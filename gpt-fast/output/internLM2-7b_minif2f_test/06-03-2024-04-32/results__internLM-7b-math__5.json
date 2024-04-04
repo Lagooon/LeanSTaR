@@ -1,0 +1,36 @@
+{
+    "results": [
+        {
+            "attempt_results": [
+                {
+                    "theorem": "amc12b_2002_p19",
+                    "proof": [
+                        "nlinarith"
+                    ],
+                    "score": 4.8640258244668075,
+                    "success": true,
+                    "failure_reason": "",
+                    "trace": [
+                        {
+                            "tactic": "nlinarith",
+                            "state_before": "a b c : \u211d\nh\u2080 : 0 < a \u2227 0 < b \u2227 0 < c\nh\u2081 : a * (b + c) = 152\nh\u2082 : b * (c + a) = 162\nh\u2083 : c * (a + b) = 170\n\u22a2 a * b * c = 720"
+                        }
+                    ],
+                    "temperature": 0.5,
+                    "elapsed": -56.41032314300537,
+                    "iteration": 0
+                }
+            ],
+            "success": true,
+            "example": {
+                "full_name": "amc12b_2002_p19",
+                "statement": "theorem amc12b_2002_p19 (a b c : \u211d) (h\u2080 : 0 < a \u2227 0 < b \u2227 0 < c) (h\u2081 : a * (b + c) = 152)\n    (h\u2082 : b * (c + a) = 162) (h\u2083 : c * (a + b) = 170) : a * b * c = 720",
+                "url": "https://github.com/rah4927/lean-dojo-mew",
+                "commit": "d00c776260c77de7e70125ef0cd119de6c0ff1de",
+                "file_path": "MiniF2F/Test.lean",
+                "split": "test"
+            }
+        }
+    ],
+    "args": {}
+}

@@ -1,0 +1,36 @@
+{
+    "results": [
+        {
+            "attempt_results": [
+                {
+                    "theorem": "mathd_algebra_354",
+                    "proof": [
+                        "linarith"
+                    ],
+                    "score": 2.7343305896256425,
+                    "success": true,
+                    "failure_reason": "",
+                    "trace": [
+                        {
+                            "tactic": "linarith",
+                            "state_before": "a d : \u211d\nh\u2080 : a + 6 * d = 30\nh\u2081 : a + 10 * d = 60\n\u22a2 a + 20 * d = 135"
+                        }
+                    ],
+                    "temperature": 0.5,
+                    "elapsed": -53.461341857910156,
+                    "iteration": 0
+                }
+            ],
+            "success": true,
+            "example": {
+                "full_name": "mathd_algebra_354",
+                "statement": "theorem mathd_algebra_354 (a d : \u211d) (h\u2080 : a + 6 * d = 30) (h\u2081 : a + 10 * d = 60) :\n    a + 20 * d = 135",
+                "url": "https://github.com/rah4927/lean-dojo-mew",
+                "commit": "d00c776260c77de7e70125ef0cd119de6c0ff1de",
+                "file_path": "MiniF2F/Test.lean",
+                "split": "test"
+            }
+        }
+    ],
+    "args": {}
+}

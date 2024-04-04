@@ -1,0 +1,41 @@
+{
+    "results": [
+        {
+            "attempt_results": [
+                {
+                    "theorem": "mathd_algebra_478",
+                    "proof": [
+                        "simp only [h\u2081, h\u2082, h\u2083, mul_assoc, div_eq_mul_inv, mul_inv_cancel, mul_one]",
+                        "norm_num"
+                    ],
+                    "score": 14.778993579769121,
+                    "success": true,
+                    "failure_reason": "",
+                    "trace": [
+                        {
+                            "tactic": "simp only [h\u2081, h\u2082, h\u2083, mul_assoc, div_eq_mul_inv, mul_inv_cancel, mul_one]",
+                            "state_before": "b h v : \u211d\nh\u2080 : 0 < b \u2227 0 < h \u2227 0 < v\nh\u2081 : v = 1 / 3 * (b * h)\nh\u2082 : b = 30\nh\u2083 : h = 13 / 2\n\u22a2 v = 65"
+                        },
+                        {
+                            "tactic": "norm_num",
+                            "state_before": "b h v : \u211d\nh\u2080 : 0 < b \u2227 0 < h \u2227 0 < v\nh\u2081 : v = 1 / 3 * (b * h)\nh\u2082 : b = 30\nh\u2083 : h = 13 / 2\n\u22a2 1 * (3\u207b\u00b9 * (30 * (13 * 2\u207b\u00b9))) = 65"
+                        }
+                    ],
+                    "temperature": 0.5,
+                    "elapsed": -63.82655143737793,
+                    "iteration": 1
+                }
+            ],
+            "success": true,
+            "example": {
+                "full_name": "mathd_algebra_478",
+                "statement": "theorem mathd_algebra_478 (b h v : \u211d) (h\u2080 : 0 < b \u2227 0 < h \u2227 0 < v) (h\u2081 : v = 1 / 3 * (b * h))\n    (h\u2082 : b = 30) (h\u2083 : h = 13 / 2) : v = 65",
+                "url": "https://github.com/rah4927/lean-dojo-mew",
+                "commit": "d00c776260c77de7e70125ef0cd119de6c0ff1de",
+                "file_path": "MiniF2F/Test.lean",
+                "split": "test"
+            }
+        }
+    ],
+    "args": {}
+}

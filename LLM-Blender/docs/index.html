@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> 
+<![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> 
+<![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153119114-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-153119114-2');
+		</script>
+
+        <title>LLM-Blender</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="author" content="LLM-Blender">
+        <meta charset="UTF-8">
+
+        <!-- CSS Bootstrap & Custom -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+		
+		<meta property="og:site_name" content="LLM-Blender | Project website">
+		<meta property="og:title" content="LLM-Blender | ">
+		<meta name=description content="Authors: Dongfu Jiang, Xiang Ren, Bill Yuchen Lin.">
+		<meta name=keywords content="LLM-Blender, Yuchen Lin, Bill Lin, Natural Language Processing, Computational Linguistics,  University of Southern California, AI2, Allen Institute for AI, Machine Learning, Commonsense, ScienceWorld, Text Game">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script language="javascript">
+				var ie4 = false; if(document.all) { ie4 = true; }
+			function getObject(id) { if (ie4) { return document.all[id]; } else { return document.getElementById(id); } }
+			function toggle(link, divId) { var lText = link.innerHTML; var d = getObject(divId);
+			 if (lText == '[show more]') { link.innerHTML = '[hide more]'; d.style.display = 'block'; }
+			 else { link.innerHTML = '[show more]'; d.style.display = 'none'; } }
+			   </script>
+<script>
+$(document).ready(function () {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+});
+</script>
+
+<link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
+
+<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+
+<style type="text/css">
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+bottom: .5em;
+}
+</style>
+		<!-- <link rel="stylesheet" id="usc-homepage-2017-style-css" href="https://www.usc.edu/wp-content/themes/usc-homepage-2017/assets/css/usc-homepage-2017.css?ver=4.1.0" type="text/css" media="screen,print"> -->
+		<link href="style.css" rel="stylesheet" media="screen">
+		<!-- MDBootstrap Datatables  -->
+		<link href="css/addons/datatables.min.css" rel="stylesheet">
+		<!-- MDBootstrap Datatables  -->
+		<script type="text/javascript" src="js/addons/datatables.min.js"></script>
+        <!-- Favicons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+    
+        <!-- JavaScripts -->
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/min/modernizr.min.js"></script>
+        <!--[if lt IE 8]>
+	    <div style=' clear: both; text-align:center; position: relative;'>
+            <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" alt="" /></a>
+        </div>
+		<![endif]-->
+		<link href="js/bootstrap-table.min.css" rel="stylesheet">
+
+<script src="js/bootstrap-table.min.js"></script>
+		
+<style>
+	
+	a{
+		color: #281885;
+	}
+
+	.menu-wrapper .main-menu ul.sf-menu > li {
+		border-right: 1px solid white;
+	  }
+
+	body {
+		font-family: Helvetica, Arial, Heveltica Neue, sans-serif;
+		font-size: 1.8em;
+		line-height: 1.6em;
+		background: #eff0e3;
+		color: #777777;
+		-webkit-font-smoothing: antialiased;
+		overflow-x: hidden;
+	  }
+	
+	  ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: circle;
+	  }
+	  
+	  li {
+		margin-bottom: 10px; /* Add space between each list item */
+	  }
+	 .section {
+		font-size:22px;
+	  }
+	
+	  .btna{
+		font-weight: 600;
+		color: rgb(195, 0, 255);
+	  }
+ 
+	  .site-header {
+		background-color: #dcf6d6;
+		color: black;
+		font-size: 13px;
+		border-bottom: 3px solid #276be0;
+	  }
+	
+	  .site-header a{
+		color: #281885;
+	}
+
+</style>
+    </head>
+    <body>
+	
+	
+		<div class="responsive-menu visible-sm visible-xs">
+			<a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+			<div class="menu-open">
+				<nav>
+						<ul class="sf-menu">
+								<li ><a style="color:white; font-weight: 600" href="index.html">Introduction</a></li> 
+								<li ><a style="color:white; font-weight: 600" href="#bg">Background</a></li>
+								<li ><a style="color:white; font-weight: 600" href="#approach">Approach</a></li>
+								<li ><a style="color:white; font-weight: 600" href="#eval">Evaluation</a></li>
+								<li ><a style="color:white; font-weight: 600" href="#analysis">Analysis</a></li>
+								<li ><a style="color:white; font-weight: 600" href="#misc">Misc.</a></li>
+							</ul>
+				</nav> 
+			</div> <!-- /.menu-open -->
+		</div> <!-- /.responsive-menu -->
+
+		<header class="site-header" id="topsection"">
+			
+			<div class="container">
+				<div class="main-header">
+					<div class="row">
+						
+						<div class="col-md-8 col-sm-4" id="top">
+							<h1 style="color: #183385"><b>LLM-Blender</b>: <span style="font-weight:600">Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</span> [ACL2023] </em></h1> 
+							<span style="color:#183385; font-size: 14pt; font-family: Roboto, Helvetica, Arial, Heveltica Neue, sans-serif">
+								<b>Authors:</b> <a class="name" target="_blank" href="https://jdf-prog.github.io/">Dongfu Jiang</a>, 
+								<a class="name" target="_blank" href="http://ink-ron.usc.edu/xiangren/">Xiang Ren</a>,
+								<a class="name" target="_blank" href="http://yuchenlin.xyz">Bill Yuchen Lin</a><br/>
+								<a class="btna" target="_blank" href="https://mosaic.allenai.org">[AI2-Mosaic]</a> &nbsp; 
+									<a class="btna" target="_blank" href="http://inklab.usc.edu/">[USC-INK]</a> &nbsp; 
+							</span>
+							<br>
+						</div> 
+						<div class="col-md-4 main-header-right">
+							<br>
+							<object width="70%"  type="image/svg+xml" data="logo-ai2.svg" class="logo">
+								AI2 Logo <!-- fallback image in CSS -->
+							  </object>
+							  <br /> 
+							  <img width="60%" src="logo-usc.png" alt="USC">
+						</div>
+					</div> <!-- /.row -->
+				</div> <!-- /.main-header -->
+			</div> <!-- /.container -->	
+
+			<div class="menu-wrapper visible-md visible-lg">
+				<div class="container">
+					<div class="inner-menu">
+						<div class="row">
+							<div class="col-md-12 main-menu">
+								<nav>
+									<ul class="sf-menu sf-js-enabled sf-arrows"> 
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="index.html">Introduction</a></li> 
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="#bg">Background</a></li>
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="#approach">Approach</a></li>
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="#eval">Evaluation</a></li>
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="#analysis">Analysis</a></li>
+								<li><a style="color:white; font-weight: 600; font-size: 18px" href="#misc">Misc.</a></li>
+										<!-- <li ><a href="#blog">Blogs</a></li>  -->
+										<!-- <li><a href="#contact">Contact</a></li> -->
+									</ul>
+								</nav>
+							</div> <!-- /.main-menu --> 
+						</div> <!-- /.row -->
+					</div> <!-- /.inner-menu -->
+				</div> <!-- /.container -->
+			</div>
+ 
+		</header> <!-- /.site-header -->
+
+
+		<div class="container">
+			
+			<div class="top-content">
+				
+				
+
+			<div class="row">
+					<div class="col-md-12">
+						<div class="box-content">
+							<div class="row">
+								 
+								<h4 class="widget-title"><span class="section"><a href="#about" ><b><em>Introduction</em></b></a></span></h4>
+								<div class="col-md-7">  
+										<ul style="font-size:18px; color:#0b32a7b4;">
+											<li>
+												We introduce <b>LLM-Blender</b>, an novel ensembling framework to attain consistently superior performance by leveraging the diverse strengths of multiple open-source large language models (LLMs). LLM-Blender cut the weaknesses through ranking and integrate the strengths through fusing generation to enhance the capability of LLMs.
+											</li>
+											<li>
+												Our framework consists of two complementary modules: <b>PairRanker</b> and <b>GenFuser</b>, addressing the observation that optimal LLMs for different examples can significantly vary.
+												<b>PairRanker</b> employs a specialized pairwise comparison method to distinguish subtle differences between candidate outputs. <b>GenFuser</b> aims to merge the top-ranked candidates from the aggregation of PairRanker's pairwise comparisons into an improved output by capitalizing on their strengths and mitigating their weaknesses.
+											</li>
+											<li>
+												To facilitate large-scale evaluation, we introduce a benchmark dataset, <b>MixInstruct</b>, which is a mixture of multiple instruction datasets featuring oracle pairwise comparisons for testing purposes. Our <b>LLM-Blender</b> significantly surpasses the best LLMs and baseline ensembling methods across various metrics on <b>MixInstruct</b>, establishing a substantial performance gap. 
+											</li>
+										</ul>					 
+									<p style="text-align: left;"> 
+									<!-- <font color="blue"><b>Links:</b></font> &nbsp;  -->
+									
+									<a target="_blank" href="https://arxiv.org/abs/2306.02561">
+									<img style="height:22pt" src="https://img.shields.io/badge/-Paper-black?style=flat&logo=arxiv">
+									</a>
+									<!-- <a class="btna" target="_blank" href="https://github.com/yuchenlin/LLM-Blender">[Code]</a> &nbsp; -->
+									<!-- <a class="btna" target="_blank" href="https://huggingface.co/datasets/llm-blender/mix-instruct">[Dataset]</a> &nbsp; -->
+									<!-- <a class="btna" target="_blank" href="https://huggingface.co/llm-blender">[Models]</a> &nbsp; -->
+									<a target="_blank" href="https://github.com/yuchenlin/LLM-Blender">
+										<img style="height:22pt" src="https://img.shields.io/badge/-Code-green?style=flat&logo=github">
+									  </a>
+									<a target="_blank" href="https://huggingface.co/datasets/llm-blender/mix-instruct">
+										<img style="height:22pt" src="https://img.shields.io/badge/-🤗%20Dataset-red?style=flat">
+									  </a>
+									<a target="_blank" href="https://huggingface.co/llm-blender">
+										<img style="height:22pt" src="https://img.shields.io/badge/-🤗%20Models-red?style=flat">
+									  </a>
+									<a target="_blank" href="https://twitter.com/billyuchenlin/status/1663603372220616704?s=20">
+										<img style="height:22pt" src="https://img.shields.io/badge/-Tweet-blue?style=flat&logo=twitter">
+									  </a>
+									</p>  
+									
+								</div>
+								 
+									
+								<div  class="col-md-5">
+									<div  align="center"> <img width="100%" src="intro.png"> <br />
+									</div>
+								</div> 
+								
+								</div>
+								
+								</div>
+								 
+									</div> <!-- /.col-md-4 -->
+								</div>
+								
+
+
+			<div class="row">
+			
+				<div class="col-md-12">
+				<div class="box-content">
+						<div class="row">
+							<div id="bg">
+								<h4 class="widget-title"><span class="section"><b><a><em>Background</em></a></b></span></h4>
+								<div  align="center"> <img width="100%" src="pairranker.png">
+	</div>
+								<div>
+									<p> 
+										<a onclick="toggle(this, 'comp_more')" class="btna">[show more]</a>
+									</p>
+									<div id="comp_more" style="display: none;">
+
+										The open-source <b>Large Language Models</b> exhibit diverse strengths and weaknesses due to variations in data, architectures, and hyperparameters, making them complementary to each other. There are two primary approaches of ensembling the multiple output candidates from various language models: (1) <b>Ranking</b> and (2) <b>Fusing Generation</b>. Ranking aims to select the best one from the candidate pool via training a critic model. Fusing Generation aims to merge the candidates into a better output by framing the task as a sequence-to-sequence learning problem. Recent studies have demonstrated ranking and fusing generation could improve the performance of a single language model.
+										<br/><br/>
+										<ul>
+											<li> <b><a href="https://github.com/awslabs/mlm-scoring" target="_blank">MLM-Scoring</a></b> 
+												is a un-supervised ranking method which only encodes the candidate text using a pre-trained BERT and compute the pseudo-log-likelihood of masked tokens as the candidate score. 
+											</li>
+											<li> <b><a href="https://github.com/yixinL7/SimCLS" target="_blank">SimCLS</a></b> 
+												is a supervised ranking method which encodes the input text and the candidate text using a single encoder and compute the cosine similarity of their representations as the score of each candidate text. It is trained using a marginal-ranking loss to maximize the margin between the score of the best candidate and the score of the worst candidate.
+											</li>
+											<li> <b><a href="https://github.com/Ravoxsg/SummaReranker" target="_blank">SummaReranker</a></b>, another supervised ranking method which encodes the input text and the candidate text using a single cross-encoder and adopt a mixture-of-experts layer for various metrics signals. It takes the average of the prediction scores for these metrics as the score of each candidate text. It is trained using a binary cross entropy loss to only maximize the score of the best candidate and minimize the score of all the other candidates.
+											</li>
+											<li> <b><a href="https://aclanthology.org/2022.emnlp-main.581/">SummaFusion</a></b> is a fusing generation method that applies the fusion-in-decoder artecture to fuse all the candidates into a better output. However, it does not filter out the bad candidates during the fusion which may lead to a worse output.
+											</li> 
+											<li> <b class="btna">Limitations</b>: 
+												All the three ranking method focused on <b>individually scoring</b> each candidate biased on the input text, and they never directly compare each candidate in a <b>pairwise manner</b>. Among the output candidates from LLMs, candidate differences can be quite <b>subtle</b>, as they are all produced by very sophisticated models and one may only be marginally better than another. Even for humans, it can be challenging to gauge candidate quality without direct comparison. And the current fusing generation method never <b>filter out</b> the bad candidates during the fusion which may lead to a worse output.
+											</li>
+											<li> <b class="btna">LLM-Blender</b> (ours) is a hybrid ensembling framework that combines the strengths of ranking and fusing generation. It first ranks the candidates in a <b>pairwise manner</b> and then fuses the <b>top-ranked candidates</b> via a sequence-to-sequence model. Check the next  for more details. 
+											</li>
+										  </ul>
+										</div>
+								</div>
+								  
+							</div>
+						</div>
+						
+					</div> <!-- /.box-content -->
+
+
+						
+				</div> <!-- /.col-md-8 -->
+				
+				
+
+			</div> <!-- /.row -->
+
+			<div class="row">
+			
+				<div class="col-md-12">
+				<div class="box-content">
+						<div class="row">
+							<div class="col-md-12" id="approach">
+								<h4 class="widget-title"><span class="section"><b><a><em>LLM-Blender Framework</em></a></b></span></h4>
+								<div   align="center"> <img width="100%" src="llm_blender.png"> <br />
+								</div>
+
+
+							<p>
+								
+								<a onclick="toggle(this, 'framework_more')" class="btna">[show more]</a>
+							</p>
+							<div class="col-md-12" id="framework_more" style="display: none;">
+								<b>LLM-Blender consists of two primary modules: the PairRanker module and the GenFuser module.  </b> <br><br>
+								<ul>
+									<li>
+										The PairRanker module is a BERT-structure encoder, fine-tuned on a DeBERTa-V3-Large (304m) checkpoint using in an pairwise manner through attention mechanism. It encodes the input text with two candidates using a single encoder and output two prediction scores for these two candidates respectively. A better candidate is expected to get a higher score. Unlike prior method using invividual scoring, PairRanker could capture the subtle difference between candidates through bi-directional attention mechanism, and thus is more robust to the quality of candidates.
+									</li>
+									<li>
+										The GenFuser module is a transformer encoder-decoder structure, fine-tuned on a Flan-T5-xl (3b) checkpoint using ground-truth outputs from ChatGPT, GPT-4 and human as labels. It encodes the input text and the a few candidates using a single encoder and then decodes the fused output using a single decoder. Instead of simply put all the candidates to the encoder, we only put the top-ranked candidates to the encoder to avoid unnecessary noise from the bad candidates, which is the key to the success of LLM-Blender.
+									</li>
+									<li>
+										By combining PairRanker and GenFuser in a single framework, LLM-Blender could leverage the strengths of both ranking and fusing generation. It first ranks the candidates in a pairwise manner and then fuses the top-ranked candidates via a sequence-to-sequence model. This hybrid ensembling framework is more robust to the quality of candidates and could generate better output than prior methods.
+									</li>
+								</ul>
+								 
+								</div>
+							</div>
+						</div>
+						
+					</div> <!-- /.box-content -->
+
+
+						
+				</div> <!-- /.col-md-8 -->
+				
+				
+
+			</div> <!-- /.row -->
+
+
+
+
+			<div class="row">
+			
+				<div class="col-md-12">
+				<div class="box-content">
+						<div class="row">
+							<div class="col-md-12" id="eval">
+								<h4 class="widget-title"><span class="section"><b><a><em>Evaluation</em></a></b></span></h4>
+								<div align="center"> <img width="100%" src="llm_results.png"> <br />
+								</div>
+
+
+							<p>
+								
+								<a onclick="toggle(this, 'eval_more')" class="btna">[show more]</a>
+							</p>
+							<div class="col-md-12" id="eval_more" style="display: none;">
+								<b>Main Results </b> 
+								This table compares the performance of various LLMs on our proposed MixInstruct dataset, along with the oracle analysis of auto metrics (BARTScore, etc.), ranker's performance and our LLM-BLender's performance.
+								Here <b>GPT-Rank</b> is computed by rank the candidates by their number of winning times in the pairwise comparisons from ChatGPT, which we take as the ground-truth comparison results in our experiments.
+								It is evident that different LLMs vary significantly in their performance, show a diverse set of strengths and weaknesses, as represented by GPT-Rank.
+								Our PairRanker module effectively improve the average GPT-Rank to 3.20 compared to the best model Open Assistant (3.90) and Vicuna (4.13), proving the effectiveness of ranking for LLMs. It also outperforms all the other rankers, including the auto metrics's performance, showcasing great capability of pairwise comparison paradigm.
+								Furthermore, our LLM-Blender framwork manages to generate candidates not only with the highest scores in auto metrics like BARTScore (79.09), but also with better correlation with ChatGPT evaluation, represented by the best GPT-Rank (3.01), percentage of winning times compared to Vicuna (70.73) and Open Assistant (77.72), and the percentage that is viewed as top-3 by ChatGPT (68.59). These overall results prove the effectiveness of our LLM-Blender framework.
+								</div>
+							</div>
+						</div>
+						
+					</div> <!-- /.box-content -->
+
+
+						
+				</div> <!-- /.col-md-8 -->
+				
+				
+
+			</div> <!-- /.row -->
+
+		
+			<div class="row">
+			
+				<div class="col-md-12">
+				<div class="box-content">
+						<div class="row">
+							<div  id="analysis">
+								<h4 class="widget-title"><span class="section"><b><a><em>Analysis</em></a></b></span></h4>
+								<div  align="center"> <img width="100%" src="tradeoff.png"> <br />
+								</div>
+
+
+							<p>
+								
+								<a onclick="toggle(this, 'analysis_more')" class="btna">[show more]</a>
+							</p>
+							<div class="col-md-12" id="analysis_more" style="display: none;">
+								<b>Effectiveness on decoding reranking scenario</b>
+								<b>Efficiency</b> To thoroughly examine the efficiency tradeoff of the three scoring method, <b>MaxLogits</b>, <b>MaxWins</b>, and <b>Bubble</b>, we conduct the efficiency tradeoff analysis on three conventional tasks. The findings indicate that the bubble run approach achieves superior performance at a minimal cost of N-1 comparisons. However, as the number of comparisons increases, the MaxLogits scoring methods outperform the bubble run method beyond a certain threshold. Consequently, in most cases, the bubble run method is a more efficient approach to employ. If one desires to pursue incremental improvements through additional comparisons, the MaxLogits method can also be employed in conjunction with parallel computing.
+								
+								</div>
+							</div>
+						</div>
+						
+					</div> <!-- /.box-content -->
+
+
+						
+				</div> <!-- /.col-md-8 -->
+				
+				
+
+			</div> <!-- /.row -->
+
+		<div class="box-content">
+
+							<div class="row">
+									<div class="col-md-12" id="misc">
+										<h4 class="widget-title"><span><b>Misc.</b></span></h4>
+		<div style="font-size:15px"> 
+			 <h4><b>Citation</b></h4>
+
+<pre><code> 
+@inproceedings{llm-blender-2023,
+  title = "LLM-Blender: Ensembling Large Language Models with Pairwise Comparison and Generative Fusion",
+  author = "Jiang, Dongfu and Ren, Xiang and Lin, Bill Yuchen",
+  booktitle = "Proceedings of the 61th Annual Meeting of the Association for Computational Linguistics (ACL 2023)",
+  year = "2023"
+}
+</code></pre>
+		</div>
+	</div>
+</div>
+
+</div>
+
+		</div> <!-- /.container -->
+
+
+		 
+		<footer class="site-footer">
+			<div class="main-footer">
+
+				<div class="container"> 
+					<p class="small-text">Contact: Bill Yuchen Lin [yuchenl@allenai.org]
+								</p> 
+					<div class="copyright">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								
+							</div> <!-- /.col-md-6 -->
+
+						</div> <!-- /.row -->
+					</div> <!-- /.copyright -->
+				</div> <!-- /.container -->
+			</div> <!-- /.main-footer -->
+		</footer> <!-- /.site-footer -->
+
+		<a href="#" id="top-link" onclick="window.scrollTo(0, 0);" class="fa fa-angle-up"></a>
+	
+        <!-- JavaScripts -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/min/plugins.min.js"></script>
+        <script src="js/min/custom.min.js"></script>
+		 
+		
+    </body>
+</html>
