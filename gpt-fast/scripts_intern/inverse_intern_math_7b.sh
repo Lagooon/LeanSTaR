@@ -1,7 +1,7 @@
 set -e
 set -x
 
-export DATA_DIR=/localdata_ssd/Lean
+export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
 export MODEL_REPO=internlm/internlm2-math-base-7b
 
 #python scripts/download.py \

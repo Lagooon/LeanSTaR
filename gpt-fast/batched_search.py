@@ -247,7 +247,7 @@ def generate(
     return seq, generated_probs, num_decoded_tokens
 
 def _load_model(checkpoint_path, device, precision, tp_size):
-    model_name = "/localdata_ssd/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo"
+    model_name = "/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo"
     model = vllm.LLM(
         model=model_name,
         tensor_parallel_size=tp_size,

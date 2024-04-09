@@ -1,7 +1,7 @@
 set -e
 set -x
 
-export DATA_DIR=/localdata_ssd/Lean
+export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
 export MODEL_REPO=internlm/internlm2-math-base-7b
 
 export OMP_NUM_THREADS=4
@@ -16,7 +16,7 @@ NUM_SHARDS=4
 DATASET="minif2f-test"
 DATA="data/minif2f.jsonl"
 export CONTAINER="native"
-export TMP_DIR="/localdata_ssd/tmp"
+export TMP_DIR="/nobackup/users/zhiqings/haohanl/tmp"
 
 MODEL="internlm/internlm2-math-base-7b"
 NAME="internLM2-7b"
@@ -26,7 +26,7 @@ mkdir -p logs
 #rm -rf /tmp/tmp*
 #--finetune_checkpoint_path "$DATA_DIR/checkpoints/internlm2-7b_dpo-_epoch-1_lr-3e-6_beta-0.1_seq-1024_2" \
     
-for SHARD in 4 5 6 7
+for SHARD in 4
 do
     CUDA_VISIBLE_DEVICES=${SHARD} python batched_search.py \
     --dataset-name ${DATASET} \

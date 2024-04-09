@@ -157,6 +157,7 @@ def main(
         total=len(train_loader),
             )
     data = []
+    args.frac = args.frac - 4
     for it, batch in pbar:
         if it < sub_length * args.frac:
             continue
@@ -183,7 +184,7 @@ def main(
                     "win_rate_2" : 0.0,
                 }
             )
-    json_file = f'/home/zxz/Math/gpt-fast/data/leandojo_benchmark_4/processed/proofstep-generated-{args.iter}-{args.frac}.json'
+    json_file = f'data/leandojo_benchmark_4/processed/proofstep-generated-{args.iter}-{args.frac}.json'
     with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
 

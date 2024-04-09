@@ -333,8 +333,8 @@ def main(
             )
             for it, batch in pbar:
                 global_step = epoch * epoch_length + it
-                #if global_step < resume_global_step:
-                #    continue
+                if global_step < resume_global_step:
+                    continue
 
                 torch.cuda.synchronize()
                 model.zero_grad()

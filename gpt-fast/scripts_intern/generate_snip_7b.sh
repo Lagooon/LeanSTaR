@@ -1,12 +1,12 @@
 set -e
 set -x
 
-export DATA_DIR=/localdata_ssd/Lean
+export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
 export MODEL_REPO=internlm/internlm2-math-base-7b
 export OMP_NUM_THREADS=8
 export NCCL_IGNORE_DISABLED_P2P=1
-ITER=2
-SPLIT=16
+ITER=1
+SPLIT=4
 # export NCCL_CROSS_NIC=1
 # export CUDA_LAUNCH_BLOCKING=1
 
@@ -16,7 +16,7 @@ SPLIT=16
 for SHARD in 4 5 6 7
 do
     CUDA_VISIBLE_DEVICES=${SHARD} python generate_snip.py \
-        --checkpoint_path $DATA_DIR/checkpoints/$MODEL_REPO/dpo \
+        --checkpoint_path $DATA_DIR/checkpoints/$MODEL_REPO/finetune \
         --source_max_len 896 \
         --target_max_len 128 \
         --seed 43\

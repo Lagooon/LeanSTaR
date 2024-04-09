@@ -1,7 +1,7 @@
 set -e
 set -x
 
-export DATA_DIR=/localdata_ssd/Lean
+export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
 export MODEL_REPO=internlm/internlm2-math-base-7b
 export OMP_NUM_THREADS=8
 export GITHUB_ACCESS_TOKEN="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"
@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 python -m torch.distributed.launch --nproc_per_node
     finetune_dpo.py \
     --do_train \
     --checkpoint_path $DATA_DIR/checkpoints/$MODEL_REPO/model.pth \
-    --sft_checkpoint_path "$DATA_DIR/checkpoints/internlm2-7b_dpo-_iter-1_lr-3e-6_beta-0.1_seq-1024_1" \
+    --sft_checkpoint_path "$DATA_DIR/checkpoints/internlm2-7b_sft_epoch-2_lr-3e-5" \
     --source_max_len 896 \
     --target_max_len 128 \
     --total_max_len 1024 \
@@ -28,15 +28,16 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 python -m torch.distributed.launch --nproc_per_node
     --warmup_ratio 0.1 \
     --num_train_epochs 2 \
     --optim_dtype fp32 \
-    --dataset "data/leandojo_benchmark_4/processed/proofstep-generated-2.json" \
+    --dataset "data/leandojo_benchmark_4/processed/proofstep-generated-1.json" \
     --save_strategy epoch \
     --save_total_limit 2 \
     --dpo_beta 0.1 \
-    --save_dir $DATA_DIR/checkpoints/internlm2-7b_dpo-_iter-2_lr-3e-6_beta-0.1_seq-1024_1 \
+    --save_dir $DATA_DIR/checkpoints/internlm2-7b_dpo-_iter-1_lr-3e-6_beta-0.1_seq-1024_1 \
     --optimizer_cpu_offload True \
     --tensor_parallel_size 1 \
     --print_training_examples False \
     --save_only_model True \
     --adam_beta2 0.95 \
     --adam_eps 1e-5 \
-    --add_eos_to_marked_target False
+    --add_eos_to_marked_target False \
+    --resume_from_checkpoint

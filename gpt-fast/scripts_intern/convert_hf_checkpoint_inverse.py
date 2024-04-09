@@ -61,7 +61,7 @@ def convert_hf_checkpoint(
         )
 
     all_state_dict = []
-    checkpoint_path = "/localdata_ssd/Lean/checkpoints/internlm2-7b_dpo-_epoch-1_lr-3e-6_beta-0.1_seq-1024_1/epoch_1_step_1325_rank_0.pt"
+    checkpoint_path = "/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm2-7b_dpo-_iter-1_lr-3e-6_beta-0.1_seq-1024_1/epoch_1_step_3655_rank_0.pt"
     pattern = checkpoint_path.replace(f"_rank_{0}", "_rank_*")
     for i in range(1):
         ckpt_file_path = pattern.replace("*", str(i))
