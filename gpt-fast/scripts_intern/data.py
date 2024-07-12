@@ -15,13 +15,22 @@ PHRASE_MAP = {
     'proofstep': '[PROOFSTEP]',
 }
 
+def chat_template_to_prompt(prompt_list):
+    result = ""
+    total_step = len(prompt_list)
+    for i, message in enumerate(prompt_list):
+        result += ('<|im_start|>' + message['role'] +
+            '\n' + message['content'])
+        if i+1 != total_step:
+            result += '<|im_end|>\n'
+        elif message['role'] == 'user':
+            result += '<|im_end|>\n<|im_start|>assistant\n'
+    return result
 def _prompt(ts):
-    prompt = """Tactic state:
----
-%s
----
-Next tactic:
----\n""" % (ts)
+    prompt = f"My LEAN 4 state is:\n```lean\n" + ts + \
+        "```\nPlease predict a possible tactic to help me prove the theorem."
+    prompt = [{"role": "user", "content": prompt}]
+    prompt = chat_template_to_prompt(prompt)
     return prompt
 
 
@@ -64,7 +73,7 @@ def _print_stats(splits):
 def _fmt_proofstep(state_before, tactic):
     # [GOAL]{state_before}[PROOFSTEP]{tactic}<|endoftext|>
     inp = _prompt(state_before)
-    out = f"{tactic}{TOKEN_MAP['eos']}"
+    out = f"Here is the predicted next tactic:\n```lean\n{tactic}\n```<|im_end|>"
     return inp, out
 
 

@@ -86,7 +86,6 @@ def generate_tactic(
         temperature=temperature,
         use_beam_search=False,
         max_tokens=max_seq_len,
-        stop=['\n', '---'],
     )
     outputs = model.generate(prompt, params, use_tqdm=False)
     if len(outputs) == 0:
@@ -157,7 +156,6 @@ def main(
         total=len(train_loader),
             )
     data = []
-    args.frac = args.frac - 4
     for it, batch in pbar:
         if it < sub_length * args.frac:
             continue
@@ -167,24 +165,28 @@ def main(
             batch["input"],
             model,
             tokenizer,
-            128,
+            512,
             1,
             1,
-            temperature=0.0,
+            temperature=1.0,
             top_k=500,
         )
         for input_, output_1, output_2 in zip(batch["input"], batch["output"], output_l):
+            tactic_1 = output_1.split("```lean4\n")[-1].split('```')[0].split('---')[0].strip()
+            tactic_2 = output_2.split("```lean4\n")[-1].split('```')[0].split('---')[0].strip()
+            if tactic_1 == tactic_2:
+                continue
             data.append(
                 {
                     "input" : input_,
                     "output_1" : output_1,
-                    "output_2" : output_2 + '\n',
+                    "output_2" : output_2,
                     "preference": 1,
                     "win_rate_1" : 1.0,
                     "win_rate_2" : 0.0,
                 }
             )
-    json_file = f'data/leandojo_benchmark_4/processed/proofstep-generated-{args.iter}-{args.frac}.json'
+    json_file = f'data/leandojo_benchmark_4/processed/cot-generated-{args.iter}-{args.frac}.json'
     with open(json_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
 

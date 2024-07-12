@@ -1,0 +1,18 @@
+`apex` is not installed. Reverting to non-fused RMSNorm.
+Loading model ...
+Traceback (most recent call last):
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_sample.py", line 1010, in <module>
+    main(
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_sample.py", line 637, in main
+    model, tokenizer = _load_model(checkpoint_path, device, precision, tp_size)
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_sample.py", line 251, in _load_model
+    model = vllm.LLM(
+  File "/nobackup/users/zhiqings/haohanl/lean2/lib/python3.9/site-packages/vllm/entrypoints/llm.py", line 109, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(engine_args)
+  File "/nobackup/users/zhiqings/haohanl/lean2/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 386, in from_engine_args
+    engine_configs = engine_args.create_engine_configs()
+  File "/nobackup/users/zhiqings/haohanl/lean2/lib/python3.9/site-packages/vllm/engine/arg_utils.py", line 286, in create_engine_configs
+    device_config = DeviceConfig(self.device)
+  File "/nobackup/users/zhiqings/haohanl/lean2/lib/python3.9/site-packages/vllm/config.py", line 496, in __init__
+    raise RuntimeError("No supported device detected.")
+RuntimeError: No supported device detected.

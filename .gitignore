@@ -136,3 +136,5 @@ tmp_scripts/
 vela_scripts/
 SALMON
 Dromedary
+data/
+output/

@@ -1,1826 +1,1310 @@
+You are using a model of type internlm to instantiate a model of type internlm2. This is not supported for all configurations of models and can yield errors.
 `apex` is not installed. Reverting to non-fused RMSNorm.
 Loading model ...
-INFO 04-06 22:16:40 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-06 22:16:45 llm_engine.py:357] # GPU blocks: 28341, # CPU blocks: 2048
-2024-04-06 22:16:49.840 | WARNING  | lean_dojo.data_extraction.lean:__post_init__:449 - LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de') relies on an unsupported Lean version: 63d2bdd4908b4df7db381537af754a7319e334e4
-Time to load model: 7.19 seconds
-Shard size: 61
-  0%|          | 0/61 [00:00<?, ?it/s]2024-04-06 22:16:50.201 | INFO     | lean_dojo.data_extraction.trace:get_traced_repo_path:79 - Tracing LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de')
-2024-04-06 22:16:51.321 | INFO     | __main__:main:165 - Building lean-dojo-mew
-info: cloning https://github.com/leanprover-community/mathlib4.git to ./lake-packages/mathlib
-info: cloning https://github.com/leanprover/std4 to ./lake-packages/std
-info: cloning https://github.com/gebner/quote4 to ./lake-packages/Qq
-info: cloning https://github.com/JLimperg/aesop to ./lake-packages/aesop
-info: cloning https://github.com/mhuisi/lean4-cli.git to ./lake-packages/Cli
-info: cloning https://github.com/EdAyers/ProofWidgets4 to ./lake-packages/proofwidgets
-Downloading proofwidgets/v0.0.13/linux-64.tar.gz
-[0/39] Building Std.Lean.Command
-[0/39] Building Std.Lean.TagAttribute
-[0/44] Building Std.Tactic.SeqFocus
-[0/44] Building Std.Data.List.Init.Lemmas
-[0/51] Building Std.Tactic.Unreachable
-[0/52] Building Std.Data.Ord
-[0/52] Building Std.Tactic.OpenPrivate
-[0/70] Building Std.Tactic.RCases
-[0/116] Building Std.Data.DList
-[0/118] Building Std.Tactic.HaveI
-[0/121] Building Std.Data.Prod.Lex
-[0/121] Building Std.Data.Option.Init.Lemmas
-[0/122] Building Std.Data.MLList.Basic
-[0/139] Building Std.Tactic.ByCases
-[0/139] Building Std.WF
-[0/139] Building Std.Util.TermUnsafe
-[0/139] Building Std.Util.LibraryNote
-[0/139] Building Std.Util.ExtendedBinder
-[0/139] Building Std.Classes.Dvd
-[0/139] Building Std.Lean.Meta.LCtx
-[0/139] Building Std.Control.ForInStep.Basic
-[0/139] Building Std.Lean.InfoTree
-[0/139] Building Std.Lean.Meta.Basic
-[0/139] Building Std.Lean.Meta.Expr
-[0/139] Building Std.Lean.Meta.Inaccessible
-[0/139] Building Std.Classes.BEq
-[0/139] Building Std.Lean.NameMapAttribute
-[0/139] Building Std.Lean.Name
-[0/139] Building Std.Lean.Position
-[0/139] Building Std.Lean.Tactic
-[0/139] Building Std.Lean.Delaborator
-[0/139] Building Std.Lean.HashMap
-[0/139] Building Std.Lean.HashSet
-[0/139] Building Std.Lean.Parser
-[0/139] Building Std.Lean.Expr
-[0/139] Building Std.Tactic.Exact
-[0/139] Building Std.Tactic.Instances
-[0/139] Building Std.Lean.PersistentHashMap
-[0/139] Building Std.Lean.MonadBacktrack
-[0/139] Building Std.Tactic.Where
-[0/144] Building Std.Lean.PersistentHashSet
-[0/210] Building Qq.ForLean.ToExpr
-[0/211] Building Qq.Typ
-[0/213] Building Qq.ForLean.ReduceEval
-[0/218] Building Aesop.Check
-[0/218] Building Aesop.Nanos
-[0/224] Building Aesop.Options.Public
-[0/229] Building Aesop.Percent
-[0/277] Building Aesop.Frontend.ElabM
-[0/353] Building Qq.SortLocalDecls
-[0/363] Building Qq.ForLean.Do
-Unpacking proofwidgets/v0.0.13/linux-64.tar.gz
-[3/1347] Building Std.Lean.AttributeExtra
-[8/1347] Building Std.Control.ForInStep.Lemmas
-[17/1347] Building Std.Data.Nat.Basic
-[17/1347] Building Std.Data.Int.Basic
-[21/1347] Building Aesop.Constants
-[29/1347] Building Std.Tactic.PrintDependents
-[29/1347] Building Std.Control.ForInStep
-[29/1347] Building Std.Tactic.CoeExt
-[31/1347] Building Std.Linter.UnreachableTactic
-[33/1347] Building Std.Linter.UnnecessarySeqFocus
-[33/1347] Building Aesop.Options.Internal
-[40/1347] Building Std.Util.Pickle
-[40/1347] Building Std.Tactic.GuardExpr
-[40/1347] Building Std.Tactic.Lint.Basic
-[40/1347] Building Std.CodeAction.Attr
-[41/1347] Building Aesop.Options
-[46/1347] Building Mathlib.Util.Syntax
-[46/1347] Building Mathlib.Tactic.Clear_
-[46/1347] Building Mathlib.Init.Data.Nat.Notation
-[46/1347] Building Mathlib.Lean.LocalContext
-[46/1347] Building Mathlib.Lean.Exception
-[46/1347] Building Mathlib.Tactic.ApplyWith
-[46/1347] Building Mathlib.Tactic.Trace
-[46/1347] Building Mathlib.Lean.EnvExtension
-[46/1347] Building Mathlib.Util.AssertExists
-[46/1347] Building Mathlib.Tactic.NthRewrite
-[46/1347] Building Mathlib.Tactic.SuccessIfFailWithMsg
-[46/1347] Building Mathlib.Tactic.ProjectionNotation
-[48/1347] Building Mathlib.Tactic.TypeCheck
-[48/1347] Building Mathlib.Tactic.GuardGoalNums
-[48/1347] Building Mathlib.Tactic.Spread
-[48/1347] Building Mathlib.Tactic.ExtractGoal
-[48/1347] Building Mathlib.Tactic.Clear!
-[48/1347] Building Mathlib.Tactic.SimpIntro
-[48/1347] Building Mathlib.Tactic.FailIfNoProgress
-[48/1347] Building Mathlib.Tactic.Set
-[48/1347] Building Mathlib.Tactic.CasesM
-[48/1347] Building Mathlib.Tactic.Coe
-[48/1347] Building Mathlib.Tactic.LeftRight
-[48/1347] Building Mathlib.Tactic.PrintPrefix
-[48/1347] Building Mathlib.Tactic.GuardHypNums
-[48/1347] Building Mathlib.Tactic.Rename
-[48/1347] Building Mathlib.Tactic.ClearExcept
-[48/1347] Building Mathlib.Tactic.Alias
-[48/1347] Building Mathlib.Tactic.Substs
-[48/1347] Building Mathlib.Tactic.LabelAttr
-[48/1347] Building Mathlib.Tactic.PPWithUniv
-[48/1347] Building Mathlib.Tactic.SimpRw
-[48/1347] Building Mathlib.Tactic.Constructor
-[48/1347] Building Mathlib.Tactic.SudoSetOption
-[48/1347] Building Mathlib.Tactic.Classical
-[48/1347] Building Mathlib.Data.Array.Defs
-[48/1347] Building Mathlib.Data.KVMap
-[48/1347] Building Mathlib.Mathport.Attributes
-[48/1347] Building Mathlib.Mathport.Rename
-[48/1347] Building Mathlib.Tactic.RunCmd
-[48/1347] Building Mathlib.Lean.CoreM
-[48/1347] Building Mathlib.Lean.Linter
-[48/1347] Building Mathlib.Lean.Message
-[48/1347] Building Mathlib.Util.MemoFix
-[48/1347] Building Mathlib.Lean.Meta.Basic
-[48/1347] Building Mathlib.Util.WithWeakNamespace
-[48/1347] Building Mathlib.Util.SynthesizeUsing
-[60/1347] Building Mathlib.Lean.Meta.Simp
-[60/1347] Building Std.Tactic.NoMatch
-[60/1347] Building Mathlib.Util.WhatsNew
-[60/1347] Building Std.Lean.Format
-[60/1347] Building Std.Tactic.Simpa
-[60/1347] Building Qq.Macro
-[60/1347] Building Std.Classes.Cast
-[60/1347] Building Std.Tactic.NormCast.Ext
-[62/1347] Building Mathlib.Tactic.HaveI
-[63/1347] Building Mathlib.Data.MLList.Heartbeats
-[66/1347] Building Mathlib.Tactic.UnsetOption
-[69/1347] Building Std.Tactic.Lint.Frontend
-[69/1347] Building Std.Tactic.Lint.Simp
-[71/1347] Building Mathlib.Init.Data.Fin.Basic
-[72/1347] Building Std.Linter
-[76/1347] Building Std.Lean.Meta.Clear
-[76/1347] Building Std.Lean.Meta.SavedState
-[76/1347] Building Std.Lean.Meta.AssertHypotheses
-[76/1347] Building Std.Lean.Meta.InstantiateMVars
-[87/1347] Building Std.Tactic.TryThis
-[95/1347] Building Std.Classes.SetNotation
-[95/1347] Building Std.CodeAction.Basic
-[97/1347] Building Mathlib.Tactic.ScopedNS
-[101/1347] Building Mathlib.Tactic.Conv
-[101/1347] Building Mathlib.Util.CompileInductive
-[102/1347] Building Mathlib.Tactic.Attr.Register
-[102/1347] Building Mathlib.Tactic.Monotonicity.Attr
-[106/1347] Building Mathlib.Tactic.Have
-[113/1347] Building Aesop.Util.EqualUpToIds
-[122/1347] Building Std.Tactic.NormCast.Lemmas
-[126/1347] Building Std.Data.Array.Init.Basic
-[127/1347] Building Mathlib.Tactic.HigherOrder
-[128/1347] Building Std.Tactic.SimpTrace
-[128/1347] Building Mathlib.Tactic.Variable
-[128/1347] Building Std.Tactic.ShowTerm
-[128/1347] Building Mathlib.Util.CountHeartbeats
-[128/1347] Building Mathlib.Tactic.TryThis
-[130/1347] Building Mathlib.Init.Data.Nat.Div
-[130/1347] Building Mathlib.Init.Quot
-[130/1347] Building Mathlib.Init.Control.Combinators
-[130/1347] Building Mathlib.Init.Data.Bool.Basic
-[130/1347] Building Mathlib.Init.Data.Ordering.Basic
-[133/1347] Building Std.Data.Array.Basic
-[134/1347] Building Mathlib.Tactic.Replace
-[137/1347] Building Mathlib.Tactic.ApplyCongr
-[140/1347] Building Mathlib.Init.Set
-[144/1347] Building Std.Tactic.Lint.TypeClass
-[144/1347] Building Std.Tactic.Lint.Misc
-[146/1347] Building Std.CodeAction.Misc
-[146/1347] Building Std.Tactic.GuardMsgs
-[157/1347] Building Std.Classes.Order
-[161/1347] Building Std.Tactic.SqueezeScope
-[161/1347] Building Std.Tactic.Basic
-[162/1347] Building Std.Data.Char
-[162/1347] Building Std.Tactic.Ext.Attr
-[163/1347] Building Std.Tactic.Lint
-[165/1347] Building Mathlib.Tactic.Lint
-[167/1347] Building Std.CodeAction
-[172/1347] Building Mathlib.Tactic.GCongr.ForwardAttr
-[172/1347] Building Std.Logic
-[172/1347] Building Std.Tactic.Ext
-[174/1347] Building Std.Classes.LawfulMonad
-[174/1347] Building Std.Data.Nat.Init.Lemmas
-[174/1347] Building Std.Data.PairingHeap
-[174/1347] Building Mathlib.Tactic.Attr.Core
-[174/1347] Building Std.Data.RBMap.Basic
-[174/1347] Building Mathlib.Tactic.Use
-[175/1347] Building Std.Data.Fin.Basic
-[175/1347] Building Std.Data.Nat.Lemmas
-[176/1347] Building Mathlib.Control.Basic
-[177/1347] Building Std.Tactic.Congr
-[179/1347] Building Std.Data.Option.Basic
-[179/1347] Building Std.Data.Array.Init.Lemmas
-[183/1347] Building Std.Data.Option.Lemmas
-[185/1347] Building Qq.Delab
-[185/1347] Building Qq.MetaM
-[187/1347] Building Qq.AssertInstancesCommute
-[187/1347] Building Qq.Match
-[188/1347] Building Std.Data.Array.Merge
-[188/1347] Building Std.Data.Nat.Gcd
-[188/1347] Building Std.Data.BinomialHeap.Basic
-[188/1347] Building Std.Data.String.Basic
-[188/1347] Building Std.Data.Int.Lemmas
-[188/1347] Building Std.Data.Fin.Lemmas
-[189/1347] Building Std.Data.List.Basic
-[190/1347] Building Std.Data.RBMap.WF
-[195/1347] Building Std.Lean.Meta.DiscrTree
-[195/1347] Building Aesop.Util.UnorderedArraySet
-[199/1347] Building Std.Data.Int.DivMod
-[200/1347] Building Std.Data.BinomialHeap.Lemmas
-[201/1347] Building Std.Data.BinomialHeap
-[203/1347] Building Mathlib.Tactic.Says
-[203/1347] Building Qq
-[204/1347] Building Std.Data.Rat.Basic
-[205/1347] Building Mathlib.Util.Qq
-[206/1347] Building Mathlib.Init.Data.List.Basic
-[206/1347] Building Mathlib.Lean.Meta
-[206/1347] Building Std.Data.AssocList
-[206/1347] Building Mathlib.Data.String.Defs
-[206/1347] Building Mathlib.Tactic.PermuteGoals
-[206/1347] Building Mathlib.Lean.Expr.Basic
-[206/1347] Building Std.Data.List.Lemmas
-[212/1347] Building Std.Classes.RatCast
-[212/1347] Building Std.Data.Rat.Lemmas
-[213/1347] Building Std.Data.HashMap.Basic
-[214/1347] Building Mathlib.Tactic.Relation.Rfl
-[214/1347] Building Mathlib.Tactic.Relation.Symm
-[214/1347] Building Mathlib.Lean.Elab.Tactic.Basic
-[216/1347] Building Mathlib.Lean.Expr.Traverse
-[216/1347] Building Mathlib.Util.Tactic
-[216/1347] Building Mathlib.Tactic.Cases
-[216/1347] Building Mathlib.Tactic.InferParam
-[216/1347] Building Mathlib.Tactic.HelpCmd
-[216/1347] Building Mathlib.Util.Imports
-[216/1347] Building Mathlib.Tactic.GeneralizeProofs
-[216/1347] Building Mathlib.Tactic.Simps.NotationClass
-[217/1347] Building Mathlib.Tactic.Relation.Trans
-[218/1347] Building Mathlib.Tactic.RenameBVar
-[218/1347] Building Mathlib.Tactic.SwapVar
-[219/1347] Building Mathlib.Lean.Expr.ReplaceRec
-[219/1347] Building Mathlib.Lean.Meta.DiscrTree
-[220/1347] Building Mathlib.Tactic.Congr!
-[223/1347] Building Std.Data.RBMap.Alter
-[223/1347] Building Std.Data.RBMap
-[225/1347] Building Std.Data.Rat
-[226/1347] Building Mathlib.Tactic.Simps.Basic
-[227/1347] Building Mathlib.Lean.Expr
-[233/1347] Building Mathlib.Data.Rat.Init
-[234/1347] Building Mathlib.Tactic.Core
-[234/1347] Building Mathlib.Tactic.Eqns
-[234/1347] Building Mathlib.Mathport.Notation
-[237/1347] Building Mathlib.Tactic.Cache
-[239/1347] Building Mathlib.Tactic.Recover
-[239/1347] Building Mathlib.Tactic.Find
-[240/1347] Building Mathlib.Init.Core
-[241/1347] Building Mathlib.Tactic.WLOG
-[248/1347] Building Std.Data.Range.Lemmas
-[248/1347] Building Std.Data.RBMap.Lemmas
-[248/1347] Building Std.Data.Array.Lemmas
-[248/1347] Building Std.Data.String.Lemmas
-[249/1347] Building Mathlib.Tactic.Convert
-[252/1347] Building Mathlib.Tactic.ToAdditive
-[253/1347] Building Std.Data.HashMap.WF
-[256/1347] Building Std.Data.String
-[257/1347] Building Std.Lean.Meta.UnusedNames
-[258/1347] Building Std.Data.HashMap
-[260/1347] Building Aesop.Util.UnionFind
-[260/1347] Building Std
-[261/1347] Building Mathlib.Tactic.Basic
-[262/1347] Building Aesop.Util.Basic
-[263/1347] Building Mathlib.Init.ZeroOne
-[264/1347] Building Mathlib.Init.Data.Nat.Basic
-[264/1347] Building Mathlib.Init.Data.Int.Basic
-[266/1347] Building Aesop.Rule.Name
-[266/1347] Building Aesop.Util.Tactic
-[266/1347] Building Aesop.Index.Basic
-[266/1347] Building Aesop.Tracing
-[268/1347] Building Mathlib.Algebra.Abs
-[268/1347] Building Mathlib.Tactic.Existsi
-[268/1347] Building Mathlib.Tactic.RSuffices
-[268/1347] Building Mathlib.Tactic.Inhabit
-[268/1347] Building Mathlib.Tactic.ExtractLets
-[268/1347] Building Mathlib.Tactic.MkIffOfInductiveProp
-[268/1347] Building Mathlib.Control.Functor
-[268/1347] Building Mathlib.Init.Control.Lawful
-[268/1347] Building Mathlib.Data.Bracket
-[268/1347] Building Mathlib.Init.Logic
-[271/1347] Building Aesop.Script
-[272/1347] Building Aesop.Index
-[282/1347] Building Mathlib.Init.Data.Quot
-[282/1347] Building Mathlib.Init.CCLemmas
-[282/1347] Building Mathlib.Init.Propext
-[282/1347] Building Mathlib.Init.Algebra.Classes
-[282/1347] Building Mathlib.Tactic.SplitIfs
-[282/1347] Building Mathlib.Init.Data.Subtype.Basic
-[282/1347] Building Mathlib.Init.Data.Sigma.Basic
-[282/1347] Building Mathlib.Init.Align
-[282/1347] Building Mathlib.Init.Data.Bool.Lemmas
-[282/1347] Building Mathlib.Init.Data.Prod
-[286/1347] Building Mathlib.Init.Data.Sigma.Lex
-[288/1347] Building Mathlib.Init.Function
-[289/1347] Building Mathlib.Tactic.ToLevel
-[289/1347] Building Mathlib.Data.HashMap
-[291/1347] Building Mathlib.Init.IteSimp
-[292/1347] Building Mathlib.Data.Option.Defs
-[294/1347] Building Mathlib.Tactic.DeriveToExpr
-[297/1347] Building Aesop.RuleTac.Basic
-[298/1347] Building Mathlib.Logic.Basic
-[300/1347] Building Aesop.RuleTac.Preprocess
-[300/1347] Building Aesop.RuleTac.Apply
-[300/1347] Building Aesop.RuleTac.Cases
-[300/1347] Building Aesop.RuleTac.RuleApplicationWithMVarInfo
-[300/1347] Building Aesop.RuleTac.Tactic
-[300/1347] Building Aesop.RuleTac.Forward
-[300/1347] Building Aesop.Rule.Basic
-[303/1347] Building Aesop.Rule
-[307/1347] Building Mathlib.Init.Algebra.Order
-[308/1347] Building Aesop.Tree.UnsafeQueue
-[308/1347] Building Aesop.Builder.Basic
-[309/1347] Building Mathlib.Logic.Nonempty
-[309/1347] Building Mathlib.Logic.Relator
-[309/1347] Building Mathlib.Data.Prod.PProd
-[310/1347] Building Aesop.RuleTac
-[311/1347] Building Aesop.Tree.Data
-[312/1347] Building Aesop.Builder.Forward
-[312/1347] Building Aesop.Builder.NormSimp
-[312/1347] Building Aesop.Builder.Apply
-[312/1347] Building Aesop.Builder.Tactic
-[312/1347] Building Aesop.Builder.Unfold
-[312/1347] Building Aesop.Builder.Cases
-[315/1347] Building Mathlib.Tactic.ToExpr
-[317/1347] Building Mathlib.Algebra.NeZero
-[317/1347] Building Mathlib.Init.Algebra.Functions
-[318/1347] Building Mathlib.Tactic.PushNeg
-[318/1347] Building Mathlib.Init.Data.Int.Order
-[319/1347] Building Aesop.Builder.Constructors
-[323/1347] Building Mathlib.Data.Quot
-[325/1347] Building Aesop.Builder.Default
-[327/1347] Building Mathlib.Init.Data.Nat.Lemmas
-[328/1347] Building Mathlib.Tactic.FBinop
-[329/1347] Building Mathlib.Tactic.Lift
-[330/1347] Building Aesop.Builder
-[331/1347] Building Aesop.Tree.Traversal
-[331/1347] Building Aesop.Tree.RunMetaM
-[331/1347] Building Aesop.Profiling
-[332/1347] Building Aesop.RuleSet
-[333/1347] Building Aesop.Tree.State
-[334/1347] Building Aesop.Tree.Tracing
-[334/1347] Building Aesop.Tree.TreeM
-[337/1347] Building Mathlib.Init.Meta.WellFoundedTactics
-[337/1347] Building Mathlib.Init.Data.List.Lemmas
-[337/1347] Building Mathlib.Data.Bool.Basic
-[337/1347] Building Mathlib.Logic.Function.Basic
-[338/1347] Building Mathlib.Tactic.ByContra
-[338/1347] Building Mathlib.Tactic.Contrapose
-[339/1347] Building Aesop.Tree.Free
-[339/1347] Building Aesop.Tree.AddRapp
-[339/1347] Building Aesop.Tree.ExtractScript
-[343/1347] Building Mathlib.Init.Data.List.Instances
-[343/1347] Building Aesop.Tree.Check
-[345/1347] Building Aesop.Tree.ExtractProof
-[346/1347] Building Mathlib.Data.SProd
-[351/1347] Building Mathlib.Init.Data.Nat.Bitwise
-[353/1347] Building Mathlib.Tactic.Choose
-[353/1347] Building Mathlib.Data.Sigma.Basic
-[353/1347] Building Mathlib.Logic.Function.Conjugate
-[353/1347] Building Mathlib.Data.Subtype
-[353/1347] Building Mathlib.Logic.IsEmpty
-[353/1347] Building Mathlib.Data.Sum.Basic
-[356/1347] Building Mathlib.Init.Data.Int.Bitwise
-[356/1347] Building Mathlib.Data.Num.Basic
-[357/1347] Building Aesop.Frontend.Extension.Init
-[357/1347] Building Aesop.Search.Expansion.Simp.Basic
-[357/1347] Building Aesop.Frontend.RuleExpr
-[358/1347] Building Aesop.Tree
-[359/1347] Building Mathlib.Logic.Function.Iterate
-[361/1347] Building Mathlib.Tactic.IrreducibleDef
-[364/1347] Building Aesop.Search.Queue.Class
-[365/1347] Building Aesop.Frontend.Extension
-[366/1347] Building Aesop.Search.Queue
-[368/1347] Building Mathlib.Tactic.Backtracking
-[369/1347] Building Aesop.Search.Expansion.Simp.SimpGoal
-[369/1347] Building Aesop.Search.Expansion.Simp.SimpAll
-[369/1347] Building Aesop.Search.SearchM
-[375/1347] Building Mathlib.Init.Classical
-[376/1347] Building Aesop.Search.Expansion.Basic
-[376/1347] Building Aesop.Search.RuleSelection
-[377/1347] Building Mathlib.Tactic.GCongr.Core
-[377/1347] Building Mathlib.Tactic.SolveByElim
-[378/1347] Building Aesop.Search.Expansion.Simp
-[382/1347] Building Aesop.Search.Expansion.Norm
-[383/1347] Building Aesop.Frontend.Attribute
-[384/1347] Building Mathlib.Tactic.Propose
-[384/1347] Building Mathlib.Tactic.Monotonicity.Basic
-[384/1347] Building Mathlib.Tactic.Tauto
-[384/1347] Building Mathlib.Tactic.Rewrites
-[384/1347] Building Mathlib.Tactic.LibrarySearch
-[385/1347] Building Aesop.Frontend.Command
-[385/1347] Building Aesop.Frontend.Tactic
-[386/1347] Building Aesop.Search.Expansion
-[391/1347] Building Aesop.Frontend
-[392/1347] Building Aesop.BuiltinRules.Intros
-[392/1347] Building Aesop.BuiltinRules.Split
-[392/1347] Building Aesop.BuiltinRules.Assumption
-[392/1347] Building Aesop.BuiltinRules.Subst
-[392/1347] Building Aesop.BuiltinRules.ApplyHyps
-[392/1347] Building Aesop.BuiltinRules.DestructProducts
-[394/1347] Building Mathlib.Tactic.Observe
-[401/1347] Building Aesop.BuiltinRules
-[403/1347] Building Aesop.Search.ExpandSafePrefix
-[405/1347] Building Aesop.Search.Main
-[406/1347] Building Aesop.Main
-[407/1347] Building Aesop
-[408/1347] Building Mathlib.Combinatorics.SimpleGraph.Init
-[408/1347] Building Mathlib.Tactic.Continuity.Init
-[408/1347] Building Mathlib.Data.Sym.Sym2.Init
-[408/1347] Building Mathlib.Tactic.Common
-[412/1347] Building Mathlib.Logic.Unique
-[412/1347] Building Mathlib.Data.Prod.Basic
-[412/1347] Building Mathlib.Algebra.Quotient
-[412/1347] Building Mathlib.Data.Option.Basic
-[412/1347] Building Mathlib.Logic.Relation
-[412/1347] Building Mathlib.Algebra.Group.Defs
-[415/1347] Building Mathlib.Logic.Nontrivial
-[415/1347] Building Mathlib.Order.Basic
-[416/1347] Building Mathlib.Data.Option.NAry
-[417/1347] Building Mathlib.Logic.Pairwise
-[418/1347] Building Mathlib.Tactic.Nontriviality.Core
-[421/1347] Building Mathlib.Control.Applicative
-[421/1347] Building Mathlib.Tactic.Continuity
-[421/1347] Building Mathlib.Data.Nat.Cast.Defs
-[421/1347] Building Mathlib.Data.Pi.Algebra
-[421/1347] Building Mathlib.Algebra.GroupWithZero.Defs
-[421/1347] Building Mathlib.Algebra.Group.Commutator
-[421/1347] Building Mathlib.Algebra.Group.Basic
-[422/1347] Building Mathlib.Tactic.Nontriviality
-[427/1347] Building Mathlib.Tactic.NormCast.Tactic
-[427/1347] Building Mathlib.Data.Int.Cast.Defs
-[429/1347] Building Mathlib.Data.PNat.Defs
-[429/1347] Building Mathlib.Data.Tree
-[429/1347] Building Mathlib.Order.ULift
-[429/1347] Building Mathlib.Order.RelClasses
-[429/1347] Building Mathlib.Algebra.Order.ZeroLEOne
-[436/1347] Building Mathlib.Data.Sigma.Lex
-[436/1347] Building Mathlib.Data.List.Lex
-[437/1347] Building Mathlib.Data.Int.Cast.Basic
-[437/1347] Building Mathlib.Algebra.Group.Units
-[437/1347] Building Mathlib.Algebra.Ring.Defs
-[438/1347] Building Mathlib.Tactic.NormCast
-[438/1347] Building Mathlib.Algebra.CharZero.Defs
-[441/1347] Building Mathlib.Algebra.Group.InjSurj
-[442/1347] Building Mathlib.Data.FunLike.Basic
-[444/1347] Building Mathlib.Data.FunLike.Embedding
-[444/1347] Building Mathlib.Algebra.Hom.Group
-[445/1347] Building Mathlib.Algebra.Field.Defs
-[446/1347] Building Mathlib.Data.FunLike.Equiv
-[447/1347] Building Mathlib.Algebra.Group.Semiconj
-[448/1347] Building Mathlib.Logic.Equiv.Defs
-[450/1347] Building Mathlib.Algebra.Ring.Semiconj
-[450/1347] Building Mathlib.Algebra.Group.Commute
-[451/1347] Building Mathlib.Algebra.GroupWithZero.InjSurj
-[455/1347] Building Mathlib.Control.EquivFunctor
-[455/1347] Building Mathlib.Order.Synonym
-[455/1347] Building Mathlib.Control.Monad.Basic
-[455/1347] Building Mathlib.Algebra.Opposites
-[455/1347] Building Mathlib.Logic.Equiv.Basic
-[457/1347] Building Mathlib.Order.Compare
-[457/1347] Building Mathlib.Order.Max
-[457/1347] Building Mathlib.Algebra.Group.OrderSynonym
-[458/1347] Building Mathlib.Logic.Equiv.Option
-[459/1347] Building Mathlib.Algebra.Ring.InjSurj
-[461/1347] Building Mathlib.Order.Monotone.Basic
-[462/1347] Building Mathlib.Algebra.GroupWithZero.Basic
-[463/1347] Building Mathlib.Algebra.Hom.Commute
-[463/1347] Building Mathlib.Algebra.Ring.Basic
-[463/1347] Building Mathlib.Algebra.Hom.Units
-[463/1347] Building Mathlib.Algebra.Divisibility.Basic
-[466/1347] Building Mathlib.Algebra.GroupWithZero.Units.Basic
-[466/1347] Building Mathlib.Data.Nat.Basic
-[466/1347] Building Mathlib.Algebra.Ring.Units
-[468/1347] Building Mathlib.Algebra.Divisibility.Units
-[468/1347] Building Mathlib.Algebra.EuclideanDomain.Defs
-[470/1347] Building Mathlib.Tactic.ApplyFun
-[470/1347] Building Mathlib.Order.Iterate
-[470/1347] Building Mathlib.Data.Int.Basic
-[470/1347] Building Mathlib.Algebra.CovariantAndContravariant
-[470/1347] Building Mathlib.Order.Lattice
-[471/1347] Building Mathlib.Algebra.Ring.Commute
-[472/1347] Building Mathlib.Data.ULift
-[472/1347] Building Mathlib.Logic.Embedding.Basic
-[472/1347] Building Mathlib.Algebra.Hom.Equiv.Basic
-[472/1347] Building Mathlib.Data.Finite.Defs
-[473/1347] Building Mathlib.Algebra.GroupWithZero.Semiconj
-[474/1347] Building Mathlib.Algebra.GroupWithZero.Divisibility
-[479/1347] Building Mathlib.Tactic.Zify
-[479/1347] Building Mathlib.Algebra.Order.Ring.Lemmas
-[481/1347] Building Mathlib.Algebra.Group.TypeTags
-[481/1347] Building Mathlib.Data.Countable.Defs
-[483/1347] Building Mathlib.Algebra.GroupWithZero.Commute
-[486/1347] Building Mathlib.Data.Nat.Bits
-[486/1347] Building Mathlib.Data.Nat.Units
-[486/1347] Building Mathlib.Data.List.Defs
-[490/1347] Building Mathlib.Algebra.Hom.Embedding
-[490/1347] Building Mathlib.Order.RelIso.Basic
-[491/1347] Building Mathlib.Data.Int.Units
-[493/1347] Building Mathlib.Order.BoundedOrder
-[493/1347] Building Mathlib.Order.MinMax
-[495/1347] Building Mathlib.Control.Traversable.Basic
-[496/1347] Building Mathlib.Algebra.GroupPower.Basic
-[496/1347] Building Mathlib.GroupTheory.GroupAction.Defs
-[498/1347] Building Mathlib.Algebra.Group.ULift
-[498/1347] Building Mathlib.Algebra.Ring.Divisibility
-[498/1347] Building Mathlib.Algebra.Group.Opposite
-[498/1347] Building Mathlib.Algebra.Hom.Equiv.Units.Basic
-[501/1347] Building Mathlib.Algebra.Order.Monoid.Lemmas
-[503/1347] Building Mathlib.Data.Prod.Lex
-[503/1347] Building Mathlib.Order.Disjoint
-[503/1347] Building Mathlib.Order.WithBot
-[505/1347] Building Mathlib.Algebra.Hom.Equiv.Units.GroupWithZero
-[509/1347] Building Mathlib.Algebra.Ring.Idempotents
-[509/1347] Building Mathlib.Algebra.Hom.GroupInstances
-[510/1347] Building Mathlib.GroupTheory.GroupAction.Units
-[513/1347] Building Mathlib.Algebra.Order.Monoid.Defs
-[513/1347] Building Mathlib.Algebra.Order.Monoid.MinMax
-[513/1347] Building Mathlib.Algebra.Regular.Basic
-[513/1347] Building Mathlib.Algebra.Order.Sub.Defs
-[513/1347] Building Mathlib.Algebra.Order.Monoid.NatCast
-[514/1347] Building Mathlib.GroupTheory.GroupAction.Opposite
-[514/1347] Building Mathlib.Algebra.Group.Prod
-[515/1347] Building Mathlib.Algebra.GroupWithZero.Units.Lemmas
-[516/1347] Building Mathlib.Algebra.Order.Monoid.Cancel.Defs
-[516/1347] Building Mathlib.Algebra.Order.Monoid.Canonical.Defs
-[518/1347] Building Mathlib.Order.PropInstances
-[518/1347] Building Mathlib.Algebra.Group.WithOne.Defs
-[518/1347] Building Mathlib.Order.Hom.Basic
-[521/1347] Building Mathlib.Algebra.Ring.Regular
-[522/1347] Building Mathlib.Algebra.Invertible
-[523/1347] Building Mathlib.Algebra.Order.Monoid.OrderDual
-[524/1347] Building Mathlib.Order.Heyting.Basic
-[526/1347] Building Mathlib.Algebra.EuclideanDomain.Basic
-[528/1347] Building Mathlib.Algebra.Order.Monoid.TypeTags
-[528/1347] Building Mathlib.Algebra.Order.Sub.Canonical
-[530/1347] Building Mathlib.Algebra.Order.Monoid.WithZero.Defs
-[533/1347] Building Mathlib.Algebra.Order.Monoid.WithZero.Basic
-[534/1347] Building Mathlib.GroupTheory.GroupAction.Prod
-[534/1347] Building Mathlib.Algebra.Order.Monoid.Prod
-[536/1347] Building Mathlib.Algebra.Order.Monoid.WithTop
-[538/1347] Building Mathlib.Algebra.Order.Monoid.Basic
-[538/1347] Building Mathlib.Data.Sum.Order
-[538/1347] Building Mathlib.Order.Antisymmetrization
-[538/1347] Building Mathlib.Algebra.Order.Group.Defs
-[538/1347] Building Mathlib.Algebra.Order.Monoid.Units
-[538/1347] Building Mathlib.Order.Hom.Bounded
-[542/1347] Building Mathlib.Algebra.Order.Monoid.Cancel.Basic
-[544/1347] Building Mathlib.Order.BooleanAlgebra
-[546/1347] Building Mathlib.Algebra.Order.Sub.WithTop
-[546/1347] Building Mathlib.Data.Nat.Cast.WithTop
-[551/1347] Building Mathlib.Algebra.Order.Group.OrderIso
-[551/1347] Building Mathlib.Algebra.Order.Group.Instances
-[551/1347] Building Mathlib.Algebra.Order.Ring.Defs
-[551/1347] Building Mathlib.Algebra.Order.Group.Units
-[552/1347] Building Mathlib.Order.SymmDiff
-[554/1347] Building Mathlib.Algebra.Order.Group.Prod
-[554/1347] Building Mathlib.Algebra.Order.Group.TypeTags
-[554/1347] Building Mathlib.Algebra.Order.Group.InjSurj
-[554/1347] Building Mathlib.Algebra.Order.WithZero
-[555/1347] Building Mathlib.Algebra.Order.Group.Abs
-[560/1347] Building Mathlib.Algebra.Order.Group.MinMax
-[561/1347] Building Mathlib.Order.Hom.Lattice
-[561/1347] Building Mathlib.Data.Set.Basic
-[563/1347] Building Mathlib.Algebra.Order.Field.Defs
-[563/1347] Building Mathlib.Algebra.Order.Ring.CharZero
-[563/1347] Building Mathlib.Algebra.Order.Ring.Abs
-[563/1347] Building Mathlib.Algebra.Order.Positive.Ring
-[563/1347] Building Mathlib.Algebra.Order.Ring.InjSurj
-[563/1347] Building Mathlib.Algebra.Order.Ring.Canonical
-[564/1347] Building Mathlib.Data.Int.Order.Basic
-[566/1347] Building Mathlib.Data.Nat.Order.Basic
-[567/1347] Building Mathlib.Algebra.Order.Field.Canonical.Defs
-[570/1347] Building Mathlib.Algebra.Order.Field.Canonical.Basic
-[571/1347] Building Mathlib.Data.Int.LeastGreatest
-[571/1347] Building Mathlib.Data.Int.Order.Lemmas
-[576/1347] Building Mathlib.Order.Circular
-[576/1347] Building Mathlib.Data.PEquiv
-[576/1347] Building Mathlib.Data.SetLike.Basic
-[576/1347] Building Mathlib.Data.Part
-[576/1347] Building Mathlib.Data.Set.Image
-[577/1347] Building Mathlib.Data.Vector
-[577/1347] Building Mathlib.Algebra.EuclideanDomain.Instances
-[577/1347] Building Mathlib.Data.Nat.Order.Lemmas
-[577/1347] Building Mathlib.Data.Nat.WithBot
-[577/1347] Building Mathlib.Data.PNat.Basic
-[577/1347] Building Mathlib.Data.List.Basic
-[584/1347] Building Mathlib.Data.Nat.GCD.Basic
-[588/1347] Building Mathlib.Data.Bool.Set
-[588/1347] Building Mathlib.Data.Nat.Set
-[588/1347] Building Mathlib.Data.Set.BoolIndicator
-[588/1347] Building Mathlib.Data.Set.Sigma
-[588/1347] Building Mathlib.Algebra.Hom.Ring
-[588/1347] Building Mathlib.Order.WellFounded
-[588/1347] Building Mathlib.Logic.Embedding.Set
-[588/1347] Building Mathlib.Data.Set.Prod
-[593/1347] Building Mathlib.Order.RelIso.Set
-[596/1347] Building Mathlib.Algebra.Ring.Opposite
-[596/1347] Building Mathlib.Algebra.Field.Basic
-[596/1347] Building Mathlib.Algebra.GroupPower.Ring
-[596/1347] Building Mathlib.Data.Nat.Cast.Basic
-[596/1347] Building Mathlib.Algebra.Order.Ring.WithTop
-[597/1347] Building Mathlib.Data.Set.NAry
-[597/1347] Building Mathlib.Data.Set.Function
-[597/1347] Building Mathlib.Data.Set.Intervals.Basic
-[599/1347] Building Mathlib.Algebra.SMulWithZero
-[600/1347] Building Mathlib.Data.Int.Cast.Lemmas
-[600/1347] Building Mathlib.Data.Int.Dvd.Basic
-[600/1347] Building Mathlib.Algebra.Order.Invertible
-[600/1347] Building Mathlib.Data.Nat.Cast.Prod
-[601/1347] Building Mathlib.Algebra.Order.Field.InjSurj
-[605/1347] Building Mathlib.Data.Int.Div
-[605/1347] Building Mathlib.Data.Rat.Defs
-[606/1347] Building Mathlib.Algebra.Regular.SMul
-[608/1347] Building Mathlib.Logic.Equiv.LocalEquiv
-[608/1347] Building Mathlib.Algebra.Group.Pi
-[608/1347] Building Mathlib.Data.Set.Pairwise.Basic
-[608/1347] Building Mathlib.Logic.Equiv.Set
-[610/1347] Building Mathlib.Data.List.Infix
-[610/1347] Building Mathlib.Data.List.TFAE
-[610/1347] Building Mathlib.Data.List.MinMax
-[610/1347] Building Mathlib.Data.List.Palindrome
-[612/1347] Building Mathlib.Algebra.Field.Opposite
-[612/1347] Building Mathlib.Data.Int.Cast.Field
-[612/1347] Building Mathlib.Data.Int.Cast.Prod
-[616/1347] Building Mathlib.Data.Rat.Lemmas
-[616/1347] Building Mathlib.Data.Rat.Basic
-[617/1347] Building Mathlib.Data.Int.CharZero
-[621/1347] Building Mathlib.Data.List.Forall2
-[622/1347] Building Mathlib.Order.Bounded
-[622/1347] Building Mathlib.Data.Set.Intervals.Image
-[622/1347] Building Mathlib.Data.Set.Intervals.WithBotTop
-[622/1347] Building Mathlib.Data.Set.Intervals.Monoid
-[622/1347] Building Mathlib.Algebra.GroupPower.Order
-[622/1347] Building Mathlib.Order.Bounds.Basic
-[623/1347] Building Mathlib.Data.Rat.Order
-[625/1347] Building Mathlib.Logic.Small.Basic
-[625/1347] Building Mathlib.Order.InitialSeg
-[625/1347] Building Mathlib.Algebra.Ring.Equiv
-[625/1347] Building Mathlib.Order.Hom.Set
-[627/1347] Building Mathlib.GroupTheory.GroupAction.Pi
-[627/1347] Building Mathlib.Algebra.Ring.Pi
-[627/1347] Building Mathlib.Data.Pi.Lex
-[634/1347] Building Mathlib.Data.Set.Intervals.OrderIso
-[634/1347] Building Mathlib.Data.Fin.Basic
-[642/1347] Building Mathlib.Data.List.BigOperators.Basic
-[643/1347] Building Mathlib.Order.Bounds.OrderIso
-[643/1347] Building Mathlib.Order.LatticeIntervals
-[643/1347] Building Mathlib.Order.Directed
-[643/1347] Building Mathlib.Data.Set.Intervals.UnorderedInterval
-[643/1347] Building Mathlib.Algebra.Order.Group.Bounds
-[643/1347] Building Mathlib.Order.CompleteLattice
-[645/1347] Building Mathlib.Algebra.Ring.ULift
-[645/1347] Building Mathlib.Algebra.Ring.CompTypeclasses
-[645/1347] Building Mathlib.Algebra.Ring.Prod
-[648/1347] Building Mathlib.Order.Antichain
-[650/1347] Building Mathlib.Data.Set.Intervals.Instances
-[650/1347] Building Mathlib.Data.Int.Order.Units
-[650/1347] Building Mathlib.Data.Nat.Pow
-[650/1347] Building Mathlib.Algebra.Order.Field.Basic
-[650/1347] Building Mathlib.Tactic.Linarith.Lemmas
-[658/1347] Building Mathlib.Data.Nat.MaxPowDiv
-[658/1347] Building Mathlib.Data.Nat.Factorial.Basic
-[658/1347] Building Mathlib.Data.Nat.Log
-[658/1347] Building Mathlib.Data.Nat.Size
-[658/1347] Building Mathlib.Algebra.GroupPower.Lemmas
-[658/1347] Building Mathlib.Data.List.Count
-[658/1347] Building Mathlib.Algebra.FreeMonoid.Basic
-[658/1347] Building Mathlib.Data.List.Zip
-[658/1347] Building Mathlib.Data.List.BigOperators.Lemmas
-[658/1347] Building Mathlib.Data.List.Join
-[659/1347] Building Mathlib.Data.Set.List
-[659/1347] Building Mathlib.Data.Fin.Tuple.Basic
-[662/1347] Building Mathlib.Data.Nat.ForSqrt
-[662/1347] Building Mathlib.Data.Int.Bitwise
-[663/1347] Building Mathlib.Data.List.Permutation
-[664/1347] Building Mathlib.Order.CompleteBooleanAlgebra
-[664/1347] Building Mathlib.Order.GaloisConnection
-[668/1347] Building Mathlib.Data.Nat.Choose.Basic
-[669/1347] Building Mathlib.Data.List.Lattice
-[669/1347] Building Mathlib.Data.List.Pairwise
-[672/1347] Building Mathlib.Data.Nat.Sqrt
-[674/1347] Building Mathlib.Data.List.Nodup
-[674/1347] Building Mathlib.Data.List.Chain
-[677/1347] Building Mathlib.Data.Int.Lemmas
-[677/1347] Building Mathlib.Data.Int.Sqrt
-[678/1347] Building Mathlib.Data.Rel
-[678/1347] Building Mathlib.Data.Setoid.Basic
-[678/1347] Building Mathlib.Order.Hom.Order
-[679/1347] Building Mathlib.Data.List.OfFn
-[681/1347] Building Mathlib.Data.Nat.Cast.Field
-[682/1347] Building Mathlib.Data.Rat.Sqrt
-[684/1347] Building Mathlib.Order.OmegaCompletePartialOrder
-[689/1347] Building Mathlib.Data.List.Range
-[690/1347] Building Mathlib.Data.List.Duplicate
-[690/1347] Building Mathlib.Data.List.Dedup
-[691/1347] Building Mathlib.Data.Set.Lattice
-[692/1347] Building Mathlib.Data.List.Intervals
-[692/1347] Building Mathlib.Data.Fin.VecNotation
-[692/1347] Building Mathlib.Data.List.NatAntidiagonal
-[694/1347] Building Mathlib.Data.List.Perm
-[695/1347] Building Mathlib.Data.List.Indexes
-[695/1347] Building Mathlib.Data.Vector.Basic
-[699/1347] Building Mathlib.Algebra.GroupWithZero.Power
-[699/1347] Building Mathlib.Algebra.Hom.Iterate
-[699/1347] Building Mathlib.Data.Set.Intervals.Group
-[699/1347] Building Mathlib.Algebra.Parity
-[699/1347] Building Mathlib.Algebra.CharZero.Lemmas
-[699/1347] Building Mathlib.Data.Int.GCD
-[701/1347] Building Mathlib.Logic.Equiv.Fin
-[705/1347] Building Mathlib.GroupTheory.Perm.Basic
-[706/1347] Building Mathlib.Data.Rat.Cast
-[707/1347] Building Mathlib.Algebra.Associated
-[707/1347] Building Mathlib.Algebra.Order.Field.Power
-[709/1347] Building Mathlib.Algebra.Ring.Fin
-[711/1347] Building Mathlib.Data.Set.Intervals.Pi
-[711/1347] Building Mathlib.Order.Chain
-[711/1347] Building Mathlib.Data.Set.Accumulate
-[711/1347] Building Mathlib.Order.Hom.CompleteLattice
-[711/1347] Building Mathlib.Data.Nat.Pairing
-[711/1347] Building Mathlib.Tactic.Monotonicity.Lemmas
-[711/1347] Building Mathlib.Data.Set.Intervals.Disjoint
-[711/1347] Building Mathlib.Data.Set.Functor
-[711/1347] Building Mathlib.Data.Set.Pairwise.Lattice
-[711/1347] Building Mathlib.Data.Set.Intervals.OrdConnected
-[711/1347] Building Mathlib.Data.Set.Pointwise.Basic
-[711/1347] Building Mathlib.GroupTheory.Subsemigroup.Basic
-[711/1347] Building Mathlib.Data.Set.UnionLift
-[711/1347] Building Mathlib.Order.ConditionallyCompleteLattice.Basic
-[714/1347] Building Mathlib.Tactic.Monotonicity
-[714/1347] Building Mathlib.Data.List.FinRange
-[714/1347] Building Mathlib.Data.List.Sublists
-[714/1347] Building Mathlib.Data.List.Sort
-[714/1347] Building Mathlib.Data.List.Rotate
-[714/1347] Building Mathlib.Data.Multiset.Basic
-[715/1347] Building Mathlib.Control.Traversable.Instances
-[719/1347] Building Mathlib.Data.Set.Intervals.OrdConnectedComponent
-[719/1347] Building Mathlib.Data.Set.Intervals.ProjIcc
-[719/1347] Building Mathlib.Order.Cover
-[719/1347] Building Mathlib.Order.UpperLower.Basic
-[720/1347] Building Mathlib.Order.Zorn
-[722/1347] Building Mathlib.Tactic.NormNum.Core
-[724/1347] Building Mathlib.Logic.Equiv.Nat
-[726/1347] Building Mathlib.GroupTheory.Submonoid.Basic
-[726/1347] Building Mathlib.GroupTheory.Subsemigroup.Operations
-[728/1347] Building Mathlib.Data.Countable.Basic
-[728/1347] Building Mathlib.Logic.Encodable.Basic
-[732/1347] Building Mathlib.Algebra.Order.Kleene
-[733/1347] Building Mathlib.Order.ModularLattice
-[733/1347] Building Mathlib.Order.SuccPred.Basic
-[736/1347] Building Mathlib.Algebra.Hom.Aut
-[736/1347] Building Mathlib.Dynamics.FixedPoints.Basic
-[737/1347] Building Mathlib.Data.List.NodupEquivFin
-[740/1347] Building Mathlib.GroupTheory.Submonoid.ZeroDivisors
-[741/1347] Building Mathlib.Logic.Encodable.Lattice
-[742/1347] Building Mathlib.Order.FixedPoints
-[743/1347] Building Mathlib.Order.Copy
-[743/1347] Building Mathlib.Order.ConditionallyCompleteLattice.Group
-[743/1347] Building Mathlib.Order.CompleteLatticeIntervals
-[744/1347] Building Mathlib.Data.Set.Pointwise.ListOfFn
-[744/1347] Building Mathlib.Data.Set.Pointwise.Interval
-[744/1347] Building Mathlib.Algebra.Bounds
-[745/1347] Building Mathlib.Order.Atoms
-[750/1347] Building Mathlib.GroupTheory.GroupAction.Group
-[750/1347] Building Mathlib.Algebra.Group.Conj
-[752/1347] Building Mathlib.GroupTheory.Subsemigroup.Center
-[752/1347] Building Mathlib.GroupTheory.Submonoid.Operations
-[754/1347] Building Mathlib.Algebra.Order.Nonneg.Ring
-[754/1347] Building Mathlib.Data.List.Prime
-[754/1347] Building Mathlib.Algebra.GCDMonoid.Basic
-[754/1347] Building Mathlib.Data.Nat.Prime
-[757/1347] Building Mathlib.SetTheory.Cardinal.SchroederBernstein
-[758/1347] Building Mathlib.Data.Nat.SuccPred
-[758/1347] Building Mathlib.Order.SuccPred.Relation
-[758/1347] Building Mathlib.Order.SuccPred.Limit
-[759/1347] Building Mathlib.Order.Minimal
-[760/1347] Building Mathlib.Tactic.FieldSimp
-[760/1347] Building Mathlib.Tactic.Positivity.Core
-[760/1347] Building Mathlib.Tactic.NormNum.Basic
-[762/1347] Building Mathlib.GroupTheory.Subsemigroup.Centralizer
-[765/1347] Building Mathlib.Data.Int.SuccPred
-[765/1347] Building Mathlib.Data.ENat.Basic
-[772/1347] Building Mathlib.Algebra.GroupRingAction.Basic
-[774/1347] Building Mathlib.Data.Nat.Factors
-[774/1347] Building Mathlib.Data.PNat.Prime
-[775/1347] Building Mathlib.Order.ZornAtoms
-[777/1347] Building Mathlib.Algebra.Ring.Aut
-[780/1347] Building Mathlib.Tactic.Positivity.Basic
-[781/1347] Building Mathlib.Algebra.Order.Nonneg.Field
-[782/1347] Building Mathlib.Algebra.Star.Basic
-[783/1347] Building Mathlib.Data.Multiset.Sort
-[783/1347] Building Mathlib.Data.Multiset.Range
-[783/1347] Building Mathlib.Algebra.BigOperators.Multiset.Basic
-[783/1347] Building Mathlib.Data.Sym.Basic
-[787/1347] Building Mathlib.GroupTheory.Submonoid.Center
-[787/1347] Building Mathlib.GroupTheory.Congruence
-[788/1347] Building Mathlib.Algebra.Star.Unitary
-[788/1347] Building Mathlib.Algebra.Star.Order
-[788/1347] Building Mathlib.Algebra.Star.Pi
-[793/1347] Building Mathlib.GroupTheory.Submonoid.Centralizer
-[796/1347] Building Mathlib.Algebra.BigOperators.Multiset.Lemmas
-[796/1347] Building Mathlib.Data.Multiset.Bind
-[800/1347] Building Mathlib.Algebra.Order.Hom.Basic
-[801/1347] Building Mathlib.Data.Multiset.Nodup
-[802/1347] Building Mathlib.Data.Multiset.Pi
-[802/1347] Building Mathlib.Data.Multiset.Sum
-[802/1347] Building Mathlib.Data.Multiset.NatAntidiagonal
-[802/1347] Building Mathlib.Data.Multiset.Powerset
-[802/1347] Building Mathlib.Data.Multiset.Dedup
-[803/1347] Building Mathlib.RingTheory.Congruence
-[804/1347] Building Mathlib.Algebra.Order.AbsoluteValue
-[807/1347] Building Mathlib.Data.Multiset.Fold
-[807/1347] Building Mathlib.Data.Multiset.FinsetOps
-[809/1347] Building Mathlib.Data.Multiset.Antidiagonal
-[811/1347] Building Mathlib.Algebra.GCDMonoid.Multiset
-[811/1347] Building Mathlib.Data.Multiset.Lattice
-[811/1347] Building Mathlib.Data.Finset.Basic
-[814/1347] Building Mathlib.Tactic.NormNum
-[814/1347] Building Mathlib.Tactic.Positivity
-[818/1347] Building Mathlib.Util.AtomM
-[818/1347] Building Mathlib.Data.Nat.ModEq
-[818/1347] Building Mathlib.Tactic.NormNum.GCD
-[818/1347] Building Mathlib.Tactic.CancelDenoms
-[819/1347] Building Mathlib.Algebra.Order.Pi
-[819/1347] Building Mathlib.Tactic.GCongr
-[821/1347] Building Mathlib.Tactic.TFAE
-[821/1347] Building Mathlib.Tactic.Abel
-[821/1347] Building Mathlib.Tactic.Ring.Basic
-[824/1347] Building Mathlib.Data.Nat.Parity
-[828/1347] Building Mathlib.Data.Int.Parity
-[828/1347] Building Mathlib.Algebra.Module.Basic
-[830/1347] Building Mathlib.Data.Finset.Order
-[830/1347] Building Mathlib.Data.Finset.Image
-[832/1347] Building Mathlib.Data.Finset.Pi
-[832/1347] Building Mathlib.Data.Finset.Fold
-[832/1347] Building Mathlib.Data.Finset.Card
-[832/1347] Building Mathlib.Data.Fintype.Basic
-[833/1347] Building Mathlib.Algebra.Module.Prod
-[833/1347] Building Mathlib.Algebra.Ring.AddAut
-[833/1347] Building Mathlib.Algebra.Module.Pi
-[833/1347] Building Mathlib.Algebra.Hom.GroupAction
-[833/1347] Building Mathlib.Algebra.PUnitInstances
-[833/1347] Building Mathlib.Data.Set.Pointwise.SMul
-[833/1347] Building Mathlib.GroupTheory.Subgroup.Basic
-[836/1347] Building Mathlib.Algebra.Star.Prod
-[838/1347] Building Mathlib.Algebra.Module.Hom
-[840/1347] Building Mathlib.Algebra.GCDMonoid.Finset
-[841/1347] Building Mathlib.Data.Finset.Sum
-[841/1347] Building Mathlib.Data.Finset.Option
-[841/1347] Building Mathlib.Data.Finset.NatAntidiagonal
-[841/1347] Building Mathlib.Data.Finset.Prod
-[841/1347] Building Mathlib.Data.Finset.Fin
-[846/1347] Building Mathlib.Tactic.Ring.RingNF
-[848/1347] Building Mathlib.Data.Fintype.Pi
-[848/1347] Building Mathlib.Tactic.FinCases
-[848/1347] Building Mathlib.Data.Matrix.DMatrix
-[848/1347] Building Mathlib.Data.Fintype.Card
-[848/1347] Building Mathlib.GroupTheory.Perm.Support
-[850/1347] Building Mathlib.Tactic.IntervalCases
-[851/1347] Building Mathlib.Data.Fintype.Vector
-[852/1347] Building Mathlib.Algebra.AddTorsor
-[852/1347] Building Mathlib.Data.Set.Semiring
-[852/1347] Building Mathlib.Algebra.Order.SMul
-[853/1347] Building Mathlib.Data.Sym.Sym2
-[853/1347] Building Mathlib.Data.Finset.Lattice
-[855/1347] Building Mathlib.Algebra.Module.LinearMap
-[857/1347] Building Mathlib.Tactic.Ring
-[858/1347] Building Mathlib.Data.Fintype.Prod
-[858/1347] Building Mathlib.Algebra.CharZero.Infinite
-[858/1347] Building Mathlib.Data.Finite.Set
-[858/1347] Building Mathlib.Data.Fintype.Sum
-[858/1347] Building Mathlib.Data.Fintype.Option
-[859/1347] Building Mathlib.Data.Fintype.Perm
-[859/1347] Building Mathlib.Tactic.Linarith.Datatypes
-[859/1347] Building Mathlib.Data.Int.ModEq
-[859/1347] Building Mathlib.Tactic.Group
-[859/1347] Building Mathlib.Algebra.GroupPower.Identities
-[859/1347] Building Mathlib.Data.Real.CauSeq
-[859/1347] Building Mathlib.Tactic.LinearCombination
-[859/1347] Building Mathlib.RingTheory.Coprime.Basic
-[861/1347] Building Mathlib.LinearAlgebra.AffineSpace.Basic
-[867/1347] Building Mathlib.GroupTheory.Perm.List
-[871/1347] Building Mathlib.Algebra.Order.Module
-[874/1347] Building Mathlib.Tactic.Linarith.Parsing
-[874/1347] Building Mathlib.Tactic.Linarith.Elimination
-[874/1347] Building Mathlib.Tactic.Linarith.Preprocessing
-[880/1347] Building Mathlib.Tactic.Linarith.Verification
-[883/1347] Building Mathlib.Data.Fintype.Lattice
-[883/1347] Building Mathlib.Data.Finset.Pairwise
-[883/1347] Building Mathlib.Data.Finset.Powerset
-[883/1347] Building Mathlib.Data.Finset.Sigma
-[884/1347] Building Mathlib.Data.ZMod.Defs
-[884/1347] Building Mathlib.Data.Finset.Sort
-[884/1347] Building Mathlib.Logic.Denumerable
-[886/1347] Building Mathlib.Data.Fintype.Sigma
-[886/1347] Building Mathlib.Algebra.BigOperators.Basic
-[887/1347] Building Mathlib.Data.Real.CauSeqCompletion
-[888/1347] Building Mathlib.Data.Fintype.Powerset
-[888/1347] Building Mathlib.Data.Fintype.List
-[888/1347] Building Mathlib.Order.SupIndep
-[890/1347] Building Mathlib.Data.Fintype.Sort
-[891/1347] Building Mathlib.Data.List.Cycle
-[892/1347] Building Mathlib.Data.Finite.Basic
-[894/1347] Building Mathlib.Logic.Equiv.List
-[896/1347] Building Mathlib.Data.Set.Finite
-[900/1347] Building Mathlib.Algebra.Module.Equiv
-[901/1347] Building Mathlib.Tactic.Linarith.Frontend
-[902/1347] Building Mathlib.GroupTheory.Subgroup.Actions
-[902/1347] Building Mathlib.GroupTheory.Subgroup.ZPowers
-[902/1347] Building Mathlib.Algebra.Star.SelfAdjoint
-[902/1347] Building Mathlib.Algebra.GroupRingAction.Subobjects
-[902/1347] Building Mathlib.GroupTheory.GroupAction.Basic
-[904/1347] Building Mathlib.Dynamics.PeriodicPts
-[905/1347] Building Mathlib.Tactic.Linarith
-[907/1347] Building Mathlib.GroupTheory.Subgroup.MulOpposite
-[909/1347] Building Mathlib.Data.Nat.Bitwise
-[909/1347] Building Mathlib.Algebra.Order.Floor
-[910/1347] Building Mathlib.Data.Set.Pointwise.Finite
-[910/1347] Building Mathlib.Data.Nat.PrimeFin
-[910/1347] Building Mathlib.Data.Set.Intervals.Infinite
-[910/1347] Building Mathlib.Algebra.Star.Pointwise
-[910/1347] Building Mathlib.Order.ConditionallyCompleteLattice.Finset
-[910/1347] Building Mathlib.Data.Set.Countable
-[910/1347] Building Mathlib.Data.Finset.NAry
-[910/1347] Building Mathlib.Order.Filter.Basic
-[910/1347] Building Mathlib.Combinatorics.SimpleGraph.Basic
-[912/1347] Building Mathlib.GroupTheory.GroupAction.SubMulAction
-[912/1347] Building Mathlib.GroupTheory.Coset
-[912/1347] Building Mathlib.GroupTheory.GroupAction.ConjAct
-[916/1347] Building Mathlib.Algebra.Star.Center
-[917/1347] Building Mathlib.Order.PartialSups
-[926/1347] Building Mathlib.GroupTheory.GroupAction.SubMulAction.Pointwise
-[927/1347] Building Mathlib.LinearAlgebra.GeneralLinearGroup
-[927/1347] Building Mathlib.Algebra.Module.Opposites
-[927/1347] Building Mathlib.Algebra.Module.ULift
-[930/1347] Building Mathlib.Algebra.BigOperators.NatAntidiagonal
-[930/1347] Building Mathlib.Algebra.Regular.Pow
-[930/1347] Building Mathlib.Algebra.BigOperators.RingEquiv
-[930/1347] Building Mathlib.Algebra.BigOperators.Option
-[930/1347] Building Mathlib.Data.Set.Pointwise.BigOperators
-[930/1347] Building Mathlib.Algebra.BigOperators.Pi
-[930/1347] Building Mathlib.Algebra.Support
-[930/1347] Building Mathlib.Data.Finset.NoncommProd
-[930/1347] Building Mathlib.Algebra.Star.BigOperators
-[930/1347] Building Mathlib.GroupTheory.GroupAction.BigOperators
-[930/1347] Building Mathlib.Algebra.BigOperators.Ring
-[930/1347] Building Mathlib.Data.Nat.Fib
-[930/1347] Building Mathlib.Data.Finset.Preimage
-[930/1347] Building Mathlib.Data.Rat.BigOperators
-[930/1347] Building Mathlib.Algebra.BigOperators.Order
-[936/1347] Building Mathlib.Algebra.Module.BigOperators
-[938/1347] Building Mathlib.Order.LocallyFinite
-[938/1347] Building Mathlib.Data.Finset.Pointwise
-[945/1347] Building Mathlib.Algebra.IndicatorFunction
-[946/1347] Building Mathlib.Data.Rat.Floor
-[946/1347] Building Mathlib.Data.Int.Log
-[947/1347] Building Mathlib.Order.Filter.CountableInter
-[947/1347] Building Mathlib.Order.Filter.Prod
-[947/1347] Building Mathlib.Order.Filter.Extr
-[948/1347] Building Mathlib.RingTheory.Coprime.Lemmas
-[948/1347] Building Mathlib.Data.Fintype.BigOperators
-[950/1347] Building Mathlib.GroupTheory.Submonoid.Membership
-[953/1347] Building Mathlib.Algebra.Order.Archimedean
-[957/1347] Building Mathlib.Data.Sign
-[959/1347] Building Mathlib.Order.Filter.NAry
-[959/1347] Building Mathlib.Order.Filter.Bases
-[960/1347] Building Mathlib.Data.Finset.LocallyFinite
-[961/1347] Building Mathlib.Data.Finsupp.Defs
-[961/1347] Building Mathlib.Algebra.BigOperators.Finprod
-[963/1347] Building Mathlib.Data.Real.Basic
-[963/1347] Building Mathlib.Algebra.Order.Nonneg.Floor
-[963/1347] Building Mathlib.GroupTheory.Archimedean
-[965/1347] Building Mathlib.Algebra.Periodic
-[965/1347] Building Mathlib.RingTheory.NonZeroDivisors
-[965/1347] Building Mathlib.GroupTheory.Subgroup.Finite
-[965/1347] Building Mathlib.Algebra.Module.Submodule.Basic
-[965/1347] Building Mathlib.RingTheory.Subsemiring.Basic
-[965/1347] Building Mathlib.Data.DFinsupp.Basic
-[965/1347] Building Mathlib.GroupTheory.MonoidLocalization
-[968/1347] Building Mathlib.Order.Filter.Pi
-[968/1347] Building Mathlib.Order.Filter.Lift
-[968/1347] Building Mathlib.Order.Filter.AtTopBot
-[969/1347] Building Mathlib.Data.Nat.Interval
-[969/1347] Building Mathlib.Data.Int.Interval
-[971/1347] Building Mathlib.GroupTheory.Perm.Subgroup
-[971/1347] Building Mathlib.GroupTheory.Commutator
-[976/1347] Building Mathlib.Data.Nat.Lattice
-[976/1347] Building Mathlib.NumberTheory.Divisors
-[976/1347] Building Mathlib.Data.Fin.Interval
-[976/1347] Building Mathlib.Algebra.BigOperators.Intervals
-[980/1347] Building Mathlib.Data.Finsupp.Fin
-[980/1347] Building Mathlib.Data.Finsupp.Indicator
-[980/1347] Building Mathlib.Data.Finsupp.Order
-[983/1347] Building Mathlib.Order.OrderIsoNat
-[983/1347] Building Mathlib.Data.ENat.Lattice
-[983/1347] Building Mathlib.Data.Fintype.Fin
-[983/1347] Building Mathlib.Data.Real.Pointwise
-[985/1347] Building Mathlib.Algebra.Module.Submodule.Lattice
-[987/1347] Building Mathlib.Data.Nat.PartENat
-[989/1347] Building Mathlib.Algebra.BigOperators.Finsupp
-[990/1347] Building Mathlib.Algebra.BigOperators.Fin
-[991/1347] Building Mathlib.Data.Nat.Choose.Sum
-[991/1347] Building Mathlib.Algebra.GeomSum
-[991/1347] Building Mathlib.Data.Nat.Digits
-[993/1347] Building Mathlib.Order.WellFoundedSet
-[993/1347] Building Mathlib.Order.CompactlyGenerated
-[994/1347] Building Mathlib.Order.Filter.SmallSets
-[994/1347] Building Mathlib.Order.Filter.Cofinite
-[994/1347] Building Mathlib.Order.Filter.Archimedean
-[996/1347] Building Mathlib.SetTheory.Cardinal.Basic
-[997/1347] Building Mathlib.Order.Filter.Interval
-[998/1347] Building Mathlib.Order.Filter.Ultrafilter
-[998/1347] Building Mathlib.Topology.Bornology.Basic
-[998/1347] Building Mathlib.Order.LiminfLimsup
-[1002/1347] Building Mathlib.GroupTheory.Submonoid.Pointwise
-[1004/1347] Building Mathlib.Topology.Bornology.Constructions
-[1004/1347] Building Mathlib.Topology.Bornology.Hom
-[1005/1347] Building Mathlib.Combinatorics.Composition
-[1008/1347] Building Mathlib.Order.Filter.Pointwise
-[1008/1347] Building Mathlib.Topology.Basic
-[1012/1347] Building Mathlib.RingTheory.Subring.Basic
-[1014/1347] Building Mathlib.Algebra.BigOperators.Associated
-[1014/1347] Building Mathlib.Data.Finsupp.Basic
-[1015/1347] Building Mathlib.GroupTheory.Subgroup.Pointwise
-[1016/1347] Building Mathlib.Topology.NhdsSet
-[1016/1347] Building Mathlib.Topology.Order
-[1018/1347] Building Mathlib.Combinatorics.Partition
-[1022/1347] Building Mathlib.Topology.Maps
-[1023/1347] Building Mathlib.Data.Rat.Denumerable
-[1023/1347] Building Mathlib.SetTheory.Cardinal.Finite
-[1023/1347] Building Mathlib.Data.Nat.Count
-[1023/1347] Building Mathlib.SetTheory.Ordinal.Basic
-[1025/1347] Building Mathlib.Data.DFinsupp.Encodable
-[1025/1347] Building Mathlib.Algebra.DirectSum.Basic
-[1026/1347] Building Mathlib.Data.Nat.Periodic
-[1027/1347] Building Mathlib.GroupTheory.QuotientGroup
-[1028/1347] Building Mathlib.Data.Finite.Card
-[1028/1347] Building Mathlib.Data.Fintype.Units
-[1031/1347] Building Mathlib.Topology.Constructions
-[1032/1347] Building Mathlib.Algebra.Group.ConjFinite
-[1034/1347] Building Mathlib.GroupTheory.GroupAction.Quotient
-[1035/1347] Building Mathlib.SetTheory.Ordinal.Arithmetic
-[1036/1347] Building Mathlib.Data.Finsupp.ToDFinsupp
-[1036/1347] Building Mathlib.LinearAlgebra.Basic
-[1036/1347] Building Mathlib.Data.Finsupp.Multiset
-[1040/1347] Building Mathlib.Data.Finsupp.Encodable
-[1042/1347] Building Mathlib.Topology.ContinuousOn
-[1043/1347] Building Mathlib.Data.Finsupp.Antidiagonal
-[1044/1347] Building Mathlib.Algebra.ModEq
-[1044/1347] Building Mathlib.GroupTheory.Divisible
-[1044/1347] Building Mathlib.GroupTheory.Finiteness
-[1044/1347] Building Mathlib.Algebra.CharZero.Quotient
-[1049/1347] Building Mathlib.GroupTheory.Index
-[1050/1347] Building Mathlib.Algebra.Order.ToIntervalMod
-[1051/1347] Building Mathlib.Topology.Inseparable
-[1051/1347] Building Mathlib.Topology.LocalExtr
-[1051/1347] Building Mathlib.Topology.Bases
-[1051/1347] Building Mathlib.Topology.LocallyFinite
-[1051/1347] Building Mathlib.Topology.Algebra.Order.LeftRight
-[1054/1347] Building Mathlib.SetTheory.Ordinal.Exponential
-[1057/1347] Building Mathlib.GroupTheory.OrderOfElement
-[1058/1347] Building Mathlib.Topology.SubsetProperties
-[1059/1347] Building Mathlib.SetTheory.Ordinal.FixedPoint
-[1060/1347] Building Mathlib.SetTheory.Ordinal.Principal
-[1061/1347] Building Mathlib.SetTheory.Cardinal.Ordinal
-[1062/1347] Building Mathlib.Topology.Connected
-[1063/1347] Building Mathlib.Topology.UniformSpace.Basic
-[1064/1347] Building Mathlib.Topology.Separation
-[1065/1347] Building Mathlib.SetTheory.Cardinal.Continuum
-[1065/1347] Building Mathlib.SetTheory.Cardinal.Cofinality
-[1068/1347] Building Mathlib.GroupTheory.Perm.Sign
-[1070/1347] Building Mathlib.Topology.Support
-[1070/1347] Building Mathlib.Topology.UniformSpace.Separation
-[1070/1347] Building Mathlib.Topology.DenseEmbedding
-[1070/1347] Building Mathlib.Topology.DiscreteSubset
-[1074/1347] Building Mathlib.Topology.Homeomorph
-[1074/1347] Building Mathlib.Topology.Order.Basic
-[1075/1347] Building Mathlib.LinearAlgebra.Pi
-[1075/1347] Building Mathlib.LinearAlgebra.Span
-[1075/1347] Building Mathlib.LinearAlgebra.BilinearMap
-[1075/1347] Building Mathlib.Algebra.Algebra.Basic
-[1076/1347] Building Mathlib.Topology.Algebra.Constructions
-[1076/1347] Building Mathlib.Topology.ContinuousFunction.Basic
-[1077/1347] Building Mathlib.Topology.UniformSpace.Cauchy
-[1077/1347] Building Mathlib.Topology.Algebra.ConstMulAction
-[1078/1347] Building Mathlib.Topology.Algebra.Star
-[1078/1347] Building Mathlib.Topology.Sets.Opens
-[1078/1347] Building Mathlib.Topology.CompactOpen
-[1079/1347] Building Mathlib.GroupTheory.Perm.Option
-[1079/1347] Building Mathlib.Logic.Equiv.Fintype
-[1082/1347] Building Mathlib.GroupTheory.Perm.Cycle.Basic
-[1085/1347] Building Mathlib.Topology.LocalHomeomorph
-[1086/1347] Building Mathlib.Topology.Algebra.MulAction
-[1087/1347] Building Mathlib.Topology.UniformSpace.Pi
-[1087/1347] Building Mathlib.Topology.UniformSpace.UniformEmbedding
-[1087/1347] Building Mathlib.Topology.UniformSpace.UniformConvergence
-[1087/1347] Building Mathlib.Topology.UniformSpace.CompleteSeparated
-[1090/1347] Building Mathlib.Topology.Algebra.Monoid
-[1091/1347] Building Mathlib.LinearAlgebra.Finsupp
-[1091/1347] Building Mathlib.LinearAlgebra.Quotient
-[1091/1347] Building Mathlib.Algebra.Module.Submodule.Pointwise
-[1092/1347] Building Mathlib.Algebra.Module.Submodule.Bilinear
-[1093/1347] Building Mathlib.Topology.UniformSpace.Equiv
-[1094/1347] Building Mathlib.Algebra.Algebra.Hom
-[1094/1347] Building Mathlib.Algebra.Module.Algebra
-[1094/1347] Building Mathlib.FieldTheory.Subfield
-[1094/1347] Building Mathlib.Data.Real.NNReal
-[1094/1347] Building Mathlib.LinearAlgebra.Multilinear.Basic
-[1099/1347] Building Mathlib.LinearAlgebra.TensorProduct
-[1100/1347] Building Mathlib.Topology.UniformSpace.AbstractCompletion
-[1100/1347] Building Mathlib.Topology.UniformSpace.UniformConvergenceTopology
-[1101/1347] Building Mathlib.Topology.Algebra.GroupWithZero
-[1101/1347] Building Mathlib.Topology.Algebra.Group.Basic
-[1102/1347] Building Mathlib.Topology.UniformSpace.Completion
-[1103/1347] Building Mathlib.Data.Real.ENNReal
-[1103/1347] Building Mathlib.Analysis.Normed.Group.Seminorm
-[1105/1347] Building Mathlib.LinearAlgebra.Isomorphisms
-[1106/1347] Building Mathlib.Topology.UniformSpace.Equicontinuity
-[1108/1347] Building Mathlib.Algebra.Algebra.Prod
-[1108/1347] Building Mathlib.Algebra.Algebra.Equiv
-[1108/1347] Building Mathlib.Algebra.Hom.NonUnitalAlg
-[1109/1347] Building Mathlib.Topology.Algebra.Order.ProjIcc
-[1109/1347] Building Mathlib.Topology.Algebra.Order.MonotoneConvergence
-[1109/1347] Building Mathlib.Topology.Algebra.Order.MonotoneContinuity
-[1109/1347] Building Mathlib.Topology.Instances.Sign
-[1109/1347] Building Mathlib.Topology.Algebra.Order.Archimedean
-[1109/1347] Building Mathlib.Topology.Algebra.Order.T5
-[1109/1347] Building Mathlib.Topology.Algebra.Order.IntermediateValue
-[1110/1347] Building Mathlib.Topology.UniformSpace.Compact
-[1115/1347] Building Mathlib.LinearAlgebra.Prod
-[1120/1347] Building Mathlib.RingTheory.Ideal.Basic
-[1121/1347] Building Mathlib.Topology.Algebra.Order.Compact
-[1124/1347] Building Mathlib.Topology.Algebra.Order.LiminfLimsup
-[1124/1347] Building Mathlib.Topology.Algebra.Ring.Basic
-[1124/1347] Building Mathlib.Topology.Algebra.Order.Group
-[1124/1347] Building Mathlib.Topology.Algebra.UniformGroup
-[1129/1347] Building Mathlib.RingTheory.Ideal.Quotient
-[1130/1347] Building Mathlib.Topology.Algebra.Field
-[1132/1347] Building Mathlib.Topology.Algebra.Order.Field
-[1135/1347] Building Mathlib.LinearAlgebra.Projection
-[1135/1347] Building Mathlib.LinearAlgebra.LinearPMap
-[1135/1347] Building Mathlib.LinearAlgebra.LinearIndependent
-[1135/1347] Building Mathlib.Algebra.Star.Module
-[1135/1347] Building Mathlib.LinearAlgebra.AffineSpace.AffineMap
-[1137/1347] Building Mathlib.Algebra.Algebra.Pi
-[1137/1347] Building Mathlib.Algebra.Algebra.Tower
-[1137/1347] Building Mathlib.Logic.Equiv.TransferInstance
-[1137/1347] Building Mathlib.Algebra.Star.StarAlgHom
-[1137/1347] Building Mathlib.Algebra.Algebra.Opposite
-[1137/1347] Building Mathlib.Algebra.MonoidAlgebra.Basic
-[1137/1347] Building Mathlib.Topology.MetricSpace.EMetricSpace
-[1141/1347] Building Mathlib.Data.Matrix.Basic
-[1142/1347] Building Mathlib.Algebra.Algebra.RestrictScalars
-[1142/1347] Building Mathlib.RingTheory.Localization.Basic
-[1145/1347] Building Mathlib.Topology.Algebra.UniformMulAction
-[1145/1347] Building Mathlib.Topology.Algebra.InfiniteSum.Basic
-[1146/1347] Building Mathlib.Topology.MetricSpace.Basic
-[1147/1347] Building Mathlib.Topology.Algebra.Module.Basic
-[1149/1347] Building Mathlib.LinearAlgebra.AffineSpace.Slope
-[1149/1347] Building Mathlib.LinearAlgebra.AffineSpace.AffineEquiv
-[1151/1347] Building Mathlib.LinearAlgebra.Multilinear.TensorProduct
-[1151/1347] Building Mathlib.Algebra.Algebra.Bilinear
-[1151/1347] Building Mathlib.LinearAlgebra.TensorProduct.Tower
-[1155/1347] Building Mathlib.LinearAlgebra.Basis
-[1156/1347] Building Mathlib.Algebra.Algebra.Operations
-[1157/1347] Building Mathlib.Topology.Instances.Int
-[1157/1347] Building Mathlib.Topology.Sequences
-[1157/1347] Building Mathlib.Topology.MetricSpace.Lipschitz
-[1158/1347] Building Mathlib.Topology.Instances.Real
-[1158/1347] Building Mathlib.Topology.Instances.Nat
-[1160/1347] Building Mathlib.LinearAlgebra.AffineSpace.Midpoint
-[1160/1347] Building Mathlib.LinearAlgebra.AffineSpace.AffineSubspace
-[1162/1347] Building Mathlib.Topology.Algebra.InfiniteSum.Ring
-[1162/1347] Building Mathlib.Topology.Algebra.InfiniteSum.Order
-[1163/1347] Building Mathlib.Topology.MetricSpace.Algebra
-[1163/1347] Building Mathlib.Topology.MetricSpace.Antilipschitz
-[1164/1347] Building Mathlib.Topology.Instances.Rat
-[1164/1347] Building Mathlib.Topology.UnitInterval
-[1166/1347] Building Mathlib.Topology.Algebra.InfiniteSum.Real
-[1166/1347] Building Mathlib.Topology.Instances.NNReal
-[1169/1347] Building Mathlib.Topology.MetricSpace.Isometry
-[1172/1347] Building Mathlib.Topology.PathConnected
-[1173/1347] Building Mathlib.Data.Real.Sqrt
-[1173/1347] Building Mathlib.Topology.Instances.ENNReal
-[1174/1347] Building Mathlib.Data.Complex.Basic
-[1176/1347] Building Mathlib.Data.Matrix.Block
-[1176/1347] Building Mathlib.LinearAlgebra.Matrix.Trace
-[1176/1347] Building Mathlib.Data.Matrix.PEquiv
-[1176/1347] Building Mathlib.Data.Matrix.Notation
-[1177/1347] Building Mathlib.Data.Matrix.Basis
-[1178/1347] Building Mathlib.Data.Polynomial.Basic
-[1178/1347] Building Mathlib.Algebra.MonoidAlgebra.Support
-[1178/1347] Building Mathlib.Algebra.MonoidAlgebra.Division
-[1179/1347] Building Mathlib.RingTheory.AlgebraTower
-[1179/1347] Building Mathlib.LinearAlgebra.Multilinear.Basis
-[1179/1347] Building Mathlib.LinearAlgebra.DFinsupp
-[1179/1347] Building Mathlib.LinearAlgebra.Basis.Bilinear
-[1180/1347] Building Mathlib.LinearAlgebra.StdBasis
-[1182/1347] Building Mathlib.Topology.MetricSpace.IsometricSMul
-[1183/1347] Building Mathlib.LinearAlgebra.AffineSpace.Combination
-[1184/1347] Building Mathlib.Algebra.MonoidAlgebra.Degree
-[1185/1347] Building Mathlib.LinearAlgebra.Alternating
-[1186/1347] Building Mathlib.RingTheory.Localization.FractionRing
-[1188/1347] Building Mathlib.RingTheory.Ideal.Operations
-[1195/1347] Building Mathlib.Analysis.Normed.Group.Basic
-[1196/1347] Building Mathlib.LinearAlgebra.FinsuppVectorSpace
-[1198/1347] Building Mathlib.Topology.Algebra.InfiniteSum.Module
-[1198/1347] Building Mathlib.Topology.Instances.RealVectorSpace
-[1198/1347] Building Mathlib.Topology.Algebra.Module.Star
-[1199/1347] Building Mathlib.Data.Complex.Exponential
-[1204/1347] Building Mathlib.Data.Polynomial.Induction
-[1204/1347] Building Mathlib.Data.Polynomial.Monomial
-[1204/1347] Building Mathlib.Data.Polynomial.Coeff
-[1205/1347] Building Mathlib.Algebra.DirectSum.Module
-[1208/1347] Building Mathlib.Data.Polynomial.Degree.Definitions
-[1209/1347] Building Mathlib.Analysis.Normed.Group.InfiniteSum
-[1209/1347] Building Mathlib.Analysis.NormedSpace.LinearIsometry
-[1209/1347] Building Mathlib.Analysis.Normed.Group.Hom
-[1210/1347] Building Mathlib.Algebra.DirectSum.Finsupp
-[1210/1347] Building Mathlib.LinearAlgebra.DirectSum.TensorProduct
-[1215/1347] Building Mathlib.Algebra.Algebra.Subalgebra.Basic
-[1215/1347] Building Mathlib.RingTheory.Nilpotent
-[1215/1347] Building Mathlib.RingTheory.Valuation.Basic
-[1215/1347] Building Mathlib.RingTheory.Ideal.QuotientOperations
-[1220/1347] Building Mathlib.Data.Polynomial.Inductions
-[1220/1347] Building Mathlib.Data.Polynomial.Degree.TrailingDegree
-[1220/1347] Building Mathlib.Data.Polynomial.Eval
-[1220/1347] Building Mathlib.Data.Polynomial.EraseLead
-[1225/1347] Building Mathlib.LinearAlgebra.DirectSum.Finsupp
-[1226/1347] Building Mathlib.Algebra.Algebra.Subalgebra.Tower
-[1226/1347] Building Mathlib.RingTheory.Finiteness
-[1226/1347] Building Mathlib.Analysis.Normed.Field.Basic
-[1228/1347] Building Mathlib.LinearAlgebra.Matrix.ToLin
-[1228/1347] Building Mathlib.RingTheory.Adjoin.Basic
-[1229/1347] Building Mathlib.Data.Polynomial.Degree.Lemmas
-[1229/1347] Building Mathlib.Data.Polynomial.Derivative
-[1229/1347] Building Mathlib.Data.Polynomial.Reverse
-[1230/1347] Building Mathlib.RingTheory.Multiplicity
-[1231/1347] Building Mathlib.Data.Polynomial.CancelLeads
-[1232/1347] Building Mathlib.Data.Polynomial.Monic
-[1233/1347] Building Mathlib.Data.Polynomial.AlgebraMap
-[1233/1347] Building Mathlib.Topology.Algebra.Algebra
-[1233/1347] Building Mathlib.Algebra.Star.Subalgebra
-[1233/1347] Building Mathlib.Data.MvPolynomial.Basic
-[1234/1347] Building Mathlib.Analysis.Normed.MulAction
-[1236/1347] Building Mathlib.Analysis.SpecificLimits.Basic
-[1237/1347] Building Mathlib.Analysis.NormedSpace.Basic
-[1238/1347] Building Mathlib.Algebra.Polynomial.BigOperators
-[1240/1347] Building Mathlib.RingTheory.Noetherian
-[1241/1347] Building Mathlib.Analysis.Normed.Order.Basic
-[1241/1347] Building Mathlib.Analysis.NormedSpace.ContinuousLinearMap
-[1241/1347] Building Mathlib.Analysis.Asymptotics.Asymptotics
-[1242/1347] Building Mathlib.Data.Real.Cardinality
-[1242/1347] Building Mathlib.Topology.MetricSpace.HausdorffDistance
-[1243/1347] Building Mathlib.LinearAlgebra.TensorProductBasis
-[1245/1347] Building Mathlib.Data.Nat.Multiplicity
-[1246/1347] Building Mathlib.Data.Complex.Cardinality
-[1247/1347] Building Mathlib.Topology.Algebra.StarSubalgebra
-[1250/1347] Building Mathlib.LinearAlgebra.FreeModule.Basic
-[1251/1347] Building Mathlib.Algebra.CharP.Basic
-[1252/1347] Building Mathlib.LinearAlgebra.Basis.VectorSpace
-[1253/1347] Building Mathlib.RingTheory.Polynomial.ScaleRoots
-[1253/1347] Building Mathlib.RingTheory.Polynomial.IntegralNormalization
-[1253/1347] Building Mathlib.RingTheory.Polynomial.Tower
-[1253/1347] Building Mathlib.Data.Polynomial.Laurent
-[1253/1347] Building Mathlib.Data.Polynomial.Div
-[1254/1347] Building Mathlib.Analysis.Normed.Group.Quotient
-[1256/1347] Building Mathlib.Analysis.NormedSpace.Star.Basic
-[1258/1347] Building Mathlib.LinearAlgebra.AffineSpace.Independent
-[1261/1347] Building Mathlib.Data.IsROrC.Basic
-[1262/1347] Building Mathlib.Analysis.Asymptotics.Theta
-[1262/1347] Building Mathlib.Analysis.SpecificLimits.Normed
-[1263/1347] Building Mathlib.Algebra.CharP.Invertible
-[1263/1347] Building Mathlib.Algebra.CharP.Two
-[1263/1347] Building Mathlib.Data.ZMod.Basic
-[1264/1347] Building Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
-[1265/1347] Building Mathlib.LinearAlgebra.AffineSpace.MidpointZero
-[1265/1347] Building Mathlib.Algebra.QuadraticDiscriminant
-[1267/1347] Building Mathlib.LinearAlgebra.AffineSpace.Ordered
-[1268/1347] Building Mathlib.Data.Polynomial.RingDivision
-[1276/1347] Building Mathlib.RingTheory.UniqueFactorizationDomain
-[1279/1347] Building Mathlib.Data.MvPolynomial.Rename
-[1281/1347] Building Mathlib.Data.MvPolynomial.Variables
-[1282/1347] Building Mathlib.Data.MvPolynomial.CommRing
-[1282/1347] Building Mathlib.Data.MvPolynomial.Equiv
-[1283/1347] Building Mathlib.RingTheory.PrincipalIdealDomain
-[1285/1347] Building Mathlib.LinearAlgebra.InvariantBasisNumber
-[1285/1347] Building Mathlib.RingTheory.EuclideanDomain
-[1285/1347] Building Mathlib.RingTheory.Int.Basic
-[1286/1347] Building Mathlib.Data.Polynomial.FieldDivision
-[1287/1347] Building Mathlib.NumberTheory.Padics.PadicVal
-[1287/1347] Building Mathlib.GroupTheory.Perm.Cycle.Type
-[1288/1347] Building Mathlib.LinearAlgebra.Dimension
-[1290/1347] Building Mathlib.Data.Nat.Factorization.Basic
-[1292/1347] Building Mathlib.GroupTheory.Perm.Fin
-[1293/1347] Building Mathlib.Data.Nat.Totient
-[1294/1347] Building Mathlib.LinearAlgebra.Matrix.Determinant
-[1296/1347] Building Mathlib.Topology.Instances.AddCircle
-[1296/1347] Building Mathlib.RingTheory.Polynomial.Content
-[1297/1347] Building Mathlib.Analysis.Normed.Group.AddCircle
-[1298/1347] Building Mathlib.LinearAlgebra.FreeModule.Rank
-[1298/1347] Building Mathlib.LinearAlgebra.Finrank
-[1298/1347] Building Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-[1298/1347] Building Mathlib.FieldTheory.Finiteness
-[1299/1347] Building Mathlib.RingTheory.Polynomial.Basic
-[1303/1347] Building Mathlib.LinearAlgebra.FreeModule.Finite.Rank
-[1305/1347] Building Mathlib.LinearAlgebra.FreeModule.Finite.Matrix
-[1305/1347] Building Mathlib.LinearAlgebra.FiniteDimensional
-[1307/1347] Building Mathlib.RingTheory.Polynomial.Quotient
-[1307/1347] Building Mathlib.RingTheory.Adjoin.FG
-[1308/1347] Building Mathlib.LinearAlgebra.Matrix.Polynomial
-[1308/1347] Building Mathlib.LinearAlgebra.Matrix.MvPolynomial
-[1309/1347] Building Mathlib.RingTheory.Adjoin.Tower
-[1311/1347] Building Mathlib.RingTheory.FiniteType
-[1312/1347] Building Mathlib.LinearAlgebra.Matrix.Adjugate
-[1313/1347] Building Mathlib.FieldTheory.Tower
-[1313/1347] Building Mathlib.RingTheory.TensorProduct
-[1314/1347] Building Mathlib.Data.Complex.Module
-[1317/1347] Building Mathlib.RingTheory.JacobsonIdeal
-[1318/1347] Building Mathlib.Data.Complex.Order
-[1319/1347] Building Mathlib.Analysis.Complex.Basic
-[1320/1347] Building Mathlib.RingTheory.Ideal.LocalRing
-[1321/1347] Building Mathlib.Data.Polynomial.Expand
-[1323/1347] Building Mathlib.Analysis.SpecialFunctions.Exp
-[1324/1347] Building Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
-[1324/1347] Building Mathlib.Analysis.SpecialFunctions.Log.Basic
-[1325/1347] Building Mathlib.RingTheory.MatrixAlgebra
-[1327/1347] Building Mathlib.RingTheory.PolynomialAlgebra
-[1328/1347] Building Mathlib.Analysis.SpecialFunctions.Trigonometric.Inverse
-[1328/1347] Building Mathlib.Analysis.SpecialFunctions.Trigonometric.Angle
-[1330/1347] Building Mathlib.LinearAlgebra.Matrix.Charpoly.Basic
-[1331/1347] Building Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
-[1332/1347] Building Mathlib.Analysis.SpecialFunctions.Complex.Arg
-[1333/1347] Building Mathlib.Analysis.SpecialFunctions.Complex.Log
-[1334/1347] Building Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap
-[1335/1347] Building Mathlib.Analysis.SpecialFunctions.Pow.Complex
-[1336/1347] Building Mathlib.RingTheory.IntegralClosure
-[1337/1347] Building Mathlib.Analysis.SpecialFunctions.Pow.Real
-[1338/1347] Building Mathlib.Analysis.SpecialFunctions.Log.Base
-[1340/1347] Building Mathlib.RingTheory.Algebraic
-[1341/1347] Building Mathlib.Data.Real.Irrational
-[1342/1347] Building MiniF2F.Minif2fImport
-[1343/1347] Building MiniF2F.Validation
-[1343/1347] Building MiniF2F.Test
-stdout:
-./././MiniF2F/Test.lean:18:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:23:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:27:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:32:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:38:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:42:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:45:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:50:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:54:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:57:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:62:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:71:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:78:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:84:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:88:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:92:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:96:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:101:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:106:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:110:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:113:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:117:39: warning: unused variable `h₀` [linter.unusedVariables]
-./././MiniF2F/Test.lean:121:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:125:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:130:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:137:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:141:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:152:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:156:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:160:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:171:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:174:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:178:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:181:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:210:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:215:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:223:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:227:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:230:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:238:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:243:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:247:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:258:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:262:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:265:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:268:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:271:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:274:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:280:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:285:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:290:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:295:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:305:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:312:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:317:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:322:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:329:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:337:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:341:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:345:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:353:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:363:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:367:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:372:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:377:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:388:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:394:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:398:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:401:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:405:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:409:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:416:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:419:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:424:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:428:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:432:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:435:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:439:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:443:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:447:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:450:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:454:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:460:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:469:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:475:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:491:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:494:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:498:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:504:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:509:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:513:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:516:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:520:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:524:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:528:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:535:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:539:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:543:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:548:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:552:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:557:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:564:7: warning: unused variable `h₃` [linter.unusedVariables]
-./././MiniF2F/Test.lean:568:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:573:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:576:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:580:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:583:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:587:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:592:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:597:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:600:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:606:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:612:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:616:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:624:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:628:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:633:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:638:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:644:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:651:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:655:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:659:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:664:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:668:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:672:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:683:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:688:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:698:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:703:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:710:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:714:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:718:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:721:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:724:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:729:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:733:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:743:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:747:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:750:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:753:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:757:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:761:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:765:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:770:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:773:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:777:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:782:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:786:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:791:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:795:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:800:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:807:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:812:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:817:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:822:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:841:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:845:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:849:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:854:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:861:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:865:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:875:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:879:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:884:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:887:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:903:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:908:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:912:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:916:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:920:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:925:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:930:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:934:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:939:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:948:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:952:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:956:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:961:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:969:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:975:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:981:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:985:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:989:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:993:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1001:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1008:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1013:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1016:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1020:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1024:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1028:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1033:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1037:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1043:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1053:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1060:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1066:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1072:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1077:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1082:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1085:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1092:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1100:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1107:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1112:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1115:8: warning: declaration uses 'sorry'
-./././MiniF2F/Test.lean:1120:8: warning: declaration uses 'sorry'
-stdout:
-./././MiniF2F/Validation.lean:19:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:23:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:27:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:34:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:38:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:56:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:61:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:64:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:68:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:73:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:78:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:82:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:86:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:90:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:94:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:98:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:107:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:110:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:114:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:117:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:120:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:138:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:149:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:152:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:161:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:168:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:171:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:174:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:178:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:181:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:185:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:189:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:194:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:198:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:202:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:207:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:212:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:222:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:225:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:229:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:233:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:236:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:249:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:256:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:260:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:268:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:272:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:279:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:283:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:287:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:291:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:294:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:298:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:302:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:310:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:313:7: warning: Lean 3 names are usually lowercase. This might be a typo.
-If the Lean 3 name is correct, then above this line, add:
-set_option linter.uppercaseLean3 false in
- [linter.uppercaseLean3]
-./././MiniF2F/Validation.lean:319:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:323:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:328:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:331:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:335:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:348:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:369:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:373:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:378:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:383:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:391:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:397:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:401:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:405:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:409:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:421:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:426:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:430:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:434:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:437:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:440:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:445:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:448:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:460:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:468:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:472:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:476:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:486:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:490:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:503:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:508:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:519:40: warning: unused variable `h₀` [linter.unusedVariables]
-./././MiniF2F/Validation.lean:536:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:540:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:543:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:550:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:555:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:559:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:564:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:568:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:572:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:576:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:580:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:583:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:587:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:591:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:594:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:597:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:601:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:604:7: warning: Lean 3 names are usually lowercase. This might be a typo.
-If the Lean 3 name is correct, then above this line, add:
-set_option linter.uppercaseLean3 false in
- [linter.uppercaseLean3]
-./././MiniF2F/Validation.lean:606:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:610:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:634:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:639:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:642:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:655:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:659:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:664:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:668:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:671:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:675:40: warning: unused variable `h₀` [linter.unusedVariables]
-./././MiniF2F/Validation.lean:683:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:687:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:691:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:698:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:701:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:705:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:709:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:713:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:719:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:725:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:728:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:736:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:740:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:755:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:759:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:766:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:769:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:773:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:777:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:782:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:787:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:794:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:811:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:815:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:820:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:824:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:827:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:831:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:835:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:840:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:843:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:848:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:852:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:857:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:862:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:867:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:872:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:880:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:883:7: warning: Lean 3 names are usually lowercase. This might be a typo.
-If the Lean 3 name is correct, then above this line, add:
-set_option linter.uppercaseLean3 false in
- [linter.uppercaseLean3]
-./././MiniF2F/Validation.lean:885:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:890:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:893:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:899:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:903:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:908:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:913:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:918:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:923:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:934:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:937:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:941:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:951:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:956:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:962:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:966:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:970:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:973:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:977:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:981:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:985:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:990:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:993:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:996:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1004:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1012:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1016:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1020:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1024:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1027:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1031:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1047:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1051:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1057:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1061:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1065:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1068:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1073:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1079:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1096:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1108:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1114:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1118:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1122:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1126:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1130:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1134:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1137:8: warning: declaration uses 'sorry'
-./././MiniF2F/Validation.lean:1142:36: warning: unused variable `h₀` [linter.unusedVariables]
-[1345/1347] Building MiniF2F.All
-[1346/1347] Building MiniF2F
-2024-04-06 22:27:43.389 | INFO     | __main__:main:188 - Tracing lean-dojo-mew
-2024-04-06 22:27:43.830 | DEBUG    | __main__:main:193 - lake env lean --threads 32 --run ExtractData.lean
-  0%|          | 0/2077 [00:00<?, ?it/s]Traceback (most recent call last):
-  File "/nobackup/users/zhiqings/haohanl/tmp/tmpul8w6_z4/workspace/build_lean4_repo.py", line 200, in <module>
-    main()
-  File "/nobackup/users/zhiqings/haohanl/tmp/tmpul8w6_z4/workspace/build_lean4_repo.py", line 194, in main
-    run_cmd(cmd, capture_output=True)
-  File "/nobackup/users/zhiqings/haohanl/tmp/tmpul8w6_z4/workspace/build_lean4_repo.py", line 29, in run_cmd
-    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/subprocess.py", line 526, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command 'lake env lean --threads 32 --run ExtractData.lean' returned non-zero exit status 1.
-  0%|          | 0/61 [11:05<?, ?it/s]
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_478')
-Traceback (most recent call last):
-  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/batched_search.py", line 1004, in <module>
-    main(
-  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/batched_search.py", line 802, in main
-    attempt_results = best_first_search(
-  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/batched_search.py", line 463, in best_first_search
-    with Dojo(theorem, hard_timeout=timeout) as (dojo, init_state):
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 265, in __enter__
-    raise ex
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/interaction/dojo.py", line 185, in __enter__
-    traced_repo_path = get_traced_repo_path(self.repo)
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 82, in get_traced_repo_path
-    _trace(repo, build_deps)
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 57, in _trace
-    raise ex
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/data_extraction/trace.py", line 45, in _trace
-    container.run(
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/container.py", line 194, in run
-    execute(cmd, capture_output=capture_output)
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/utils.py", line 116, in execute
-    raise ex
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/site-packages/lean_dojo/utils.py", line 111, in execute
-    res = subprocess.run(cmd, shell=True, capture_output=capture_output, check=True)
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.10/subprocess.py", line 526, in run
-    raise CalledProcessError(retcode, process.args,
-subprocess.CalledProcessError: Command 'NUM_PROCS=32 python build_lean4_repo.py lean-dojo-mew' returned non-zero exit status 1.
+INFO 05-29 12:47:25 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-plus-7b', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-plus-7b', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
+INFO 05-29 12:47:32 llm_engine.py:357] # GPU blocks: 28341, # CPU blocks: 2048
+Time to load model: 14.48 seconds
+Shard size: 30
+**abc**
+{'full_name': 'mathd_algebra_76', 'statement': 'theorem mathd_algebra_76 (f : ℤ → ℤ) (h₀ : ∀ n, Odd n → f n = n ^ 2)\n    (h₁ : ∀ n, Even n → f n = n ^ 2 - 4 * n - 1) : f 4 = -1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+  0%|          | 0/30 [00:00<?, ?it/s]2024-05-29 12:47:45.450 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 12:47:45.451 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+*********
+ {'full_name': 'mathd_algebra_76', 'statement': 'theorem mathd_algebra_76 (f : ℤ → ℤ) (h₀ : ∀ n, Odd n → f n = n ^ 2)\n    (h₁ : ∀ n, Even n → f n = n ^ 2 - 4 * n - 1) : f 4 = -1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_76 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_76')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
+  3%|▎         | 1/30 [00:24<11:54, 24.65s/it]2024-05-29 12:48:09.423 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 12:48:09.424 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [h₁ 4 even_two_mul, show (4 : ℤ) ^ 2 - 4 * 4 - 1 = -1 by norm_num]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+1.0
+# successes: 	1
+*********
+ {'full_name': 'mathd_numbertheory_99', 'statement': 'theorem mathd_numbertheory_99 (n : ℕ) (h₀ : 2 * n % 47 = 15) : n % 47 = 31', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_99 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_99')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:53<43:38, 53.45s/it][A
+  4%|▍         | 2/50 [01:47<42:55, 53.66s/it][A  4%|▍         | 2/50 [09:59<3:59:59, 299.99s/it]
+  7%|▋         | 2/30 [10:44<2:54:52, 374.72s/it]2024-05-29 12:58:29.276 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 12:58:29.276 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [Nat.mul_mod] at h₀
+```
+Here is the predicted next tactic:
+```lean
+have h₁ := Nat.mod_lt n (by norm_num : 0 < 47)
+```
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.5
+# successes: 	1
+*********
+ {'full_name': 'algebra_9onxpypzleqsum2onxpy', 'statement': 'theorem algebra_9onxpypzleqsum2onxpy (x y z : ℝ) (h₀ : 0 < x ∧ 0 < y ∧ 0 < z) :\n    9 / (x + y + z) ≤ 2 / (x + y) + 2 / (y + z) + 2 / (z + x)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ algebra_9onxpypzleqsum2onxpy **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_9onxpypzleqsum2onxpy')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<01:23,  1.70s/it][A
+  4%|▍         | 2/50 [00:05<02:14,  2.81s/it][A
+  6%|▌         | 3/50 [00:08<02:22,  3.03s/it][A
+  8%|▊         | 4/50 [00:11<02:20,  3.06s/it][A
+ 10%|█         | 5/50 [00:18<03:18,  4.41s/it][A
+ 12%|█▏        | 6/50 [00:22<03:14,  4.43s/it][A
+ 14%|█▍        | 7/50 [00:25<02:48,  3.92s/it][A
+ 16%|█▌        | 8/50 [00:28<02:30,  3.58s/it][A
+ 18%|█▊        | 9/50 [00:31<02:23,  3.49s/it][A
+ 20%|██        | 10/50 [00:34<02:12,  3.31s/it][A
+ 22%|██▏       | 11/50 [00:38<02:15,  3.46s/it][A
+ 24%|██▍       | 12/50 [00:45<02:47,  4.40s/it][A
+ 26%|██▌       | 13/50 [00:49<02:43,  4.41s/it][A
+ 28%|██▊       | 14/50 [00:52<02:21,  3.94s/it][A
+ 30%|███       | 15/50 [00:55<02:06,  3.61s/it][A
+ 32%|███▏      | 16/50 [01:02<02:34,  4.55s/it][A
+ 34%|███▍      | 17/50 [01:04<02:06,  3.84s/it][A
+ 36%|███▌      | 18/50 [01:05<01:40,  3.13s/it][A
+ 38%|███▊      | 19/50 [01:11<01:56,  3.77s/it][A
+ 40%|████      | 20/50 [01:13<01:44,  3.47s/it][A
+ 42%|████▏     | 21/50 [01:15<01:24,  2.91s/it][A
+ 44%|████▍     | 22/50 [01:18<01:24,  3.01s/it][A
+ 46%|████▌     | 23/50 [01:26<02:04,  4.60s/it][A
+ 48%|████▊     | 24/50 [01:29<01:46,  4.11s/it][A
+ 50%|█████     | 25/50 [01:31<01:23,  3.33s/it][A
+ 52%|█████▏    | 26/50 [01:38<01:48,  4.51s/it][A
+ 54%|█████▍    | 27/50 [01:41<01:34,  4.12s/it][A
+ 56%|█████▌    | 28/50 [01:47<01:37,  4.44s/it][A
+ 58%|█████▊    | 29/50 [01:50<01:29,  4.28s/it][A
+ 60%|██████    | 30/50 [01:53<01:16,  3.82s/it][A
+ 62%|██████▏   | 31/50 [01:57<01:12,  3.81s/it][A
+ 64%|██████▍   | 32/50 [01:59<00:59,  3.33s/it][A
+ 66%|██████▌   | 33/50 [02:01<00:49,  2.91s/it][A
+ 68%|██████▊   | 34/50 [02:04<00:48,  3.03s/it][A
+ 70%|███████   | 35/50 [02:13<01:09,  4.63s/it][A
+ 72%|███████▏  | 36/50 [02:14<00:51,  3.65s/it][A
+ 74%|███████▍  | 37/50 [02:21<01:01,  4.73s/it][A
+ 76%|███████▌  | 38/50 [02:28<01:03,  5.28s/it][A
+ 78%|███████▊  | 39/50 [02:29<00:45,  4.13s/it][A
+ 80%|████████  | 40/50 [02:37<00:51,  5.15s/it][A
+ 82%|████████▏ | 41/50 [02:44<00:52,  5.84s/it][A
+ 84%|████████▍ | 42/50 [02:46<00:36,  4.54s/it][A
+ 86%|████████▌ | 43/50 [02:48<00:27,  3.86s/it][A
+ 88%|████████▊ | 44/50 [02:52<00:22,  3.70s/it][A
+ 90%|█████████ | 45/50 [02:58<00:22,  4.56s/it][A
+ 92%|█████████▏| 46/50 [03:00<00:14,  3.65s/it][A
+ 94%|█████████▍| 47/50 [03:07<00:14,  4.71s/it][A
+ 96%|█████████▌| 48/50 [03:08<00:07,  3.77s/it][A
+ 98%|█████████▊| 49/50 [03:16<00:04,  4.81s/it][A
+100%|██████████| 50/50 [03:19<00:00,  4.50s/it][A100%|██████████| 50/50 [03:19<00:00,  4.00s/it]
+ 10%|█         | 3/30 [14:27<2:17:25, 305.40s/it]2024-05-29 13:02:11.531 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:02:11.531 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+have h₁ : x + y + z ≠ 0 := by positivity
+```
+Here is the predicted next tactic:
+```lean
+have h₂ : 0 < 2 / (x + y) + 2 / (y + z) + 2 / (z + x) :=
+ add_pos (add_pos (div_pos two_pos (add_pos h₀.1 h₀.2.1)) (div_pos two_pos (add_pos h₀.2.1 h₀.2.2))) (div_pos two_pos (add_pos h₀.2.2 h₀.1))
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	1
+*********
+ {'full_name': 'mathd_numbertheory_233', 'statement': 'theorem mathd_numbertheory_233 (b : ZMod (11 ^ 2)) (h₀ : b = 24⁻¹) : b = 116', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_233 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_233')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:00<?, ?it/s]
+ 13%|█▎        | 4/30 [14:49<1:23:55, 193.68s/it]2024-05-29 13:02:34.057 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:02:34.057 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [h₀]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.5
+# successes: 	2
+*********
+ {'full_name': 'algebra_absapbon1pabsapbleqsumabsaon1pabsa', 'statement': 'theorem algebra_absapbon1pabsapbleqsumabsaon1pabsa (a b : ℝ) :\n    abs (a + b) / (1 + abs (a + b)) ≤ abs a / (1 + abs a) + abs b / (1 + abs b)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ algebra_absapbon1pabsapbleqsumabsaon1pabsa **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_absapbon1pabsapbleqsumabsaon1pabsa')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:02<01:45,  2.15s/it][A
+  4%|▍         | 2/50 [00:04<01:55,  2.40s/it][A
+  6%|▌         | 3/50 [00:07<01:54,  2.43s/it][A
+  8%|▊         | 4/50 [00:18<04:37,  6.04s/it][A
+ 10%|█         | 5/50 [00:20<03:28,  4.64s/it][A
+ 12%|█▏        | 6/50 [00:22<02:45,  3.76s/it][A
+ 14%|█▍        | 7/50 [00:33<04:20,  6.06s/it][A
+ 16%|█▌        | 8/50 [00:35<03:20,  4.76s/it][A
+ 18%|█▊        | 9/50 [00:42<03:44,  5.48s/it][A
+ 20%|██        | 10/50 [00:44<02:57,  4.44s/it][A
+ 22%|██▏       | 11/50 [00:48<02:39,  4.10s/it][A
+ 24%|██▍       | 12/50 [00:55<03:08,  4.95s/it][A
+ 26%|██▌       | 13/50 [01:01<03:19,  5.39s/it][A
+ 28%|██▊       | 14/50 [01:04<02:49,  4.71s/it][A
+ 30%|███       | 15/50 [01:11<03:08,  5.39s/it][A
+ 32%|███▏      | 16/50 [01:18<03:22,  5.96s/it][A
+ 34%|███▍      | 17/50 [01:22<02:52,  5.23s/it][A
+ 36%|███▌      | 18/50 [01:30<03:13,  6.04s/it][A
+ 38%|███▊      | 19/50 [01:37<03:17,  6.39s/it][A
+ 40%|████      | 20/50 [01:44<03:17,  6.58s/it][A
+ 42%|████▏     | 21/50 [01:51<03:14,  6.72s/it][A
+ 44%|████▍     | 22/50 [01:53<02:29,  5.33s/it][A
+ 46%|████▌     | 23/50 [02:01<02:43,  6.05s/it][A
+ 48%|████▊     | 24/50 [02:02<02:01,  4.68s/it][A
+ 50%|█████     | 25/50 [02:10<02:15,  5.43s/it][A
+ 52%|█████▏    | 26/50 [02:17<02:22,  5.93s/it][A
+ 54%|█████▍    | 27/50 [02:25<02:29,  6.49s/it][A
+ 56%|█████▌    | 28/50 [02:28<02:03,  5.62s/it][A
+ 58%|█████▊    | 29/50 [02:29<01:31,  4.34s/it][A
+ 60%|██████    | 30/50 [02:38<01:52,  5.63s/it][A
+ 62%|██████▏   | 31/50 [02:42<01:34,  4.99s/it][A
+ 64%|██████▍   | 32/50 [02:45<01:22,  4.58s/it][A
+ 66%|██████▌   | 33/50 [02:53<01:32,  5.45s/it][A
+ 68%|██████▊   | 34/50 [03:01<01:42,  6.42s/it][A
+ 70%|███████   | 35/50 [03:10<01:46,  7.07s/it][A
+ 72%|███████▏  | 36/50 [03:12<01:18,  5.57s/it][A
+ 74%|███████▍  | 37/50 [03:21<01:24,  6.53s/it][A
+ 76%|███████▌  | 38/50 [03:28<01:21,  6.80s/it][A
+ 78%|███████▊  | 39/50 [03:36<01:18,  7.15s/it][A
+ 80%|████████  | 40/50 [03:44<01:14,  7.48s/it][A
+ 82%|████████▏ | 41/50 [03:48<00:57,  6.42s/it][A
+ 84%|████████▍ | 42/50 [03:52<00:45,  5.66s/it][A
+ 86%|████████▌ | 43/50 [03:55<00:33,  4.84s/it][A
+ 88%|████████▊ | 44/50 [04:02<00:33,  5.55s/it][A
+ 90%|█████████ | 45/50 [04:05<00:23,  4.69s/it][A
+ 92%|█████████▏| 46/50 [04:12<00:21,  5.30s/it][A
+ 94%|█████████▍| 47/50 [04:15<00:14,  4.80s/it][A
+ 96%|█████████▌| 48/50 [04:23<00:11,  5.57s/it][A
+ 98%|█████████▊| 49/50 [04:26<00:04,  4.72s/it][A
+100%|██████████| 50/50 [04:28<00:00,  4.10s/it][A100%|██████████| 50/50 [04:28<00:00,  5.37s/it]
+ 17%|█▋        | 5/30 [19:41<1:35:22, 228.91s/it]2024-05-29 13:07:26.038 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:07:26.038 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+have h₁ : |a + b| ≤ |a| + |b| := abs_add a b
+```
+Here is the predicted next tactic:
+```lean
+refine' (div_le_div_of_le (add_le_add (abs_nonneg a) (abs_nonneg b)) _).mpr h₁
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4
+# successes: 	2
+*********
+ {'full_name': 'imo_1984_p6', 'statement': 'theorem imo_1984_p6 (a b c d k m : ℕ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)\n    (h₁ : Odd a ∧ Odd b ∧ Odd c ∧ Odd d) (h₂ : a < b ∧ b < c ∧ c < d) (h₃ : a * d = b * c)\n    (h₄ : a + d = 2 ^ k) (h₅ : b + c = 2 ^ m) : a = 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ imo_1984_p6 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='imo_1984_p6')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:02<01:57,  2.40s/it][A
+  4%|▍         | 2/50 [00:05<02:10,  2.72s/it][A
+  6%|▌         | 3/50 [00:06<01:38,  2.10s/it][A
+  8%|▊         | 4/50 [00:07<01:20,  1.74s/it][A
+ 10%|█         | 5/50 [00:11<01:42,  2.28s/it][A
+ 12%|█▏        | 6/50 [00:13<01:37,  2.22s/it][A
+ 14%|█▍        | 7/50 [00:15<01:32,  2.14s/it][A
+ 16%|█▌        | 8/50 [00:16<01:22,  1.97s/it][A
+ 18%|█▊        | 9/50 [02:39<31:19, 45.85s/it][A
+ 20%|██        | 10/50 [02:40<21:21, 32.04s/it][A
+ 22%|██▏       | 11/50 [02:42<14:55, 22.95s/it][A
+ 24%|██▍       | 12/50 [02:43<10:22, 16.38s/it][A
+ 26%|██▌       | 13/50 [02:45<07:20, 11.92s/it][A 26%|██▌       | 13/50 [09:59<28:27, 46.15s/it]
+ 20%|██        | 6/30 [30:01<2:24:44, 361.87s/it]2024-05-29 13:17:45.916 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:17:45.916 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [← Nat.succ_pred_eq_of_pos h₀.1, ← Nat.succ_pred_eq_of_pos h₀.2.1,
+ ← Nat.succ_pred_eq_of_pos h₀.2.2.1, ← Nat.succ_pred_eq_of_pos h₀.2.2.2]
+```
+Here is the predicted next tactic:
+```lean
+rw [←Nat.factorization_prod_pow_eq_self h₀.1, ←Nat.factorization_prod_pow_eq_self h₀.2.1,
+ ←Nat.factorization_prod_pow_eq_self h₀.2.2.1, ←Nat.factorization_prod_pow_eq_self h₀.2.2.2]
+```
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	2
+*********
+ {'full_name': 'imo_2001_p6', 'statement': 'theorem imo_2001_p6 (a b c d : ℕ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d) (h₁ : d < c) (h₂ : c < b)\n    (h₃ : b < a) (h₄ : a * c + b * d = (b + d + a - c) * (b + d + c - a)) :\n    ¬Nat.Prime (a * b + c * d)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ imo_2001_p6 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='imo_2001_p6')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [09:59<?, ?it/s]
+ 23%|██▎       | 7/30 [40:20<2:50:59, 446.05s/it]2024-05-29 13:28:05.122 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:28:05.122 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [← eq_sub_iff_add_eq] at h₄
+```
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.2857142857142857
+# successes: 	2
+*********
+ {'full_name': 'mathd_numbertheory_321', 'statement': 'theorem mathd_numbertheory_321 (n : ZMod 1399) (h₁ : n = 160⁻¹) : n = 1058', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_321 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_321')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:02<?, ?it/s]
+ 27%|██▋       | 8/30 [40:45<1:54:26, 312.13s/it]2024-05-29 13:28:30.346 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:28:30.346 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [h₁]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.375
+# successes: 	3
+*********
+ {'full_name': 'mathd_algebra_17', 'statement': 'theorem mathd_algebra_17 (a : ℝ)\n    (h₀ : Real.sqrt (4 + Real.sqrt (16 + 16 * a)) + Real.sqrt (1 + Real.sqrt (1 + a)) = 6) :\n    a = 8', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_17 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_17')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<01:25,  1.74s/it][A
+  4%|▍         | 2/50 [00:02<01:00,  1.26s/it][A
+  6%|▌         | 3/50 [00:04<01:19,  1.68s/it][A
+  8%|▊         | 4/50 [00:06<01:25,  1.86s/it][A
+ 10%|█         | 5/50 [00:07<01:06,  1.48s/it][A
+ 12%|█▏        | 6/50 [00:08<01:00,  1.38s/it][A
+ 14%|█▍        | 7/50 [00:10<01:07,  1.58s/it][A
+ 16%|█▌        | 8/50 [00:12<01:11,  1.71s/it][A
+ 18%|█▊        | 9/50 [00:14<01:02,  1.51s/it][A
+ 20%|██        | 10/50 [00:16<01:07,  1.69s/it][A
+ 22%|██▏       | 11/50 [00:17<01:05,  1.67s/it][A
+ 24%|██▍       | 12/50 [00:19<01:07,  1.78s/it][A
+ 26%|██▌       | 13/50 [00:25<01:51,  3.02s/it][A
+ 28%|██▊       | 14/50 [00:27<01:32,  2.58s/it][A
+ 30%|███       | 15/50 [00:29<01:25,  2.44s/it][A
+ 32%|███▏      | 16/50 [00:35<01:56,  3.44s/it][A
+ 34%|███▍      | 17/50 [00:37<01:42,  3.09s/it][A
+ 36%|███▌      | 18/50 [00:43<02:06,  3.95s/it][A
+ 38%|███▊      | 19/50 [00:45<01:49,  3.54s/it][A
+ 40%|████      | 20/50 [00:51<02:09,  4.31s/it][A
+ 42%|████▏     | 21/50 [00:54<01:49,  3.79s/it][A
+ 44%|████▍     | 22/50 [00:56<01:32,  3.30s/it][A
+ 46%|████▌     | 23/50 [01:06<02:21,  5.24s/it][A
+ 48%|████▊     | 24/50 [01:08<01:51,  4.30s/it][A
+ 50%|█████     | 25/50 [01:11<01:36,  3.86s/it][A
+ 52%|█████▏    | 26/50 [01:13<01:19,  3.30s/it][A
+ 54%|█████▍    | 27/50 [01:19<01:33,  4.05s/it][A
+ 56%|█████▌    | 28/50 [01:21<01:16,  3.50s/it][A
+ 58%|█████▊    | 29/50 [01:27<01:28,  4.20s/it][A
+ 60%|██████    | 30/50 [01:32<01:32,  4.63s/it][A
+ 62%|██████▏   | 31/50 [01:34<01:13,  3.86s/it][A
+ 64%|██████▍   | 32/50 [01:36<00:57,  3.22s/it][A
+ 66%|██████▌   | 33/50 [01:39<00:54,  3.19s/it][A
+ 68%|██████▊   | 34/50 [01:41<00:45,  2.86s/it][A
+ 70%|███████   | 35/50 [01:44<00:41,  2.78s/it][A
+ 72%|███████▏  | 36/50 [01:51<00:58,  4.18s/it][A
+ 74%|███████▍  | 37/50 [01:54<00:46,  3.55s/it][A
+ 76%|███████▌  | 38/50 [01:59<00:50,  4.21s/it][A
+ 78%|███████▊  | 39/50 [02:01<00:39,  3.60s/it][A
+ 80%|████████  | 40/50 [02:07<00:42,  4.27s/it][A
+ 82%|████████▏ | 41/50 [02:09<00:32,  3.58s/it][A
+ 84%|████████▍ | 42/50 [02:15<00:34,  4.25s/it][A
+ 86%|████████▌ | 43/50 [02:21<00:33,  4.76s/it][A
+ 88%|████████▊ | 44/50 [02:23<00:23,  3.88s/it][A
+ 90%|█████████ | 45/50 [02:29<00:22,  4.51s/it][A
+ 92%|█████████▏| 46/50 [02:31<00:15,  3.94s/it][A
+ 94%|█████████▍| 47/50 [02:35<00:11,  3.69s/it][A
+ 96%|█████████▌| 48/50 [02:47<00:12,  6.46s/it][A
+ 98%|█████████▊| 49/50 [02:55<00:06,  6.76s/it][A
+100%|██████████| 50/50 [03:01<00:00,  6.43s/it][A100%|██████████| 50/50 [03:01<00:00,  3.62s/it]
+ 30%|███       | 9/30 [44:09<1:37:22, 278.23s/it]2024-05-29 13:31:53.885 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:31:53.885 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+field_simp [h₀] at h₀ <;> norm_num at h₀ <;> linarith
+```
+Here is the predicted next tactic:
+```lean
+norm_cast at h₀
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	3
+*********
+ {'full_name': 'mathd_algebra_153', 'statement': 'theorem mathd_algebra_153 (n : ℝ) (h₀ : n = 1 / 3) :\n    Int.floor (10 * n) + Int.floor (100 * n) + Int.floor (1000 * n) + Int.floor (10000 * n) =\n      3702', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_153 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_153')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:06<05:20,  6.54s/it][A
+  4%|▍         | 2/50 [00:13<05:25,  6.78s/it][A
+  6%|▌         | 3/50 [00:20<05:23,  6.88s/it][A
+  8%|▊         | 4/50 [00:27<05:18,  6.93s/it][A
+ 10%|█         | 5/50 [00:33<04:58,  6.62s/it][A
+ 12%|█▏        | 6/50 [00:37<04:07,  5.62s/it][A
+ 14%|█▍        | 7/50 [00:40<03:34,  5.00s/it][A
+ 16%|█▌        | 8/50 [00:47<03:54,  5.59s/it][A
+ 18%|█▊        | 9/50 [00:51<03:24,  4.99s/it][A
+ 20%|██        | 10/50 [00:58<03:42,  5.57s/it][A
+ 22%|██▏       | 11/50 [01:02<03:15,  5.00s/it][A
+ 24%|██▍       | 12/50 [01:05<02:54,  4.60s/it][A
+ 26%|██▌       | 13/50 [01:12<03:15,  5.29s/it][A
+ 28%|██▊       | 14/50 [01:16<02:52,  4.80s/it][A
+ 30%|███       | 15/50 [01:23<03:09,  5.42s/it][A
+ 32%|███▏      | 16/50 [01:26<02:47,  4.91s/it][A
+ 34%|███▍      | 17/50 [01:30<02:29,  4.54s/it][A
+ 36%|███▌      | 18/50 [01:37<02:47,  5.23s/it][A
+ 38%|███▊      | 19/50 [01:41<02:27,  4.76s/it][A
+ 40%|████      | 20/50 [01:48<02:42,  5.42s/it][A
+ 42%|████▏     | 21/50 [01:54<02:49,  5.84s/it][A
+ 44%|████▍     | 22/50 [01:58<02:25,  5.20s/it][A
+ 46%|████▌     | 23/50 [02:02<02:08,  4.74s/it][A
+ 48%|████▊     | 24/50 [02:05<01:55,  4.44s/it][A
+ 50%|█████     | 25/50 [02:13<02:14,  5.37s/it][A
+ 52%|█████▏    | 26/50 [02:20<02:19,  5.81s/it][A
+ 54%|█████▍    | 27/50 [02:24<01:59,  5.19s/it][A
+ 56%|█████▌    | 28/50 [02:27<01:44,  4.73s/it][A
+ 58%|█████▊    | 29/50 [02:35<01:56,  5.55s/it][A
+ 60%|██████    | 30/50 [02:42<01:59,  5.98s/it][A
+ 62%|██████▏   | 31/50 [02:48<01:54,  6.00s/it][A
+ 64%|██████▍   | 32/50 [02:51<01:33,  5.21s/it][A
+ 66%|██████▌   | 33/50 [02:55<01:19,  4.66s/it][A
+ 68%|██████▊   | 34/50 [02:58<01:09,  4.37s/it][A
+ 70%|███████   | 35/50 [03:02<01:00,  4.07s/it][A
+ 72%|███████▏  | 36/50 [03:05<00:54,  3.92s/it][A
+ 74%|███████▍  | 37/50 [03:08<00:48,  3.75s/it][A
+ 76%|███████▌  | 38/50 [03:15<00:53,  4.45s/it][A
+ 78%|███████▊  | 39/50 [03:18<00:46,  4.21s/it][A
+ 80%|████████  | 40/50 [03:22<00:40,  4.03s/it][A
+ 82%|████████▏ | 41/50 [03:25<00:34,  3.83s/it][A
+ 84%|████████▍ | 42/50 [03:29<00:29,  3.70s/it][A
+ 86%|████████▌ | 43/50 [03:32<00:25,  3.60s/it][A
+ 88%|████████▊ | 44/50 [03:35<00:21,  3.53s/it][A
+ 90%|█████████ | 45/50 [03:39<00:17,  3.48s/it][A
+ 92%|█████████▏| 46/50 [03:42<00:13,  3.47s/it][A
+ 94%|█████████▍| 47/50 [03:49<00:13,  4.46s/it][A
+ 96%|█████████▌| 48/50 [03:52<00:08,  4.13s/it][A
+ 98%|█████████▊| 49/50 [03:56<00:03,  3.97s/it][A
+100%|██████████| 50/50 [03:59<00:00,  3.78s/it][A100%|██████████| 50/50 [03:59<00:00,  4.79s/it]
+ 33%|███▎      | 10/30 [48:31<1:31:06, 273.30s/it]2024-05-29 13:36:16.202 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:36:16.203 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [h₀]
+```
+n : ℝ
+h₀ : n = 1 / 3
+⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)⌋ + ⌊10000 * (1 / 3)⌋ = 3702
+
+n : ℝ
+h₀ : n = 1 / 3
+⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)⌋ + ⌊10000 * (1 / 3)⌋ = 3702
+
+n : ℝ
+h₀ : n = 1 / 3
+⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3
+# successes: 	3
+*********
+ {'full_name': 'algebra_sqineq_unitcircatbpamblt1', 'statement': 'theorem algebra_sqineq_unitcircatbpamblt1 (a b : ℝ) (h₀ : a ^ 2 + b ^ 2 = 1) :\n    a * b + (a - b) ≤ 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ algebra_sqineq_unitcircatbpamblt1 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_sqineq_unitcircatbpamblt1')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:02<02:21,  2.88s/it][A
+  4%|▍         | 2/50 [00:06<02:46,  3.47s/it][A
+  6%|▌         | 3/50 [00:13<03:52,  4.94s/it][A
+  8%|▊         | 4/50 [00:16<03:16,  4.28s/it][A  8%|▊         | 4/50 [00:18<03:34,  4.66s/it]
+ 37%|███▋      | 11/30 [49:12<1:04:00, 202.13s/it]2024-05-29 13:36:57.146 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:36:57.147 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+have h₁ : a * b ≤ 1 / 2 * (a ^ 2 + b ^ 2) := by
+ rw [h₀]
+ calc
+  a * b ≤ (a ^ 2 + b ^ 2) / 2 := by linarith [sq_nonneg (a - b)]
+   _ = 1 / 2 * (a ^ 2 + b ^ 2) := by ring
+```
+Here is the predicted next tactic:
+```lean
+nlinarith [h₀]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.36363636363636365
+# successes: 	4
+*********
+ {'full_name': 'amc12a_2021_p18', 'statement': 'theorem amc12a_2021_p18 (f : ℚ → ℝ) (h₀ : ∀ x > 0, ∀ y > 0, f (x * y) = f x + f y)\n    (h₁ : ∀ p, Nat.Prime p → f p = p) : f (25 /. 11) < 0', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2021_p18 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p18')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:03<02:55,  3.57s/it][A
+  4%|▍         | 2/50 [00:06<02:24,  3.02s/it][A
+  6%|▌         | 3/50 [00:13<03:45,  4.80s/it][A
+  8%|▊         | 4/50 [00:15<02:48,  3.67s/it][A
+ 10%|█         | 5/50 [00:16<02:13,  2.97s/it][A
+ 12%|█▏        | 6/50 [00:18<01:55,  2.64s/it][A
+ 14%|█▍        | 7/50 [00:20<01:38,  2.29s/it][A
+ 16%|█▌        | 8/50 [00:32<03:48,  5.44s/it][A
+ 18%|█▊        | 9/50 [00:36<03:27,  5.05s/it][A
+ 20%|██        | 10/50 [00:38<02:40,  4.01s/it][A
+ 22%|██▏       | 11/50 [00:39<02:05,  3.21s/it][A
+ 24%|██▍       | 12/50 [00:41<01:46,  2.80s/it][A
+ 26%|██▌       | 13/50 [00:42<01:24,  2.29s/it][A
+ 28%|██▊       | 14/50 [00:44<01:14,  2.07s/it][A
+ 30%|███       | 15/50 [00:45<01:06,  1.89s/it][A
+ 32%|███▏      | 16/50 [00:52<01:55,  3.40s/it][A
+ 34%|███▍      | 17/50 [00:59<02:26,  4.44s/it][A
+ 36%|███▌      | 18/50 [01:01<02:02,  3.82s/it][A
+ 38%|███▊      | 19/50 [01:03<01:38,  3.19s/it][A
+ 40%|████      | 20/50 [01:06<01:32,  3.07s/it][A
+ 42%|████▏     | 21/50 [01:07<01:14,  2.58s/it][A
+ 44%|████▍     | 22/50 [01:10<01:12,  2.60s/it][A
+ 46%|████▌     | 23/50 [01:12<01:01,  2.29s/it][A
+ 48%|████▊     | 24/50 [01:14<00:58,  2.25s/it][A
+ 50%|█████     | 25/50 [01:15<00:51,  2.04s/it][A
+ 52%|█████▏    | 26/50 [01:18<00:52,  2.21s/it][A
+ 54%|█████▍    | 27/50 [01:20<00:50,  2.21s/it][A
+ 56%|█████▌    | 28/50 [01:23<00:51,  2.32s/it][A
+ 58%|█████▊    | 29/50 [01:31<01:25,  4.05s/it][A
+ 60%|██████    | 30/50 [01:35<01:22,  4.10s/it][A
+ 62%|██████▏   | 31/50 [01:37<01:08,  3.59s/it][A
+ 64%|██████▍   | 32/50 [01:39<00:54,  3.01s/it][A
+ 66%|██████▌   | 33/50 [01:47<01:15,  4.41s/it][A
+ 68%|██████▊   | 34/50 [01:54<01:22,  5.14s/it][A
+ 70%|███████   | 35/50 [01:56<01:03,  4.24s/it][A
+ 72%|███████▏  | 36/50 [01:58<00:50,  3.60s/it][A
+ 74%|███████▍  | 37/50 [02:02<00:47,  3.68s/it][A
+ 76%|███████▌  | 38/50 [02:03<00:36,  3.07s/it][A
+ 78%|███████▊  | 39/50 [02:09<00:41,  3.77s/it][A
+ 80%|████████  | 40/50 [02:11<00:34,  3.43s/it][A
+ 82%|████████▏ | 41/50 [03:34<04:05, 27.28s/it][A
+ 84%|████████▍ | 42/50 [03:39<02:42, 20.37s/it][A
+ 86%|████████▌ | 43/50 [03:41<01:44, 14.86s/it][A
+ 88%|████████▊ | 44/50 [03:42<01:05, 10.86s/it][A
+ 90%|█████████ | 45/50 [03:44<00:40,  8.09s/it][A
+ 92%|█████████▏| 46/50 [03:48<00:27,  6.86s/it][A
+ 94%|█████████▍| 47/50 [04:30<00:52, 17.55s/it][A
+ 96%|█████████▌| 48/50 [04:32<00:25, 12.90s/it][A
+ 98%|█████████▊| 49/50 [04:42<00:11, 11.86s/it][A
+100%|██████████| 50/50 [04:43<00:00,  8.78s/it][A100%|██████████| 50/50 [04:43<00:00,  5.68s/it]
+ 40%|████      | 12/30 [54:19<1:10:13, 234.10s/it]2024-05-29 13:42:04.171 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:42:04.172 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+have h₂ : f (2 : ℚ) = 1 := by
+ calc
+  f 2 = f (1 + 1) := by norm_num
+  _ = f 1 + f 1 := h₀ 1 zero_lt_one 1 zero_lt_one
+  _ = 1 + 1 := by norm_num
+  _ = ↑(1 + 1) := by norm_cast
+  _ = (2 : ℝ) := by norm_num
+```
+Here is the predicted next tactic:
+```lean
+have h₃ : f 25 = 2 * f 5 := by
+ calc
+  f 25 = f (5 * 5) := by norm_num
+  _ = f 5 + f 5 := h₀ 5 (by norm_num) 5 (by norm_num)
+  _ = 2 * f 5 := (two_mul (f 5)).symm
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	4
+*********
+ {'full_name': 'mathd_algebra_329', 'statement': 'theorem mathd_algebra_329 (x y : ℝ) (h₀ : 3 * y = x) (h₁ : 2 * x + 5 * y = 11) : x + y = 4', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_329 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_329')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
+ 43%|████▎     | 13/30 [54:42<48:13, 170.22s/it]  2024-05-29 13:42:27.012 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:42:27.013 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+nlinarith [h₀, h₁]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.38461538461538464
+# successes: 	5
+*********
+ {'full_name': 'induction_pprime_pdvdapowpma', 'statement': 'theorem induction_pprime_pdvdapowpma (p a : ℕ) (h₀ : 0 < a) (h₁ : Nat.Prime p) : p ∣ a ^ p - a', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ induction_pprime_pdvdapowpma **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='induction_pprime_pdvdapowpma')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:58,  1.20s/it][A
+  4%|▍         | 2/50 [00:02<01:09,  1.46s/it][A
+  6%|▌         | 3/50 [00:03<01:01,  1.30s/it][A
+  8%|▊         | 4/50 [00:05<00:55,  1.20s/it][A
+ 10%|█         | 5/50 [00:06<00:51,  1.15s/it][A
+ 12%|█▏        | 6/50 [00:07<00:55,  1.25s/it][A
+ 14%|█▍        | 7/50 [00:08<00:55,  1.30s/it][A
+ 16%|█▌        | 8/50 [00:09<00:51,  1.22s/it][A
+ 18%|█▊        | 9/50 [00:11<00:51,  1.26s/it][A
+ 20%|██        | 10/50 [00:12<00:50,  1.25s/it][A
+ 22%|██▏       | 11/50 [00:13<00:49,  1.27s/it][A
+ 24%|██▍       | 12/50 [00:14<00:41,  1.10s/it][A
+ 26%|██▌       | 13/50 [00:15<00:42,  1.14s/it][A
+ 28%|██▊       | 14/50 [00:16<00:36,  1.01s/it][A
+ 30%|███       | 15/50 [00:18<00:46,  1.32s/it][A
+ 32%|███▏      | 16/50 [00:24<01:33,  2.75s/it][A
+ 34%|███▍      | 17/50 [00:26<01:18,  2.38s/it][A
+ 36%|███▌      | 18/50 [00:28<01:13,  2.28s/it][A
+ 38%|███▊      | 19/50 [00:28<00:55,  1.78s/it][A
+ 40%|████      | 20/50 [00:30<00:50,  1.67s/it][A
+ 42%|████▏     | 21/50 [00:30<00:39,  1.35s/it][A
+ 44%|████▍     | 22/50 [00:32<00:37,  1.33s/it][A
+ 46%|████▌     | 23/50 [00:34<00:41,  1.55s/it][A
+ 48%|████▊     | 24/50 [00:35<00:36,  1.41s/it][A
+ 50%|█████     | 25/50 [00:37<00:38,  1.53s/it][A
+ 52%|█████▏    | 26/50 [00:38<00:33,  1.39s/it][A
+ 54%|█████▍    | 27/50 [00:40<00:36,  1.59s/it][A
+ 56%|█████▌    | 28/50 [00:41<00:31,  1.42s/it][A
+ 58%|█████▊    | 29/50 [00:42<00:30,  1.46s/it][A
+ 60%|██████    | 30/50 [00:46<00:45,  2.28s/it][A
+ 62%|██████▏   | 31/50 [00:47<00:36,  1.91s/it][A
+ 64%|██████▍   | 32/50 [00:49<00:33,  1.84s/it][A
+ 66%|██████▌   | 33/50 [00:51<00:32,  1.92s/it][A
+ 68%|██████▊   | 34/50 [00:53<00:29,  1.85s/it][A
+ 70%|███████   | 35/50 [00:54<00:22,  1.49s/it][A
+ 72%|███████▏  | 36/50 [00:55<00:20,  1.49s/it][A
+ 74%|███████▍  | 37/50 [01:02<00:40,  3.13s/it][A
+ 76%|███████▌  | 38/50 [01:04<00:32,  2.72s/it][A
+ 78%|███████▊  | 39/50 [01:05<00:23,  2.14s/it][A
+ 80%|████████  | 40/50 [01:06<00:18,  1.86s/it][A
+ 82%|████████▏ | 41/50 [01:07<00:14,  1.59s/it][A
+ 84%|████████▍ | 42/50 [01:10<00:16,  2.07s/it][A
+ 86%|████████▌ | 43/50 [01:11<00:13,  1.90s/it][A
+ 88%|████████▊ | 44/50 [01:13<00:11,  1.84s/it][A
+ 90%|█████████ | 45/50 [01:16<00:10,  2.15s/it][A
+ 92%|█████████▏| 46/50 [01:23<00:13,  3.45s/it][A
+ 94%|█████████▍| 47/50 [01:24<00:08,  2.88s/it][A
+ 96%|█████████▌| 48/50 [01:25<00:04,  2.21s/it][A
+ 98%|█████████▊| 49/50 [01:32<00:03,  3.72s/it][A
+100%|██████████| 50/50 [01:34<00:00,  3.34s/it][A100%|██████████| 50/50 [01:34<00:00,  1.90s/it]
+ 47%|████▋     | 14/30 [56:39<41:02, 153.93s/it]2024-05-29 13:44:25.031 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:44:25.031 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [← Nat.mod_add_div a p]
+```
+Here is the predicted next tactic:
+```lean
+apply dvd_mul_of_dvd_right
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.35714285714285715
+# successes: 	5
+*********
+ {'full_name': 'amc12a_2021_p9', 'statement': 'theorem amc12a_2021_p9 : (∏ k in Finset.range 7, 2 ^ 2 ^ k + 3 ^ 2 ^ k) = 3 ^ 128 - 2 ^ 128', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2021_p9 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p9')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:06<05:11,  6.35s/it][A
+  4%|▍         | 2/50 [00:12<05:06,  6.39s/it][A
+  6%|▌         | 3/50 [00:19<05:00,  6.40s/it][A
+  8%|▊         | 4/50 [00:25<04:53,  6.38s/it][A
+ 10%|█         | 5/50 [00:31<04:48,  6.40s/it][A
+ 12%|█▏        | 6/50 [00:38<04:41,  6.41s/it][A
+ 14%|█▍        | 7/50 [00:44<04:37,  6.44s/it][A
+ 16%|█▌        | 8/50 [00:51<04:31,  6.46s/it][A 16%|█▌        | 8/50 [00:51<04:29,  6.42s/it]
+ 50%|█████     | 15/30 [57:54<32:31, 130.12s/it]2024-05-29 13:45:38.354 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:45:38.355 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀
+Here is the predicted next tactic:
+```lean
+norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	5
+*********
+ {'full_name': 'aime_1984_p1', 'statement': 'theorem aime_1984_p1 (u : ℕ → ℚ) (h₀ : ∀ n, u (n + 1) = u n + 1)\n    (h₁ : (∑ k in Finset.range 98, u k.succ) = 137) :\n    (∑ k in Finset.range 49, u (2 * k.succ)) = 93', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ aime_1984_p1 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='aime_1984_p1')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:30<25:04, 30.71s/it][A
+  4%|▍         | 2/50 [02:32<1:07:23, 84.24s/it][AHere is the predicted next tactic:
+```lean
+have h₂ : (∑ k in Finset.range 98, (k + 1 : ℚ)) = 98 * 99 / 2 := by norm_num
+```
+Here is the predicted next tactic:
+```lean
+simp only [h₀, Finset.sum_range_succ, Finset.sum_range_zero]
+```
+WARNING 05-29 13:48:18 scheduler.py:195] Input prompt (18844 tokens) is too long and exceeds limit of 8192
+
+  6%|▌         | 3/50 [02:32<35:59, 45.95s/it]  [AWARNING 05-29 13:48:19 scheduler.py:195] Input prompt (18819 tokens) is too long and exceeds limit of 8192
+
+  8%|▊         | 4/50 [02:33<21:26, 27.97s/it][A
+ 10%|█         | 5/50 [03:55<35:42, 47.62s/it][A 10%|█         | 5/50 [09:59<1:29:59, 120.00s/it]
+ 53%|█████▎    | 16/30 [1:08:12<1:04:40, 277.19s/it]2024-05-29 13:55:57.222 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:55:57.222 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3125
+# successes: 	5
+*********
+ {'full_name': 'amc12a_2021_p22', 'statement': "theorem amc12a_2021_p22 (a b c : ℝ) (f : ℝ → ℝ) (h₀ : ∀ x, f x = x ^ 3 + a * x ^ 2 + b * x + c)\n    (h₁ :\n      f ⁻¹' {0} =\n        {Real.cos (2 * Real.pi / 7), Real.cos (4 * Real.pi / 7), Real.cos (6 * Real.pi / 7)}) :\n    a * b * c = 1 / 32", 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2021_p22 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p22')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:02<02:17,  2.80s/it][A
+  4%|▍         | 2/50 [00:06<02:27,  3.07s/it][A
+  6%|▌         | 3/50 [00:09<02:23,  3.06s/it][A
+  8%|▊         | 4/50 [00:12<02:18,  3.00s/it][A
+ 10%|█         | 5/50 [00:15<02:18,  3.08s/it][A
+ 12%|█▏        | 6/50 [00:18<02:15,  3.07s/it][A
+ 14%|█▍        | 7/50 [00:21<02:11,  3.06s/it][A
+ 16%|█▌        | 8/50 [00:23<01:58,  2.82s/it][A
+ 18%|█▊        | 9/50 [00:26<01:59,  2.90s/it][A
+ 20%|██        | 10/50 [00:29<01:48,  2.72s/it][A
+ 22%|██▏       | 11/50 [00:32<01:52,  2.87s/it][A
+ 24%|██▍       | 12/50 [00:35<01:52,  2.96s/it][A
+ 26%|██▌       | 13/50 [00:38<01:47,  2.90s/it][A
+ 28%|██▊       | 14/50 [00:44<02:18,  3.85s/it][A
+ 30%|███       | 15/50 [00:47<02:07,  3.65s/it][A
+ 32%|███▏      | 16/50 [00:50<02:02,  3.60s/it][A
+ 34%|███▍      | 17/50 [00:51<01:32,  2.80s/it][A
+ 36%|███▌      | 18/50 [00:54<01:24,  2.64s/it][A
+ 38%|███▊      | 19/50 [00:56<01:22,  2.65s/it][A
+ 40%|████      | 20/50 [00:58<01:15,  2.53s/it][A
+ 42%|████▏     | 21/50 [01:02<01:21,  2.80s/it][A
+ 44%|████▍     | 22/50 [01:04<01:13,  2.63s/it][A
+ 46%|████▌     | 23/50 [01:10<01:37,  3.60s/it][A
+ 48%|████▊     | 24/50 [01:12<01:23,  3.20s/it][A
+ 50%|█████     | 25/50 [01:14<01:12,  2.89s/it][A
+ 52%|█████▏    | 26/50 [01:18<01:13,  3.08s/it][A
+ 54%|█████▍    | 27/50 [01:22<01:14,  3.25s/it][A
+ 56%|█████▌    | 28/50 [01:24<01:05,  2.98s/it][A
+ 58%|█████▊    | 29/50 [01:26<00:57,  2.73s/it][A
+ 60%|██████    | 30/50 [01:35<01:33,  4.67s/it][A
+ 62%|██████▏   | 31/50 [01:41<01:36,  5.10s/it][A
+ 64%|██████▍   | 32/50 [01:44<01:16,  4.25s/it][A
+ 66%|██████▌   | 33/50 [01:46<01:04,  3.77s/it][A
+ 68%|██████▊   | 34/50 [01:48<00:48,  3.04s/it][A
+ 70%|███████   | 35/50 [01:50<00:42,  2.81s/it][A
+ 72%|███████▏  | 36/50 [01:53<00:39,  2.82s/it][A
+ 74%|███████▍  | 37/50 [01:56<00:39,  3.04s/it][A
+ 76%|███████▌  | 38/50 [02:06<01:01,  5.10s/it][A
+ 78%|███████▊  | 39/50 [02:08<00:44,  4.07s/it][A
+ 80%|████████  | 40/50 [02:18<00:58,  5.81s/it][A
+ 82%|████████▏ | 41/50 [02:20<00:43,  4.87s/it][A
+ 84%|████████▍ | 42/50 [02:24<00:36,  4.54s/it][A
+ 86%|████████▌ | 43/50 [02:33<00:40,  5.78s/it][A
+ 88%|████████▊ | 44/50 [02:34<00:26,  4.45s/it][A
+ 90%|█████████ | 45/50 [02:37<00:18,  3.80s/it][A
+ 92%|█████████▏| 46/50 [02:40<00:14,  3.68s/it][A
+ 94%|█████████▍| 47/50 [02:42<00:09,  3.09s/it][A
+ 96%|█████████▌| 48/50 [02:45<00:06,  3.22s/it][A
+ 98%|█████████▊| 49/50 [02:54<00:04,  4.86s/it][A
+100%|██████████| 50/50 [02:57<00:00,  4.46s/it][A100%|██████████| 50/50 [02:57<00:00,  3.56s/it]
+ 57%|█████▋    | 17/30 [1:11:33<55:04, 254.21s/it]  2024-05-29 13:59:18.429 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:59:18.429 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+have h₂ : f = fun x => x ^ 3 + a * x ^ 2 + b * x + c := by ext; rw [h₀]
+```
+Here is the predicted next tactic:
+```lean
+have h₃ : (fun x => x ^ 3 + a * x ^ 2 + b * x + c) ⁻¹' {0} =
+  {cos (2 * π / 7), cos (4 * π / 7), cos (6 * π / 7)} := by rw [h₂, h₁]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.29411764705882354
+# successes: 	5
+*********
+ {'full_name': 'mathd_numbertheory_229', 'statement': 'theorem mathd_numbertheory_229 : 5 ^ 30 % 7 = 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_229 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_229')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:05<?, ?it/s]
+ 60%|██████    | 18/30 [1:12:02<37:18, 186.53s/it]2024-05-29 13:59:47.163 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 13:59:47.163 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+```lean
+norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀.35]
+```[UN
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3333333333333333
+# successes: 	6
+*********
+ {'full_name': 'mathd_numbertheory_100', 'statement': 'theorem mathd_numbertheory_100 (n : ℕ) (h₀ : 0 < n) (h₁ : Nat.gcd n 40 = 10)\n    (h₂ : Nat.lcm n 40 = 280) : n = 70', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_100 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_100')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:56,  1.15s/it][A
+  4%|▍         | 2/50 [00:02<00:53,  1.10s/it][A
+  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
+  8%|▊         | 4/50 [00:04<00:49,  1.08s/it][A
+ 10%|█         | 5/50 [00:05<00:50,  1.12s/it][A
+ 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
+ 14%|█▍        | 7/50 [00:08<00:55,  1.29s/it][A
+ 16%|█▌        | 8/50 [00:09<00:49,  1.19s/it][A 16%|█▌        | 8/50 [00:34<02:59,  4.26s/it]
+ 63%|██████▎   | 19/30 [1:12:58<27:01, 147.38s/it]2024-05-29 14:00:43.285 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:00:43.286 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [Nat.gcd_comm] at h₁
+```
+Here is the predicted next tactic:
+```lean
+rw [Nat.gcd_comm] at h₁
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.3684210526315789
+# successes: 	7
+*********
+ {'full_name': 'mathd_algebra_313', 'statement': 'theorem mathd_algebra_313 (v i z : ℂ) (h₀ : v = i * z) (h₁ : v = 1 + Complex.I)\n    (h₂ : z = 2 - Complex.I) : i = 1 / 5 + 3 / 5 * Complex.I', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_313 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_313')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:02<02:02,  2.50s/it][A
+  4%|▍         | 2/50 [00:04<01:32,  1.93s/it][A
+  6%|▌         | 3/50 [00:05<01:28,  1.88s/it][A
+  8%|▊         | 4/50 [00:12<02:50,  3.71s/it][A
+ 10%|█         | 5/50 [00:13<02:12,  2.95s/it][A
+ 12%|█▏        | 6/50 [00:15<01:47,  2.45s/it][A
+ 14%|█▍        | 7/50 [00:18<01:49,  2.55s/it][A
+ 16%|█▌        | 8/50 [00:19<01:34,  2.24s/it][A
+ 18%|█▊        | 9/50 [00:21<01:22,  2.02s/it][A
+ 20%|██        | 10/50 [00:23<01:24,  2.10s/it][A
+ 22%|██▏       | 11/50 [00:25<01:18,  2.02s/it][A
+ 24%|██▍       | 12/50 [00:27<01:14,  1.96s/it][A
+ 26%|██▌       | 13/50 [00:29<01:21,  2.19s/it][A
+ 28%|██▊       | 14/50 [00:33<01:30,  2.51s/it][A
+ 30%|███       | 15/50 [00:36<01:34,  2.70s/it][A
+ 32%|███▏      | 16/50 [00:38<01:28,  2.61s/it][A
+ 34%|███▍      | 17/50 [00:41<01:25,  2.59s/it][A
+ 36%|███▌      | 18/50 [00:44<01:30,  2.84s/it][A
+ 38%|███▊      | 19/50 [00:46<01:22,  2.66s/it][A
+ 40%|████      | 20/50 [00:48<01:09,  2.32s/it][A
+ 42%|████▏     | 21/50 [00:49<00:58,  2.03s/it][A
+ 44%|████▍     | 22/50 [00:53<01:08,  2.45s/it][A
+ 46%|████▌     | 23/50 [00:55<01:01,  2.26s/it][A
+ 48%|████▊     | 24/50 [00:57<00:56,  2.18s/it][A
+ 50%|█████     | 25/50 [00:58<00:51,  2.07s/it][A
+ 52%|█████▏    | 26/50 [01:05<01:22,  3.42s/it][A
+ 54%|█████▍    | 27/50 [01:07<01:06,  2.90s/it][A
+ 56%|█████▌    | 28/50 [01:08<00:54,  2.49s/it][A
+ 58%|█████▊    | 29/50 [01:10<00:48,  2.31s/it][A
+ 60%|██████    | 30/50 [01:13<00:48,  2.41s/it][A
+ 62%|██████▏   | 31/50 [01:14<00:39,  2.05s/it][A
+ 64%|██████▍   | 32/50 [01:16<00:34,  1.91s/it][A
+ 66%|██████▌   | 33/50 [01:17<00:30,  1.79s/it][A
+ 68%|██████▊   | 34/50 [01:21<00:36,  2.31s/it][A
+ 70%|███████   | 35/50 [01:22<00:31,  2.07s/it][A
+ 72%|███████▏  | 36/50 [01:34<01:09,  5.00s/it][A
+ 74%|███████▍  | 37/50 [01:35<00:51,  3.96s/it][A
+ 76%|███████▌  | 38/50 [01:37<00:38,  3.24s/it][A
+ 78%|███████▊  | 39/50 [01:39<00:29,  2.73s/it][A
+ 80%|████████  | 40/50 [01:41<00:25,  2.57s/it][A
+ 82%|████████▏ | 41/50 [01:43<00:21,  2.38s/it][A
+ 84%|████████▍ | 42/50 [01:47<00:23,  2.92s/it][A
+ 86%|████████▌ | 43/50 [01:50<00:19,  2.84s/it][A
+ 88%|████████▊ | 44/50 [01:53<00:18,  3.08s/it][A 88%|████████▊ | 44/50 [02:00<00:16,  2.73s/it]
+ 67%|██████▋   | 20/30 [1:15:21<24:19, 145.94s/it]2024-05-29 14:03:06.016 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:03:06.016 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+field_simp [h₀, h₁, h₂]
+```
+Here is the predicted next tactic:
+```lean
+ring
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4
+# successes: 	8
+*********
+ {'full_name': 'amc12b_2002_p4', 'statement': 'theorem amc12b_2002_p4 (n : ℕ) (h₀ : 0 < n) (h₁ : (1 /. 2 + 1 /. 3 + 1 /. 7 + 1 /. ↑n).den = 1) :\n    n = 42', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12b_2002_p4 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12b_2002_p4')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:03<02:35,  3.17s/it][A
+  4%|▍         | 2/50 [00:28<13:07, 16.41s/it][A
+  6%|▌         | 3/50 [00:31<07:46,  9.92s/it][A
+  8%|▊         | 4/50 [01:07<15:35, 20.34s/it][A
+ 10%|█         | 5/50 [01:09<10:19, 13.77s/it][A
+ 12%|█▏        | 6/50 [01:12<07:23, 10.07s/it][A
+ 14%|█▍        | 7/50 [01:14<05:28,  7.64s/it][A
+ 16%|█▌        | 8/50 [01:21<05:03,  7.23s/it][A
+ 18%|█▊        | 9/50 [02:40<20:16, 29.67s/it][A
+ 20%|██        | 10/50 [03:56<29:19, 44.00s/it][A
+ 22%|██▏       | 11/50 [05:10<34:36, 53.24s/it][A
+ 24%|██▍       | 12/50 [06:14<35:47, 56.51s/it][A
+ 26%|██▌       | 13/50 [07:22<36:54, 59.85s/it][A
+ 28%|██▊       | 14/50 [07:51<30:21, 50.60s/it][A
+ 30%|███       | 15/50 [07:53<20:54, 35.85s/it][A
+ 32%|███▏      | 16/50 [08:55<24:46, 43.72s/it][A
+ 34%|███▍      | 17/50 [09:53<26:27, 48.12s/it][A
+ 36%|███▌      | 18/50 [09:56<18:23, 34.50s/it][A 36%|███▌      | 18/50 [09:59<17:46, 33.33s/it]
+ 70%|███████   | 21/30 [1:25:40<43:11, 287.99s/it]2024-05-29 14:13:24.988 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:13:24.988 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+field_simp [(by norm_num : (2 : ℤ) ≠ 0), (by norm_num : (3 : ℤ) ≠ 0), (by norm_num : (7 : ℤ) ≠ 0), (by norm_num : (n : ℤ) ≠ 0)] at h₁
+```
+Here is the predicted next tactic:
+```lean
+contradiction
+```
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.38095238095238093
+# successes: 	8
+*********
+ {'full_name': 'amc12a_2002_p6', 'statement': 'theorem amc12a_2002_p6 (n : ℕ) (h₀ : 0 < n) : ∃ m, m > n ∧ ∃ p, m * p ≤ m + p', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2002_p6 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2002_p6')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:20<16:28, 20.18s/it][A
+  4%|▍         | 2/50 [00:22<07:52,  9.85s/it][A
+  6%|▌         | 3/50 [00:25<05:06,  6.52s/it][A
+  8%|▊         | 4/50 [00:27<03:48,  4.98s/it][A
+ 10%|█         | 5/50 [00:30<03:05,  4.12s/it][A
+ 12%|█▏        | 6/50 [00:33<02:38,  3.61s/it][A
+ 14%|█▍        | 7/50 [00:35<02:20,  3.26s/it][A
+ 16%|█▌        | 8/50 [00:38<02:08,  3.06s/it][A
+ 18%|█▊        | 9/50 [00:40<01:59,  2.92s/it][A
+ 20%|██        | 10/50 [00:43<01:52,  2.81s/it][A
+ 22%|██▏       | 11/50 [00:46<01:47,  2.75s/it][A
+ 24%|██▍       | 12/50 [00:48<01:42,  2.71s/it][A
+ 26%|██▌       | 13/50 [00:50<01:25,  2.32s/it][A
+ 28%|██▊       | 14/50 [00:55<01:53,  3.15s/it][A
+ 30%|███       | 15/50 [00:56<01:32,  2.63s/it][A
+ 32%|███▏      | 16/50 [01:01<01:53,  3.35s/it][A
+ 34%|███▍      | 17/50 [01:03<01:31,  2.77s/it][A
+ 36%|███▌      | 18/50 [01:04<01:16,  2.39s/it][A
+ 38%|███▊      | 19/50 [01:09<01:38,  3.17s/it][A
+ 40%|████      | 20/50 [01:12<01:30,  3.01s/it][A
+ 42%|████▏     | 21/50 [01:13<01:12,  2.51s/it][A
+ 44%|████▍     | 22/50 [01:18<01:31,  3.28s/it][A
+ 46%|████▌     | 23/50 [01:21<01:22,  3.06s/it][A
+ 48%|████▊     | 24/50 [01:23<01:16,  2.93s/it][A
+ 50%|█████     | 25/50 [01:24<00:57,  2.32s/it][A
+ 52%|█████▏    | 26/50 [01:26<00:48,  2.02s/it][A
+ 54%|█████▍    | 27/50 [01:27<00:41,  1.82s/it][A
+ 56%|█████▌    | 28/50 [01:28<00:34,  1.55s/it][A
+ 58%|█████▊    | 29/50 [01:30<00:39,  1.87s/it][A
+ 60%|██████    | 30/50 [01:33<00:41,  2.09s/it][A
+ 62%|██████▏   | 31/50 [01:34<00:33,  1.76s/it][A
+ 64%|██████▍   | 32/50 [01:35<00:29,  1.61s/it][A
+ 66%|██████▌   | 33/50 [01:36<00:23,  1.40s/it][A
+ 68%|██████▊   | 34/50 [01:37<00:20,  1.25s/it][A
+ 70%|███████   | 35/50 [01:39<00:21,  1.41s/it][A
+ 72%|███████▏  | 36/50 [01:40<00:17,  1.26s/it][A
+ 74%|███████▍  | 37/50 [01:41<00:16,  1.29s/it][A
+ 76%|███████▌  | 38/50 [01:43<00:17,  1.44s/it][A
+ 78%|███████▊  | 39/50 [01:44<00:14,  1.28s/it][A
+ 80%|████████  | 40/50 [01:45<00:13,  1.33s/it][A
+ 82%|████████▏ | 41/50 [01:47<00:11,  1.31s/it][A
+ 84%|████████▍ | 42/50 [01:47<00:09,  1.19s/it][A
+ 86%|████████▌ | 43/50 [01:53<00:16,  2.35s/it][A 86%|████████▌ | 43/50 [01:55<00:18,  2.69s/it]
+ 73%|███████▎  | 22/30 [1:27:58<32:22, 242.81s/it]2024-05-29 14:15:42.517 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:15:42.517 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+all_goals norm_num
+```
+Here is the predicted next tactic:
+```lean
+suffices ∃ m, n < m ∧ ∃ p, m < p ∧ m + p ≤ m * p by
+ rcases this with ⟨m, h₁, p, h₂, h₃⟩
+ exact ⟨p, h₂, m, h₃⟩
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4090909090909091
+# successes: 	9
+*********
+ {'full_name': 'amc12a_2003_p23', 'statement': 'theorem amc12a_2003_p23 (S : Finset ℕ)\n    (h₀ : ∀ k : ℕ, k ∈ S ↔ 0 < k ∧ (k * k : ℕ) ∣ ∏ i in Finset.Icc 1 9, i !) : S.card = 672', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2003_p23 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2003_p23')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:03<02:49,  3.46s/it][A
+  4%|▍         | 2/50 [00:04<01:43,  2.16s/it][A
+  6%|▌         | 3/50 [00:05<01:20,  1.71s/it][A
+  8%|▊         | 4/50 [00:06<01:03,  1.38s/it][A
+ 10%|█         | 5/50 [00:07<00:48,  1.09s/it][A
+ 12%|█▏        | 6/50 [00:08<00:45,  1.03s/it][A
+ 14%|█▍        | 7/50 [00:11<01:17,  1.80s/it][A
+ 16%|█▌        | 8/50 [00:12<01:01,  1.46s/it][A
+ 18%|█▊        | 9/50 [00:13<00:52,  1.29s/it][A
+ 20%|██        | 10/50 [00:16<01:16,  1.92s/it][A
+ 22%|██▏       | 11/50 [00:17<01:01,  1.58s/it][A
+ 24%|██▍       | 12/50 [00:18<00:50,  1.32s/it][A
+ 26%|██▌       | 13/50 [00:18<00:42,  1.14s/it][A
+ 28%|██▊       | 14/50 [00:19<00:34,  1.03it/s][A
+ 30%|███       | 15/50 [00:20<00:31,  1.12it/s][A
+ 32%|███▏      | 16/50 [00:20<00:29,  1.16it/s][A
+ 34%|███▍      | 17/50 [00:21<00:27,  1.21it/s][A
+ 36%|███▌      | 18/50 [00:22<00:26,  1.22it/s][A
+ 38%|███▊      | 19/50 [00:23<00:24,  1.26it/s][A
+ 40%|████      | 20/50 [00:24<00:30,  1.01s/it][A
+ 42%|████▏     | 21/50 [00:25<00:30,  1.04s/it][A
+ 44%|████▍     | 22/50 [00:27<00:30,  1.09s/it][A
+ 46%|████▌     | 23/50 [00:29<00:39,  1.45s/it][A
+ 48%|████▊     | 24/50 [00:29<00:29,  1.15s/it][A
+ 50%|█████     | 25/50 [00:30<00:25,  1.02s/it][A
+ 52%|█████▏    | 26/50 [00:31<00:23,  1.04it/s][A
+ 54%|█████▍    | 27/50 [00:32<00:22,  1.03it/s][A
+ 56%|█████▌    | 28/50 [00:33<00:19,  1.11it/s][A
+ 58%|█████▊    | 29/50 [00:33<00:17,  1.17it/s][A
+ 60%|██████    | 30/50 [00:34<00:14,  1.36it/s][A
+ 62%|██████▏   | 31/50 [00:34<00:12,  1.47it/s][A
+ 64%|██████▍   | 32/50 [00:35<00:14,  1.24it/s][A
+ 66%|██████▌   | 33/50 [00:36<00:13,  1.27it/s][A
+ 68%|██████▊   | 34/50 [00:40<00:26,  1.68s/it][A
+ 70%|███████   | 35/50 [00:41<00:23,  1.54s/it][A
+ 72%|███████▏  | 36/50 [00:43<00:24,  1.76s/it][A
+ 74%|███████▍  | 37/50 [00:44<00:19,  1.49s/it][A
+ 76%|███████▌  | 38/50 [00:45<00:16,  1.40s/it][A
+ 78%|███████▊  | 39/50 [00:46<00:12,  1.15s/it][A
+ 80%|████████  | 40/50 [00:47<00:11,  1.14s/it][A
+ 82%|████████▏ | 41/50 [00:51<00:16,  1.81s/it][A
+ 84%|████████▍ | 42/50 [00:51<00:11,  1.40s/it][A
+ 86%|████████▌ | 43/50 [00:52<00:08,  1.20s/it][A
+ 88%|████████▊ | 44/50 [00:53<00:06,  1.14s/it][A
+ 90%|█████████ | 45/50 [00:54<00:05,  1.16s/it][A
+ 92%|█████████▏| 46/50 [00:55<00:04,  1.12s/it][A
+ 94%|█████████▍| 47/50 [00:56<00:03,  1.04s/it][A
+ 96%|█████████▌| 48/50 [00:57<00:01,  1.06it/s][A
+ 98%|█████████▊| 49/50 [00:58<00:00,  1.00it/s][A
+100%|██████████| 50/50 [01:01<00:00,  1.84s/it][A100%|██████████| 50/50 [01:01<00:00,  1.24s/it]
+ 77%|███████▋  | 23/30 [1:29:22<22:46, 195.17s/it]2024-05-29 14:17:06.435 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:17:06.435 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+suffices ∀ k : ℕ, 0 < k ∧ k * k ∣ (∏ i in Finset.Icc 1 9, i !) ↔ k = 1 ∨ k = 2 ∨ k = 3 ∨ k = 4 ∨ k = 5 ∨ k = 6 ∨ k = 7 ∨ k = 8 ∨ k = 9 by
+ rw [Finset.card_eq_sum_ones]
+ apply Finset.sum_congr rfl
+ simpa
+```
+Here is the predicted next tactic:
+```lean
+rw [Finset.sum_const]
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.391304347826087
+# successes: 	9
+*********
+ {'full_name': 'mathd_algebra_129', 'statement': 'theorem mathd_algebra_129 (a : ℝ) (h₀ : a ≠ 0) (h₁ : 8⁻¹ / 4⁻¹ - a⁻¹ = 1) : a = -2', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_129 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_129')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
+ 80%|████████  | 24/30 [1:29:45<14:21, 143.54s/it]2024-05-29 14:17:29.587 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:17:29.587 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+field_simp at h₁
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4166666666666667
+# successes: 	10
+*********
+ {'full_name': 'amc12b_2021_p18', 'statement': 'theorem amc12b_2021_p18 (z : ℂ)\n    (h₀ : 12 * Complex.normSq z = 2 * Complex.normSq (z + 2) + Complex.normSq (z ^ 2 + 1) + 31) :\n    z + 6 / z = -2', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12b_2021_p18 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12b_2021_p18')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:12<10:08, 12.43s/it][A
+  4%|▍         | 2/50 [00:15<05:33,  6.94s/it][A
+  6%|▌         | 3/50 [00:18<04:03,  5.17s/it][A
+  8%|▊         | 4/50 [00:21<03:09,  4.12s/it][A
+ 10%|█         | 5/50 [00:25<03:08,  4.19s/it][A
+ 12%|█▏        | 6/50 [00:27<02:38,  3.61s/it][A
+ 14%|█▍        | 7/50 [00:29<02:08,  3.00s/it][A
+ 16%|█▌        | 8/50 [00:32<01:59,  2.84s/it][A
+ 18%|█▊        | 9/50 [00:38<02:43,  4.00s/it][A
+ 20%|██        | 10/50 [00:43<02:43,  4.10s/it][A
+ 22%|██▏       | 11/50 [00:46<02:33,  3.94s/it][A
+ 24%|██▍       | 12/50 [00:49<02:23,  3.77s/it][A
+ 26%|██▌       | 13/50 [00:58<03:10,  5.14s/it][A
+ 28%|██▊       | 14/50 [01:04<03:20,  5.56s/it][A
+ 30%|███       | 15/50 [01:11<03:27,  5.94s/it][A
+ 32%|███▏      | 16/50 [01:14<02:53,  5.10s/it][A
+ 34%|███▍      | 17/50 [01:20<02:51,  5.19s/it][A
+ 36%|███▌      | 18/50 [01:25<02:48,  5.26s/it][A
+ 38%|███▊      | 19/50 [01:31<02:53,  5.59s/it][A
+ 40%|████      | 20/50 [01:34<02:17,  4.59s/it][A
+ 42%|████▏     | 21/50 [01:37<02:04,  4.30s/it][A
+ 44%|████▍     | 22/50 [01:44<02:21,  5.06s/it][A
+ 46%|████▌     | 23/50 [01:48<02:03,  4.59s/it][A
+ 48%|████▊     | 24/50 [01:52<01:56,  4.49s/it][A
+ 50%|█████     | 25/50 [01:56<01:51,  4.45s/it][A
+ 52%|█████▏    | 26/50 [02:02<01:53,  4.72s/it][A
+ 54%|█████▍    | 27/50 [02:07<01:53,  4.93s/it][A
+ 56%|█████▌    | 28/50 [02:13<01:57,  5.36s/it][A
+ 58%|█████▊    | 29/50 [02:20<02:00,  5.72s/it][A
+ 60%|██████    | 30/50 [02:24<01:45,  5.30s/it][A
+ 62%|██████▏   | 31/50 [02:29<01:35,  5.00s/it][A
+ 64%|██████▍   | 32/50 [02:38<01:56,  6.48s/it][A
+ 66%|██████▌   | 33/50 [02:42<01:35,  5.62s/it][A
+ 68%|██████▊   | 34/50 [02:46<01:19,  4.96s/it][A
+ 70%|███████   | 35/50 [02:50<01:11,  4.74s/it][A
+ 72%|███████▏  | 36/50 [02:54<01:04,  4.61s/it][A
+ 74%|███████▍  | 37/50 [02:58<00:58,  4.53s/it][A
+ 76%|███████▌  | 38/50 [03:04<00:58,  4.91s/it][A
+ 78%|███████▊  | 39/50 [03:09<00:53,  4.86s/it][A
+ 80%|████████  | 40/50 [03:22<01:12,  7.26s/it][A
+ 82%|████████▏ | 41/50 [03:28<01:03,  7.05s/it][A
+ 84%|████████▍ | 42/50 [03:32<00:48,  6.04s/it][A
+ 86%|████████▌ | 43/50 [03:36<00:38,  5.52s/it][A
+ 88%|████████▊ | 44/50 [03:41<00:30,  5.14s/it][A
+ 90%|█████████ | 45/50 [03:54<00:38,  7.62s/it][A
+ 92%|█████████▏| 46/50 [03:58<00:25,  6.48s/it][A
+ 94%|█████████▍| 47/50 [04:04<00:18,  6.23s/it][A
+ 96%|█████████▌| 48/50 [04:09<00:12,  6.01s/it][A
+ 98%|█████████▊| 49/50 [04:13<00:05,  5.54s/it][A
+100%|██████████| 50/50 [04:20<00:00,  5.82s/it][A100%|██████████| 50/50 [04:20<00:00,  5.21s/it]
+ 83%|████████▎ | 25/30 [1:34:28<15:27, 185.52s/it]2024-05-29 14:22:13.016 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:22:13.016 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+field_simp [Complex.ext_iff] at h₀ ⊢
+```
+Here is the predicted next tactic:
+```lean
+replace h₀ : 12 * (z.re ^ 2 + z.im ^ 2) = 2 * ((z + 2).re ^ 2 + (z + 2).im ^ 2) + (z ^ 2 + 1).re ^ 2 + (z ^ 2 + 1).im ^ 2 + 31
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4
+# successes: 	10
+*********
+ {'full_name': 'mathd_algebra_484', 'statement': 'theorem mathd_algebra_484 : Real.log 27 / Real.log 3 = 3', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_484 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_484')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:51,  1.05s/it][A
+  4%|▍         | 2/50 [00:06<03:02,  3.81s/it][A
+  6%|▌         | 3/50 [00:09<02:30,  3.19s/it][A
+  8%|▊         | 4/50 [00:11<02:12,  2.89s/it][A
+ 10%|█         | 5/50 [00:13<01:58,  2.64s/it][A
+ 12%|█▏        | 6/50 [00:16<01:48,  2.47s/it][A
+ 14%|█▍        | 7/50 [00:17<01:32,  2.14s/it][A
+ 16%|█▌        | 8/50 [00:18<01:20,  1.92s/it][A
+ 18%|█▊        | 9/50 [00:20<01:13,  1.80s/it][A
+ 20%|██        | 10/50 [00:22<01:17,  1.93s/it][A
+ 22%|██▏       | 11/50 [00:24<01:17,  2.00s/it][A
+ 24%|██▍       | 12/50 [00:27<01:18,  2.07s/it][A
+ 26%|██▌       | 13/50 [00:29<01:18,  2.11s/it][A
+ 28%|██▊       | 14/50 [00:31<01:17,  2.15s/it][A 28%|██▊       | 14/50 [00:31<01:20,  2.25s/it]
+ 87%|████████▋ | 26/30 [1:35:22<09:43, 145.86s/it]2024-05-29 14:23:06.575 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:23:06.575 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [show (27 : ℝ) = (3 : ℝ) ^ 3 by norm_num, Real.log_rpow]
+```
+Here is the predicted next tactic:
+```lean
+simp only [logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.38461538461538464
+# successes: 	10
+*********
+ {'full_name': 'mathd_numbertheory_551', 'statement': 'theorem mathd_numbertheory_551 : 1529 % 6 = 5', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_numbertheory_551 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_551')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:05<?, ?it/s]
+ 90%|█████████ | 27/30 [1:35:49<05:31, 110.42s/it]2024-05-29 14:23:34.386 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:23:34.386 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+```lean
+norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀.35]
+```[UN
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4074074074074074
+# successes: 	11
+*********
+ {'full_name': 'mathd_algebra_304', 'statement': 'theorem mathd_algebra_304 : 91 ^ 2 = 8281', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ mathd_algebra_304 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_304')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:04<?, ?it/s]
+ 93%|█████████▎| 28/30 [1:36:16<02:50, 85.35s/it] 2024-05-29 14:24:00.768 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:24:00.768 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+# Proof in Natural langauge
+
+To calculate $91^2$, we can use the formula $(a+b)^2 = a^2 + 2ab + b^2$. Here, $a=90$ and $b=1$. Substituting these values into the formula, we get:
+
+$(91)^2 = (90+1)^2 = 90^2 + 2*90*1 + 1^2 = 8100 + 180 + 1 = 8281$.
+
+So, $91^2 = 8281$.
+
+# Proof in LEAN 4
+
+```lean
+decide
+```
+
+# Explanation
+
+The `decide` tactic is used to automatically prove goals that are decidable propositions, such as equalities, inequalities, and true/false statements. In this case, `decide` is able to prove the goal by simplifying the left-hand side of the equation `91 ^ 2 = 8281` and comparing it to the right-hand side.
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.42857142857142855
+# successes: 	12
+*********
+ {'full_name': 'amc12a_2021_p8', 'statement': 'theorem amc12a_2021_p8 (d : ℕ → ℕ) (h₀ : d 0 = 0) (h₁ : d 1 = 0) (h₂ : d 2 = 1)\n    (h₃ : ∀ n ≥ 3, d n = d (n - 1) + d (n - 3)) : Even (d 2021) ∧ Odd (d 2022) ∧ Even (d 2023)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ amc12a_2021_p8 **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p8')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [01:04<52:35, 64.40s/it][A  2%|▏         | 1/50 [09:59<8:09:59, 599.99s/it]
+ 97%|█████████▋| 29/30 [1:46:35<04:05, 245.53s/it]2024-05-29 14:34:20.413 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
+2024-05-29 14:34:20.413 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
+Here is the predicted next tactic:
+```lean
+rw [h₃ 2021 (by norm_num : 2021 ≥ 3), h₃ 2022 (by norm_num : 2022 ≥ 3), h₃ 2023 (by norm_num : 2023 ≥ 3)]
+```
+Here is the predicted next tactic:
+```lean
+exact ⟨by norm_num [h₀, h₁, h₂, h₃], by norm_num [h₀, h₁, h₂, h₃], by norm_num [h₀, h₁, h₂, h₃]⟩
+```
+
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.41379310344827586
+# successes: 	12
+*********
+ {'full_name': 'algebra_ineq_nto1onlt2m1on', 'statement': 'theorem algebra_ineq_nto1onlt2m1on (n : ℕ) : (n : ℝ) ^ ((1 : ℝ) / n) < 2 - 1 / n', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
+**a**
+ algebra_ineq_nto1onlt2m1on **a**
+
+Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_ineq_nto1onlt2m1on')
+
+  0%|          | 0/50 [00:00<?, ?it/s][A
+  2%|▏         | 1/50 [00:01<00:50,  1.02s/it][A
+  4%|▍         | 2/50 [00:02<01:01,  1.28s/it][A
+  6%|▌         | 3/50 [00:03<01:02,  1.32s/it][A
+  8%|▊         | 4/50 [00:04<00:56,  1.23s/it][A
+ 10%|█         | 5/50 [00:06<00:56,  1.26s/it][A
+ 12%|█▏        | 6/50 [00:07<00:53,  1.21s/it][A
+ 14%|█▍        | 7/50 [00:08<00:50,  1.17s/it][A
+ 16%|█▌        | 8/50 [00:10<01:03,  1.50s/it][A
+ 18%|█▊        | 9/50 [00:12<01:01,  1.51s/it][A
+ 20%|██        | 10/50 [00:13<00:52,  1.31s/it][A
+ 22%|██▏       | 11/50 [00:14<00:53,  1.38s/it][A
+ 24%|██▍       | 12/50 [00:16<00:53,  1.41s/it][A
+ 26%|██▌       | 13/50 [00:17<00:49,  1.35s/it][A
+ 28%|██▊       | 14/50 [00:19<00:57,  1.61s/it][A
+ 30%|███       | 15/50 [00:52<06:26, 11.04s/it][A
+ 32%|███▏      | 16/50 [00:53<04:34,  8.09s/it][A
+ 34%|███▍      | 17/50 [00:54<03:15,  5.92s/it][A
+ 36%|███▌      | 18/50 [00:55<02:25,  4.56s/it][A
+ 38%|███▊      | 19/50 [00:57<01:52,  3.63s/it][A
+ 40%|████      | 20/50 [00:58<01:27,  2.91s/it][A
+ 42%|████▏     | 21/50 [00:59<01:11,  2.45s/it][A
+ 44%|████▍     | 22/50 [01:01<00:57,  2.07s/it][A
+ 46%|████▌     | 23/50 [01:02<00:46,  1.71s/it][A
+ 48%|████▊     | 24/50 [01:03<00:42,  1.65s/it][A
+ 50%|█████     | 25/50 [01:05<00:40,  1.60s/it][A
+ 52%|█████▏    | 26/50 [01:12<01:20,  3.33s/it][A
+ 54%|█████▍    | 27/50 [01:15<01:13,  3.22s/it][A
+ 56%|█████▌    | 28/50 [01:32<02:41,  7.34s/it][A
+ 58%|█████▊    | 29/50 [01:34<01:59,  5.67s/it][A
+ 60%|██████    | 30/50 [01:35<01:27,  4.36s/it][A
+ 62%|██████▏   | 31/50 [01:36<01:06,  3.51s/it][A
+ 64%|██████▍   | 32/50 [01:38<00:54,  3.05s/it][A
+ 66%|██████▌   | 33/50 [01:39<00:41,  2.46s/it][A
+ 68%|██████▊   | 34/50 [01:40<00:31,  1.98s/it][A
+ 70%|███████   | 35/50 [01:43<00:30,  2.05s/it][A
+ 72%|███████▏  | 36/50 [01:44<00:26,  1.91s/it][A
+ 74%|███████▍  | 37/50 [01:51<00:46,  3.54s/it][A
+ 76%|███████▌  | 38/50 [02:25<02:28, 12.41s/it][A
+ 78%|███████▊  | 39/50 [02:26<01:39,  9.02s/it][A
+ 80%|████████  | 40/50 [02:27<01:07,  6.77s/it][A
+ 82%|████████▏ | 41/50 [02:33<00:59,  6.61s/it][A
+ 84%|████████▍ | 42/50 [02:36<00:44,  5.53s/it][A
+ 86%|████████▌ | 43/50 [02:37<00:28,  4.13s/it][A
+ 88%|████████▊ | 44/50 [02:39<00:19,  3.29s/it][A
+ 90%|█████████ | 45/50 [02:40<00:13,  2.63s/it][A
+ 92%|█████████▏| 46/50 [02:41<00:08,  2.10s/it][A
+ 94%|█████████▍| 47/50 [02:42<00:05,  1.90s/it][A
+ 96%|█████████▌| 48/50 [03:15<00:22, 11.21s/it][A
+ 98%|█████████▊| 49/50 [03:16<00:08,  8.25s/it][A
+100%|██████████| 50/50 [03:17<00:00,  6.13s/it][A100%|██████████| 50/50 [03:17<00:00,  3.96s/it]
+100%|██████████| 30/30 [1:50:18<00:00, 238.67s/it]100%|██████████| 30/30 [1:50:18<00:00, 220.62s/it]
+Here is the predicted next tactic:
+```lean
+rcases eq_or_ne n 0 with (rfl | hn)
+```
+Here is the predicted next tactic:
+```lean
+case inl => simp
+```
+output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
+0.4
+# successes: 	12

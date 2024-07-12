@@ -1,8 +1,8 @@
 set -e
 set -x
 
-export HF_HOME=/nobackup/users/zhiqings/haohanl/Lean
-export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
+export HF_HOME=/data/user_data/shengyuf/Lean
+export DATA_DIR=/data/user_data/shengyuf/Lean
 export MODEL_REPO=internlm/internlm2-math-base-7b
 
 python scripts/download.py \

@@ -81,6 +81,16 @@ transformer_configs = {
         intermediate_size=14336,
         rope_base=1000000,
     ),
+    "internlm2-math-plus-7b": dict(
+        block_size=8192,
+        vocab_size=92544,
+        n_layer=32,
+        n_head=32,
+        n_local_heads=8,
+        dim=4096,
+        intermediate_size=14336,
+        rope_base=1000000,
+    ),
     "CodeLlama-7b-Python-hf": dict(
         block_size=16384, vocab_size=32000, n_layer=32, dim=4096, rope_base=1000000
     ),

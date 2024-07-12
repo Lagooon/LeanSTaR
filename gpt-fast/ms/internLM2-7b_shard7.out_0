@@ -1,0 +1,80 @@
+`apex` is not installed. Reverting to non-fused RMSNorm.
+Loading model ...
+INFO 04-18 15:52:22 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
+Traceback (most recent call last):
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 1008, in <module>
+    main(
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 640, in main
+    model, tokenizer = _load_model(checkpoint_path, device, precision, tp_size)
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 251, in _load_model
+    model = vllm.LLM(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/entrypoints/llm.py", line 109, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(engine_args)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 391, in from_engine_args
+    engine = cls(*engine_configs,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 128, in __init__
+    self._init_workers()
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 181, in _init_workers
+    self._run_workers("load_model")
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 1041, in _run_workers
+    driver_worker_output = getattr(self.driver_worker,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/worker/worker.py", line 100, in load_model
+    self.model_runner.load_model()
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/worker/model_runner.py", line 88, in load_model
+    self.model = get_model(self.model_config,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/utils.py", line 52, in get_model
+    return get_model_fn(model_config, device_config, **kwargs)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/model_loader.py", line 79, in get_model
+    model = model_class(model_config.hf_config, linear_method)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/models/internlm2.py", line 251, in __init__
+    self.model = InternLM2Model(config, linear_method)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/models/internlm2.py", line 213, in __init__
+    self.layers = nn.ModuleList([
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/models/internlm2.py", line 214, in <listcomp>
+    InternLMDecoderLayer(config, linear_method)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/models/internlm2.py", line 160, in __init__
+    self.feed_forward = InternLM2MLP(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/models/internlm2.py", line 40, in __init__
+    self.gate_up_proj = MergedColumnParallelLinear(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/layers/linear.py", line 260, in __init__
+    super().__init__(input_size, sum(output_sizes), bias, gather_output,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/layers/linear.py", line 181, in __init__
+    self.linear_weights = self.linear_method.create_weights(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/model_executor/layers/linear.py", line 63, in create_weights
+    weight = Parameter(torch.empty(output_size_per_partition,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/torch/utils/_device.py", line 77, in __torch_function__
+    return func(*args, **kwargs)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 224.00 MiB. GPU 0 has a total capacty of 79.10 GiB of which 182.44 MiB is free. Process 3836996 has 70.79 GiB memory in use. Including non-PyTorch memory, this process has 8.11 GiB memory in  0%|          | 0/61 [17:38<?, ?it/s]
+0  # state:  TacticState(pp='x y z : ℝ\nh₀ : 0 < x ∧ 0 < y ∧ 0 < z\n⊢ 9 / (x + y + z) ≤ 2 / (x + y) + 2 / (y + z) + 2 / (z + x)', id=0, message=None)
+tatics:  ### REASONING
+
+The objective is to establish an inequality involving the arithmetic mean of three positive numbers, which is directly related to the arithmetic mean-geometric mean (AM-GM) inequality. The AM-GM inequality states that for any non-negative real numbers, the arithmetic mean is always greater than or equal to the geometric mean. Applying this inequality to the given positive numbers `x`, `y`, and `z` provides a foundational step to establish the desired inequality.
+
+### TACTIC
+
+```lean4
+apply div_le_div (by positivity) (AM_GM h₀.1 h₀.2.1 h₀.2.2)
+```
+1  # state:  TacticState(pp='x y z : ℝ\nh₀ : 0 < x ∧ 0 < y ∧ 0 < z\n⊢ 9 * (x + y + z)⁻¹ ≤ 2 * (x + y)⁻¹ + 2 * (y + z)⁻¹ + 2 * (z + x)⁻¹', id=1, message='')
+tatics:  ### REASONING
+
+To prove the inequality involving the inverses of the sums of pairs of real numbers, we leverage the property that the sum of inverses can be bounded above by the inverse of the sum of the numbers. This principle is applied to each pair of variables in the inequality, thereby reducing the problem to a simpler form involving the sums of the individual variables.
+
+### TACTIC
+
+```lean4
+refine' le_trans _ (add_le_add add_le_add <| inv_le_inv (add_nonneg (le_mul_of_one_le_left le_rfl h₀.2.2) (le_mul_of_one_le_left le_rfl h₀.1)) <| add_le_add <| inv_le_inv (add_nonneg (le_mul_of_one_le_left le_rfl h₀.1) (le_mul_of_one_le_left le_rfl h₀.2.1)) <| add_le_add <| inv_le_inv (add_nonneg (le_mul_of_one_le_left le_rfl h₀.2.1) (le_mul_of_one_le_left le_rfl h₀.2.2)) <| add_le_add <| inv_le_inv (add_nonneg (le_mul_of_one_le_left le_rfl h₀.2.2) (le_mul_of_one_le_left le_rfl h₀.1)) <| add_le_add _ _)
+```
+Traceback (most recent call last):
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 1008, in <module>
+    main(
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 806, in main
+    attempt_results = best_first_search(
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 522, in best_first_search
+    heapq.heappush(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/lean_dojo/interaction/dojo.py", line 331, in __exit__
+    self._submit_request(req)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/lean_dojo/interaction/dojo.py", line 342, in _cleanup
+    def _cleanup(self):
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/lean_dojo/interaction/dojo.py", line 367, in _cleanup_proc
+NameError: name '_kill_descendants' is not defined

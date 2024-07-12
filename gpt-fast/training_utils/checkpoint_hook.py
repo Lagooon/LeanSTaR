@@ -545,6 +545,7 @@ def get_latest_checkpoint_path(
     if not os.path.exists(f"{checkpoint_dir}/{prefix}last_checkpoint"):
         return None, 0, 0
 
+    
     with open(f"{checkpoint_dir}/{prefix}last_checkpoint", "r") as f:
         last_checkpoint_file = f.read()
 

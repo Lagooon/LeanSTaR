@@ -82,6 +82,7 @@ def convert_hf_checkpoint(
             qkv = final_result[key]
             head_dim = config.dim // config.n_head
             num_key_value_groups = config.n_head // config.n_local_heads
+            print(config.n_local_heads)
             qkv = qkv.view(-1, 2+num_key_value_groups, head_dim ,config.dim)
             q = qkv[:, : num_key_value_groups, :, :].reshape(-1 ,config.dim)
             k = qkv[:, -2, :, :].reshape(-1 ,config.dim)

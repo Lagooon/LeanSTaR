@@ -1,0 +1,28 @@
+`apex` is not installed. Reverting to non-fused RMSNorm.
+Loading model ...
+INFO 04-27 20:09:19 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
+INFO 04-27 20:09:35 llm_engine.py:357] # GPU blocks: 12178, # CPU blocks: 2048
+Traceback (most recent call last):
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 1017, in <module>
+    main(
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 648, in main
+    model, tokenizer = _load_model(checkpoint_path, device, precision, tp_size)
+  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/cot_search.py", line 254, in _load_model
+    model = vllm.LLM(
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/entrypoints/llm.py", line 109, in __init__
+    self.llm_engine = LLMEngine.from_engine_args(engine_args)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 391, in from_engine_args
+    engine = cls(*engine_configs,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 131, in __init__
+    self._init_cache()
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 377, in _init_cache
+    self._run_workers("init_cache_engine", cache_config=self.cache_config)
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/engine/llm_engine.py", line 1041, in _run_workers
+    driver_worker_output = getattr(self.driver_worker,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/worker/worker.py", line 150, in init_cache_engine
+    self.cache_engine = CacheEngine(self.cache_config, self.model_config,
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/worker/cache_engine.py", line 51, in __init__
+    self.gpu_cache = self.allocate_gpu_cache()
+  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/vllm/worker/cache_engine.py", line 87, in allocate_gpu_cache
+    value_blocks = torch.empty(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 382.00 MiB. GPU 0 has a total capacty of 79.10 GiB of which 84.88 MiB is free. Including non-PyTorch memory, this process has 23.92 GiB memory in use. Process 1505897 has 15.24 GiB memory in use. Process 1505889 has 39.84 GiB memory in use. Of the allocated memory 23.00 GiB is allocated by PyTorch, and 52.55 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

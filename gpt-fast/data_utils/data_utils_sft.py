@@ -66,10 +66,9 @@ def preprocess_for_sft(
     sources = [example["input"] for example in instances]
     targets = [f"\n{example['output']}" for example in instances]
 
-    #begin_padding_len = tokenizer(
-    #    ["\n"], return_tensors="pt", add_bos=False, add_eos=False
-    #).input_ids.shape[1]
-    begin_padding_len = 0
+    begin_padding_len = tokenizer(
+        ["\n"], return_tensors="pt", add_bos=False, add_eos=False
+    ).input_ids.shape[1]
 
     # Tokenize
     tokenized_sources_with_prompt = tokenizer(

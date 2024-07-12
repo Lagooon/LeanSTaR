@@ -247,7 +247,7 @@ def generate(
     return seq, generated_probs, num_decoded_tokens
 
 def _load_model(checkpoint_path, device, precision, tp_size):
-    model_name = "/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo"
+    model_name = "/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-plus-7b"
     model = vllm.LLM(
         model=model_name,
         tensor_parallel_size=tp_size,
@@ -306,60 +306,24 @@ def _tactic_state(state):
         ts = state.unsolved_tactic_state
     return ts
 
-def _prompt_fewshot(ts):
-    prompt = """Tactic state:
----
-%s
----
-Next tactic:
----\n""" % (ts)
-    return prompt
-'''
-    prompt = """Tactic state:
----
-α : Type u_1
-r : α → α → Prop
-inst✝¹ : DecidableEq α
-inst✝ : IsIrrefl α r
-⊢ CutExpand r ≤ InvImage (Finsupp.Lex (rᶜ ⊓ fun x x_1 => x ≠ x_1) fun x x_1 => x < x_1) ↑toFinsupp
----
-Next tactic:
----
-rintro s t ⟨u, a, hr, he⟩
----
+def chat_template_to_prompt(prompt_list):
+    result = ""
+    total_step = len(prompt_list)
+    for i, message in enumerate(prompt_list):
+        result += ('[UNUSED_TOKEN_146]' + message['role'] +
+            '\n' + message['content'])
+        if i+1 != total_step:
+            result += '[UNUSED_TOKEN_145]\n'
+        elif message['role'] == 'user':
+            result += '[UNUSED_TOKEN_145]\n[UNUSED_TOKEN_146]assistant\n'
+    return result
 
-Tactic state:
----
-ι : Type u_1
-I✝ J✝ : Box ι
-x y : ι → ℝ
-I J : WithBot (Box ι)
-⊢ ↑I = ↑J ↔ I = J
----
-Next tactic:
----
-simp only [Subset.antisymm_iff, ← le_antisymm_iff, withBotCoe_subset_iff]
----
+def _prompt_fewshot(state):
+    prompt = f"My LEAN 4 state is:\n```lean\n" + state + \
+        "```\nPlease predict a possible tactic to help me prove the theorem."
+    prompt = [{"role": "user", "content": prompt}]
+    return chat_template_to_prompt(prompt)
 
-Tactic state:
----
-m n : ℕ
-h : Nat.coprime m n
-⊢ Nat.gcd m n = 1
----
-Next tactic:
----
-rw [← h.gcd_eq_one]
----
-
-Tactic state:
----
-%s
----
-Next tactic:
----\n""" % (ts)
-    return prompt'''
-    
 def _unique_sorted(texts, scores):
     texts_ = []
     scores_ = []
@@ -387,13 +351,13 @@ def generate_tactic(
         temperature=temperature,
         use_beam_search=temperature==0.0,
         max_tokens=max_seq_len,
-        stop=['\n', '---'],
+        stop=["<|im_end|>"],
     )
     outputs = model.generate([prompt], params, use_tqdm=False)
     if len(outputs) == 0:
         return [], []
     for output in outputs[0].outputs:
-        text = output.text.replace(tokenizer.eos_token, '')
+        text = output.text.replace(tokenizer.eos_token, '').split('---')[0]
         score = output.cumulative_logprob/max(len(output.token_ids), 1)
         texts.append(text)
         scores.append(score)
@@ -453,7 +417,7 @@ def best_first_search(
         batch_size,
         timeout=600,
         early_stop=False,
-        max_seq_len=64,
+        max_seq_len=256,
         top_k=200
 ) -> dict:
     """Best first search."""
@@ -487,7 +451,9 @@ def best_first_search(
                     top_k=top_k
                 )
 
-                step_cands = [s.strip() for s in step_cands]
+                if iteration < 2:
+                    print(step_cands[0])
+                step_cands = [s.split("```lean\n")[-1].split('```')[0].strip() for s in step_cands]
 
                 for step, score in zip(step_cands, step_scores):
                     result = dojo.run_tac(state, step)
@@ -520,6 +486,7 @@ def best_first_search(
                                 queue, (new_score, cnt, steps+[step], result, trace+[step_trace])
                             )
     except (DojoInitError, DojoHardTimeoutError, DojoCrashError) as e:
+        print(e)
         if len(attempt_results) == 0:
             attempt_results.append({
                 'theorem': theorem.full_name,
@@ -794,9 +761,13 @@ def main(
 
     start = time.time()
     results = []
+    print("**abc**")
+    print(data[0])
     for example in tqdm(data, total=len(data)):
+        print("*********\n",example)
         file_path = example['file_path']
         theorem_name = example['full_name']
+        print("**a**\n", theorem_name, "**a**\n")
         theorem = Theorem(repo, file_path, theorem_name)
         for _ in range(1):
             attempt_results = best_first_search(
@@ -983,7 +954,7 @@ if __name__ == "__main__":
     parser.add_argument(
         '--dataset-name',
         default='minif2f-test',
-        choices=['minif2f-valid', 'minif2f-test']
+        choices=['minif2f-valid', 'minif2f-test', 'leandojo']
     )
     
     parser.add_argument('--shard', type=int, required=True)

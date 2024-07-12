@@ -1,0 +1,36 @@
+`apex` is not installed. Reverting to non-fused RMSNorm.
+Loading model ...
+INFO 04-27 18:09:54 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
+INFO 04-27 18:10:11 llm_engine.py:357] # GPU blocks: 1585, # CPU blocks: 2048
+Time to load model: 25.24 seconds
+Shard size: 3522
+  0%|          | 0/3522 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/Category/Basic.lean'), full_name='CategoryTheory.epi_comp')
+
+  0%|          | 0/10 [00:00<?, ?it/s][A
+ 10%|█         | 1/10 [00:01<00:13,  1.48s/it][A
+ 20%|██        | 2/10 [00:03<00:16,  2.02s/it][A
+ 30%|███       | 3/10 [00:06<00:14,  2.13s/it][A
+ 40%|████      | 4/10 [00:08<00:13,  2.32s/it][A
+ 50%|█████     | 5/10 [00:10<00:11,  2.28s/it][A
+ 60%|██████    | 6/10 [00:13<00:08,  2.24s/it][A
+ 70%|███████   | 7/10 [00:15<00:06,  2.28s/it][A
+ 80%|████████  | 8/10 [00:17<00:04,  2.31s/it][A
+ 90%|█████████ | 9/10 [00:19<00:02,  2.24s/it][A
+100%|██████████| 10/10 [00:22<00:00,  2.27s/it][A100%|██████████| 10/10 [00:22<00:00,  2.23s/it]
+  0%|          | 1/3522 [01:15<73:55:20, 75.58s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+output/internLM2-7b_mathlib_test/27-04-2024-18-10/results__internLM-7b-math__28.json
+0.0
+# successes: 	0
+theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Algebra/Order/Floor.lean'), full_name='tendsto_ceil_atBot')
+
+  0%|          | 0/10 [00:00<?, ?it/s][A
+ 10%|█         | 1/10 [00:01<00:15,  1.72s/it][A
+ 20%|██        | 2/10 [00:03<00:13,  1.72s/it][A 20%|██        | 2/10 [01:06<04:25, 33.17s/it]
+  0%|          | 1/3522 [03:04<180:33:46, 184.61s/it]

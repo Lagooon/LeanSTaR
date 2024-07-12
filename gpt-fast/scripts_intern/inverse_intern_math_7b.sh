@@ -1,8 +1,8 @@
 set -e
 set -x
 
-export DATA_DIR=/nobackup/users/zhiqings/haohanl/Lean
-export MODEL_REPO=internlm/internlm2-math-base-7b
+export DATA_DIR=/data/user_data/shengyuf/Lean
+export MODEL_REPO=internlm/internlm2-math-plus-7b
 
 #python scripts/download.py \
 #    --repo_id $MODEL_REPO \

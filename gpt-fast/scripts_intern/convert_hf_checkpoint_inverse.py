@@ -61,9 +61,9 @@ def convert_hf_checkpoint(
         )
 
     all_state_dict = []
-    checkpoint_path = "/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm2-7b_dpo-_iter-1_lr-3e-6_beta-0.1_seq-1024_1/epoch_1_step_3655_rank_0.pt"
+    checkpoint_path = "/data/user_data/shengyuf/Lean/checkpoints/internlm2-7b_stars_epoch-3_lr-3e-5-plus/epoch_1_step_497_rank_0.pt"
     pattern = checkpoint_path.replace(f"_rank_{0}", "_rank_*")
-    for i in range(1):
+    for i in range(8):
         ckpt_file_path = pattern.replace("*", str(i))
         model_state_dict = torch.load(
             ckpt_file_path, map_location="cpu", mmap=True
@@ -115,7 +115,7 @@ def convert_hf_checkpoint(
         trust_remote_code=True
     )
     model.load_state_dict(final_result, strict=False)
-    model.save_pretrained(checkpoint_dir / "dpo")
+    model.save_pretrained(checkpoint_dir / "stars")
 
 if __name__ == '__main__':
     import argparse
