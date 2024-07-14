@@ -1,2121 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 07-02 18:57:04 llm_engine.py:87] Initializing an LLM engine with config: model='/data/user_data/shengyuf/Lean/checkpoints/internlm/internlm2-math-plus-7b/sft', tokenizer='/data/user_data/shengyuf/Lean/checkpoints/internlm/internlm2-math-plus-7b/sft', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 07-02 18:57:24 llm_engine.py:357] # GPU blocks: 12355, # CPU blocks: 2048
-Time to load model: 23.19 seconds
-Shard size: 9091
-  0%|          | 0/9091 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/ContinuousOn.lean'), full_name='ContinuousWithinAt.prod_map')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.70s/it][A
- 40%|████      | 2/5 [00:03<00:06,  2.04s/it][A 40%|████      | 2/5 [00:05<00:08,  2.99s/it]
-  0%|          | 1/9091 [00:36<92:50:08, 36.77s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	1
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Calculus/ContDiff/Defs.lean'), full_name='contDiff_zero')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  0%|          | 2/9091 [02:04<168:30:11, 66.74s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	2
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/GroupAction/Hom.lean'), full_name='DistribMulActionHom.id_apply')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  0%|          | 3/9091 [02:36<128:39:58, 50.97s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	3
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/IntermediateField.lean'), full_name='IntermediateField.range_val')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.86s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.89s/it][A 40%|████      | 2/5 [00:06<00:09,  3.08s/it]
-  0%|          | 4/9091 [03:15<116:50:20, 46.29s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	4
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Multiset/Basic.lean'), full_name='Multiset.map_surjective_of_surjective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:00<00:03,  1.18it/s][A
- 40%|████      | 2/5 [00:03<00:06,  2.16s/it][A 40%|████      | 2/5 [00:06<00:09,  3.32s/it]
-  0%|          | 5/9091 [03:58<113:48:15, 45.09s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	5
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Connected/PathConnected.lean'), full_name='Path.symm_symm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.02s/it][A 20%|██        | 1/5 [00:03<00:13,  3.27s/it]
-  0%|          | 6/9091 [04:31<102:55:53, 40.79s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	6
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Geometry/Manifold/LocalInvariantProperties.lean'), full_name='StructureGroupoid.LocalInvariantProp.liftPropOn_mono')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.19s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.41s/it][A 40%|████      | 2/5 [00:10<00:15,  5.16s/it]
-  0%|          | 7/9091 [05:09<101:06:03, 40.07s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-1.0
-# successes: 	7
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/LinearRecurrence.lean'), full_name='LinearRecurrence.geom_sol_iff_root_charPoly')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:29,  7.27s/it][A
- 40%|████      | 2/5 [00:11<00:16,  5.51s/it][A
- 60%|██████    | 3/5 [00:16<00:10,  5.12s/it][A
- 80%|████████  | 4/5 [00:20<00:04,  4.98s/it][A
-100%|██████████| 5/5 [00:27<00:00,  5.60s/it][A100%|██████████| 5/5 [00:27<00:00,  5.53s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/LinearRecurrence.lean'), full_name='LinearRecurrence.geom_sol_iff_root_charPoly')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:28,  7.20s/it][A
- 40%|████      | 2/5 [00:10<00:15,  5.20s/it][A
- 60%|██████    | 3/5 [00:17<00:11,  5.76s/it][A
- 80%|████████  | 4/5 [00:23<00:05,  5.78s/it][A
-100%|██████████| 5/5 [00:29<00:00,  5.96s/it][A100%|██████████| 5/5 [00:29<00:00,  5.90s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/LinearRecurrence.lean'), full_name='LinearRecurrence.geom_sol_iff_root_charPoly')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.74s/it][A
- 40%|████      | 2/5 [00:09<00:15,  5.14s/it][A
- 60%|██████    | 3/5 [00:14<00:09,  4.79s/it][A
- 80%|████████  | 4/5 [00:20<00:05,  5.23s/it][A
-100%|██████████| 5/5 [00:27<00:00,  6.13s/it][A100%|██████████| 5/5 [00:27<00:00,  5.57s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/LinearRecurrence.lean'), full_name='LinearRecurrence.geom_sol_iff_root_charPoly')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.02s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.21s/it][A
- 60%|██████    | 3/5 [00:15<00:11,  5.57s/it][A
- 80%|████████  | 4/5 [00:19<00:04,  4.86s/it][A
-100%|██████████| 5/5 [00:26<00:00,  5.64s/it][A100%|██████████| 5/5 [00:26<00:00,  5.21s/it]
-  0%|          | 8/9091 [08:56<250:47:24, 99.40s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.875
-# successes: 	7
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Monotone/Basic.lean'), full_name='StrictAntiOn.compares')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.14s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.23s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.57s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.54s/it][A
-100%|██████████| 5/5 [00:20<00:00,  4.50s/it][A100%|██████████| 5/5 [00:20<00:00,  4.17s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Monotone/Basic.lean'), full_name='StrictAntiOn.compares')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.21s/it][A
- 40%|████      | 2/5 [00:07<00:10,  3.57s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.55s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.78s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.82s/it][A100%|██████████| 5/5 [00:18<00:00,  3.72s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Monotone/Basic.lean'), full_name='StrictAntiOn.compares')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.15s/it][A
- 40%|████      | 2/5 [00:05<00:09,  3.08s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.46s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.58s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.77s/it][A100%|██████████| 5/5 [00:17<00:00,  3.54s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Monotone/Basic.lean'), full_name='StrictAntiOn.compares')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.65s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.83s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.23s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.43s/it][A
-100%|██████████| 5/5 [00:16<00:00,  3.53s/it][A100%|██████████| 5/5 [00:16<00:00,  3.35s/it]
-  0%|          | 9/9091 [12:05<321:24:31, 127.40s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7777777777777778
-# successes: 	7
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Sub/Defs.lean'), full_name='AddLECancellable.le_add_tsub_swap')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.39s/it][A
- 40%|████      | 2/5 [00:02<00:04,  1.35s/it][A
- 60%|██████    | 3/5 [00:03<00:02,  1.28s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.30s/it][A
-100%|██████████| 5/5 [00:06<00:00,  1.31s/it][A100%|██████████| 5/5 [00:06<00:00,  1.31s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Sub/Defs.lean'), full_name='AddLECancellable.le_add_tsub_swap')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.32s/it][A
- 40%|████      | 2/5 [00:02<00:03,  1.31s/it][A
- 60%|██████    | 3/5 [00:03<00:02,  1.29s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.27s/it][A
-100%|██████████| 5/5 [00:06<00:00,  1.25s/it][A100%|██████████| 5/5 [00:06<00:00,  1.27s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Sub/Defs.lean'), full_name='AddLECancellable.le_add_tsub_swap')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.27s/it][A
- 40%|████      | 2/5 [00:02<00:03,  1.23s/it][A
- 60%|██████    | 3/5 [00:03<00:02,  1.22s/it][A
- 80%|████████  | 4/5 [00:04<00:01,  1.22s/it][A
-100%|██████████| 5/5 [00:06<00:00,  1.28s/it][A100%|██████████| 5/5 [00:06<00:00,  1.26s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Sub/Defs.lean'), full_name='AddLECancellable.le_add_tsub_swap')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.34s/it][A
- 40%|████      | 2/5 [00:02<00:03,  1.27s/it][A
- 60%|██████    | 3/5 [00:03<00:02,  1.25s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.25s/it][A
-100%|██████████| 5/5 [00:06<00:00,  1.28s/it][A100%|██████████| 5/5 [00:06<00:00,  1.27s/it]
-  0%|          | 10/9091 [14:18<325:36:24, 129.08s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7
-# successes: 	7
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/Ordinal/Arithmetic.lean'), full_name="Ordinal.add_lt_add_iff_left'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 11/9091 [14:52<252:13:56, 100.00s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7272727272727273
-# successes: 	8
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Subgroup/Basic.lean'), full_name="Subgroup.mem_normalizer_iff''")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 12/9091 [15:39<211:32:08, 83.88s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.75
-# successes: 	9
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Lie/Submodule.lean'), full_name='LieSubmodule.mem_map_of_mem')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.53s/it][A 20%|██        | 1/5 [00:04<00:19,  4.80s/it]
-  0%|          | 13/9091 [16:23<181:10:09, 71.85s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7692307692307693
-# successes: 	10
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Complement.lean'), full_name='Subgroup.mem_rightTransversals_iff_existsUnique_mul_inv_mem')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.82s/it][A
- 40%|████      | 2/5 [00:05<00:07,  2.54s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.53s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.70s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.36s/it][A100%|██████████| 5/5 [00:15<00:00,  3.19s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Complement.lean'), full_name='Subgroup.mem_rightTransversals_iff_existsUnique_mul_inv_mem')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.51s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.90s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.67s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.94s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.94s/it][A100%|██████████| 5/5 [00:14<00:00,  2.93s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Complement.lean'), full_name='Subgroup.mem_rightTransversals_iff_existsUnique_mul_inv_mem')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.38s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.29s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.43s/it][A
- 80%|████████  | 4/5 [00:11<00:03,  3.08s/it][A
-100%|██████████| 5/5 [00:16<00:00,  3.67s/it][A100%|██████████| 5/5 [00:16<00:00,  3.20s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Complement.lean'), full_name='Subgroup.mem_rightTransversals_iff_existsUnique_mul_inv_mem')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.15s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.22s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.46s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.52s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.96s/it][A100%|██████████| 5/5 [00:17<00:00,  3.41s/it]
-  0%|          | 14/9091 [19:24<264:35:13, 104.94s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	10
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Control/Traversable/Equiv.lean'), full_name='Equiv.traverse_eq_map_id')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.41s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.50s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.34s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.53s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.62s/it][A100%|██████████| 5/5 [00:12<00:00,  2.55s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Control/Traversable/Equiv.lean'), full_name='Equiv.traverse_eq_map_id')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.37s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.25s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.30s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.53s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.47s/it][A100%|██████████| 5/5 [00:12<00:00,  2.43s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Control/Traversable/Equiv.lean'), full_name='Equiv.traverse_eq_map_id')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.24s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.47s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.37s/it][A
- 80%|████████  | 4/5 [00:11<00:03,  3.01s/it][A
-100%|██████████| 5/5 [00:14<00:00,  3.07s/it][A100%|██████████| 5/5 [00:14<00:00,  2.85s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Control/Traversable/Equiv.lean'), full_name='Equiv.traverse_eq_map_id')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.44s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.35s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.35s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.36s/it][A
-100%|██████████| 5/5 [00:11<00:00,  2.36s/it][A100%|██████████| 5/5 [00:11<00:00,  2.37s/it]
-  0%|          | 15/9091 [22:00<303:33:47, 120.41s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6666666666666666
-# successes: 	10
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Homology/ShortComplex/Ab.lean'), full_name='CategoryTheory.ShortComplex.ab_exact_iff_ker_le_range')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.82s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.62s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.79s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.66s/it][A
-100%|██████████| 5/5 [00:13<00:00,  3.25s/it][A100%|██████████| 5/5 [00:13<00:00,  2.72s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Homology/ShortComplex/Ab.lean'), full_name='CategoryTheory.ShortComplex.ab_exact_iff_ker_le_range')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.15s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.17s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.48s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.46s/it][A
-100%|██████████| 5/5 [00:14<00:00,  3.11s/it][A100%|██████████| 5/5 [00:14<00:00,  2.93s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Homology/ShortComplex/Ab.lean'), full_name='CategoryTheory.ShortComplex.ab_exact_iff_ker_le_range')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.17s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.91s/it][A
- 60%|██████    | 3/5 [00:09<00:07,  3.72s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.52s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.18s/it][A100%|██████████| 5/5 [00:15<00:00,  3.11s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Homology/ShortComplex/Ab.lean'), full_name='CategoryTheory.ShortComplex.ab_exact_iff_ker_le_range')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.90s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.18s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.31s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.93s/it][A
-100%|██████████| 5/5 [00:13<00:00,  3.09s/it][A100%|██████████| 5/5 [00:13<00:00,  2.80s/it]
-  0%|          | 16/9091 [24:46<338:10:05, 134.15s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.625
-# successes: 	10
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Integral/Lebesgue.lean'), full_name='MeasureTheory.lintegral_le_meas')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.06s/it][A
- 40%|████      | 2/5 [00:04<00:05,  2.00s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.38s/it][A 60%|██████    | 3/5 [00:09<00:06,  3.09s/it]
-  0%|          | 17/9091 [25:36<273:48:11, 108.63s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6470588235294118
-# successes: 	11
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/UniqueFactorizationDomain.lean'), full_name='UniqueFactorizationMonoid.isRelPrime_iff_no_prime_factors')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.84s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.07s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.91s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.85s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.73s/it][A100%|██████████| 5/5 [00:14<00:00,  2.81s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/UniqueFactorizationDomain.lean'), full_name='UniqueFactorizationMonoid.isRelPrime_iff_no_prime_factors')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.83s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.19s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.71s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.97s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.97s/it][A100%|██████████| 5/5 [00:14<00:00,  2.95s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/UniqueFactorizationDomain.lean'), full_name='UniqueFactorizationMonoid.isRelPrime_iff_no_prime_factors')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.57s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.87s/it][A
- 60%|██████    | 3/5 [00:10<00:06,  3.44s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.49s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.42s/it][A100%|██████████| 5/5 [00:17<00:00,  3.43s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/UniqueFactorizationDomain.lean'), full_name='UniqueFactorizationMonoid.isRelPrime_iff_no_prime_factors')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.35s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.97s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.73s/it][A
- 80%|████████  | 4/5 [00:11<00:03,  3.02s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.18s/it][A100%|██████████| 5/5 [00:15<00:00,  3.03s/it]
-  0%|          | 18/9091 [29:06<350:52:56, 139.22s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6111111111111112
-# successes: 	11
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Ideal.iInf_sup_eq_top')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.69s/it][A 20%|██        | 1/5 [00:14<00:58, 14.54s/it]
-  0%|          | 19/9091 [30:00<286:05:40, 113.53s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.631578947368421
-# successes: 	12
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Basic.lean'), full_name='Finset.sdiff_eq_self_of_disjoint')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.68s/it][A 20%|██        | 1/5 [00:03<00:13,  3.32s/it]
-  0%|          | 20/9091 [30:45<234:32:18, 93.08s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.65
-# successes: 	13
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/ZetaValues.lean'), full_name='hasSum_zeta_nat')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:08<00:34,  8.70s/it][A
- 40%|████      | 2/5 [00:21<00:33, 11.19s/it][A
- 60%|██████    | 3/5 [00:28<00:18,  9.29s/it][A 60%|██████    | 3/5 [00:30<00:20, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/ZetaValues.lean'), full_name='hasSum_zeta_nat')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:10<00:40, 10.02s/it][A
- 40%|████      | 2/5 [00:16<00:23,  7.67s/it][A
- 60%|██████    | 3/5 [00:27<00:18,  9.20s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/ZetaValues.lean'), full_name='hasSum_zeta_nat')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:05<00:23,  5.90s/it][A
- 40%|████      | 2/5 [00:13<00:20,  6.92s/it][A
- 60%|██████    | 3/5 [00:20<00:13,  6.96s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/ZetaValues.lean'), full_name='hasSum_zeta_nat')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:06<00:25,  6.46s/it][A
- 40%|████      | 2/5 [00:12<00:18,  6.30s/it][A
- 60%|██████    | 3/5 [00:19<00:13,  6.65s/it][A
- 80%|████████  | 4/5 [00:26<00:06,  6.79s/it][A 80%|████████  | 4/5 [00:30<00:07,  7.50s/it]
-  0%|          | 21/9091 [35:07<362:08:02, 143.74s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6190476190476191
-# successes: 	13
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/AffineSpace/Combination.lean'), full_name='Finset.sum_affineCombinationSingleWeights')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.50s/it][A 20%|██        | 1/5 [00:05<00:21,  5.48s/it]
-  0%|          | 22/9091 [35:48<284:01:39, 112.75s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6363636363636364
-# successes: 	14
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/NatAntidiagonal.lean'), full_name="Finset.Nat.prod_antidiagonal_succ'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.81s/it][A 20%|██        | 1/5 [00:05<00:21,  5.30s/it]
-  0%|          | 23/9091 [36:19<222:19:49, 88.27s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6521739130434783
-# successes: 	15
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/IsROrC/Basic.lean'), full_name='IsROrC.conjCLE_apply')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:00<?, ?it/s]
-  0%|          | 24/9091 [37:00<186:43:56, 74.14s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6666666666666666
-# successes: 	16
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/AlgebraicGeometry/EllipticCurve/Projective.lean'), full_name='WeierstrassCurve.Projective.polynomialY_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:05<00:21,  5.47s/it][A
- 40%|████      | 2/5 [00:22<00:36, 12.23s/it][A 40%|████      | 2/5 [00:27<00:41, 13.86s/it]
-  0%|          | 25/9091 [37:58<174:42:44, 69.38s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.68
-# successes: 	17
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Order/Basic.lean'), full_name='Ico_mem_nhds_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 26/9091 [38:45<157:47:33, 62.66s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6923076923076923
-# successes: 	18
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Basic.lean'), full_name='Finset.prod_powerset')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 27/9091 [39:22<138:16:15, 54.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7037037037037037
-# successes: 	19
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/ContinuousFunction/Basic.lean'), full_name='ContinuousMap.toFun_eq_coe')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 28/9091 [39:51<118:50:51, 47.21s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	20
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/Basic.lean'), full_name='Filter.NeBot.ne')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 29/9091 [40:28<110:30:36, 43.90s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7241379310344828
-# successes: 	21
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/MvPolynomial/Homogeneous.lean'), full_name='MvPolynomial.isHomogeneous_C')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.64s/it][A 20%|██        | 1/5 [00:03<00:12,  3.23s/it]
-  0%|          | 30/9091 [40:59<101:02:17, 40.14s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7333333333333333
-# successes: 	22
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/LegendreSymbol/QuadraticReciprocity.lean'), full_name='ZMod.exists_sq_eq_prime_iff_of_mod_four_eq_three')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:03<?, ?it/s]
-  0%|          | 31/9091 [41:31<95:06:56, 37.79s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7419354838709677
-# successes: 	23
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Lattice.lean'), full_name='Set.mapsTo_iUnion')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.01s/it][A 20%|██        | 1/5 [00:04<00:18,  4.55s/it]
-  0%|          | 32/9091 [42:10<95:53:16, 38.11s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.75
-# successes: 	24
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/DFinsupp/NeLocus.lean'), full_name='DFinsupp.mapRange_neLocus_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.65s/it][A 20%|██        | 1/5 [00:05<00:20,  5.05s/it]
-  0%|          | 33/9091 [42:41<90:46:18, 36.08s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7575757575757576
-# successes: 	25
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/FintypeCat.lean'), full_name='FintypeCat.id_apply')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 34/9091 [43:09<84:32:49, 33.61s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7647058823529411
-# successes: 	26
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/Cardinal/Continuum.lean'), full_name='Cardinal.beth_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  0%|          | 35/9091 [43:37<80:03:32, 31.83s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7714285714285715
-# successes: 	27
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Sqrt.lean'), full_name='Rat.exists_mul_self')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.67s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.36s/it][A
- 60%|██████    | 3/5 [00:16<00:12,  6.41s/it][A
- 80%|████████  | 4/5 [00:25<00:07,  7.52s/it][A 80%|████████  | 4/5 [00:30<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Sqrt.lean'), full_name='Rat.exists_mul_self')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.69s/it][A
- 40%|████      | 2/5 [00:07<00:12,  4.04s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.79s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.87s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.84s/it][A100%|██████████| 5/5 [00:21<00:00,  4.34s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Sqrt.lean'), full_name='Rat.exists_mul_self')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:19,  4.78s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.02s/it][A
- 60%|██████    | 3/5 [00:12<00:08,  4.15s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.67s/it][A
-100%|██████████| 5/5 [00:19<00:00,  3.87s/it][A100%|██████████| 5/5 [00:19<00:00,  3.95s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Sqrt.lean'), full_name='Rat.exists_mul_self')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.46s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.07s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.84s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.06s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.14s/it][A100%|██████████| 5/5 [00:15<00:00,  3.10s/it]
-  0%|          | 36/9091 [46:50<201:36:54, 80.16s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.75
-# successes: 	27
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Constructions/BorelSpace/Basic.lean'), full_name='measurableSet_Iio')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:05<00:22,  5.54s/it][A
- 40%|████      | 2/5 [00:09<00:14,  4.70s/it][A
- 60%|██████    | 3/5 [00:13<00:08,  4.44s/it][A
- 80%|████████  | 4/5 [00:17<00:04,  4.03s/it][A 80%|████████  | 4/5 [00:20<00:05,  5.17s/it]
-  0%|          | 37/9091 [47:44<181:46:04, 72.27s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7567567567567568
-# successes: 	28
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Determinant.lean'), full_name='Basis.det_unitsSMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.37s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.78s/it][A
- 60%|██████    | 3/5 [00:11<00:08,  4.12s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.55s/it][A
-100%|██████████| 5/5 [00:20<00:00,  4.26s/it][A100%|██████████| 5/5 [00:20<00:00,  4.13s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Determinant.lean'), full_name='Basis.det_unitsSMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.71s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.86s/it][A
- 60%|██████    | 3/5 [00:11<00:08,  4.04s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.08s/it][A
-100%|██████████| 5/5 [00:20<00:00,  4.27s/it][A100%|██████████| 5/5 [00:20<00:00,  4.14s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Determinant.lean'), full_name='Basis.det_unitsSMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:17,  4.26s/it][A
- 40%|████      | 2/5 [00:08<00:13,  4.46s/it][A
- 60%|██████    | 3/5 [00:13<00:09,  4.57s/it][A
- 80%|████████  | 4/5 [00:18<00:04,  4.58s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.03s/it][A100%|██████████| 5/5 [00:21<00:00,  4.24s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Determinant.lean'), full_name='Basis.det_unitsSMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.63s/it][A
- 40%|████      | 2/5 [00:10<00:16,  5.41s/it][A
- 60%|██████    | 3/5 [00:14<00:09,  4.88s/it][A
- 80%|████████  | 4/5 [00:18<00:04,  4.57s/it][A
-100%|██████████| 5/5 [00:23<00:00,  4.60s/it][A100%|██████████| 5/5 [00:23<00:00,  4.66s/it]
-  0%|          | 38/9091 [51:53<315:17:33, 125.38s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7368421052631579
-# successes: 	28
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Eigenspace/Basic.lean'), full_name='Module.End.injOn_generalizedEigenspace')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.61s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.93s/it][A
- 60%|██████    | 3/5 [00:15<00:11,  5.56s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Eigenspace/Basic.lean'), full_name='Module.End.injOn_generalizedEigenspace')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.91s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.82s/it][A 40%|████      | 2/5 [00:29<00:44, 15.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Eigenspace/Basic.lean'), full_name='Module.End.injOn_generalizedEigenspace')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.91s/it][A
- 40%|████      | 2/5 [00:10<00:16,  5.58s/it][A
- 60%|██████    | 3/5 [00:18<00:13,  6.82s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Eigenspace/Basic.lean'), full_name='Module.End.injOn_generalizedEigenspace')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.65s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.76s/it][A
- 60%|██████    | 3/5 [00:14<00:10,  5.41s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-  0%|          | 39/9091 [56:19<421:25:45, 167.60s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.717948717948718
-# successes: 	28
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Integral/FundThmCalculus.lean'), full_name="intervalIntegral.integral_comp_smul_deriv''")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:17,  4.30s/it][A
- 40%|████      | 2/5 [00:11<00:17,  5.83s/it][A
- 60%|██████    | 3/5 [00:16<00:10,  5.47s/it][A
- 80%|████████  | 4/5 [00:21<00:05,  5.45s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Integral/FundThmCalculus.lean'), full_name="intervalIntegral.integral_comp_smul_deriv''")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:17,  4.31s/it][A
- 40%|████      | 2/5 [00:13<00:21,  7.15s/it][A
- 60%|██████    | 3/5 [00:18<00:11,  5.98s/it][A
- 80%|████████  | 4/5 [00:23<00:05,  5.61s/it][A
-100%|██████████| 5/5 [00:28<00:00,  5.48s/it][A100%|██████████| 5/5 [00:28<00:00,  5.66s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Integral/FundThmCalculus.lean'), full_name="intervalIntegral.integral_comp_smul_deriv''")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:29<?, ?it/s]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Integral/FundThmCalculus.lean'), full_name="intervalIntegral.integral_comp_smul_deriv''")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:30,  7.73s/it][A
- 40%|████      | 2/5 [00:12<00:17,  5.71s/it][A
- 60%|██████    | 3/5 [00:16<00:10,  5.21s/it][A
- 80%|████████  | 4/5 [00:21<00:04,  4.96s/it][A
-100%|██████████| 5/5 [00:28<00:00,  5.75s/it][A100%|██████████| 5/5 [00:28<00:00,  5.67s/it]
-  0%|          | 40/9091 [1:01:06<511:06:42, 203.29s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7
-# successes: 	28
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/UnionFind/Basic.lean'), full_name="Std.UnionFind.parentD_eq'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:03<?, ?it/s]
-  0%|          | 41/9091 [1:01:36<380:45:01, 151.46s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7073170731707317
-# successes: 	29
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Geometry/Manifold/Algebra/Monoid.lean'), full_name='smooth_finset_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:19,  4.81s/it][A 20%|██        | 1/5 [00:08<00:35,  8.83s/it]
-  0%|          | 42/9091 [1:02:17<297:15:00, 118.26s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	30
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Setoid/Basic.lean'), full_name='Setoid.eq_iff_rel_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.88s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.94s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.95s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.97s/it][A
-100%|██████████| 5/5 [00:10<00:00,  2.07s/it][A100%|██████████| 5/5 [00:10<00:00,  2.01s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Setoid/Basic.lean'), full_name='Setoid.eq_iff_rel_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.87s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.16s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.08s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.96s/it][A
-100%|██████████| 5/5 [00:10<00:00,  2.02s/it][A100%|██████████| 5/5 [00:10<00:00,  2.02s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Setoid/Basic.lean'), full_name='Setoid.eq_iff_rel_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.62s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.67s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.89s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.89s/it][A
-100%|██████████| 5/5 [00:09<00:00,  1.94s/it][A100%|██████████| 5/5 [00:09<00:00,  1.88s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Setoid/Basic.lean'), full_name='Setoid.eq_iff_rel_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.61s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.57s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.72s/it][A 60%|██████    | 3/5 [00:08<00:05,  2.85s/it]
-  0%|          | 43/9091 [1:04:40<315:35:23, 125.57s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7209302325581395
-# successes: 	31
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Basic.lean'), full_name='Set.subset_diff_union')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.18s/it][A
- 40%|████      | 2/5 [00:02<00:03,  1.29s/it][A 40%|████      | 2/5 [00:03<00:05,  1.90s/it]
-  0%|          | 44/9091 [1:05:17<249:21:02, 99.22s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7272727272727273
-# successes: 	32
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/TrivSqZeroExt.lean'), full_name='TrivSqZeroExt.inr_neg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  0%|          | 45/9091 [1:05:47<196:45:27, 78.30s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7333333333333333
-# successes: 	33
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Computability/TuringMachine.lean'), full_name='Turing.TM0.step_supports')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.81s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.72s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.32s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.49s/it][A
-100%|██████████| 5/5 [00:16<00:00,  3.29s/it][A100%|██████████| 5/5 [00:16<00:00,  3.24s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Computability/TuringMachine.lean'), full_name='Turing.TM0.step_supports')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.78s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.92s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.61s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.47s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.25s/it][A100%|██████████| 5/5 [00:19<00:00,  3.92s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Computability/TuringMachine.lean'), full_name='Turing.TM0.step_supports')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:18,  4.63s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.11s/it][A
- 60%|██████    | 3/5 [00:16<00:12,  6.16s/it][A
- 80%|████████  | 4/5 [00:22<00:05,  5.75s/it][A
-100%|██████████| 5/5 [00:27<00:00,  5.67s/it][A100%|██████████| 5/5 [00:27<00:00,  5.52s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Computability/TuringMachine.lean'), full_name='Turing.TM0.step_supports')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:05<00:20,  5.01s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.78s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.62s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.87s/it][A
-100%|██████████| 5/5 [00:19<00:00,  3.72s/it][A100%|██████████| 5/5 [00:19<00:00,  3.81s/it]
-  1%|          | 46/9091 [1:09:23<300:18:13, 119.52s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.717391304347826
-# successes: 	33
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/List.lean'), full_name='Set.range_list_getI')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.90s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.36s/it][A
- 60%|██████    | 3/5 [00:08<00:06,  3.03s/it][A
- 80%|████████  | 4/5 [00:15<00:04,  4.49s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.99s/it][A100%|██████████| 5/5 [00:18<00:00,  3.65s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/List.lean'), full_name='Set.range_list_getI')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.12s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.01s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.50s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.67s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.45s/it][A100%|██████████| 5/5 [00:17<00:00,  3.43s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/List.lean'), full_name='Set.range_list_getI')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.19s/it][A
- 40%|████      | 2/5 [00:05<00:07,  2.58s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.57s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.75s/it][A
-100%|██████████| 5/5 [00:13<00:00,  2.80s/it][A100%|██████████| 5/5 [00:13<00:00,  2.70s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/List.lean'), full_name='Set.range_list_getI')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.61s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.74s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.68s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.79s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.99s/it][A100%|██████████| 5/5 [00:14<00:00,  2.87s/it]
-  1%|          | 47/9091 [1:12:11<336:50:48, 134.08s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7021276595744681
-# successes: 	33
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/LocallyFinite/Basic.lean'), full_name='Finset.Ioc_subset_Icc_self')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.49s/it][A 20%|██        | 1/5 [00:02<00:11,  2.79s/it]
-  1%|          | 48/9091 [1:12:42<259:15:05, 103.21s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7083333333333334
-# successes: 	34
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Distribution/SchwartzSpace.lean'), full_name='SchwartzMap.schwartzSeminormFamily_apply_zero')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.98s/it][A 20%|██        | 1/5 [00:09<00:37,  9.30s/it]
-  1%|          | 49/9091 [1:13:25<214:22:16, 85.35s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	35
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Archimedean.lean'), full_name='exists_mem_Ioc_zpow')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:13<00:52, 13.24s/it][A
- 40%|████      | 2/5 [00:23<00:35, 11.72s/it][A 40%|████      | 2/5 [00:30<00:45, 15.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Archimedean.lean'), full_name='exists_mem_Ioc_zpow')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:14<00:58, 14.59s/it][A
- 40%|████      | 2/5 [00:28<00:42, 14.23s/it][A 40%|████      | 2/5 [00:30<00:45, 15.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Archimedean.lean'), full_name='exists_mem_Ioc_zpow')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:13<00:53, 13.49s/it][A
- 40%|████      | 2/5 [00:29<00:44, 14.93s/it][A 40%|████      | 2/5 [00:30<00:45, 15.12s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Archimedean.lean'), full_name='exists_mem_Ioc_zpow')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:13<00:52, 13.08s/it][A
- 40%|████      | 2/5 [00:28<00:42, 14.31s/it][A 40%|████      | 2/5 [00:30<00:45, 15.00s/it]
-  1%|          | 50/9091 [1:17:21<327:47:26, 130.52s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7
-# successes: 	35
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean'), full_name='Complex.GammaIntegral_add_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:16<01:04, 16.09s/it][A
- 40%|████      | 2/5 [00:29<00:43, 14.63s/it][A 40%|████      | 2/5 [00:30<00:45, 15.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean'), full_name='Complex.GammaIntegral_add_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:17<01:11, 17.89s/it][A
- 40%|████      | 2/5 [00:22<00:29,  9.93s/it][A
- 60%|██████    | 3/5 [00:29<00:17,  8.91s/it][A 60%|██████    | 3/5 [00:30<00:20, 10.02s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean'), full_name='Complex.GammaIntegral_add_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:14<00:57, 14.26s/it][A
- 40%|████      | 2/5 [00:22<00:31, 10.51s/it][A
- 60%|██████    | 3/5 [00:26<00:15,  7.58s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Gamma/Basic.lean'), full_name='Complex.GammaIntegral_add_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:08<00:33,  8.40s/it][A
- 40%|████      | 2/5 [00:14<00:21,  7.31s/it][A
- 60%|██████    | 3/5 [00:19<00:12,  6.16s/it][A
- 80%|████████  | 4/5 [00:26<00:06,  6.59s/it][A 80%|████████  | 4/5 [00:30<00:07,  7.50s/it]
-  1%|          | 51/9091 [1:21:24<412:18:38, 164.19s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6862745098039216
-# successes: 	35
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/MetricSpace/PseudoMetric.lean'), full_name='continuous_dist')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:06<00:24,  6.00s/it][A
- 40%|████      | 2/5 [00:09<00:13,  4.55s/it][A
- 60%|██████    | 3/5 [00:16<00:10,  5.46s/it][A
- 80%|████████  | 4/5 [00:18<00:04,  4.17s/it][A
-100%|██████████| 5/5 [00:20<00:00,  3.61s/it][A100%|██████████| 5/5 [00:20<00:00,  4.18s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/MetricSpace/PseudoMetric.lean'), full_name='continuous_dist')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.19s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.22s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.58s/it][A
- 80%|████████  | 4/5 [00:14<00:04,  4.36s/it][A
-100%|██████████| 5/5 [00:18<00:00,  4.11s/it][A100%|██████████| 5/5 [00:18<00:00,  3.64s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/MetricSpace/PseudoMetric.lean'), full_name='continuous_dist')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:13<00:53, 13.30s/it][A
- 40%|████      | 2/5 [00:15<00:21,  7.01s/it][A
- 60%|██████    | 3/5 [00:18<00:10,  5.04s/it][A
- 80%|████████  | 4/5 [00:21<00:04,  4.24s/it][A
-100%|██████████| 5/5 [00:23<00:00,  3.43s/it][A100%|██████████| 5/5 [00:23<00:00,  4.72s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/MetricSpace/PseudoMetric.lean'), full_name='continuous_dist')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:06<00:25,  6.42s/it][A
- 40%|████      | 2/5 [00:08<00:11,  3.86s/it][A
- 60%|██████    | 3/5 [00:11<00:06,  3.31s/it][A
- 80%|████████  | 4/5 [00:13<00:02,  2.88s/it][A
-100%|██████████| 5/5 [00:15<00:00,  2.75s/it][A100%|██████████| 5/5 [00:15<00:00,  3.18s/it]
-  1%|          | 52/9091 [1:25:12<460:34:58, 183.44s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6730769230769231
-# successes: 	35
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Prod.lean'), full_name='Set.diagonal_eq_univ')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.07s/it][A 20%|██        | 1/5 [00:02<00:08,  2.21s/it]
-  1%|          | 53/9091 [1:25:45<347:04:09, 138.24s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6792452830188679
-# successes: 	36
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/NormedSpace/OperatorNorm/Mul.lean'), full_name="ContinuousLinearMap.mul_apply'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.33s/it][A 20%|██        | 1/5 [00:06<00:24,  6.07s/it]
-  1%|          | 54/9091 [1:26:18<267:18:58, 106.49s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6851851851851852
-# successes: 	37
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/RelClasses.lean'), full_name='ssubset_asymm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|          | 55/9091 [1:26:48<210:05:46, 83.70s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6909090909090909
-# successes: 	38
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean'), full_name='HasDerivAt.cosh')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.23s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.03s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.91s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.78s/it][A 80%|████████  | 4/5 [00:09<00:02,  2.40s/it]
-  1%|          | 56/9091 [1:27:39<185:08:33, 73.77s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6964285714285714
-# successes: 	39
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Group/Equiv/Basic.lean'), full_name='MulEquiv.map_div')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 57/9091 [1:28:10<153:11:45, 61.05s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7017543859649122
-# successes: 	40
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Padics/Hensel.lean'), full_name='newton_seq_norm_eq')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.66s/it][A 20%|██        | 1/5 [00:07<00:28,  7.24s/it]
-  1%|          | 58/9091 [1:28:53<139:45:36, 55.70s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7068965517241379
-# successes: 	41
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/ContinuedFractions/Computation/Basic.lean'), full_name='GeneralizedContinuedFraction.IntFractPair.coe_to_intFractPair')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 59/9091 [1:29:21<118:31:38, 47.24s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.711864406779661
-# successes: 	42
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Geometry/Euclidean/Circumcenter.lean'), full_name='EuclideanGeometry.circumcenter_eq_of_cospherical')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.52s/it][A 20%|██        | 1/5 [00:04<00:19,  4.84s/it]
-  1%|          | 60/9091 [1:30:06<117:11:37, 46.72s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7166666666666667
-# successes: 	43
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Pointwise/Interval.lean'), full_name='Set.preimage_mul_const_Ici_of_neg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.62s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.61s/it][A
- 60%|██████    | 3/5 [00:04<00:03,  1.60s/it][A
- 80%|████████  | 4/5 [00:06<00:01,  1.62s/it][A 80%|████████  | 4/5 [00:08<00:02,  2.02s/it]
-  1%|          | 61/9091 [1:30:50<115:00:20, 45.85s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7213114754098361
-# successes: 	44
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Opposites.lean'), full_name='AddOpposite.op_eq_one_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.13s/it][A 20%|██        | 1/5 [00:02<00:08,  2.19s/it]
-  1%|          | 62/9091 [1:31:19<101:56:05, 40.64s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7258064516129032
-# successes: 	45
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Algebra/NonUnitalHom.lean'), full_name='NonUnitalAlgHom.coe_to_mulHom')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 63/9091 [1:31:48<93:40:39, 37.35s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7301587301587301
-# successes: 	46
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Clique.lean'), full_name='SimpleGraph.IsClique.mono')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.33s/it][A
- 40%|████      | 2/5 [00:02<00:04,  1.48s/it][A 40%|████      | 2/5 [00:04<00:06,  2.28s/it]
-  1%|          | 64/9091 [1:32:20<89:05:09, 35.53s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.734375
-# successes: 	47
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Pow/NNReal.lean'), full_name='NNReal.one_le_rpow_of_pos_of_le_one_of_nonpos')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.94s/it][A 20%|██        | 1/5 [00:05<00:21,  5.30s/it]
-  1%|          | 65/9091 [1:32:53<87:32:45, 34.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7384615384615385
-# successes: 	48
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/MonoidLocalization.lean'), full_name='Submonoid.LocalizationMap.map_units')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.65s/it][A
- 40%|████      | 2/5 [00:02<00:04,  1.46s/it][A
- 60%|██████    | 3/5 [00:04<00:02,  1.48s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.45s/it][A
-100%|██████████| 5/5 [00:07<00:00,  1.51s/it][A100%|██████████| 5/5 [00:07<00:00,  1.50s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/MonoidLocalization.lean'), full_name='Submonoid.LocalizationMap.map_units')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.37s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.76s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.89s/it][A
- 80%|████████  | 4/5 [00:06<00:01,  1.63s/it][A
-100%|██████████| 5/5 [00:08<00:00,  1.73s/it][A100%|██████████| 5/5 [00:08<00:00,  1.72s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/MonoidLocalization.lean'), full_name='Submonoid.LocalizationMap.map_units')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.24s/it][A
- 40%|████      | 2/5 [00:02<00:03,  1.30s/it][A
- 60%|██████    | 3/5 [00:04<00:02,  1.42s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.46s/it][A
-100%|██████████| 5/5 [00:07<00:00,  1.47s/it][A100%|██████████| 5/5 [00:07<00:00,  1.43s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/MonoidLocalization.lean'), full_name='Submonoid.LocalizationMap.map_units')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.23s/it][A
- 40%|████      | 2/5 [00:02<00:04,  1.44s/it][A
- 60%|██████    | 3/5 [00:04<00:02,  1.42s/it][A
- 80%|████████  | 4/5 [00:05<00:01,  1.50s/it][A
-100%|██████████| 5/5 [00:07<00:00,  1.41s/it][A100%|██████████| 5/5 [00:07<00:00,  1.42s/it]
-  1%|          | 66/9091 [1:35:37<184:28:48, 73.59s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7272727272727273
-# successes: 	48
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/TensorProduct/Basic.lean'), full_name='TensorProduct.smul_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:06<00:25,  6.40s/it][A
- 40%|████      | 2/5 [00:15<00:24,  8.10s/it][A
- 60%|██████    | 3/5 [00:22<00:15,  7.73s/it][A 60%|██████    | 3/5 [00:29<00:19, 10.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/TensorProduct/Basic.lean'), full_name='TensorProduct.smul_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:06<00:24,  6.24s/it][A
- 40%|████      | 2/5 [00:16<00:25,  8.44s/it][A
- 60%|██████    | 3/5 [00:25<00:17,  8.96s/it][A 60%|██████    | 3/5 [00:30<00:20, 10.07s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/TensorProduct/Basic.lean'), full_name='TensorProduct.smul_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:28,  7.12s/it][A
- 40%|████      | 2/5 [00:14<00:21,  7.27s/it][A
- 60%|██████    | 3/5 [00:21<00:14,  7.35s/it][A
- 80%|████████  | 4/5 [00:28<00:07,  7.08s/it][A 80%|████████  | 4/5 [00:30<00:07,  7.56s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/TensorProduct/Basic.lean'), full_name='TensorProduct.smul_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:10<00:40, 10.01s/it][A
- 40%|████      | 2/5 [00:16<00:23,  7.88s/it][A
- 60%|██████    | 3/5 [00:23<00:15,  7.60s/it][A 60%|██████    | 3/5 [00:30<00:20, 10.00s/it]
-  1%|          | 67/9091 [1:39:50<319:10:33, 127.33s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7164179104477612
-# successes: 	48
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Prime.lean'), full_name='mem_list_primes_of_dvd_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.74s/it][A 20%|██        | 1/5 [00:03<00:13,  3.46s/it]
-  1%|          | 68/9091 [1:40:19<245:43:40, 98.04s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7205882352941176
-# successes: 	49
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/Prod.lean'), full_name='Filter.prod_mono_right')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 69/9091 [1:40:48<193:33:47, 77.24s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7246376811594203
-# successes: 	50
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Matrix/Basic.lean'), full_name='Matrix.star_vecMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.48s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.75s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.84s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.90s/it][A
-100%|██████████| 5/5 [00:09<00:00,  2.00s/it][A100%|██████████| 5/5 [00:09<00:00,  1.90s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Matrix/Basic.lean'), full_name='Matrix.star_vecMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.37s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.83s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.96s/it][A
- 80%|████████  | 4/5 [00:07<00:02,  2.02s/it][A
-100%|██████████| 5/5 [00:10<00:00,  2.10s/it][A100%|██████████| 5/5 [00:10<00:00,  2.00s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Matrix/Basic.lean'), full_name='Matrix.star_vecMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.36s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.72s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.84s/it][A
- 80%|████████  | 4/5 [00:07<00:02,  2.04s/it][A
-100%|██████████| 5/5 [00:09<00:00,  2.11s/it][A100%|██████████| 5/5 [00:09<00:00,  1.98s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Matrix/Basic.lean'), full_name='Matrix.star_vecMul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.37s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.81s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.96s/it][A
- 80%|████████  | 4/5 [00:07<00:02,  2.07s/it][A
-100%|██████████| 5/5 [00:09<00:00,  2.09s/it][A100%|██████████| 5/5 [00:09<00:00,  2.00s/it]
-  1%|          | 70/9091 [1:44:20<295:03:48, 117.75s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	50
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/Cardinal/Ordinal.lean'), full_name='Cardinal.aleph_le')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|          | 71/9091 [1:44:51<229:36:00, 91.64s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7183098591549296
-# successes: 	51
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Prod.lean'), full_name='SimpleGraph.Preconnected.ofBoxProdRight')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.16s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.67s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.76s/it][A
- 80%|████████  | 4/5 [00:06<00:01,  1.72s/it][A
-100%|██████████| 5/5 [00:08<00:00,  1.72s/it][A100%|██████████| 5/5 [00:08<00:00,  1.69s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Prod.lean'), full_name='SimpleGraph.Preconnected.ofBoxProdRight')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.14s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.63s/it][A
- 60%|██████    | 3/5 [00:04<00:03,  1.73s/it][A
- 80%|████████  | 4/5 [00:06<00:01,  1.72s/it][A
-100%|██████████| 5/5 [00:08<00:00,  1.69s/it][A100%|██████████| 5/5 [00:08<00:00,  1.66s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Prod.lean'), full_name='SimpleGraph.Preconnected.ofBoxProdRight')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.91s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.98s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.99s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.91s/it][A
-100%|██████████| 5/5 [00:09<00:00,  1.89s/it][A100%|██████████| 5/5 [00:09<00:00,  1.91s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Prod.lean'), full_name='SimpleGraph.Preconnected.ofBoxProdRight')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.14s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.63s/it][A
- 60%|██████    | 3/5 [00:05<00:04,  2.00s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.93s/it][A
-100%|██████████| 5/5 [00:08<00:00,  1.78s/it][A100%|██████████| 5/5 [00:08<00:00,  1.78s/it]
-  1%|          | 72/9091 [1:47:13<267:04:34, 106.61s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7083333333333334
-# successes: 	51
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/EventuallyConst.lean'), full_name='Filter.EventuallyConst.mulIndicator_const')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.66s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.72s/it][A
- 60%|██████    | 3/5 [00:05<00:03,  1.81s/it][A
- 80%|████████  | 4/5 [00:07<00:01,  1.96s/it][A
-100%|██████████| 5/5 [00:09<00:00,  2.13s/it][A100%|██████████| 5/5 [00:09<00:00,  1.99s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/EventuallyConst.lean'), full_name='Filter.EventuallyConst.mulIndicator_const')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.04s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.56s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.58s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.55s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.64s/it][A100%|██████████| 5/5 [00:12<00:00,  2.58s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/EventuallyConst.lean'), full_name='Filter.EventuallyConst.mulIndicator_const')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.70s/it][A
- 40%|████      | 2/5 [00:03<00:06,  2.04s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.19s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.39s/it][A
-100%|██████████| 5/5 [00:11<00:00,  2.51s/it][A100%|██████████| 5/5 [00:11<00:00,  2.35s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/EventuallyConst.lean'), full_name='Filter.EventuallyConst.mulIndicator_const')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.83s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.26s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.45s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.45s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.54s/it][A100%|██████████| 5/5 [00:12<00:00,  2.44s/it]
-  1%|          | 73/9091 [1:49:46<302:25:33, 120.73s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6986301369863014
-# successes: 	51
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Bounds/Basic.lean'), full_name='bddAbove_Ioo')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.31s/it][A 20%|██        | 1/5 [00:03<00:15,  3.78s/it]
-  1%|          | 74/9091 [1:50:19<236:23:45, 94.38s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7027027027027027
-# successes: 	52
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Tactic/NormNum/Inv.lean'), full_name='Mathlib.Meta.NormNum.isRat_inv_pos')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.35s/it][A
- 40%|████      | 2/5 [00:04<00:08,  2.70s/it][A 40%|████      | 2/5 [00:07<00:10,  3.55s/it]
-  1%|          | 75/9091 [1:50:54<191:37:27, 76.51s/it]  1%|          | 76/9091 [1:52:26<203:08:09, 81.12s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7066666666666667
-# successes: 	53
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Zip.lean'), full_name='List.prod_mul_prod_eq_prod_zipWith_mul_prod_drop')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Zip.lean'), full_name='List.prod_mul_prod_eq_prod_zipWith_mul_prod_drop')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Zip.lean'), full_name='List.prod_mul_prod_eq_prod_zipWith_mul_prod_drop')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Zip.lean'), full_name='List.prod_mul_prod_eq_prod_zipWith_mul_prod_drop')
-Error:  EOF
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6973684210526315
-# successes: 	53
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Sum.lean'), full_name='Finset.disjSum_strictMono_left')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.00s/it][A
- 40%|████      | 2/5 [00:05<00:09,  3.17s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.25s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.24s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.31s/it][A100%|██████████| 5/5 [00:15<00:00,  3.20s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Sum.lean'), full_name='Finset.disjSum_strictMono_left')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.00s/it][A
- 40%|████      | 2/5 [00:05<00:07,  2.60s/it][A
- 60%|██████    | 3/5 [00:08<00:06,  3.14s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.73s/it][A
-100%|██████████| 5/5 [00:16<00:00,  3.45s/it][A100%|██████████| 5/5 [00:16<00:00,  3.28s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Sum.lean'), full_name='Finset.disjSum_strictMono_left')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.76s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.85s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.40s/it][A
- 80%|████████  | 4/5 [00:14<00:04,  4.10s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.39s/it][A100%|██████████| 5/5 [00:19<00:00,  3.90s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Sum.lean'), full_name='Finset.disjSum_strictMono_left')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.07s/it][A
- 40%|████      | 2/5 [00:05<00:09,  3.10s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.23s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.18s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.30s/it][A100%|██████████| 5/5 [00:15<00:00,  3.18s/it]
-  1%|          | 77/9091 [1:55:19<272:21:55, 108.78s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6883116883116883
-# successes: 	53
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Fintype/Card.lean'), full_name='Fintype.false')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 78/9091 [1:55:49<213:15:34, 85.18s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6923076923076923
-# successes: 	54
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/NatAntidiagonal.lean'), full_name='Finset.Nat.antidiagonal.snd_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.91s/it][A 20%|██        | 1/5 [00:03<00:14,  3.66s/it]
-  1%|          | 79/9091 [1:56:20<172:40:14, 68.98s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6962025316455697
-# successes: 	55
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Dimension/StrongRankCondition.lean'), full_name='FiniteDimensional.finrank_eq_card_basis')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 80/9091 [1:56:55<146:25:56, 58.50s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7
-# successes: 	56
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Order/Basic.lean'), full_name='exists_Icc_mem_subset_of_mem_nhds')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.33s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.04s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.00s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.29s/it][A 80%|████████  | 4/5 [00:26<00:06,  6.73s/it]
-  1%|          | 81/9091 [1:57:54<147:28:09, 58.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7037037037037037
-# successes: 	57
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/NoncommProd.lean'), full_name='Finset.noncommProd_commute')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.91s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.30s/it][A 40%|████      | 2/5 [00:06<00:10,  3.44s/it]
-  1%|          | 82/9091 [1:58:29<129:30:22, 51.75s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7073170731707317
-# successes: 	58
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Regular/Basic.lean'), full_name='IsRightRegular.of_mul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.94s/it][A 20%|██        | 1/5 [00:03<00:14,  3.57s/it]
-  1%|          | 83/9091 [1:59:00<113:44:15, 45.45s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7108433734939759
-# successes: 	59
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Convex/Function.lean'), full_name='LinearOrder.convexOn_of_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.44s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.38s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.16s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.60s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.90s/it][A100%|██████████| 5/5 [00:21<00:00,  4.23s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Convex/Function.lean'), full_name='LinearOrder.convexOn_of_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.25s/it][A
- 40%|████      | 2/5 [00:06<00:08,  2.97s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.77s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.42s/it][A
-100%|██████████| 5/5 [00:18<00:00,  4.18s/it][A100%|██████████| 5/5 [00:18<00:00,  3.70s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Convex/Function.lean'), full_name='LinearOrder.convexOn_of_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.26s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.03s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.78s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.55s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.57s/it][A100%|██████████| 5/5 [00:19<00:00,  3.94s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Convex/Function.lean'), full_name='LinearOrder.convexOn_of_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.22s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.29s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.15s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.90s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.30s/it][A100%|██████████| 5/5 [00:19<00:00,  3.92s/it]
-  1%|          | 84/9091 [2:02:28<235:23:57, 94.09s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7023809523809523
-# successes: 	59
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Homology/Bifunctor.lean'), full_name='HomologicalComplex.ι_mapBifunctorMap')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:07<?, ?it/s]
-  1%|          | 85/9091 [2:03:14<199:06:02, 79.59s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7058823529411765
-# successes: 	60
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Analysis/Topology.lean'), full_name='Ctop.Realizer.mem_nhds')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.24s/it][A 20%|██        | 1/5 [00:03<00:15,  3.85s/it]
-  1%|          | 86/9091 [2:03:45<163:14:21, 65.26s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7093023255813954
-# successes: 	61
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Matrix/Basic.lean'), full_name='Matrix.submatrix_one_equiv')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.55s/it][A 20%|██        | 1/5 [00:03<00:14,  3.62s/it]
-  1%|          | 87/9091 [2:04:37<153:13:33, 61.26s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7126436781609196
-# successes: 	62
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Order.lean'), full_name='Fintype.one_le_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.86s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.71s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.64s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.68s/it][A
-100%|██████████| 5/5 [00:13<00:00,  2.97s/it][A100%|██████████| 5/5 [00:13<00:00,  2.79s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Order.lean'), full_name='Fintype.one_le_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.89s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.19s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.56s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.75s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.92s/it][A100%|██████████| 5/5 [00:17<00:00,  3.42s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Order.lean'), full_name='Fintype.one_le_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.89s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.12s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.12s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.60s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.61s/it][A100%|██████████| 5/5 [00:12<00:00,  2.45s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Order.lean'), full_name='Fintype.one_le_prod')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.86s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.38s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.54s/it][A 60%|██████    | 3/5 [00:10<00:06,  3.44s/it]
-  1%|          | 88/9091 [2:07:39<243:17:50, 97.29s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7159090909090909
-# successes: 	63
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Algebra/Hom.lean'), full_name='AlgHom.map_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.05s/it][A
- 40%|████      | 2/5 [00:05<00:07,  2.46s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.29s/it][A 60%|██████    | 3/5 [00:08<00:05,  2.93s/it]
-  1%|          | 89/9091 [2:08:16<198:28:55, 79.38s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7191011235955056
-# successes: 	64
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Polynomial/UnitTrinomial.lean'), full_name="Polynomial.IsUnitTrinomial.irreducible_of_coprime'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.00s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.15s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.58s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.61s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.76s/it][A100%|██████████| 5/5 [00:18<00:00,  3.60s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Polynomial/UnitTrinomial.lean'), full_name="Polynomial.IsUnitTrinomial.irreducible_of_coprime'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:18,  4.62s/it][A
- 40%|████      | 2/5 [00:08<00:13,  4.39s/it][A
- 60%|██████    | 3/5 [00:14<00:09,  4.96s/it][A
- 80%|████████  | 4/5 [00:19<00:05,  5.02s/it][A
-100%|██████████| 5/5 [00:25<00:00,  5.22s/it][A100%|██████████| 5/5 [00:25<00:00,  5.03s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Polynomial/UnitTrinomial.lean'), full_name="Polynomial.IsUnitTrinomial.irreducible_of_coprime'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.36s/it][A
- 40%|████      | 2/5 [00:05<00:07,  2.62s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.97s/it][A
- 80%|████████  | 4/5 [00:14<00:04,  4.08s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.96s/it][A100%|██████████| 5/5 [00:18<00:00,  3.62s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Polynomial/UnitTrinomial.lean'), full_name="Polynomial.IsUnitTrinomial.irreducible_of_coprime'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.38s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.79s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.94s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.85s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.64s/it][A100%|██████████| 5/5 [00:21<00:00,  4.26s/it]
-  1%|          | 90/9091 [2:11:39<291:20:13, 116.52s/it]  1%|          | 91/9091 [2:13:36<291:11:27, 116.48s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7111111111111111
-# successes: 	64
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/String/Lemmas.lean'), full_name='Substring.Valid.foldr')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/String/Lemmas.lean'), full_name='Substring.Valid.foldr')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/String/Lemmas.lean'), full_name='Substring.Valid.foldr')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/String/Lemmas.lean'), full_name='Substring.Valid.foldr')
-Error:  EOF
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7032967032967034
-# successes: 	64
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Compare.lean'), full_name='Ordering.orElse_eq_lt')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 92/9091 [2:14:05<225:40:41, 90.28s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7065217391304348
-# successes: 	65
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Group/Commute/Basic.lean'), full_name='Commute.inv_mul_cancel_assoc')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 93/9091 [2:14:33<178:59:03, 71.61s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7096774193548387
-# successes: 	66
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finsupp/Defs.lean'), full_name='Finsupp.single_apply_eq_zero')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 94/9091 [2:15:04<148:41:27, 59.50s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7127659574468085
-# successes: 	67
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Measure/Restrict.lean'), full_name='MeasureTheory.Measure.restrict_congr_meas')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.23s/it][A
- 40%|████      | 2/5 [00:06<00:08,  2.98s/it][A
- 60%|██████    | 3/5 [00:12<00:09,  4.63s/it][A
- 80%|████████  | 4/5 [00:17<00:04,  4.65s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.56s/it][A100%|██████████| 5/5 [00:21<00:00,  4.34s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Measure/Restrict.lean'), full_name='MeasureTheory.Measure.restrict_congr_meas')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.63s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.97s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.49s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.79s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.19s/it][A100%|██████████| 5/5 [00:19<00:00,  3.82s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Measure/Restrict.lean'), full_name='MeasureTheory.Measure.restrict_congr_meas')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:30,  7.52s/it][A
- 40%|████      | 2/5 [00:15<00:23,  7.97s/it][A
- 60%|██████    | 3/5 [00:21<00:13,  6.87s/it][A
- 80%|████████  | 4/5 [00:27<00:06,  6.53s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Measure/Restrict.lean'), full_name='MeasureTheory.Measure.restrict_congr_meas')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:18,  4.56s/it][A
- 40%|████      | 2/5 [00:07<00:10,  3.51s/it][A
- 60%|██████    | 3/5 [00:16<00:11,  5.91s/it][A
- 80%|████████  | 4/5 [00:22<00:06,  6.22s/it][A
-100%|██████████| 5/5 [00:27<00:00,  5.50s/it][A100%|██████████| 5/5 [00:27<00:00,  5.40s/it]
-  1%|          | 95/9091 [2:18:40<265:41:39, 106.32s/it]  1%|          | 96/9091 [2:20:42<277:47:07, 111.18s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7052631578947368
-# successes: 	67
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/SpecificGroups/Coxeter.lean'), full_name='CoxeterMatrix.AₙIsCoxeter')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/SpecificGroups/Coxeter.lean'), full_name='CoxeterMatrix.AₙIsCoxeter')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/SpecificGroups/Coxeter.lean'), full_name='CoxeterMatrix.AₙIsCoxeter')
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/SpecificGroups/Coxeter.lean'), full_name='CoxeterMatrix.AₙIsCoxeter')
-Error:  EOF
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6979166666666666
-# successes: 	67
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/Ordinal/NaturalOps.lean'), full_name='Ordinal.nadd_succ')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 97/9091 [2:21:12<216:57:05, 86.84s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7010309278350515
-# successes: 	68
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/Filter/Pi.lean'), full_name='Filter.pi_inf_principal_pi_neBot')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|          | 98/9091 [2:21:43<174:40:16, 69.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7040816326530612
-# successes: 	69
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Subgroup/Basic.lean'), full_name='Subgroup.map_id')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.75s/it][A 20%|██        | 1/5 [00:03<00:13,  3.45s/it]
-  1%|          | 99/9091 [2:22:27<155:05:38, 62.09s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7070707070707071
-# successes: 	70
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Powerset.lean'), full_name='Finset.powersetCard_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.28s/it][A
- 40%|████      | 2/5 [00:06<00:08,  2.96s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.55s/it][A
- 80%|████████  | 4/5 [00:15<00:04,  4.07s/it][A
-100%|██████████| 5/5 [00:23<00:00,  5.68s/it][A100%|██████████| 5/5 [00:23<00:00,  4.73s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Powerset.lean'), full_name='Finset.powersetCard_one')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.75s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.45s/it][A
- 60%|██████    | 3/5 [00:10<00:08,  4.14s/it][A
- 80%|████████  | 4/5 [00:18<00:05,  5.40s/it][A 80%|████████  | 4/5 [00:21<00:05,  5.41s/it]
-  1%|          | 100/9091 [2:24:07<183:35:44, 73.51s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.71
-# successes: 	71
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/Composition.lean'), full_name="CompositionAsSet.lt_length'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:12<00:51, 12.86s/it][A 20%|██        | 1/5 [00:14<00:57, 14.39s/it]
-  1%|          | 101/9091 [2:24:51<161:29:11, 64.67s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7128712871287128
-# successes: 	72
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Probability/Martingale/Basic.lean'), full_name='MeasureTheory.Martingale.eq_zero_of_predictable')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:05<00:21,  5.34s/it][A
- 40%|████      | 2/5 [00:09<00:14,  4.79s/it][A
- 60%|██████    | 3/5 [00:16<00:11,  5.84s/it][A 60%|██████    | 3/5 [00:21<00:14,  7.16s/it]
-  1%|          | 102/9091 [2:25:47<154:45:02, 61.98s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7156862745098039
-# successes: 	73
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Submonoid/Operations.lean'), full_name='Submonoid.map_map')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.82s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.02s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.66s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.94s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.36s/it][A100%|██████████| 5/5 [00:17<00:00,  3.48s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/Submonoid/Operations.lean'), full_name='Submonoid.map_map')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.55s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.87s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.93s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.25s/it][A 80%|████████  | 4/5 [00:17<00:04,  4.36s/it]
-  1%|          | 103/9091 [2:27:18<176:36:33, 70.74s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7184466019417476
-# successes: 	74
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Divisors.lean'), full_name='Nat.swap_mem_divisorsAntidiagonal')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 104/9091 [2:27:48<146:08:18, 58.54s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7211538461538461
-# successes: 	75
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Baire/Lemmas.lean'), full_name='IsGδ.dense_sUnion_interior_of_closed')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:29<?, ?it/s]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Baire/Lemmas.lean'), full_name='IsGδ.dense_sUnion_interior_of_closed')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:18<01:15, 18.76s/it][A 20%|██        | 1/5 [00:30<02:00, 30.01s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Baire/Lemmas.lean'), full_name='IsGδ.dense_sUnion_interior_of_closed')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:29<?, ?it/s]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Baire/Lemmas.lean'), full_name='IsGδ.dense_sUnion_interior_of_closed')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:22<01:29, 22.37s/it][A 20%|██        | 1/5 [00:29<01:59, 30.00s/it]
-  1%|          | 105/9091 [2:31:35<272:21:54, 109.12s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	75
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/Separable.lean'), full_name='Polynomial.separable_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.22s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.29s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.33s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.51s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.53s/it][A100%|██████████| 5/5 [00:12<00:00,  2.46s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/Separable.lean'), full_name='Polynomial.separable_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.91s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.23s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.80s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.81s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.56s/it][A100%|██████████| 5/5 [00:17<00:00,  3.50s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/Separable.lean'), full_name='Polynomial.separable_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.51s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.20s/it][A
- 60%|██████    | 3/5 [00:10<00:06,  3.49s/it][A
- 80%|████████  | 4/5 [00:24<00:07,  7.34s/it][A
-100%|██████████| 5/5 [00:28<00:00,  6.32s/it][A100%|██████████| 5/5 [00:28<00:00,  5.72s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/Separable.lean'), full_name='Polynomial.separable_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.24s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.17s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.62s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.73s/it][A
-100%|██████████| 5/5 [00:13<00:00,  2.88s/it][A100%|██████████| 5/5 [00:13<00:00,  2.71s/it]
-  1%|          | 106/9091 [2:34:36<326:32:02, 130.83s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7075471698113207
-# successes: 	75
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Logic/Basic.lean'), full_name='exists_iff_of_forall')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 107/9091 [2:35:06<250:51:55, 100.52s/it]  1%|          | 108/9091 [2:36:39<245:05:46, 98.22s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7102803738317757
-# successes: 	76
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/PFunctor/Univariate/M.lean'), full_name="PFunctor.M.head_eq_head'")
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/PFunctor/Univariate/M.lean'), full_name="PFunctor.M.head_eq_head'")
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/PFunctor/Univariate/M.lean'), full_name="PFunctor.M.head_eq_head'")
-Error:  EOF
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/PFunctor/Univariate/M.lean'), full_name="PFunctor.M.head_eq_head'")
-Error:  EOF
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7037037037037037
-# successes: 	76
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Nat/Choose/Bounds.lean'), full_name='Nat.pow_le_choose')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:11<00:46, 11.62s/it][A
- 40%|████      | 2/5 [00:15<00:20,  6.86s/it][A
- 60%|██████    | 3/5 [00:18<00:10,  5.29s/it][A
- 80%|████████  | 4/5 [00:25<00:05,  5.92s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Nat/Choose/Bounds.lean'), full_name='Nat.pow_le_choose')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.55s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.44s/it][A
- 60%|██████    | 3/5 [00:10<00:06,  3.38s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.72s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.36s/it][A100%|██████████| 5/5 [00:17<00:00,  3.44s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Nat/Choose/Bounds.lean'), full_name='Nat.pow_le_choose')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.22s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.24s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.59s/it][A
- 80%|████████  | 4/5 [00:24<00:07,  7.43s/it][A
-100%|██████████| 5/5 [00:27<00:00,  5.75s/it][A100%|██████████| 5/5 [00:27<00:00,  5.41s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Nat/Choose/Bounds.lean'), full_name='Nat.pow_le_choose')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.59s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.71s/it][A
- 60%|██████    | 3/5 [00:19<00:15,  7.66s/it][A
- 80%|████████  | 4/5 [00:24<00:06,  6.75s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-  1%|          | 109/9091 [2:40:10<329:03:46, 131.89s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6972477064220184
-# successes: 	76
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/Limits/Shapes/Kernels.lean'), full_name='CategoryTheory.Limits.coequalizer_as_cokernel')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|          | 110/9091 [2:40:44<256:02:11, 102.63s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7
-# successes: 	77
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/AlgebraicGeometry/EllipticCurve/Weierstrass.lean'), full_name='WeierstrassCurve.b_relation')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.67s/it][A 20%|██        | 1/5 [00:05<00:22,  5.72s/it]
-  1%|          | 111/9091 [2:41:17<204:09:40, 81.85s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7027027027027027
-# successes: 	78
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Nodup.lean'), full_name='List.forall_mem_ne')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|          | 112/9091 [2:41:46<164:07:16, 65.80s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7053571428571429
-# successes: 	79
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Analytic/Basic.lean'), full_name='FormalMultilinearSeries.changeOriginSeriesTerm_changeOriginIndexEquiv_symm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.23s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.92s/it][A
- 60%|██████    | 3/5 [00:13<00:09,  4.80s/it][A
- 80%|████████  | 4/5 [00:20<00:05,  5.69s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Analytic/Basic.lean'), full_name='FormalMultilinearSeries.changeOriginSeriesTerm_changeOriginIndexEquiv_symm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.13s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.29s/it][A
- 60%|██████    | 3/5 [00:13<00:09,  4.54s/it][A
- 80%|████████  | 4/5 [00:22<00:06,  6.50s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Analytic/Basic.lean'), full_name='FormalMultilinearSeries.changeOriginSeriesTerm_changeOriginIndexEquiv_symm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.11s/it][A
- 40%|████      | 2/5 [00:09<00:15,  5.15s/it][A
- 60%|██████    | 3/5 [00:23<00:18,  9.10s/it][A 60%|██████    | 3/5 [00:29<00:19,  9.99s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Analytic/Basic.lean'), full_name='FormalMultilinearSeries.changeOriginSeriesTerm_changeOriginIndexEquiv_symm')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.33s/it][A
- 40%|████      | 2/5 [00:08<00:13,  4.42s/it][A
- 60%|██████    | 3/5 [00:16<00:12,  6.10s/it][A
- 80%|████████  | 4/5 [00:24<00:06,  6.96s/it][A 80%|████████  | 4/5 [00:29<00:07,  7.50s/it]
-  1%|          | 113/9091 [2:48:10<402:17:34, 161.31s/it]Error:  
-output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.6991150442477876
-# successes: 	79
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Padics/PadicIntegers.lean'), full_name='PadicInt.norm_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.67s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.89s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.68s/it][A
- 80%|████████  | 4/5 [00:15<00:03,  3.93s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.12s/it][A100%|██████████| 5/5 [00:19<00:00,  3.98s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Padics/PadicIntegers.lean'), full_name='PadicInt.norm_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:16,  4.16s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.86s/it][A 40%|████      | 2/5 [00:11<00:17,  5.91s/it]
-  1%|▏         | 114/9091 [2:49:39<348:21:15, 139.70s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7017543859649122
-# successes: 	80
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Holor.lean'), full_name='Holor.mul_scalar_mul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:03<?, ?it/s]
-  1%|▏         | 115/9091 [2:50:08<265:32:02, 106.50s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7043478260869566
-# successes: 	81
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Subring/Basic.lean'), full_name='Subring.coe_add')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|▏         | 116/9091 [2:50:40<209:44:44, 84.13s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7068965517241379
-# successes: 	82
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/GroupAction/Embedding.lean'), full_name='Function.Embedding.coe_smul')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|▏         | 117/9091 [2:51:07<166:43:04, 66.88s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7094017094017094
-# successes: 	83
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Intervals/OrdConnected.lean'), full_name='Set.ordConnected_Iic')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:04,  1.17s/it][A
- 40%|████      | 2/5 [00:02<00:04,  1.45s/it][A 40%|████      | 2/5 [00:04<00:06,  2.30s/it]
-  1%|▏         | 118/9091 [2:51:37<139:22:32, 55.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.711864406779661
-# successes: 	84
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Polynomial/Pochhammer.lean'), full_name='ascPochhammer_eval_cast')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|▏         | 119/9091 [2:52:07<119:47:47, 48.07s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7142857142857143
-# successes: 	85
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Geometry/Euclidean/Angle/Unoriented/Basic.lean'), full_name='InnerProductGeometry.angle_le_pi')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:00<00:03,  1.04it/s][A 20%|██        | 1/5 [00:02<00:08,  2.12s/it]
-  1%|▏         | 120/9091 [2:52:36<105:32:42, 42.35s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7166666666666667
-# successes: 	86
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/LocallyFinite.lean'), full_name='Finset.coe_Ioo')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.24s/it][A 20%|██        | 1/5 [00:04<00:16,  4.18s/it]
-  1%|▏         | 121/9091 [2:53:08<97:58:44, 39.32s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.71900826446281
-# successes: 	87
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Ideal.comap_map_of_surjective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.66s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.70s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.43s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.46s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.37s/it][A100%|██████████| 5/5 [00:12<00:00,  2.44s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Ideal.comap_map_of_surjective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.81s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.38s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.34s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.37s/it][A
-100%|██████████| 5/5 [00:11<00:00,  2.30s/it][A100%|██████████| 5/5 [00:11<00:00,  2.35s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Ideal.comap_map_of_surjective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.62s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.21s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.14s/it][A
- 80%|████████  | 4/5 [00:08<00:02,  2.11s/it][A
-100%|██████████| 5/5 [00:10<00:00,  2.15s/it][A100%|██████████| 5/5 [00:10<00:00,  2.18s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Ideal.comap_map_of_surjective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.30s/it][A
- 40%|████      | 2/5 [00:04<00:06,  2.21s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.35s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.42s/it][A
-100%|██████████| 5/5 [00:11<00:00,  2.41s/it][A100%|██████████| 5/5 [00:11<00:00,  2.38s/it]
-  1%|▏         | 122/9091 [2:56:59<241:00:56, 96.74s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7131147540983607
-# successes: 	87
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Order/Monoid/Lemmas.lean'), full_name="le_mul_of_one_le_left'")
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|▏         | 123/9091 [2:57:28<190:55:25, 76.64s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7154471544715447
-# successes: 	88
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Measure/Content.lean'), full_name='MeasureTheory.Content.sup_disjoint')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|▏         | 124/9091 [2:57:58<155:48:03, 62.55s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.717741935483871
-# successes: 	89
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Constructions/BorelSpace/Basic.lean'), full_name='Real.isPiSystem_Ici_rat')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:04<00:16,  4.10s/it][A
- 40%|████      | 2/5 [00:05<00:06,  2.32s/it][A 40%|████      | 2/5 [00:06<00:10,  3.43s/it]
-  1%|▏         | 125/9091 [2:58:47<145:43:20, 58.51s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.72
-# successes: 	90
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/Adjoin.lean'), full_name='PowerBasis.equivAdjoinSimple_symm_gen')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  1%|▏         | 126/9091 [2:59:48<147:47:39, 59.35s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7222222222222222
-# successes: 	91
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Basis.lean'), full_name='Basis.constr_range')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:03<?, ?it/s]
-  1%|▏         | 127/9091 [3:00:28<132:58:05, 53.40s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7244094488188977
-# successes: 	92
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/NormedSpace/Star/ContinuousFunctionalCalculus/Instances.lean'), full_name='spectrum_star_mul_self_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.07s/it][A
- 40%|████      | 2/5 [00:05<00:09,  3.06s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.23s/it][A
- 80%|████████  | 4/5 [00:15<00:04,  4.32s/it][A
-100%|██████████| 5/5 [00:18<00:00,  4.05s/it][A100%|██████████| 5/5 [00:18<00:00,  3.76s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/NormedSpace/Star/ContinuousFunctionalCalculus/Instances.lean'), full_name='spectrum_star_mul_self_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.53s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.37s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.53s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.54s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.84s/it][A100%|██████████| 5/5 [00:18<00:00,  3.69s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/NormedSpace/Star/ContinuousFunctionalCalculus/Instances.lean'), full_name='spectrum_star_mul_self_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.96s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.75s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.51s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.56s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.45s/it][A100%|██████████| 5/5 [00:17<00:00,  3.53s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/NormedSpace/Star/ContinuousFunctionalCalculus/Instances.lean'), full_name='spectrum_star_mul_self_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.61s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.43s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.57s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.81s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.91s/it][A100%|██████████| 5/5 [00:18<00:00,  3.73s/it]
-  1%|▏         | 128/9091 [3:03:50<243:47:40, 97.92s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.71875
-# successes: 	92
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/PartialHomeomorph.lean'), full_name='PartialHomeomorph.isOpen_symm_image_iff_of_subset_target')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.36s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.39s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.76s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.72s/it][A
-100%|██████████| 5/5 [00:12<00:00,  2.59s/it][A100%|██████████| 5/5 [00:12<00:00,  2.60s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/PartialHomeomorph.lean'), full_name='PartialHomeomorph.isOpen_symm_image_iff_of_subset_target')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.03s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.28s/it][A
- 60%|██████    | 3/5 [00:09<00:05,  2.96s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.82s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.84s/it][A100%|██████████| 5/5 [00:14<00:00,  2.91s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/PartialHomeomorph.lean'), full_name='PartialHomeomorph.isOpen_symm_image_iff_of_subset_target')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.49s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.90s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.65s/it][A
- 80%|████████  | 4/5 [00:11<00:03,  3.00s/it][A
-100%|██████████| 5/5 [00:14<00:00,  2.90s/it][A100%|██████████| 5/5 [00:14<00:00,  2.86s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/PartialHomeomorph.lean'), full_name='PartialHomeomorph.isOpen_symm_image_iff_of_subset_target')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:12,  3.07s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.73s/it][A
- 60%|██████    | 3/5 [00:07<00:05,  2.55s/it][A
- 80%|████████  | 4/5 [00:10<00:02,  2.69s/it][A
-100%|██████████| 5/5 [00:13<00:00,  2.70s/it][A100%|██████████| 5/5 [00:13<00:00,  2.70s/it]
-  1%|▏         | 129/9091 [3:06:40<297:24:57, 119.47s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7131782945736435
-# successes: 	92
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Defs.lean'), full_name='Rat.neg_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.01s/it][A
- 40%|████      | 2/5 [00:03<00:05,  1.88s/it][A 40%|████      | 2/5 [00:29<00:44, 15.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Defs.lean'), full_name='Rat.neg_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.67s/it][A 20%|██        | 1/5 [00:29<01:59, 30.00s/it]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Defs.lean'), full_name='Rat.neg_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:29<?, ?it/s]
-Error:  
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Rat/Defs.lean'), full_name='Rat.neg_def')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.87s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.34s/it][A
- 60%|██████    | 3/5 [00:06<00:04,  2.29s/it][A
- 80%|████████  | 4/5 [00:09<00:02,  2.31s/it][A
-100%|██████████| 5/5 [00:11<00:00,  2.29s/it][A100%|██████████| 5/5 [00:11<00:00,  2.27s/it]
-  1%|▏         | 130/9091 [3:10:06<362:29:57, 145.63s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7076923076923077
-# successes: 	92
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean'), full_name='ContDiffOn.csin')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  1%|▏         | 131/9091 [3:10:43<281:31:09, 113.11s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7099236641221374
-# successes: 	93
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/NumberField/Embeddings.lean'), full_name='NumberField.ComplexEmbedding.IsConj.isUnramified_mk_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.52s/it][A
- 40%|████      | 2/5 [00:07<00:10,  3.51s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.78s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.80s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.86s/it][A100%|██████████| 5/5 [00:18<00:00,  3.78s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/NumberField/Embeddings.lean'), full_name='NumberField.ComplexEmbedding.IsConj.isUnramified_mk_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.26s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.19s/it][A
- 60%|██████    | 3/5 [00:11<00:08,  4.07s/it][A
- 80%|████████  | 4/5 [00:18<00:05,  5.05s/it][A
-100%|██████████| 5/5 [00:22<00:00,  4.67s/it][A100%|██████████| 5/5 [00:22<00:00,  4.41s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/NumberField/Embeddings.lean'), full_name='NumberField.ComplexEmbedding.IsConj.isUnramified_mk_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.76s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.71s/it][A
- 60%|██████    | 3/5 [00:12<00:08,  4.39s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.36s/it][A
-100%|██████████| 5/5 [00:20<00:00,  3.94s/it][A100%|██████████| 5/5 [00:20<00:00,  4.03s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/NumberField/Embeddings.lean'), full_name='NumberField.ComplexEmbedding.IsConj.isUnramified_mk_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:15,  3.76s/it][A
- 40%|████      | 2/5 [00:07<00:10,  3.48s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.85s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.45s/it][A
-100%|██████████| 5/5 [00:23<00:00,  5.19s/it][A100%|██████████| 5/5 [00:23<00:00,  4.64s/it]
-  1%|▏         | 132/9091 [3:14:45<377:00:48, 151.50s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7045454545454546
-# successes: 	93
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/HNNExtension.lean'), full_name='HNNExtension.of_mul_inv_t')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:04<?, ?it/s]
-  1%|▏         | 133/9091 [3:15:17<288:11:22, 115.82s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.706766917293233
-# successes: 	94
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/OrderOfElement.lean'), full_name='IsOfFinOrder.apply')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:07,  1.89s/it][A 20%|██        | 1/5 [00:04<00:17,  4.40s/it]
-  1%|▏         | 134/9091 [3:15:48<224:43:49, 90.32s/it] output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7089552238805971
-# successes: 	95
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Padics/PadicVal.lean'), full_name='padicValInt.eq_zero_of_not_dvd')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:05,  1.41s/it][A 20%|██        | 1/5 [00:03<00:14,  3.73s/it]
-  1%|▏         | 135/9091 [3:16:20<180:52:52, 72.71s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7111111111111111
-# successes: 	96
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/MonoidAlgebra/Basic.lean'), full_name='MonoidAlgebra.equivariantOfLinearOfComm_apply')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:03<?, ?it/s]
-  1%|▏         | 136/9091 [3:17:02<158:36:48, 63.76s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7132352941176471
-# successes: 	97
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/BigOperators/Basic.lean'), full_name='List.tail_sum')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  2%|▏         | 137/9091 [3:17:35<135:08:18, 54.33s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7153284671532847
-# successes: 	98
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/ConditionallyCompleteLattice/Basic.lean'), full_name='ciInf_eq_ite')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:01<?, ?it/s]
-  2%|▏         | 138/9091 [3:18:07<118:47:39, 47.77s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.717391304347826
-# successes: 	99
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/ZFC/Basic.lean'), full_name='Class.coe_union')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:00<00:03,  1.31it/s][A
- 40%|████      | 2/5 [00:02<00:03,  1.09s/it][A
- 60%|██████    | 3/5 [00:02<00:01,  1.02it/s][A
- 80%|████████  | 4/5 [00:04<00:01,  1.07s/it][A
-100%|██████████| 5/5 [00:05<00:00,  1.14s/it][A100%|██████████| 5/5 [00:05<00:00,  1.08s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/ZFC/Basic.lean'), full_name='Class.coe_union')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:00<00:03,  1.29it/s][A
- 40%|████      | 2/5 [00:01<00:03,  1.00s/it][A
- 60%|██████    | 3/5 [00:03<00:02,  1.15s/it][A
- 80%|████████  | 4/5 [00:04<00:01,  1.17s/it][A
-100%|██████████| 5/5 [00:05<00:00,  1.06s/it][A100%|██████████| 5/5 [00:05<00:00,  1.06s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/ZFC/Basic.lean'), full_name='Class.coe_union')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:00<00:02,  1.33it/s][A
- 40%|████      | 2/5 [00:01<00:02,  1.01it/s][A 40%|████      | 2/5 [00:02<00:04,  1.39s/it]
-  2%|▏         | 139/9091 [3:19:58<165:58:15, 66.74s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7194244604316546
-# successes: 	100
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Sum/Interval.lean'), full_name='Finset.sumLexLift_inr_inr')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A  0%|          | 0/5 [00:02<?, ?it/s]
-  2%|▏         | 140/9091 [3:20:28<138:04:12, 55.53s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7214285714285714
-# successes: 	101
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/IntegralClosure.lean'), full_name='IsIntegral.pow_iff')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.14s/it][A
- 40%|████      | 2/5 [00:04<00:07,  2.38s/it][A
- 60%|██████    | 3/5 [00:07<00:04,  2.39s/it][A 60%|██████    | 3/5 [00:09<00:06,  3.18s/it]
-  2%|▏         | 141/9091 [3:21:13<130:15:29, 52.39s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.723404255319149
-# successes: 	102
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/DirectSum/Internal.lean'), full_name='SetLike.int_cast_mem_graded')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.79s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.86s/it][A
- 60%|██████    | 3/5 [00:08<00:05,  2.80s/it][A
- 80%|████████  | 4/5 [00:11<00:02,  2.89s/it][A
-100%|██████████| 5/5 [00:14<00:00,  3.12s/it][A100%|██████████| 5/5 [00:14<00:00,  3.00s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/DirectSum/Internal.lean'), full_name='SetLike.int_cast_mem_graded')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:11,  2.85s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.39s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.21s/it][A
- 80%|████████  | 4/5 [00:12<00:03,  3.08s/it][A
-100%|██████████| 5/5 [00:15<00:00,  3.08s/it][A100%|██████████| 5/5 [00:15<00:00,  3.12s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/DirectSum/Internal.lean'), full_name='SetLike.int_cast_mem_graded')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:13,  3.43s/it][A
- 40%|████      | 2/5 [00:07<00:11,  3.93s/it][A
- 60%|██████    | 3/5 [00:12<00:08,  4.12s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.64s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.43s/it][A100%|██████████| 5/5 [00:18<00:00,  3.61s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/DirectSum/Internal.lean'), full_name='SetLike.int_cast_mem_graded')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.50s/it][A
- 40%|████      | 2/5 [00:06<00:10,  3.44s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.66s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.62s/it][A
-100%|██████████| 5/5 [00:17<00:00,  3.42s/it][A100%|██████████| 5/5 [00:17<00:00,  3.49s/it]
-  2%|▏         | 142/9091 [3:24:05<219:59:17, 88.50s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7183098591549296
-# successes: 	102
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Calculus/MeanValue.lean'), full_name='monotone_of_hasDerivAt_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.62s/it][A
- 40%|████      | 2/5 [00:05<00:08,  2.92s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.15s/it][A
- 80%|████████  | 4/5 [00:13<00:03,  3.80s/it][A
-100%|██████████| 5/5 [00:19<00:00,  4.28s/it][A100%|██████████| 5/5 [00:19<00:00,  3.82s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Calculus/MeanValue.lean'), full_name='monotone_of_hasDerivAt_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:08,  2.03s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.32s/it][A
- 60%|██████    | 3/5 [00:10<00:07,  3.57s/it][A
- 80%|████████  | 4/5 [00:15<00:04,  4.42s/it][A
-100%|██████████| 5/5 [00:21<00:00,  4.80s/it][A100%|██████████| 5/5 [00:21<00:00,  4.26s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Calculus/MeanValue.lean'), full_name='monotone_of_hasDerivAt_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:10,  2.60s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.29s/it][A
- 60%|██████    | 3/5 [00:11<00:07,  3.91s/it][A
- 80%|████████  | 4/5 [00:16<00:04,  4.38s/it][A
-100%|██████████| 5/5 [00:20<00:00,  4.36s/it][A100%|██████████| 5/5 [00:20<00:00,  4.09s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Calculus/MeanValue.lean'), full_name='monotone_of_hasDerivAt_nonneg')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:02<00:09,  2.30s/it][A
- 40%|████      | 2/5 [00:06<00:09,  3.28s/it][A
- 60%|██████    | 3/5 [00:09<00:06,  3.29s/it][A
- 80%|████████  | 4/5 [00:14<00:03,  3.89s/it][A
-100%|██████████| 5/5 [00:18<00:00,  3.88s/it][A100%|██████████| 5/5 [00:18<00:00,  3.65s/it]
-  2%|▏         | 143/9091 [3:27:50<321:30:50, 129.35s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7132867132867133
-# successes: 	102
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/Monoidal/Braided/Basic.lean'), full_name='CategoryTheory.BraidedCategory.braiding_tensor_right')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:03<00:14,  3.72s/it][A
- 40%|████      | 2/5 [00:08<00:12,  4.28s/it][A
- 60%|██████    | 3/5 [00:12<00:08,  4.28s/it][A
- 80%|████████  | 4/5 [00:19<00:05,  5.13s/it][A
-100%|██████████| 5/5 [00:28<00:00,  6.64s/it][A100%|██████████| 5/5 [00:28<00:00,  5.68s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/Monoidal/Braided/Basic.lean'), full_name='CategoryTheory.BraidedCategory.braiding_tensor_right')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:07<00:28,  7.13s/it][A
- 40%|████      | 2/5 [00:14<00:21,  7.19s/it][A
- 60%|██████    | 3/5 [00:19<00:12,  6.13s/it][A 60%|██████    | 3/5 [00:24<00:16,  8.00s/it]
-  2%|▏         | 144/9091 [3:29:37<304:31:30, 122.53s/it]output/internLM2-7b-sample_mathlib_train/02-07-2024-18-57/results__internLM-7b-math__4.json
-0.7152777777777778
-# successes: 	103
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Algebra/Unitization.lean'), full_name='Unitization.inr_injective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A
- 20%|██        | 1/5 [00:01<00:06,  1.60s/it][A
- 40%|████      | 2/5 [00:03<00:04,  1.64s/it][A
- 60%|██████    | 3/5 [00:04<00:03,  1.66s/it][A
- 80%|████████  | 4/5 [00:06<00:01,  1.57s/it][A
-100%|██████████| 5/5 [00:07<00:00,  1.56s/it][A100%|██████████| 5/5 [00:07<00:00,  1.59s/it]
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Algebra/Unitization.lean'), full_name='Unitization.inr_injective')
-
-  0%|          | 0/5 [00:00<?, ?it/s][A

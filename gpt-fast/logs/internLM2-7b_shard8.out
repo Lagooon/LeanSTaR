@@ -1,92 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 04-27 21:15:58 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-27 21:16:11 llm_engine.py:357] # GPU blocks: 218, # CPU blocks: 2048
-Time to load model: 22.87 seconds
-Shard size: 7045
-  0%|          | 0/7045 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/Algebra/GroupWithZero.lean'), full_name='Filter.Tendsto.zpow₀')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 1/7045 [02:24<283:25:27, 144.85s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Probability/Kernel/MeasurableIntegral.lean'), full_name='Measurable.lintegral_kernel')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 2/7045 [05:32<332:26:15, 169.92s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/SetTheory/Ordinal/CantorNormalForm.lean'), full_name='Ordinal.CNF_snd_lt')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 3/7045 [08:37<345:41:08, 176.72s/it]  0%|          | 4/7045 [10:14<284:06:59, 145.27s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/List/Basic.lean'), full_name='List.getLastI_eq_getLast?')
-Error:  EOF
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/UniformSpace/Basic.lean'), full_name='Filter.HasBasis.lebesgue_number_lemma')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 5/7045 [13:41<328:01:23, 167.74s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/BigOperators/Multiset/Basic.lean'), full_name='Multiset.prod_replicate')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 6/7045 [17:38<373:56:26, 191.25s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/NumberTheory/Pell.lean'), full_name='Pell.IsFundamental.exists_of_not_isSquare')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 7/7045 [21:05<383:50:49, 196.34s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/DFinsupp.lean'), full_name='LinearMap.map_dfinsupp_sumAddHom')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 8/7045 [24:42<396:44:43, 202.97s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Pow/Real.lean'), full_name='Complex.cpow_inv_two_im_eq_neg_sqrt')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 9/7045 [27:51<388:21:08, 198.70s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Basic.lean'), full_name='List.toFinset_surjective')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 10/7045 [30:58<381:12:55, 195.08s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/InnerProductSpace/Basic.lean'), full_name='LinearMap.coe_isometryOfInner')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 11/7045 [34:07<377:15:40, 193.08s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/CompleteLattice.lean'), full_name='OrderIso.map_sInf_eq_sInf_symm_preimage')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 12/7045 [37:23<378:55:57, 193.97s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__8.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Nat/Defs.lean'), full_name='Nat.and_forall_succ')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 12/7045 [40:53<399:23:15, 204.44s/it]

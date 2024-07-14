@@ -1,14 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 04-09 23:16:20 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/dpo', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-09 23:16:27 llm_engine.py:357] # GPU blocks: 27829, # CPU blocks: 2048
-Time to load model: 10.74 seconds
-Iteration:   0%|          | 0/1340 [00:00<?, ?it/s]Iteration:  25%|██▌       | 335/1340 [00:00<00:00, 39965.07it/s]
-Traceback (most recent call last):
-  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/eval_cot.py", line 190, in <module>
-    main(args)
-  File "/nobackup/users/zhiqings/haohanl/LeanCOT/gpt-fast/eval_cot.py", line 167, in main
-    output_l = generate_tactic(
-  File "/nobackup/users/zhiqings/haohanl/lean1/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
-    return func(*args, **kwargs)
-TypeError: generate_tactic() missing 1 required positional argument: 'top_k'

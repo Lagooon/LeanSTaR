@@ -1,1310 +1,0 @@
-You are using a model of type internlm to instantiate a model of type internlm2. This is not supported for all configurations of models and can yield errors.
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 05-29 12:47:25 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-plus-7b', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-plus-7b', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 05-29 12:47:32 llm_engine.py:357] # GPU blocks: 28341, # CPU blocks: 2048
-Time to load model: 14.48 seconds
-Shard size: 30
-**abc**
-{'full_name': 'mathd_algebra_76', 'statement': 'theorem mathd_algebra_76 (f : ℤ → ℤ) (h₀ : ∀ n, Odd n → f n = n ^ 2)\n    (h₁ : ∀ n, Even n → f n = n ^ 2 - 4 * n - 1) : f 4 = -1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-  0%|          | 0/30 [00:00<?, ?it/s]2024-05-29 12:47:45.450 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 12:47:45.451 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-*********
- {'full_name': 'mathd_algebra_76', 'statement': 'theorem mathd_algebra_76 (f : ℤ → ℤ) (h₀ : ∀ n, Odd n → f n = n ^ 2)\n    (h₁ : ∀ n, Even n → f n = n ^ 2 - 4 * n - 1) : f 4 = -1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_76 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_76')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
-  3%|▎         | 1/30 [00:24<11:54, 24.65s/it]2024-05-29 12:48:09.423 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 12:48:09.424 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [h₁ 4 even_two_mul, show (4 : ℤ) ^ 2 - 4 * 4 - 1 = -1 by norm_num]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-1.0
-# successes: 	1
-*********
- {'full_name': 'mathd_numbertheory_99', 'statement': 'theorem mathd_numbertheory_99 (n : ℕ) (h₀ : 2 * n % 47 = 15) : n % 47 = 31', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_99 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_99')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:53<43:38, 53.45s/it][A
-  4%|▍         | 2/50 [01:47<42:55, 53.66s/it][A  4%|▍         | 2/50 [09:59<3:59:59, 299.99s/it]
-  7%|▋         | 2/30 [10:44<2:54:52, 374.72s/it]2024-05-29 12:58:29.276 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 12:58:29.276 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [Nat.mul_mod] at h₀
-```
-Here is the predicted next tactic:
-```lean
-have h₁ := Nat.mod_lt n (by norm_num : 0 < 47)
-```
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.5
-# successes: 	1
-*********
- {'full_name': 'algebra_9onxpypzleqsum2onxpy', 'statement': 'theorem algebra_9onxpypzleqsum2onxpy (x y z : ℝ) (h₀ : 0 < x ∧ 0 < y ∧ 0 < z) :\n    9 / (x + y + z) ≤ 2 / (x + y) + 2 / (y + z) + 2 / (z + x)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- algebra_9onxpypzleqsum2onxpy **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_9onxpypzleqsum2onxpy')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<01:23,  1.70s/it][A
-  4%|▍         | 2/50 [00:05<02:14,  2.81s/it][A
-  6%|▌         | 3/50 [00:08<02:22,  3.03s/it][A
-  8%|▊         | 4/50 [00:11<02:20,  3.06s/it][A
- 10%|█         | 5/50 [00:18<03:18,  4.41s/it][A
- 12%|█▏        | 6/50 [00:22<03:14,  4.43s/it][A
- 14%|█▍        | 7/50 [00:25<02:48,  3.92s/it][A
- 16%|█▌        | 8/50 [00:28<02:30,  3.58s/it][A
- 18%|█▊        | 9/50 [00:31<02:23,  3.49s/it][A
- 20%|██        | 10/50 [00:34<02:12,  3.31s/it][A
- 22%|██▏       | 11/50 [00:38<02:15,  3.46s/it][A
- 24%|██▍       | 12/50 [00:45<02:47,  4.40s/it][A
- 26%|██▌       | 13/50 [00:49<02:43,  4.41s/it][A
- 28%|██▊       | 14/50 [00:52<02:21,  3.94s/it][A
- 30%|███       | 15/50 [00:55<02:06,  3.61s/it][A
- 32%|███▏      | 16/50 [01:02<02:34,  4.55s/it][A
- 34%|███▍      | 17/50 [01:04<02:06,  3.84s/it][A
- 36%|███▌      | 18/50 [01:05<01:40,  3.13s/it][A
- 38%|███▊      | 19/50 [01:11<01:56,  3.77s/it][A
- 40%|████      | 20/50 [01:13<01:44,  3.47s/it][A
- 42%|████▏     | 21/50 [01:15<01:24,  2.91s/it][A
- 44%|████▍     | 22/50 [01:18<01:24,  3.01s/it][A
- 46%|████▌     | 23/50 [01:26<02:04,  4.60s/it][A
- 48%|████▊     | 24/50 [01:29<01:46,  4.11s/it][A
- 50%|█████     | 25/50 [01:31<01:23,  3.33s/it][A
- 52%|█████▏    | 26/50 [01:38<01:48,  4.51s/it][A
- 54%|█████▍    | 27/50 [01:41<01:34,  4.12s/it][A
- 56%|█████▌    | 28/50 [01:47<01:37,  4.44s/it][A
- 58%|█████▊    | 29/50 [01:50<01:29,  4.28s/it][A
- 60%|██████    | 30/50 [01:53<01:16,  3.82s/it][A
- 62%|██████▏   | 31/50 [01:57<01:12,  3.81s/it][A
- 64%|██████▍   | 32/50 [01:59<00:59,  3.33s/it][A
- 66%|██████▌   | 33/50 [02:01<00:49,  2.91s/it][A
- 68%|██████▊   | 34/50 [02:04<00:48,  3.03s/it][A
- 70%|███████   | 35/50 [02:13<01:09,  4.63s/it][A
- 72%|███████▏  | 36/50 [02:14<00:51,  3.65s/it][A
- 74%|███████▍  | 37/50 [02:21<01:01,  4.73s/it][A
- 76%|███████▌  | 38/50 [02:28<01:03,  5.28s/it][A
- 78%|███████▊  | 39/50 [02:29<00:45,  4.13s/it][A
- 80%|████████  | 40/50 [02:37<00:51,  5.15s/it][A
- 82%|████████▏ | 41/50 [02:44<00:52,  5.84s/it][A
- 84%|████████▍ | 42/50 [02:46<00:36,  4.54s/it][A
- 86%|████████▌ | 43/50 [02:48<00:27,  3.86s/it][A
- 88%|████████▊ | 44/50 [02:52<00:22,  3.70s/it][A
- 90%|█████████ | 45/50 [02:58<00:22,  4.56s/it][A
- 92%|█████████▏| 46/50 [03:00<00:14,  3.65s/it][A
- 94%|█████████▍| 47/50 [03:07<00:14,  4.71s/it][A
- 96%|█████████▌| 48/50 [03:08<00:07,  3.77s/it][A
- 98%|█████████▊| 49/50 [03:16<00:04,  4.81s/it][A
-100%|██████████| 50/50 [03:19<00:00,  4.50s/it][A100%|██████████| 50/50 [03:19<00:00,  4.00s/it]
- 10%|█         | 3/30 [14:27<2:17:25, 305.40s/it]2024-05-29 13:02:11.531 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:02:11.531 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-have h₁ : x + y + z ≠ 0 := by positivity
-```
-Here is the predicted next tactic:
-```lean
-have h₂ : 0 < 2 / (x + y) + 2 / (y + z) + 2 / (z + x) :=
- add_pos (add_pos (div_pos two_pos (add_pos h₀.1 h₀.2.1)) (div_pos two_pos (add_pos h₀.2.1 h₀.2.2))) (div_pos two_pos (add_pos h₀.2.2 h₀.1))
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	1
-*********
- {'full_name': 'mathd_numbertheory_233', 'statement': 'theorem mathd_numbertheory_233 (b : ZMod (11 ^ 2)) (h₀ : b = 24⁻¹) : b = 116', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_233 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_233')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:00<?, ?it/s]
- 13%|█▎        | 4/30 [14:49<1:23:55, 193.68s/it]2024-05-29 13:02:34.057 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:02:34.057 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [h₀]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.5
-# successes: 	2
-*********
- {'full_name': 'algebra_absapbon1pabsapbleqsumabsaon1pabsa', 'statement': 'theorem algebra_absapbon1pabsapbleqsumabsaon1pabsa (a b : ℝ) :\n    abs (a + b) / (1 + abs (a + b)) ≤ abs a / (1 + abs a) + abs b / (1 + abs b)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- algebra_absapbon1pabsapbleqsumabsaon1pabsa **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_absapbon1pabsapbleqsumabsaon1pabsa')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:02<01:45,  2.15s/it][A
-  4%|▍         | 2/50 [00:04<01:55,  2.40s/it][A
-  6%|▌         | 3/50 [00:07<01:54,  2.43s/it][A
-  8%|▊         | 4/50 [00:18<04:37,  6.04s/it][A
- 10%|█         | 5/50 [00:20<03:28,  4.64s/it][A
- 12%|█▏        | 6/50 [00:22<02:45,  3.76s/it][A
- 14%|█▍        | 7/50 [00:33<04:20,  6.06s/it][A
- 16%|█▌        | 8/50 [00:35<03:20,  4.76s/it][A
- 18%|█▊        | 9/50 [00:42<03:44,  5.48s/it][A
- 20%|██        | 10/50 [00:44<02:57,  4.44s/it][A
- 22%|██▏       | 11/50 [00:48<02:39,  4.10s/it][A
- 24%|██▍       | 12/50 [00:55<03:08,  4.95s/it][A
- 26%|██▌       | 13/50 [01:01<03:19,  5.39s/it][A
- 28%|██▊       | 14/50 [01:04<02:49,  4.71s/it][A
- 30%|███       | 15/50 [01:11<03:08,  5.39s/it][A
- 32%|███▏      | 16/50 [01:18<03:22,  5.96s/it][A
- 34%|███▍      | 17/50 [01:22<02:52,  5.23s/it][A
- 36%|███▌      | 18/50 [01:30<03:13,  6.04s/it][A
- 38%|███▊      | 19/50 [01:37<03:17,  6.39s/it][A
- 40%|████      | 20/50 [01:44<03:17,  6.58s/it][A
- 42%|████▏     | 21/50 [01:51<03:14,  6.72s/it][A
- 44%|████▍     | 22/50 [01:53<02:29,  5.33s/it][A
- 46%|████▌     | 23/50 [02:01<02:43,  6.05s/it][A
- 48%|████▊     | 24/50 [02:02<02:01,  4.68s/it][A
- 50%|█████     | 25/50 [02:10<02:15,  5.43s/it][A
- 52%|█████▏    | 26/50 [02:17<02:22,  5.93s/it][A
- 54%|█████▍    | 27/50 [02:25<02:29,  6.49s/it][A
- 56%|█████▌    | 28/50 [02:28<02:03,  5.62s/it][A
- 58%|█████▊    | 29/50 [02:29<01:31,  4.34s/it][A
- 60%|██████    | 30/50 [02:38<01:52,  5.63s/it][A
- 62%|██████▏   | 31/50 [02:42<01:34,  4.99s/it][A
- 64%|██████▍   | 32/50 [02:45<01:22,  4.58s/it][A
- 66%|██████▌   | 33/50 [02:53<01:32,  5.45s/it][A
- 68%|██████▊   | 34/50 [03:01<01:42,  6.42s/it][A
- 70%|███████   | 35/50 [03:10<01:46,  7.07s/it][A
- 72%|███████▏  | 36/50 [03:12<01:18,  5.57s/it][A
- 74%|███████▍  | 37/50 [03:21<01:24,  6.53s/it][A
- 76%|███████▌  | 38/50 [03:28<01:21,  6.80s/it][A
- 78%|███████▊  | 39/50 [03:36<01:18,  7.15s/it][A
- 80%|████████  | 40/50 [03:44<01:14,  7.48s/it][A
- 82%|████████▏ | 41/50 [03:48<00:57,  6.42s/it][A
- 84%|████████▍ | 42/50 [03:52<00:45,  5.66s/it][A
- 86%|████████▌ | 43/50 [03:55<00:33,  4.84s/it][A
- 88%|████████▊ | 44/50 [04:02<00:33,  5.55s/it][A
- 90%|█████████ | 45/50 [04:05<00:23,  4.69s/it][A
- 92%|█████████▏| 46/50 [04:12<00:21,  5.30s/it][A
- 94%|█████████▍| 47/50 [04:15<00:14,  4.80s/it][A
- 96%|█████████▌| 48/50 [04:23<00:11,  5.57s/it][A
- 98%|█████████▊| 49/50 [04:26<00:04,  4.72s/it][A
-100%|██████████| 50/50 [04:28<00:00,  4.10s/it][A100%|██████████| 50/50 [04:28<00:00,  5.37s/it]
- 17%|█▋        | 5/30 [19:41<1:35:22, 228.91s/it]2024-05-29 13:07:26.038 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:07:26.038 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-have h₁ : |a + b| ≤ |a| + |b| := abs_add a b
-```
-Here is the predicted next tactic:
-```lean
-refine' (div_le_div_of_le (add_le_add (abs_nonneg a) (abs_nonneg b)) _).mpr h₁
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4
-# successes: 	2
-*********
- {'full_name': 'imo_1984_p6', 'statement': 'theorem imo_1984_p6 (a b c d k m : ℕ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d)\n    (h₁ : Odd a ∧ Odd b ∧ Odd c ∧ Odd d) (h₂ : a < b ∧ b < c ∧ c < d) (h₃ : a * d = b * c)\n    (h₄ : a + d = 2 ^ k) (h₅ : b + c = 2 ^ m) : a = 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- imo_1984_p6 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='imo_1984_p6')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:02<01:57,  2.40s/it][A
-  4%|▍         | 2/50 [00:05<02:10,  2.72s/it][A
-  6%|▌         | 3/50 [00:06<01:38,  2.10s/it][A
-  8%|▊         | 4/50 [00:07<01:20,  1.74s/it][A
- 10%|█         | 5/50 [00:11<01:42,  2.28s/it][A
- 12%|█▏        | 6/50 [00:13<01:37,  2.22s/it][A
- 14%|█▍        | 7/50 [00:15<01:32,  2.14s/it][A
- 16%|█▌        | 8/50 [00:16<01:22,  1.97s/it][A
- 18%|█▊        | 9/50 [02:39<31:19, 45.85s/it][A
- 20%|██        | 10/50 [02:40<21:21, 32.04s/it][A
- 22%|██▏       | 11/50 [02:42<14:55, 22.95s/it][A
- 24%|██▍       | 12/50 [02:43<10:22, 16.38s/it][A
- 26%|██▌       | 13/50 [02:45<07:20, 11.92s/it][A 26%|██▌       | 13/50 [09:59<28:27, 46.15s/it]
- 20%|██        | 6/30 [30:01<2:24:44, 361.87s/it]2024-05-29 13:17:45.916 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:17:45.916 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [← Nat.succ_pred_eq_of_pos h₀.1, ← Nat.succ_pred_eq_of_pos h₀.2.1,
- ← Nat.succ_pred_eq_of_pos h₀.2.2.1, ← Nat.succ_pred_eq_of_pos h₀.2.2.2]
-```
-Here is the predicted next tactic:
-```lean
-rw [←Nat.factorization_prod_pow_eq_self h₀.1, ←Nat.factorization_prod_pow_eq_self h₀.2.1,
- ←Nat.factorization_prod_pow_eq_self h₀.2.2.1, ←Nat.factorization_prod_pow_eq_self h₀.2.2.2]
-```
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	2
-*********
- {'full_name': 'imo_2001_p6', 'statement': 'theorem imo_2001_p6 (a b c d : ℕ) (h₀ : 0 < a ∧ 0 < b ∧ 0 < c ∧ 0 < d) (h₁ : d < c) (h₂ : c < b)\n    (h₃ : b < a) (h₄ : a * c + b * d = (b + d + a - c) * (b + d + c - a)) :\n    ¬Nat.Prime (a * b + c * d)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- imo_2001_p6 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='imo_2001_p6')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [09:59<?, ?it/s]
- 23%|██▎       | 7/30 [40:20<2:50:59, 446.05s/it]2024-05-29 13:28:05.122 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:28:05.122 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [← eq_sub_iff_add_eq] at h₄
-```
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.2857142857142857
-# successes: 	2
-*********
- {'full_name': 'mathd_numbertheory_321', 'statement': 'theorem mathd_numbertheory_321 (n : ZMod 1399) (h₁ : n = 160⁻¹) : n = 1058', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_321 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_321')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:02<?, ?it/s]
- 27%|██▋       | 8/30 [40:45<1:54:26, 312.13s/it]2024-05-29 13:28:30.346 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:28:30.346 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [h₁]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.375
-# successes: 	3
-*********
- {'full_name': 'mathd_algebra_17', 'statement': 'theorem mathd_algebra_17 (a : ℝ)\n    (h₀ : Real.sqrt (4 + Real.sqrt (16 + 16 * a)) + Real.sqrt (1 + Real.sqrt (1 + a)) = 6) :\n    a = 8', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_17 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_17')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<01:25,  1.74s/it][A
-  4%|▍         | 2/50 [00:02<01:00,  1.26s/it][A
-  6%|▌         | 3/50 [00:04<01:19,  1.68s/it][A
-  8%|▊         | 4/50 [00:06<01:25,  1.86s/it][A
- 10%|█         | 5/50 [00:07<01:06,  1.48s/it][A
- 12%|█▏        | 6/50 [00:08<01:00,  1.38s/it][A
- 14%|█▍        | 7/50 [00:10<01:07,  1.58s/it][A
- 16%|█▌        | 8/50 [00:12<01:11,  1.71s/it][A
- 18%|█▊        | 9/50 [00:14<01:02,  1.51s/it][A
- 20%|██        | 10/50 [00:16<01:07,  1.69s/it][A
- 22%|██▏       | 11/50 [00:17<01:05,  1.67s/it][A
- 24%|██▍       | 12/50 [00:19<01:07,  1.78s/it][A
- 26%|██▌       | 13/50 [00:25<01:51,  3.02s/it][A
- 28%|██▊       | 14/50 [00:27<01:32,  2.58s/it][A
- 30%|███       | 15/50 [00:29<01:25,  2.44s/it][A
- 32%|███▏      | 16/50 [00:35<01:56,  3.44s/it][A
- 34%|███▍      | 17/50 [00:37<01:42,  3.09s/it][A
- 36%|███▌      | 18/50 [00:43<02:06,  3.95s/it][A
- 38%|███▊      | 19/50 [00:45<01:49,  3.54s/it][A
- 40%|████      | 20/50 [00:51<02:09,  4.31s/it][A
- 42%|████▏     | 21/50 [00:54<01:49,  3.79s/it][A
- 44%|████▍     | 22/50 [00:56<01:32,  3.30s/it][A
- 46%|████▌     | 23/50 [01:06<02:21,  5.24s/it][A
- 48%|████▊     | 24/50 [01:08<01:51,  4.30s/it][A
- 50%|█████     | 25/50 [01:11<01:36,  3.86s/it][A
- 52%|█████▏    | 26/50 [01:13<01:19,  3.30s/it][A
- 54%|█████▍    | 27/50 [01:19<01:33,  4.05s/it][A
- 56%|█████▌    | 28/50 [01:21<01:16,  3.50s/it][A
- 58%|█████▊    | 29/50 [01:27<01:28,  4.20s/it][A
- 60%|██████    | 30/50 [01:32<01:32,  4.63s/it][A
- 62%|██████▏   | 31/50 [01:34<01:13,  3.86s/it][A
- 64%|██████▍   | 32/50 [01:36<00:57,  3.22s/it][A
- 66%|██████▌   | 33/50 [01:39<00:54,  3.19s/it][A
- 68%|██████▊   | 34/50 [01:41<00:45,  2.86s/it][A
- 70%|███████   | 35/50 [01:44<00:41,  2.78s/it][A
- 72%|███████▏  | 36/50 [01:51<00:58,  4.18s/it][A
- 74%|███████▍  | 37/50 [01:54<00:46,  3.55s/it][A
- 76%|███████▌  | 38/50 [01:59<00:50,  4.21s/it][A
- 78%|███████▊  | 39/50 [02:01<00:39,  3.60s/it][A
- 80%|████████  | 40/50 [02:07<00:42,  4.27s/it][A
- 82%|████████▏ | 41/50 [02:09<00:32,  3.58s/it][A
- 84%|████████▍ | 42/50 [02:15<00:34,  4.25s/it][A
- 86%|████████▌ | 43/50 [02:21<00:33,  4.76s/it][A
- 88%|████████▊ | 44/50 [02:23<00:23,  3.88s/it][A
- 90%|█████████ | 45/50 [02:29<00:22,  4.51s/it][A
- 92%|█████████▏| 46/50 [02:31<00:15,  3.94s/it][A
- 94%|█████████▍| 47/50 [02:35<00:11,  3.69s/it][A
- 96%|█████████▌| 48/50 [02:47<00:12,  6.46s/it][A
- 98%|█████████▊| 49/50 [02:55<00:06,  6.76s/it][A
-100%|██████████| 50/50 [03:01<00:00,  6.43s/it][A100%|██████████| 50/50 [03:01<00:00,  3.62s/it]
- 30%|███       | 9/30 [44:09<1:37:22, 278.23s/it]2024-05-29 13:31:53.885 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:31:53.885 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-field_simp [h₀] at h₀ <;> norm_num at h₀ <;> linarith
-```
-Here is the predicted next tactic:
-```lean
-norm_cast at h₀
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	3
-*********
- {'full_name': 'mathd_algebra_153', 'statement': 'theorem mathd_algebra_153 (n : ℝ) (h₀ : n = 1 / 3) :\n    Int.floor (10 * n) + Int.floor (100 * n) + Int.floor (1000 * n) + Int.floor (10000 * n) =\n      3702', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_153 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_153')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:06<05:20,  6.54s/it][A
-  4%|▍         | 2/50 [00:13<05:25,  6.78s/it][A
-  6%|▌         | 3/50 [00:20<05:23,  6.88s/it][A
-  8%|▊         | 4/50 [00:27<05:18,  6.93s/it][A
- 10%|█         | 5/50 [00:33<04:58,  6.62s/it][A
- 12%|█▏        | 6/50 [00:37<04:07,  5.62s/it][A
- 14%|█▍        | 7/50 [00:40<03:34,  5.00s/it][A
- 16%|█▌        | 8/50 [00:47<03:54,  5.59s/it][A
- 18%|█▊        | 9/50 [00:51<03:24,  4.99s/it][A
- 20%|██        | 10/50 [00:58<03:42,  5.57s/it][A
- 22%|██▏       | 11/50 [01:02<03:15,  5.00s/it][A
- 24%|██▍       | 12/50 [01:05<02:54,  4.60s/it][A
- 26%|██▌       | 13/50 [01:12<03:15,  5.29s/it][A
- 28%|██▊       | 14/50 [01:16<02:52,  4.80s/it][A
- 30%|███       | 15/50 [01:23<03:09,  5.42s/it][A
- 32%|███▏      | 16/50 [01:26<02:47,  4.91s/it][A
- 34%|███▍      | 17/50 [01:30<02:29,  4.54s/it][A
- 36%|███▌      | 18/50 [01:37<02:47,  5.23s/it][A
- 38%|███▊      | 19/50 [01:41<02:27,  4.76s/it][A
- 40%|████      | 20/50 [01:48<02:42,  5.42s/it][A
- 42%|████▏     | 21/50 [01:54<02:49,  5.84s/it][A
- 44%|████▍     | 22/50 [01:58<02:25,  5.20s/it][A
- 46%|████▌     | 23/50 [02:02<02:08,  4.74s/it][A
- 48%|████▊     | 24/50 [02:05<01:55,  4.44s/it][A
- 50%|█████     | 25/50 [02:13<02:14,  5.37s/it][A
- 52%|█████▏    | 26/50 [02:20<02:19,  5.81s/it][A
- 54%|█████▍    | 27/50 [02:24<01:59,  5.19s/it][A
- 56%|█████▌    | 28/50 [02:27<01:44,  4.73s/it][A
- 58%|█████▊    | 29/50 [02:35<01:56,  5.55s/it][A
- 60%|██████    | 30/50 [02:42<01:59,  5.98s/it][A
- 62%|██████▏   | 31/50 [02:48<01:54,  6.00s/it][A
- 64%|██████▍   | 32/50 [02:51<01:33,  5.21s/it][A
- 66%|██████▌   | 33/50 [02:55<01:19,  4.66s/it][A
- 68%|██████▊   | 34/50 [02:58<01:09,  4.37s/it][A
- 70%|███████   | 35/50 [03:02<01:00,  4.07s/it][A
- 72%|███████▏  | 36/50 [03:05<00:54,  3.92s/it][A
- 74%|███████▍  | 37/50 [03:08<00:48,  3.75s/it][A
- 76%|███████▌  | 38/50 [03:15<00:53,  4.45s/it][A
- 78%|███████▊  | 39/50 [03:18<00:46,  4.21s/it][A
- 80%|████████  | 40/50 [03:22<00:40,  4.03s/it][A
- 82%|████████▏ | 41/50 [03:25<00:34,  3.83s/it][A
- 84%|████████▍ | 42/50 [03:29<00:29,  3.70s/it][A
- 86%|████████▌ | 43/50 [03:32<00:25,  3.60s/it][A
- 88%|████████▊ | 44/50 [03:35<00:21,  3.53s/it][A
- 90%|█████████ | 45/50 [03:39<00:17,  3.48s/it][A
- 92%|█████████▏| 46/50 [03:42<00:13,  3.47s/it][A
- 94%|█████████▍| 47/50 [03:49<00:13,  4.46s/it][A
- 96%|█████████▌| 48/50 [03:52<00:08,  4.13s/it][A
- 98%|█████████▊| 49/50 [03:56<00:03,  3.97s/it][A
-100%|██████████| 50/50 [03:59<00:00,  3.78s/it][A100%|██████████| 50/50 [03:59<00:00,  4.79s/it]
- 33%|███▎      | 10/30 [48:31<1:31:06, 273.30s/it]2024-05-29 13:36:16.202 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:36:16.203 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [h₀]
-```
-n : ℝ
-h₀ : n = 1 / 3
-⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)⌋ + ⌊10000 * (1 / 3)⌋ = 3702
-
-n : ℝ
-h₀ : n = 1 / 3
-⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)⌋ + ⌊10000 * (1 / 3)⌋ = 3702
-
-n : ℝ
-h₀ : n = 1 / 3
-⊢ ⌊10 * (1 / 3)⌋ + ⌊100 * (1 / 3)⌋ + ⌊1000 * (1 / 3)
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3
-# successes: 	3
-*********
- {'full_name': 'algebra_sqineq_unitcircatbpamblt1', 'statement': 'theorem algebra_sqineq_unitcircatbpamblt1 (a b : ℝ) (h₀ : a ^ 2 + b ^ 2 = 1) :\n    a * b + (a - b) ≤ 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- algebra_sqineq_unitcircatbpamblt1 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_sqineq_unitcircatbpamblt1')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:02<02:21,  2.88s/it][A
-  4%|▍         | 2/50 [00:06<02:46,  3.47s/it][A
-  6%|▌         | 3/50 [00:13<03:52,  4.94s/it][A
-  8%|▊         | 4/50 [00:16<03:16,  4.28s/it][A  8%|▊         | 4/50 [00:18<03:34,  4.66s/it]
- 37%|███▋      | 11/30 [49:12<1:04:00, 202.13s/it]2024-05-29 13:36:57.146 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:36:57.147 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-have h₁ : a * b ≤ 1 / 2 * (a ^ 2 + b ^ 2) := by
- rw [h₀]
- calc
-  a * b ≤ (a ^ 2 + b ^ 2) / 2 := by linarith [sq_nonneg (a - b)]
-   _ = 1 / 2 * (a ^ 2 + b ^ 2) := by ring
-```
-Here is the predicted next tactic:
-```lean
-nlinarith [h₀]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.36363636363636365
-# successes: 	4
-*********
- {'full_name': 'amc12a_2021_p18', 'statement': 'theorem amc12a_2021_p18 (f : ℚ → ℝ) (h₀ : ∀ x > 0, ∀ y > 0, f (x * y) = f x + f y)\n    (h₁ : ∀ p, Nat.Prime p → f p = p) : f (25 /. 11) < 0', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2021_p18 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p18')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:03<02:55,  3.57s/it][A
-  4%|▍         | 2/50 [00:06<02:24,  3.02s/it][A
-  6%|▌         | 3/50 [00:13<03:45,  4.80s/it][A
-  8%|▊         | 4/50 [00:15<02:48,  3.67s/it][A
- 10%|█         | 5/50 [00:16<02:13,  2.97s/it][A
- 12%|█▏        | 6/50 [00:18<01:55,  2.64s/it][A
- 14%|█▍        | 7/50 [00:20<01:38,  2.29s/it][A
- 16%|█▌        | 8/50 [00:32<03:48,  5.44s/it][A
- 18%|█▊        | 9/50 [00:36<03:27,  5.05s/it][A
- 20%|██        | 10/50 [00:38<02:40,  4.01s/it][A
- 22%|██▏       | 11/50 [00:39<02:05,  3.21s/it][A
- 24%|██▍       | 12/50 [00:41<01:46,  2.80s/it][A
- 26%|██▌       | 13/50 [00:42<01:24,  2.29s/it][A
- 28%|██▊       | 14/50 [00:44<01:14,  2.07s/it][A
- 30%|███       | 15/50 [00:45<01:06,  1.89s/it][A
- 32%|███▏      | 16/50 [00:52<01:55,  3.40s/it][A
- 34%|███▍      | 17/50 [00:59<02:26,  4.44s/it][A
- 36%|███▌      | 18/50 [01:01<02:02,  3.82s/it][A
- 38%|███▊      | 19/50 [01:03<01:38,  3.19s/it][A
- 40%|████      | 20/50 [01:06<01:32,  3.07s/it][A
- 42%|████▏     | 21/50 [01:07<01:14,  2.58s/it][A
- 44%|████▍     | 22/50 [01:10<01:12,  2.60s/it][A
- 46%|████▌     | 23/50 [01:12<01:01,  2.29s/it][A
- 48%|████▊     | 24/50 [01:14<00:58,  2.25s/it][A
- 50%|█████     | 25/50 [01:15<00:51,  2.04s/it][A
- 52%|█████▏    | 26/50 [01:18<00:52,  2.21s/it][A
- 54%|█████▍    | 27/50 [01:20<00:50,  2.21s/it][A
- 56%|█████▌    | 28/50 [01:23<00:51,  2.32s/it][A
- 58%|█████▊    | 29/50 [01:31<01:25,  4.05s/it][A
- 60%|██████    | 30/50 [01:35<01:22,  4.10s/it][A
- 62%|██████▏   | 31/50 [01:37<01:08,  3.59s/it][A
- 64%|██████▍   | 32/50 [01:39<00:54,  3.01s/it][A
- 66%|██████▌   | 33/50 [01:47<01:15,  4.41s/it][A
- 68%|██████▊   | 34/50 [01:54<01:22,  5.14s/it][A
- 70%|███████   | 35/50 [01:56<01:03,  4.24s/it][A
- 72%|███████▏  | 36/50 [01:58<00:50,  3.60s/it][A
- 74%|███████▍  | 37/50 [02:02<00:47,  3.68s/it][A
- 76%|███████▌  | 38/50 [02:03<00:36,  3.07s/it][A
- 78%|███████▊  | 39/50 [02:09<00:41,  3.77s/it][A
- 80%|████████  | 40/50 [02:11<00:34,  3.43s/it][A
- 82%|████████▏ | 41/50 [03:34<04:05, 27.28s/it][A
- 84%|████████▍ | 42/50 [03:39<02:42, 20.37s/it][A
- 86%|████████▌ | 43/50 [03:41<01:44, 14.86s/it][A
- 88%|████████▊ | 44/50 [03:42<01:05, 10.86s/it][A
- 90%|█████████ | 45/50 [03:44<00:40,  8.09s/it][A
- 92%|█████████▏| 46/50 [03:48<00:27,  6.86s/it][A
- 94%|█████████▍| 47/50 [04:30<00:52, 17.55s/it][A
- 96%|█████████▌| 48/50 [04:32<00:25, 12.90s/it][A
- 98%|█████████▊| 49/50 [04:42<00:11, 11.86s/it][A
-100%|██████████| 50/50 [04:43<00:00,  8.78s/it][A100%|██████████| 50/50 [04:43<00:00,  5.68s/it]
- 40%|████      | 12/30 [54:19<1:10:13, 234.10s/it]2024-05-29 13:42:04.171 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:42:04.172 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-have h₂ : f (2 : ℚ) = 1 := by
- calc
-  f 2 = f (1 + 1) := by norm_num
-  _ = f 1 + f 1 := h₀ 1 zero_lt_one 1 zero_lt_one
-  _ = 1 + 1 := by norm_num
-  _ = ↑(1 + 1) := by norm_cast
-  _ = (2 : ℝ) := by norm_num
-```
-Here is the predicted next tactic:
-```lean
-have h₃ : f 25 = 2 * f 5 := by
- calc
-  f 25 = f (5 * 5) := by norm_num
-  _ = f 5 + f 5 := h₀ 5 (by norm_num) 5 (by norm_num)
-  _ = 2 * f 5 := (two_mul (f 5)).symm
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	4
-*********
- {'full_name': 'mathd_algebra_329', 'statement': 'theorem mathd_algebra_329 (x y : ℝ) (h₀ : 3 * y = x) (h₁ : 2 * x + 5 * y = 11) : x + y = 4', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_329 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_329')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
- 43%|████▎     | 13/30 [54:42<48:13, 170.22s/it]  2024-05-29 13:42:27.012 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:42:27.013 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-nlinarith [h₀, h₁]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.38461538461538464
-# successes: 	5
-*********
- {'full_name': 'induction_pprime_pdvdapowpma', 'statement': 'theorem induction_pprime_pdvdapowpma (p a : ℕ) (h₀ : 0 < a) (h₁ : Nat.Prime p) : p ∣ a ^ p - a', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- induction_pprime_pdvdapowpma **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='induction_pprime_pdvdapowpma')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<00:58,  1.20s/it][A
-  4%|▍         | 2/50 [00:02<01:09,  1.46s/it][A
-  6%|▌         | 3/50 [00:03<01:01,  1.30s/it][A
-  8%|▊         | 4/50 [00:05<00:55,  1.20s/it][A
- 10%|█         | 5/50 [00:06<00:51,  1.15s/it][A
- 12%|█▏        | 6/50 [00:07<00:55,  1.25s/it][A
- 14%|█▍        | 7/50 [00:08<00:55,  1.30s/it][A
- 16%|█▌        | 8/50 [00:09<00:51,  1.22s/it][A
- 18%|█▊        | 9/50 [00:11<00:51,  1.26s/it][A
- 20%|██        | 10/50 [00:12<00:50,  1.25s/it][A
- 22%|██▏       | 11/50 [00:13<00:49,  1.27s/it][A
- 24%|██▍       | 12/50 [00:14<00:41,  1.10s/it][A
- 26%|██▌       | 13/50 [00:15<00:42,  1.14s/it][A
- 28%|██▊       | 14/50 [00:16<00:36,  1.01s/it][A
- 30%|███       | 15/50 [00:18<00:46,  1.32s/it][A
- 32%|███▏      | 16/50 [00:24<01:33,  2.75s/it][A
- 34%|███▍      | 17/50 [00:26<01:18,  2.38s/it][A
- 36%|███▌      | 18/50 [00:28<01:13,  2.28s/it][A
- 38%|███▊      | 19/50 [00:28<00:55,  1.78s/it][A
- 40%|████      | 20/50 [00:30<00:50,  1.67s/it][A
- 42%|████▏     | 21/50 [00:30<00:39,  1.35s/it][A
- 44%|████▍     | 22/50 [00:32<00:37,  1.33s/it][A
- 46%|████▌     | 23/50 [00:34<00:41,  1.55s/it][A
- 48%|████▊     | 24/50 [00:35<00:36,  1.41s/it][A
- 50%|█████     | 25/50 [00:37<00:38,  1.53s/it][A
- 52%|█████▏    | 26/50 [00:38<00:33,  1.39s/it][A
- 54%|█████▍    | 27/50 [00:40<00:36,  1.59s/it][A
- 56%|█████▌    | 28/50 [00:41<00:31,  1.42s/it][A
- 58%|█████▊    | 29/50 [00:42<00:30,  1.46s/it][A
- 60%|██████    | 30/50 [00:46<00:45,  2.28s/it][A
- 62%|██████▏   | 31/50 [00:47<00:36,  1.91s/it][A
- 64%|██████▍   | 32/50 [00:49<00:33,  1.84s/it][A
- 66%|██████▌   | 33/50 [00:51<00:32,  1.92s/it][A
- 68%|██████▊   | 34/50 [00:53<00:29,  1.85s/it][A
- 70%|███████   | 35/50 [00:54<00:22,  1.49s/it][A
- 72%|███████▏  | 36/50 [00:55<00:20,  1.49s/it][A
- 74%|███████▍  | 37/50 [01:02<00:40,  3.13s/it][A
- 76%|███████▌  | 38/50 [01:04<00:32,  2.72s/it][A
- 78%|███████▊  | 39/50 [01:05<00:23,  2.14s/it][A
- 80%|████████  | 40/50 [01:06<00:18,  1.86s/it][A
- 82%|████████▏ | 41/50 [01:07<00:14,  1.59s/it][A
- 84%|████████▍ | 42/50 [01:10<00:16,  2.07s/it][A
- 86%|████████▌ | 43/50 [01:11<00:13,  1.90s/it][A
- 88%|████████▊ | 44/50 [01:13<00:11,  1.84s/it][A
- 90%|█████████ | 45/50 [01:16<00:10,  2.15s/it][A
- 92%|█████████▏| 46/50 [01:23<00:13,  3.45s/it][A
- 94%|█████████▍| 47/50 [01:24<00:08,  2.88s/it][A
- 96%|█████████▌| 48/50 [01:25<00:04,  2.21s/it][A
- 98%|█████████▊| 49/50 [01:32<00:03,  3.72s/it][A
-100%|██████████| 50/50 [01:34<00:00,  3.34s/it][A100%|██████████| 50/50 [01:34<00:00,  1.90s/it]
- 47%|████▋     | 14/30 [56:39<41:02, 153.93s/it]2024-05-29 13:44:25.031 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:44:25.031 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [← Nat.mod_add_div a p]
-```
-Here is the predicted next tactic:
-```lean
-apply dvd_mul_of_dvd_right
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.35714285714285715
-# successes: 	5
-*********
- {'full_name': 'amc12a_2021_p9', 'statement': 'theorem amc12a_2021_p9 : (∏ k in Finset.range 7, 2 ^ 2 ^ k + 3 ^ 2 ^ k) = 3 ^ 128 - 2 ^ 128', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2021_p9 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p9')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:06<05:11,  6.35s/it][A
-  4%|▍         | 2/50 [00:12<05:06,  6.39s/it][A
-  6%|▌         | 3/50 [00:19<05:00,  6.40s/it][A
-  8%|▊         | 4/50 [00:25<04:53,  6.38s/it][A
- 10%|█         | 5/50 [00:31<04:48,  6.40s/it][A
- 12%|█▏        | 6/50 [00:38<04:41,  6.41s/it][A
- 14%|█▍        | 7/50 [00:44<04:37,  6.44s/it][A
- 16%|█▌        | 8/50 [00:51<04:31,  6.46s/it][A 16%|█▌        | 8/50 [00:51<04:29,  6.42s/it]
- 50%|█████     | 15/30 [57:54<32:31, 130.12s/it]2024-05-29 13:45:38.354 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:45:38.355 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀
-Here is the predicted next tactic:
-```lean
-norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	5
-*********
- {'full_name': 'aime_1984_p1', 'statement': 'theorem aime_1984_p1 (u : ℕ → ℚ) (h₀ : ∀ n, u (n + 1) = u n + 1)\n    (h₁ : (∑ k in Finset.range 98, u k.succ) = 137) :\n    (∑ k in Finset.range 49, u (2 * k.succ)) = 93', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- aime_1984_p1 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='aime_1984_p1')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:30<25:04, 30.71s/it][A
-  4%|▍         | 2/50 [02:32<1:07:23, 84.24s/it][AHere is the predicted next tactic:
-```lean
-have h₂ : (∑ k in Finset.range 98, (k + 1 : ℚ)) = 98 * 99 / 2 := by norm_num
-```
-Here is the predicted next tactic:
-```lean
-simp only [h₀, Finset.sum_range_succ, Finset.sum_range_zero]
-```
-WARNING 05-29 13:48:18 scheduler.py:195] Input prompt (18844 tokens) is too long and exceeds limit of 8192
-
-  6%|▌         | 3/50 [02:32<35:59, 45.95s/it]  [AWARNING 05-29 13:48:19 scheduler.py:195] Input prompt (18819 tokens) is too long and exceeds limit of 8192
-
-  8%|▊         | 4/50 [02:33<21:26, 27.97s/it][A
- 10%|█         | 5/50 [03:55<35:42, 47.62s/it][A 10%|█         | 5/50 [09:59<1:29:59, 120.00s/it]
- 53%|█████▎    | 16/30 [1:08:12<1:04:40, 277.19s/it]2024-05-29 13:55:57.222 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:55:57.222 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3125
-# successes: 	5
-*********
- {'full_name': 'amc12a_2021_p22', 'statement': "theorem amc12a_2021_p22 (a b c : ℝ) (f : ℝ → ℝ) (h₀ : ∀ x, f x = x ^ 3 + a * x ^ 2 + b * x + c)\n    (h₁ :\n      f ⁻¹' {0} =\n        {Real.cos (2 * Real.pi / 7), Real.cos (4 * Real.pi / 7), Real.cos (6 * Real.pi / 7)}) :\n    a * b * c = 1 / 32", 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2021_p22 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p22')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:02<02:17,  2.80s/it][A
-  4%|▍         | 2/50 [00:06<02:27,  3.07s/it][A
-  6%|▌         | 3/50 [00:09<02:23,  3.06s/it][A
-  8%|▊         | 4/50 [00:12<02:18,  3.00s/it][A
- 10%|█         | 5/50 [00:15<02:18,  3.08s/it][A
- 12%|█▏        | 6/50 [00:18<02:15,  3.07s/it][A
- 14%|█▍        | 7/50 [00:21<02:11,  3.06s/it][A
- 16%|█▌        | 8/50 [00:23<01:58,  2.82s/it][A
- 18%|█▊        | 9/50 [00:26<01:59,  2.90s/it][A
- 20%|██        | 10/50 [00:29<01:48,  2.72s/it][A
- 22%|██▏       | 11/50 [00:32<01:52,  2.87s/it][A
- 24%|██▍       | 12/50 [00:35<01:52,  2.96s/it][A
- 26%|██▌       | 13/50 [00:38<01:47,  2.90s/it][A
- 28%|██▊       | 14/50 [00:44<02:18,  3.85s/it][A
- 30%|███       | 15/50 [00:47<02:07,  3.65s/it][A
- 32%|███▏      | 16/50 [00:50<02:02,  3.60s/it][A
- 34%|███▍      | 17/50 [00:51<01:32,  2.80s/it][A
- 36%|███▌      | 18/50 [00:54<01:24,  2.64s/it][A
- 38%|███▊      | 19/50 [00:56<01:22,  2.65s/it][A
- 40%|████      | 20/50 [00:58<01:15,  2.53s/it][A
- 42%|████▏     | 21/50 [01:02<01:21,  2.80s/it][A
- 44%|████▍     | 22/50 [01:04<01:13,  2.63s/it][A
- 46%|████▌     | 23/50 [01:10<01:37,  3.60s/it][A
- 48%|████▊     | 24/50 [01:12<01:23,  3.20s/it][A
- 50%|█████     | 25/50 [01:14<01:12,  2.89s/it][A
- 52%|█████▏    | 26/50 [01:18<01:13,  3.08s/it][A
- 54%|█████▍    | 27/50 [01:22<01:14,  3.25s/it][A
- 56%|█████▌    | 28/50 [01:24<01:05,  2.98s/it][A
- 58%|█████▊    | 29/50 [01:26<00:57,  2.73s/it][A
- 60%|██████    | 30/50 [01:35<01:33,  4.67s/it][A
- 62%|██████▏   | 31/50 [01:41<01:36,  5.10s/it][A
- 64%|██████▍   | 32/50 [01:44<01:16,  4.25s/it][A
- 66%|██████▌   | 33/50 [01:46<01:04,  3.77s/it][A
- 68%|██████▊   | 34/50 [01:48<00:48,  3.04s/it][A
- 70%|███████   | 35/50 [01:50<00:42,  2.81s/it][A
- 72%|███████▏  | 36/50 [01:53<00:39,  2.82s/it][A
- 74%|███████▍  | 37/50 [01:56<00:39,  3.04s/it][A
- 76%|███████▌  | 38/50 [02:06<01:01,  5.10s/it][A
- 78%|███████▊  | 39/50 [02:08<00:44,  4.07s/it][A
- 80%|████████  | 40/50 [02:18<00:58,  5.81s/it][A
- 82%|████████▏ | 41/50 [02:20<00:43,  4.87s/it][A
- 84%|████████▍ | 42/50 [02:24<00:36,  4.54s/it][A
- 86%|████████▌ | 43/50 [02:33<00:40,  5.78s/it][A
- 88%|████████▊ | 44/50 [02:34<00:26,  4.45s/it][A
- 90%|█████████ | 45/50 [02:37<00:18,  3.80s/it][A
- 92%|█████████▏| 46/50 [02:40<00:14,  3.68s/it][A
- 94%|█████████▍| 47/50 [02:42<00:09,  3.09s/it][A
- 96%|█████████▌| 48/50 [02:45<00:06,  3.22s/it][A
- 98%|█████████▊| 49/50 [02:54<00:04,  4.86s/it][A
-100%|██████████| 50/50 [02:57<00:00,  4.46s/it][A100%|██████████| 50/50 [02:57<00:00,  3.56s/it]
- 57%|█████▋    | 17/30 [1:11:33<55:04, 254.21s/it]  2024-05-29 13:59:18.429 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:59:18.429 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-have h₂ : f = fun x => x ^ 3 + a * x ^ 2 + b * x + c := by ext; rw [h₀]
-```
-Here is the predicted next tactic:
-```lean
-have h₃ : (fun x => x ^ 3 + a * x ^ 2 + b * x + c) ⁻¹' {0} =
-  {cos (2 * π / 7), cos (4 * π / 7), cos (6 * π / 7)} := by rw [h₂, h₁]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.29411764705882354
-# successes: 	5
-*********
- {'full_name': 'mathd_numbertheory_229', 'statement': 'theorem mathd_numbertheory_229 : 5 ^ 30 % 7 = 1', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_229 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_229')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:05<?, ?it/s]
- 60%|██████    | 18/30 [1:12:02<37:18, 186.53s/it]2024-05-29 13:59:47.163 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 13:59:47.163 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-```lean
-norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀.35]
-```[UN
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3333333333333333
-# successes: 	6
-*********
- {'full_name': 'mathd_numbertheory_100', 'statement': 'theorem mathd_numbertheory_100 (n : ℕ) (h₀ : 0 < n) (h₁ : Nat.gcd n 40 = 10)\n    (h₂ : Nat.lcm n 40 = 280) : n = 70', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_100 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_100')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<00:56,  1.15s/it][A
-  4%|▍         | 2/50 [00:02<00:53,  1.10s/it][A
-  6%|▌         | 3/50 [00:03<00:47,  1.01s/it][A
-  8%|▊         | 4/50 [00:04<00:49,  1.08s/it][A
- 10%|█         | 5/50 [00:05<00:50,  1.12s/it][A
- 12%|█▏        | 6/50 [00:06<00:46,  1.07s/it][A
- 14%|█▍        | 7/50 [00:08<00:55,  1.29s/it][A
- 16%|█▌        | 8/50 [00:09<00:49,  1.19s/it][A 16%|█▌        | 8/50 [00:34<02:59,  4.26s/it]
- 63%|██████▎   | 19/30 [1:12:58<27:01, 147.38s/it]2024-05-29 14:00:43.285 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:00:43.286 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [Nat.gcd_comm] at h₁
-```
-Here is the predicted next tactic:
-```lean
-rw [Nat.gcd_comm] at h₁
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.3684210526315789
-# successes: 	7
-*********
- {'full_name': 'mathd_algebra_313', 'statement': 'theorem mathd_algebra_313 (v i z : ℂ) (h₀ : v = i * z) (h₁ : v = 1 + Complex.I)\n    (h₂ : z = 2 - Complex.I) : i = 1 / 5 + 3 / 5 * Complex.I', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_313 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_313')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:02<02:02,  2.50s/it][A
-  4%|▍         | 2/50 [00:04<01:32,  1.93s/it][A
-  6%|▌         | 3/50 [00:05<01:28,  1.88s/it][A
-  8%|▊         | 4/50 [00:12<02:50,  3.71s/it][A
- 10%|█         | 5/50 [00:13<02:12,  2.95s/it][A
- 12%|█▏        | 6/50 [00:15<01:47,  2.45s/it][A
- 14%|█▍        | 7/50 [00:18<01:49,  2.55s/it][A
- 16%|█▌        | 8/50 [00:19<01:34,  2.24s/it][A
- 18%|█▊        | 9/50 [00:21<01:22,  2.02s/it][A
- 20%|██        | 10/50 [00:23<01:24,  2.10s/it][A
- 22%|██▏       | 11/50 [00:25<01:18,  2.02s/it][A
- 24%|██▍       | 12/50 [00:27<01:14,  1.96s/it][A
- 26%|██▌       | 13/50 [00:29<01:21,  2.19s/it][A
- 28%|██▊       | 14/50 [00:33<01:30,  2.51s/it][A
- 30%|███       | 15/50 [00:36<01:34,  2.70s/it][A
- 32%|███▏      | 16/50 [00:38<01:28,  2.61s/it][A
- 34%|███▍      | 17/50 [00:41<01:25,  2.59s/it][A
- 36%|███▌      | 18/50 [00:44<01:30,  2.84s/it][A
- 38%|███▊      | 19/50 [00:46<01:22,  2.66s/it][A
- 40%|████      | 20/50 [00:48<01:09,  2.32s/it][A
- 42%|████▏     | 21/50 [00:49<00:58,  2.03s/it][A
- 44%|████▍     | 22/50 [00:53<01:08,  2.45s/it][A
- 46%|████▌     | 23/50 [00:55<01:01,  2.26s/it][A
- 48%|████▊     | 24/50 [00:57<00:56,  2.18s/it][A
- 50%|█████     | 25/50 [00:58<00:51,  2.07s/it][A
- 52%|█████▏    | 26/50 [01:05<01:22,  3.42s/it][A
- 54%|█████▍    | 27/50 [01:07<01:06,  2.90s/it][A
- 56%|█████▌    | 28/50 [01:08<00:54,  2.49s/it][A
- 58%|█████▊    | 29/50 [01:10<00:48,  2.31s/it][A
- 60%|██████    | 30/50 [01:13<00:48,  2.41s/it][A
- 62%|██████▏   | 31/50 [01:14<00:39,  2.05s/it][A
- 64%|██████▍   | 32/50 [01:16<00:34,  1.91s/it][A
- 66%|██████▌   | 33/50 [01:17<00:30,  1.79s/it][A
- 68%|██████▊   | 34/50 [01:21<00:36,  2.31s/it][A
- 70%|███████   | 35/50 [01:22<00:31,  2.07s/it][A
- 72%|███████▏  | 36/50 [01:34<01:09,  5.00s/it][A
- 74%|███████▍  | 37/50 [01:35<00:51,  3.96s/it][A
- 76%|███████▌  | 38/50 [01:37<00:38,  3.24s/it][A
- 78%|███████▊  | 39/50 [01:39<00:29,  2.73s/it][A
- 80%|████████  | 40/50 [01:41<00:25,  2.57s/it][A
- 82%|████████▏ | 41/50 [01:43<00:21,  2.38s/it][A
- 84%|████████▍ | 42/50 [01:47<00:23,  2.92s/it][A
- 86%|████████▌ | 43/50 [01:50<00:19,  2.84s/it][A
- 88%|████████▊ | 44/50 [01:53<00:18,  3.08s/it][A 88%|████████▊ | 44/50 [02:00<00:16,  2.73s/it]
- 67%|██████▋   | 20/30 [1:15:21<24:19, 145.94s/it]2024-05-29 14:03:06.016 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:03:06.016 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-field_simp [h₀, h₁, h₂]
-```
-Here is the predicted next tactic:
-```lean
-ring
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4
-# successes: 	8
-*********
- {'full_name': 'amc12b_2002_p4', 'statement': 'theorem amc12b_2002_p4 (n : ℕ) (h₀ : 0 < n) (h₁ : (1 /. 2 + 1 /. 3 + 1 /. 7 + 1 /. ↑n).den = 1) :\n    n = 42', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12b_2002_p4 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12b_2002_p4')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:03<02:35,  3.17s/it][A
-  4%|▍         | 2/50 [00:28<13:07, 16.41s/it][A
-  6%|▌         | 3/50 [00:31<07:46,  9.92s/it][A
-  8%|▊         | 4/50 [01:07<15:35, 20.34s/it][A
- 10%|█         | 5/50 [01:09<10:19, 13.77s/it][A
- 12%|█▏        | 6/50 [01:12<07:23, 10.07s/it][A
- 14%|█▍        | 7/50 [01:14<05:28,  7.64s/it][A
- 16%|█▌        | 8/50 [01:21<05:03,  7.23s/it][A
- 18%|█▊        | 9/50 [02:40<20:16, 29.67s/it][A
- 20%|██        | 10/50 [03:56<29:19, 44.00s/it][A
- 22%|██▏       | 11/50 [05:10<34:36, 53.24s/it][A
- 24%|██▍       | 12/50 [06:14<35:47, 56.51s/it][A
- 26%|██▌       | 13/50 [07:22<36:54, 59.85s/it][A
- 28%|██▊       | 14/50 [07:51<30:21, 50.60s/it][A
- 30%|███       | 15/50 [07:53<20:54, 35.85s/it][A
- 32%|███▏      | 16/50 [08:55<24:46, 43.72s/it][A
- 34%|███▍      | 17/50 [09:53<26:27, 48.12s/it][A
- 36%|███▌      | 18/50 [09:56<18:23, 34.50s/it][A 36%|███▌      | 18/50 [09:59<17:46, 33.33s/it]
- 70%|███████   | 21/30 [1:25:40<43:11, 287.99s/it]2024-05-29 14:13:24.988 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:13:24.988 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-field_simp [(by norm_num : (2 : ℤ) ≠ 0), (by norm_num : (3 : ℤ) ≠ 0), (by norm_num : (7 : ℤ) ≠ 0), (by norm_num : (n : ℤ) ≠ 0)] at h₁
-```
-Here is the predicted next tactic:
-```lean
-contradiction
-```
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.38095238095238093
-# successes: 	8
-*********
- {'full_name': 'amc12a_2002_p6', 'statement': 'theorem amc12a_2002_p6 (n : ℕ) (h₀ : 0 < n) : ∃ m, m > n ∧ ∃ p, m * p ≤ m + p', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2002_p6 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2002_p6')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:20<16:28, 20.18s/it][A
-  4%|▍         | 2/50 [00:22<07:52,  9.85s/it][A
-  6%|▌         | 3/50 [00:25<05:06,  6.52s/it][A
-  8%|▊         | 4/50 [00:27<03:48,  4.98s/it][A
- 10%|█         | 5/50 [00:30<03:05,  4.12s/it][A
- 12%|█▏        | 6/50 [00:33<02:38,  3.61s/it][A
- 14%|█▍        | 7/50 [00:35<02:20,  3.26s/it][A
- 16%|█▌        | 8/50 [00:38<02:08,  3.06s/it][A
- 18%|█▊        | 9/50 [00:40<01:59,  2.92s/it][A
- 20%|██        | 10/50 [00:43<01:52,  2.81s/it][A
- 22%|██▏       | 11/50 [00:46<01:47,  2.75s/it][A
- 24%|██▍       | 12/50 [00:48<01:42,  2.71s/it][A
- 26%|██▌       | 13/50 [00:50<01:25,  2.32s/it][A
- 28%|██▊       | 14/50 [00:55<01:53,  3.15s/it][A
- 30%|███       | 15/50 [00:56<01:32,  2.63s/it][A
- 32%|███▏      | 16/50 [01:01<01:53,  3.35s/it][A
- 34%|███▍      | 17/50 [01:03<01:31,  2.77s/it][A
- 36%|███▌      | 18/50 [01:04<01:16,  2.39s/it][A
- 38%|███▊      | 19/50 [01:09<01:38,  3.17s/it][A
- 40%|████      | 20/50 [01:12<01:30,  3.01s/it][A
- 42%|████▏     | 21/50 [01:13<01:12,  2.51s/it][A
- 44%|████▍     | 22/50 [01:18<01:31,  3.28s/it][A
- 46%|████▌     | 23/50 [01:21<01:22,  3.06s/it][A
- 48%|████▊     | 24/50 [01:23<01:16,  2.93s/it][A
- 50%|█████     | 25/50 [01:24<00:57,  2.32s/it][A
- 52%|█████▏    | 26/50 [01:26<00:48,  2.02s/it][A
- 54%|█████▍    | 27/50 [01:27<00:41,  1.82s/it][A
- 56%|█████▌    | 28/50 [01:28<00:34,  1.55s/it][A
- 58%|█████▊    | 29/50 [01:30<00:39,  1.87s/it][A
- 60%|██████    | 30/50 [01:33<00:41,  2.09s/it][A
- 62%|██████▏   | 31/50 [01:34<00:33,  1.76s/it][A
- 64%|██████▍   | 32/50 [01:35<00:29,  1.61s/it][A
- 66%|██████▌   | 33/50 [01:36<00:23,  1.40s/it][A
- 68%|██████▊   | 34/50 [01:37<00:20,  1.25s/it][A
- 70%|███████   | 35/50 [01:39<00:21,  1.41s/it][A
- 72%|███████▏  | 36/50 [01:40<00:17,  1.26s/it][A
- 74%|███████▍  | 37/50 [01:41<00:16,  1.29s/it][A
- 76%|███████▌  | 38/50 [01:43<00:17,  1.44s/it][A
- 78%|███████▊  | 39/50 [01:44<00:14,  1.28s/it][A
- 80%|████████  | 40/50 [01:45<00:13,  1.33s/it][A
- 82%|████████▏ | 41/50 [01:47<00:11,  1.31s/it][A
- 84%|████████▍ | 42/50 [01:47<00:09,  1.19s/it][A
- 86%|████████▌ | 43/50 [01:53<00:16,  2.35s/it][A 86%|████████▌ | 43/50 [01:55<00:18,  2.69s/it]
- 73%|███████▎  | 22/30 [1:27:58<32:22, 242.81s/it]2024-05-29 14:15:42.517 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:15:42.517 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-all_goals norm_num
-```
-Here is the predicted next tactic:
-```lean
-suffices ∃ m, n < m ∧ ∃ p, m < p ∧ m + p ≤ m * p by
- rcases this with ⟨m, h₁, p, h₂, h₃⟩
- exact ⟨p, h₂, m, h₃⟩
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4090909090909091
-# successes: 	9
-*********
- {'full_name': 'amc12a_2003_p23', 'statement': 'theorem amc12a_2003_p23 (S : Finset ℕ)\n    (h₀ : ∀ k : ℕ, k ∈ S ↔ 0 < k ∧ (k * k : ℕ) ∣ ∏ i in Finset.Icc 1 9, i !) : S.card = 672', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2003_p23 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2003_p23')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:03<02:49,  3.46s/it][A
-  4%|▍         | 2/50 [00:04<01:43,  2.16s/it][A
-  6%|▌         | 3/50 [00:05<01:20,  1.71s/it][A
-  8%|▊         | 4/50 [00:06<01:03,  1.38s/it][A
- 10%|█         | 5/50 [00:07<00:48,  1.09s/it][A
- 12%|█▏        | 6/50 [00:08<00:45,  1.03s/it][A
- 14%|█▍        | 7/50 [00:11<01:17,  1.80s/it][A
- 16%|█▌        | 8/50 [00:12<01:01,  1.46s/it][A
- 18%|█▊        | 9/50 [00:13<00:52,  1.29s/it][A
- 20%|██        | 10/50 [00:16<01:16,  1.92s/it][A
- 22%|██▏       | 11/50 [00:17<01:01,  1.58s/it][A
- 24%|██▍       | 12/50 [00:18<00:50,  1.32s/it][A
- 26%|██▌       | 13/50 [00:18<00:42,  1.14s/it][A
- 28%|██▊       | 14/50 [00:19<00:34,  1.03it/s][A
- 30%|███       | 15/50 [00:20<00:31,  1.12it/s][A
- 32%|███▏      | 16/50 [00:20<00:29,  1.16it/s][A
- 34%|███▍      | 17/50 [00:21<00:27,  1.21it/s][A
- 36%|███▌      | 18/50 [00:22<00:26,  1.22it/s][A
- 38%|███▊      | 19/50 [00:23<00:24,  1.26it/s][A
- 40%|████      | 20/50 [00:24<00:30,  1.01s/it][A
- 42%|████▏     | 21/50 [00:25<00:30,  1.04s/it][A
- 44%|████▍     | 22/50 [00:27<00:30,  1.09s/it][A
- 46%|████▌     | 23/50 [00:29<00:39,  1.45s/it][A
- 48%|████▊     | 24/50 [00:29<00:29,  1.15s/it][A
- 50%|█████     | 25/50 [00:30<00:25,  1.02s/it][A
- 52%|█████▏    | 26/50 [00:31<00:23,  1.04it/s][A
- 54%|█████▍    | 27/50 [00:32<00:22,  1.03it/s][A
- 56%|█████▌    | 28/50 [00:33<00:19,  1.11it/s][A
- 58%|█████▊    | 29/50 [00:33<00:17,  1.17it/s][A
- 60%|██████    | 30/50 [00:34<00:14,  1.36it/s][A
- 62%|██████▏   | 31/50 [00:34<00:12,  1.47it/s][A
- 64%|██████▍   | 32/50 [00:35<00:14,  1.24it/s][A
- 66%|██████▌   | 33/50 [00:36<00:13,  1.27it/s][A
- 68%|██████▊   | 34/50 [00:40<00:26,  1.68s/it][A
- 70%|███████   | 35/50 [00:41<00:23,  1.54s/it][A
- 72%|███████▏  | 36/50 [00:43<00:24,  1.76s/it][A
- 74%|███████▍  | 37/50 [00:44<00:19,  1.49s/it][A
- 76%|███████▌  | 38/50 [00:45<00:16,  1.40s/it][A
- 78%|███████▊  | 39/50 [00:46<00:12,  1.15s/it][A
- 80%|████████  | 40/50 [00:47<00:11,  1.14s/it][A
- 82%|████████▏ | 41/50 [00:51<00:16,  1.81s/it][A
- 84%|████████▍ | 42/50 [00:51<00:11,  1.40s/it][A
- 86%|████████▌ | 43/50 [00:52<00:08,  1.20s/it][A
- 88%|████████▊ | 44/50 [00:53<00:06,  1.14s/it][A
- 90%|█████████ | 45/50 [00:54<00:05,  1.16s/it][A
- 92%|█████████▏| 46/50 [00:55<00:04,  1.12s/it][A
- 94%|█████████▍| 47/50 [00:56<00:03,  1.04s/it][A
- 96%|█████████▌| 48/50 [00:57<00:01,  1.06it/s][A
- 98%|█████████▊| 49/50 [00:58<00:00,  1.00it/s][A
-100%|██████████| 50/50 [01:01<00:00,  1.84s/it][A100%|██████████| 50/50 [01:01<00:00,  1.24s/it]
- 77%|███████▋  | 23/30 [1:29:22<22:46, 195.17s/it]2024-05-29 14:17:06.435 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:17:06.435 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-suffices ∀ k : ℕ, 0 < k ∧ k * k ∣ (∏ i in Finset.Icc 1 9, i !) ↔ k = 1 ∨ k = 2 ∨ k = 3 ∨ k = 4 ∨ k = 5 ∨ k = 6 ∨ k = 7 ∨ k = 8 ∨ k = 9 by
- rw [Finset.card_eq_sum_ones]
- apply Finset.sum_congr rfl
- simpa
-```
-Here is the predicted next tactic:
-```lean
-rw [Finset.sum_const]
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.391304347826087
-# successes: 	9
-*********
- {'full_name': 'mathd_algebra_129', 'statement': 'theorem mathd_algebra_129 (a : ℝ) (h₀ : a ≠ 0) (h₁ : 8⁻¹ / 4⁻¹ - a⁻¹ = 1) : a = -2', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_129 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_129')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:01<?, ?it/s]
- 80%|████████  | 24/30 [1:29:45<14:21, 143.54s/it]2024-05-29 14:17:29.587 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:17:29.587 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-field_simp at h₁
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4166666666666667
-# successes: 	10
-*********
- {'full_name': 'amc12b_2021_p18', 'statement': 'theorem amc12b_2021_p18 (z : ℂ)\n    (h₀ : 12 * Complex.normSq z = 2 * Complex.normSq (z + 2) + Complex.normSq (z ^ 2 + 1) + 31) :\n    z + 6 / z = -2', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12b_2021_p18 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12b_2021_p18')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:12<10:08, 12.43s/it][A
-  4%|▍         | 2/50 [00:15<05:33,  6.94s/it][A
-  6%|▌         | 3/50 [00:18<04:03,  5.17s/it][A
-  8%|▊         | 4/50 [00:21<03:09,  4.12s/it][A
- 10%|█         | 5/50 [00:25<03:08,  4.19s/it][A
- 12%|█▏        | 6/50 [00:27<02:38,  3.61s/it][A
- 14%|█▍        | 7/50 [00:29<02:08,  3.00s/it][A
- 16%|█▌        | 8/50 [00:32<01:59,  2.84s/it][A
- 18%|█▊        | 9/50 [00:38<02:43,  4.00s/it][A
- 20%|██        | 10/50 [00:43<02:43,  4.10s/it][A
- 22%|██▏       | 11/50 [00:46<02:33,  3.94s/it][A
- 24%|██▍       | 12/50 [00:49<02:23,  3.77s/it][A
- 26%|██▌       | 13/50 [00:58<03:10,  5.14s/it][A
- 28%|██▊       | 14/50 [01:04<03:20,  5.56s/it][A
- 30%|███       | 15/50 [01:11<03:27,  5.94s/it][A
- 32%|███▏      | 16/50 [01:14<02:53,  5.10s/it][A
- 34%|███▍      | 17/50 [01:20<02:51,  5.19s/it][A
- 36%|███▌      | 18/50 [01:25<02:48,  5.26s/it][A
- 38%|███▊      | 19/50 [01:31<02:53,  5.59s/it][A
- 40%|████      | 20/50 [01:34<02:17,  4.59s/it][A
- 42%|████▏     | 21/50 [01:37<02:04,  4.30s/it][A
- 44%|████▍     | 22/50 [01:44<02:21,  5.06s/it][A
- 46%|████▌     | 23/50 [01:48<02:03,  4.59s/it][A
- 48%|████▊     | 24/50 [01:52<01:56,  4.49s/it][A
- 50%|█████     | 25/50 [01:56<01:51,  4.45s/it][A
- 52%|█████▏    | 26/50 [02:02<01:53,  4.72s/it][A
- 54%|█████▍    | 27/50 [02:07<01:53,  4.93s/it][A
- 56%|█████▌    | 28/50 [02:13<01:57,  5.36s/it][A
- 58%|█████▊    | 29/50 [02:20<02:00,  5.72s/it][A
- 60%|██████    | 30/50 [02:24<01:45,  5.30s/it][A
- 62%|██████▏   | 31/50 [02:29<01:35,  5.00s/it][A
- 64%|██████▍   | 32/50 [02:38<01:56,  6.48s/it][A
- 66%|██████▌   | 33/50 [02:42<01:35,  5.62s/it][A
- 68%|██████▊   | 34/50 [02:46<01:19,  4.96s/it][A
- 70%|███████   | 35/50 [02:50<01:11,  4.74s/it][A
- 72%|███████▏  | 36/50 [02:54<01:04,  4.61s/it][A
- 74%|███████▍  | 37/50 [02:58<00:58,  4.53s/it][A
- 76%|███████▌  | 38/50 [03:04<00:58,  4.91s/it][A
- 78%|███████▊  | 39/50 [03:09<00:53,  4.86s/it][A
- 80%|████████  | 40/50 [03:22<01:12,  7.26s/it][A
- 82%|████████▏ | 41/50 [03:28<01:03,  7.05s/it][A
- 84%|████████▍ | 42/50 [03:32<00:48,  6.04s/it][A
- 86%|████████▌ | 43/50 [03:36<00:38,  5.52s/it][A
- 88%|████████▊ | 44/50 [03:41<00:30,  5.14s/it][A
- 90%|█████████ | 45/50 [03:54<00:38,  7.62s/it][A
- 92%|█████████▏| 46/50 [03:58<00:25,  6.48s/it][A
- 94%|█████████▍| 47/50 [04:04<00:18,  6.23s/it][A
- 96%|█████████▌| 48/50 [04:09<00:12,  6.01s/it][A
- 98%|█████████▊| 49/50 [04:13<00:05,  5.54s/it][A
-100%|██████████| 50/50 [04:20<00:00,  5.82s/it][A100%|██████████| 50/50 [04:20<00:00,  5.21s/it]
- 83%|████████▎ | 25/30 [1:34:28<15:27, 185.52s/it]2024-05-29 14:22:13.016 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:22:13.016 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-field_simp [Complex.ext_iff] at h₀ ⊢
-```
-Here is the predicted next tactic:
-```lean
-replace h₀ : 12 * (z.re ^ 2 + z.im ^ 2) = 2 * ((z + 2).re ^ 2 + (z + 2).im ^ 2) + (z ^ 2 + 1).re ^ 2 + (z ^ 2 + 1).im ^ 2 + 31
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4
-# successes: 	10
-*********
- {'full_name': 'mathd_algebra_484', 'statement': 'theorem mathd_algebra_484 : Real.log 27 / Real.log 3 = 3', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_484 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_484')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<00:51,  1.05s/it][A
-  4%|▍         | 2/50 [00:06<03:02,  3.81s/it][A
-  6%|▌         | 3/50 [00:09<02:30,  3.19s/it][A
-  8%|▊         | 4/50 [00:11<02:12,  2.89s/it][A
- 10%|█         | 5/50 [00:13<01:58,  2.64s/it][A
- 12%|█▏        | 6/50 [00:16<01:48,  2.47s/it][A
- 14%|█▍        | 7/50 [00:17<01:32,  2.14s/it][A
- 16%|█▌        | 8/50 [00:18<01:20,  1.92s/it][A
- 18%|█▊        | 9/50 [00:20<01:13,  1.80s/it][A
- 20%|██        | 10/50 [00:22<01:17,  1.93s/it][A
- 22%|██▏       | 11/50 [00:24<01:17,  2.00s/it][A
- 24%|██▍       | 12/50 [00:27<01:18,  2.07s/it][A
- 26%|██▌       | 13/50 [00:29<01:18,  2.11s/it][A
- 28%|██▊       | 14/50 [00:31<01:17,  2.15s/it][A 28%|██▊       | 14/50 [00:31<01:20,  2.25s/it]
- 87%|████████▋ | 26/30 [1:35:22<09:43, 145.86s/it]2024-05-29 14:23:06.575 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:23:06.575 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [show (27 : ℝ) = (3 : ℝ) ^ 3 by norm_num, Real.log_rpow]
-```
-Here is the predicted next tactic:
-```lean
-simp only [logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb, logb
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.38461538461538464
-# successes: 	10
-*********
- {'full_name': 'mathd_numbertheory_551', 'statement': 'theorem mathd_numbertheory_551 : 1529 % 6 = 5', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_numbertheory_551 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_numbertheory_551')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:05<?, ?it/s]
- 90%|█████████ | 27/30 [1:35:49<05:31, 110.42s/it]2024-05-29 14:23:34.386 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:23:34.386 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-```lean
-norm_num [h₀.1, h₀.2, h₀.3, h₀.4, h₀.5, h₀.6, h₀.7, h₀.8, h₀.9, h₀.10, h₀.11, h₀.12, h₀.13, h₀.14, h₀.15, h₀.16, h₀.17, h₀.18, h₀.19, h₀.20, h₀.21, h₀.22, h₀.23, h₀.24, h₀.25, h₀.26, h₀.27, h₀.28, h₀.29, h₀.30, h₀.31, h₀.32, h₀.33, h₀.34, h₀.35]
-```[UN
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4074074074074074
-# successes: 	11
-*********
- {'full_name': 'mathd_algebra_304', 'statement': 'theorem mathd_algebra_304 : 91 ^ 2 = 8281', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- mathd_algebra_304 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='mathd_algebra_304')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A  0%|          | 0/50 [00:04<?, ?it/s]
- 93%|█████████▎| 28/30 [1:36:16<02:50, 85.35s/it] 2024-05-29 14:24:00.768 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:24:00.768 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-# Proof in Natural langauge
-
-To calculate $91^2$, we can use the formula $(a+b)^2 = a^2 + 2ab + b^2$. Here, $a=90$ and $b=1$. Substituting these values into the formula, we get:
-
-$(91)^2 = (90+1)^2 = 90^2 + 2*90*1 + 1^2 = 8100 + 180 + 1 = 8281$.
-
-So, $91^2 = 8281$.
-
-# Proof in LEAN 4
-
-```lean
-decide
-```
-
-# Explanation
-
-The `decide` tactic is used to automatically prove goals that are decidable propositions, such as equalities, inequalities, and true/false statements. In this case, `decide` is able to prove the goal by simplifying the left-hand side of the equation `91 ^ 2 = 8281` and comparing it to the right-hand side.
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.42857142857142855
-# successes: 	12
-*********
- {'full_name': 'amc12a_2021_p8', 'statement': 'theorem amc12a_2021_p8 (d : ℕ → ℕ) (h₀ : d 0 = 0) (h₁ : d 1 = 0) (h₂ : d 2 = 1)\n    (h₃ : ∀ n ≥ 3, d n = d (n - 1) + d (n - 3)) : Even (d 2021) ∧ Odd (d 2022) ∧ Even (d 2023)', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- amc12a_2021_p8 **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='amc12a_2021_p8')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [01:04<52:35, 64.40s/it][A  2%|▏         | 1/50 [09:59<8:09:59, 599.99s/it]
- 97%|█████████▋| 29/30 [1:46:35<04:05, 245.53s/it]2024-05-29 14:34:20.413 | WARNING  | lean_dojo.container:run_interactive:209 - Disregarding `cpu_limit = 16 since NativeContainer does not support CPU limit.`
-2024-05-29 14:34:20.413 | WARNING  | lean_dojo.container:run_interactive:213 - Disregarding `memory_limit = 16g` since NativeContainer does not support memory limit.
-Here is the predicted next tactic:
-```lean
-rw [h₃ 2021 (by norm_num : 2021 ≥ 3), h₃ 2022 (by norm_num : 2022 ≥ 3), h₃ 2023 (by norm_num : 2023 ≥ 3)]
-```
-Here is the predicted next tactic:
-```lean
-exact ⟨by norm_num [h₀, h₁, h₂, h₃], by norm_num [h₀, h₁, h₂, h₃], by norm_num [h₀, h₁, h₂, h₃]⟩
-```
-
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.41379310344827586
-# successes: 	12
-*********
- {'full_name': 'algebra_ineq_nto1onlt2m1on', 'statement': 'theorem algebra_ineq_nto1onlt2m1on (n : ℕ) : (n : ℝ) ^ ((1 : ℝ) / n) < 2 - 1 / n', 'url': 'https://github.com/rah4927/lean-dojo-mew', 'commit': 'd00c776260c77de7e70125ef0cd119de6c0ff1de', 'file_path': 'MiniF2F/Test.lean', 'split': 'test'}
-**a**
- algebra_ineq_nto1onlt2m1on **a**
-
-Theorem(repo=LeanGitRepo(url='https://github.com/rah4927/lean-dojo-mew', commit='d00c776260c77de7e70125ef0cd119de6c0ff1de'), file_path=PosixPath('MiniF2F/Test.lean'), full_name='algebra_ineq_nto1onlt2m1on')
-
-  0%|          | 0/50 [00:00<?, ?it/s][A
-  2%|▏         | 1/50 [00:01<00:50,  1.02s/it][A
-  4%|▍         | 2/50 [00:02<01:01,  1.28s/it][A
-  6%|▌         | 3/50 [00:03<01:02,  1.32s/it][A
-  8%|▊         | 4/50 [00:04<00:56,  1.23s/it][A
- 10%|█         | 5/50 [00:06<00:56,  1.26s/it][A
- 12%|█▏        | 6/50 [00:07<00:53,  1.21s/it][A
- 14%|█▍        | 7/50 [00:08<00:50,  1.17s/it][A
- 16%|█▌        | 8/50 [00:10<01:03,  1.50s/it][A
- 18%|█▊        | 9/50 [00:12<01:01,  1.51s/it][A
- 20%|██        | 10/50 [00:13<00:52,  1.31s/it][A
- 22%|██▏       | 11/50 [00:14<00:53,  1.38s/it][A
- 24%|██▍       | 12/50 [00:16<00:53,  1.41s/it][A
- 26%|██▌       | 13/50 [00:17<00:49,  1.35s/it][A
- 28%|██▊       | 14/50 [00:19<00:57,  1.61s/it][A
- 30%|███       | 15/50 [00:52<06:26, 11.04s/it][A
- 32%|███▏      | 16/50 [00:53<04:34,  8.09s/it][A
- 34%|███▍      | 17/50 [00:54<03:15,  5.92s/it][A
- 36%|███▌      | 18/50 [00:55<02:25,  4.56s/it][A
- 38%|███▊      | 19/50 [00:57<01:52,  3.63s/it][A
- 40%|████      | 20/50 [00:58<01:27,  2.91s/it][A
- 42%|████▏     | 21/50 [00:59<01:11,  2.45s/it][A
- 44%|████▍     | 22/50 [01:01<00:57,  2.07s/it][A
- 46%|████▌     | 23/50 [01:02<00:46,  1.71s/it][A
- 48%|████▊     | 24/50 [01:03<00:42,  1.65s/it][A
- 50%|█████     | 25/50 [01:05<00:40,  1.60s/it][A
- 52%|█████▏    | 26/50 [01:12<01:20,  3.33s/it][A
- 54%|█████▍    | 27/50 [01:15<01:13,  3.22s/it][A
- 56%|█████▌    | 28/50 [01:32<02:41,  7.34s/it][A
- 58%|█████▊    | 29/50 [01:34<01:59,  5.67s/it][A
- 60%|██████    | 30/50 [01:35<01:27,  4.36s/it][A
- 62%|██████▏   | 31/50 [01:36<01:06,  3.51s/it][A
- 64%|██████▍   | 32/50 [01:38<00:54,  3.05s/it][A
- 66%|██████▌   | 33/50 [01:39<00:41,  2.46s/it][A
- 68%|██████▊   | 34/50 [01:40<00:31,  1.98s/it][A
- 70%|███████   | 35/50 [01:43<00:30,  2.05s/it][A
- 72%|███████▏  | 36/50 [01:44<00:26,  1.91s/it][A
- 74%|███████▍  | 37/50 [01:51<00:46,  3.54s/it][A
- 76%|███████▌  | 38/50 [02:25<02:28, 12.41s/it][A
- 78%|███████▊  | 39/50 [02:26<01:39,  9.02s/it][A
- 80%|████████  | 40/50 [02:27<01:07,  6.77s/it][A
- 82%|████████▏ | 41/50 [02:33<00:59,  6.61s/it][A
- 84%|████████▍ | 42/50 [02:36<00:44,  5.53s/it][A
- 86%|████████▌ | 43/50 [02:37<00:28,  4.13s/it][A
- 88%|████████▊ | 44/50 [02:39<00:19,  3.29s/it][A
- 90%|█████████ | 45/50 [02:40<00:13,  2.63s/it][A
- 92%|█████████▏| 46/50 [02:41<00:08,  2.10s/it][A
- 94%|█████████▍| 47/50 [02:42<00:05,  1.90s/it][A
- 96%|█████████▌| 48/50 [03:15<00:22, 11.21s/it][A
- 98%|█████████▊| 49/50 [03:16<00:08,  8.25s/it][A
-100%|██████████| 50/50 [03:17<00:00,  6.13s/it][A100%|██████████| 50/50 [03:17<00:00,  3.96s/it]
-100%|██████████| 30/30 [1:50:18<00:00, 238.67s/it]100%|██████████| 30/30 [1:50:18<00:00, 220.62s/it]
-Here is the predicted next tactic:
-```lean
-rcases eq_or_ne n 0 with (rfl | hn)
-```
-Here is the predicted next tactic:
-```lean
-case inl => simp
-```
-output/internLM2-7b_mathlib_test/29-05-2024-12-47/results__internLM-7b-math__4.json
-0.4
-# successes: 	12

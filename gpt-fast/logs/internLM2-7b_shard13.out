@@ -1,93 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 04-27 21:15:58 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-27 21:16:11 llm_engine.py:357] # GPU blocks: 243, # CPU blocks: 2048
-Time to load model: 23.16 seconds
-Shard size: 7045
-  0%|          | 0/7045 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/DFinsupp.lean'), full_name='CompleteLattice.independent_of_dfinsupp_sumAddHom_injective')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A
- 10%|█         | 1/10 [00:03<00:32,  3.58s/it][A 10%|█         | 1/10 [01:29<13:29, 89.99s/it]
-  0%|          | 1/7045 [02:46<324:59:47, 166.10s/it]  0%|          | 2/7045 [04:16<237:31:33, 121.41s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('.lake/packages/std/Std/Data/List/Lemmas.lean'), full_name='List.IsSuffix.trans')
-Error:  EOF
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/GroupTheory/MonoidLocalization.lean'), full_name="Localization.liftOn₂_mk'")
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 3/7045 [06:57<273:12:24, 139.67s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/GradedAlgebra/HomogeneousIdeal.lean'), full_name='HomogeneousIdeal.toIdeal_homogeneousCore_eq_self')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 4/7045 [09:29<282:53:11, 144.64s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/SpecialFunctions/Trigonometric/Deriv.lean'), full_name='DifferentiableOn.sin')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 5/7045 [13:26<347:29:50, 177.70s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/CategoryTheory/Monoidal/Rigid/Basic.lean'), full_name='CategoryTheory.coevaluation_comp_leftAdjointMate')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 6/7045 [17:39<397:40:24, 203.38s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Topology/UniformSpace/UniformConvergence.lean'), full_name='TendstoLocallyUniformly.tendsto_comp')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 7/7045 [21:08<400:59:40, 205.11s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Basic.lean'), full_name='Set.mem_powerset_iff')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 8/7045 [24:44<408:15:26, 208.86s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/Complex/Basic.lean'), full_name='Complex.re_tsum')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 9/7045 [27:52<395:16:14, 202.24s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/FieldTheory/PolynomialGaloisGroup.lean'), full_name='Polynomial.Gal.galActionHom_injective')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 10/7045 [30:52<381:25:51, 195.19s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/FiniteDimensional.lean'), full_name='FiniteDimensional.of_finrank_eq_succ')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 11/7045 [33:44<367:48:34, 188.24s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Combinatorics/SimpleGraph/Finite.lean'), full_name='SimpleGraph.edgeFinset_subset_edgeFinset')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 12/7045 [37:19<383:33:18, 196.33s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__13.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/Ideal/Operations.lean'), full_name='Submodule.span_smul_eq')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:19<?, ?it/s]
-  0%|          | 12/7045 [41:01<400:47:21, 205.15s/it]

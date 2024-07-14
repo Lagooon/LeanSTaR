@@ -1,48 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 04-27 18:09:55 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-27 18:10:10 llm_engine.py:357] # GPU blocks: 858, # CPU blocks: 2048
-Time to load model: 24.30 seconds
-Shard size: 3522
-  0%|          | 0/3522 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Probability/Independence/Conditional.lean'), full_name='ProbabilityTheory.condIndep_iSup_of_disjoint')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A
- 10%|█         | 1/10 [00:02<00:19,  2.20s/it][A
- 20%|██        | 2/10 [00:04<00:18,  2.32s/it][A
- 30%|███       | 3/10 [00:07<00:16,  2.38s/it][A
- 40%|████      | 4/10 [00:10<00:17,  2.99s/it][A
- 50%|█████     | 5/10 [00:13<00:14,  2.80s/it][A
- 60%|██████    | 6/10 [00:15<00:10,  2.66s/it][A
- 70%|███████   | 7/10 [00:17<00:07,  2.42s/it][A
- 80%|████████  | 8/10 [00:20<00:05,  2.55s/it][A
- 90%|█████████ | 9/10 [00:23<00:02,  2.58s/it][A
-100%|██████████| 10/10 [00:25<00:00,  2.44s/it][A100%|██████████| 10/10 [00:25<00:00,  2.54s/it]
-  0%|          | 1/3522 [01:16<75:01:34, 76.71s/it]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-output/internLM2-7b_mathlib_test/27-04-2024-18-10/results__internLM-7b-math__25.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Group/GeometryOfNumbers.lean'), full_name='MeasureTheory.exists_pair_mem_lattice_not_disjoint_vadd')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A
- 10%|█         | 1/10 [00:02<00:25,  2.84s/it][A
- 20%|██        | 2/10 [00:05<00:21,  2.73s/it][A
- 30%|███       | 3/10 [00:07<00:17,  2.45s/it][A
- 40%|████      | 4/10 [00:10<00:15,  2.57s/it][A
- 50%|█████     | 5/10 [00:12<00:12,  2.58s/it][A
- 60%|██████    | 6/10 [00:15<00:09,  2.44s/it][A
- 70%|███████   | 7/10 [00:17<00:06,  2.31s/it][A
- 80%|████████  | 8/10 [00:19<00:04,  2.32s/it][A
- 90%|█████████ | 9/10 [00:22<00:02,  2.39s/it][A
-100%|██████████| 10/10 [00:24<00:00,  2.27s/it][A100%|██████████| 10/10 [00:24<00:00,  2.41s/it]
-  0%|          | 2/3522 [02:34<75:23:43, 77.11s/it]  0%|          | 2/3522 [02:52<84:25:09, 86.34s/it]
-output/internLM2-7b_mathlib_test/27-04-2024-18-10/results__internLM-7b-math__25.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/NonUnitalSubring/Basic.lean'), full_name='NonUnitalSubring.multiset_sum_mem')

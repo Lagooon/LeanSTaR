@@ -1,95 +1,0 @@
-`apex` is not installed. Reverting to non-fused RMSNorm.
-Loading model ...
-INFO 04-27 21:15:58 llm_engine.py:87] Initializing an LLM engine with config: model='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer='/nobackup/users/zhiqings/haohanl/Lean/checkpoints/internlm/internlm2-math-base-7b/cots', tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, seed=0)
-INFO 04-27 21:16:10 llm_engine.py:357] # GPU blocks: 245, # CPU blocks: 2048
-Time to load model: 22.52 seconds
-Shard size: 7045
-  0%|          | 0/7045 [00:00<?, ?it/s]theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/QPF/Multivariate/Constructions/Fix.lean'), full_name="MvQPF.recF_eq'")
-
-  0%|          | 0/10 [00:00<?, ?it/s][A
- 10%|█         | 1/10 [00:02<00:18,  2.05s/it][A 10%|█         | 1/10 [01:29<13:29, 89.99s/it]
-  0%|          | 1/7045 [02:23<280:27:37, 143.34s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/RingTheory/IntegrallyClosed.lean'), full_name='IsIntegrallyClosed.isIntegral_iff')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 2/7045 [05:30<330:56:25, 169.16s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Function/SimpleFunc.lean'), full_name='MeasureTheory.SimpleFunc.lintegral_mono')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 3/7045 [08:35<344:41:16, 176.21s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Set/Pointwise/SMul.lean'), full_name='Set.image_smul_prod')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 4/7045 [11:39<351:05:47, 179.51s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Order/BooleanAlgebra.lean'), full_name='sdiff_sdiff_sdiff_cancel_right')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 5/7045 [14:48<357:22:17, 182.75s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Analysis/InnerProductSpace/TwoDim.lean'), full_name='FiniteDimensional.of_fact_finrank_eq_two')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 6/7045 [17:56<361:18:44, 184.79s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/AlgebraicGeometry/Morphisms/QuasiSeparated.lean'), full_name='AlgebraicGeometry.exists_eq_pow_mul_of_isAffineOpen')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 7/7045 [21:43<387:42:51, 198.32s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Finset/Basic.lean'), full_name='Finset.sdiff_insert_of_not_mem')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 8/7045 [25:05<390:07:31, 199.58s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Quaternion.lean'), full_name='Quaternion.coe_zpow')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 9/7045 [28:42<400:33:56, 204.95s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/MeasureTheory/Group/Measure.lean'), full_name="MeasureTheory.measure_lt_top_of_isCompact_of_isMulLeftInvariant'")
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 10/7045 [32:17<406:28:12, 208.00s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Data/Setoid/Basic.lean'), full_name='Setoid.ker_eq_lift_of_injective')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 11/7045 [35:46<407:31:41, 208.57s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/LinearAlgebra/Basis/VectorSpace.lean'), full_name='LinearMap.exists_extend')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [01:29<?, ?it/s]
-  0%|          | 12/7045 [39:03<400:11:21, 204.85s/it]Error:  
-output/internLM2-7b_mathlib_test/27-04-2024-21-16/results__internLM-7b-math__10.json
-0.0
-# successes: 	0
-theorem:  Theorem(repo=LeanGitRepo(url='https://github.com/leanprover-community/mathlib4', commit='fe4454af900584467d21f4fd4fe951d29d9332a7'), file_path=PosixPath('Mathlib/Algebra/Lie/Basic.lean'), full_name='LieHom.id_apply')
-
-  0%|          | 0/10 [00:00<?, ?it/s][A  0%|          | 0/10 [00:17<?, ?it/s]
-  0%|          | 12/7045 [41:02<400:49:10, 205.17s/it]
