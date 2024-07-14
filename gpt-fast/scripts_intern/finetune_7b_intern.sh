@@ -20,14 +20,14 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --standalone --nproc_per_node=8 \
     --per_device_train_batch_size 16 \
     --micro_train_batch_size 2 \
     --learning_rate 2e-5 \
-    --num_train_epochs 2 \
+    --num_train_epochs 1 \
     --dataset "data/leandojo_benchmark_4/processed/proofstep-train.json" \
     --dataset_format "mapped" \
     --add_eos_to_target \
     --save_strategy epoch \
     --save_steps 60\
     --save_total_limit 3 \
-    --save_dir $DATA_DIR/checkpoints/internlm2-7b_sft_epoch-3_lr-3e-5-plus 
+    --save_dir $DATA_DIR/checkpoints/internlm2-7b_sft_epoch-1_lr-3e-5-plus 
     #--resume_from_checkpoint
 
 # --dataset "alpaca" \
