@@ -1,3 +1,3 @@
-# ScalableMath
+# LeanSTaR
 
-Work in progress. Please do not distribute.
+Work in progress.
