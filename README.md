@@ -36,5 +36,6 @@ bash scripts_intern/finetune_7b_star.sh
 #### Evaluation
 ```
 cd gpt-fast
+bash scripts_intern/inverse_intern_math_7b.sh
 bash scripts_intern/sample_cot_7b.sh
 ```
