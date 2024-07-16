@@ -1,7 +1,7 @@
 # `Lean-STaR` MiniF2F performance reproduce 
 
 Scripts for the Lean formal2formal (tactic prediction) experiments. Adapted from
-[InternLM-Math](https://github.com/wellecks/llemma_formal2formal).
+[llemma_formal2formal](https://github.com/wellecks/llemma_formal2formal).
 
 
 #### Setup
