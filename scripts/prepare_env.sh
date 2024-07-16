@@ -16,7 +16,7 @@ pip install deepspeed
 pip install "fschat[model_worker,webui]"
 pip install openai anthropic GPUtil typing-inspect==0.8.0 typing_extensions==4.5.0 ray==2.7.1
 pip install vllm==0.4.1
-pip install lean-dojo==1.1.2
+pip install lean-dojo==1.7.0
 
 # (L1072) vi /home/ray/workspace/.local/lib/python3.9/site-packages/peft/tuners/lora.py
 
