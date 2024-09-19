@@ -39,3 +39,6 @@ cd gpt-fast
 bash scripts_intern/inverse_intern_math_7b.sh
 bash scripts_intern/sample_cot_7b.sh
 ```
+
+# Acknowledgements
+The code is partially adopted from [gpt-accelera](https://github.com/Edward-Sun/gpt-accelera).
